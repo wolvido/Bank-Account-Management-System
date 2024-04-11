@@ -1,0 +1,20 @@
+﻿@section styles {
+    <link href="~/css/authentication.css" rel="stylesheet" type="text/css" />
+}
+
+<form class="authentication page__authentication" asp-controller="Authentication" asp-action="Authentication">
+
+    <img class="authentication__logo" src="~/css/common.blocks/BMS-Logo.png" />
+
+    <div class="authentication__field">
+        <span class="authentication__field-details">
+            <label class="authentication__label" for="code">Access Code</label>
+            <a class="authentication__change" href="">Change?</a>
+        </span>
+
+        <input class="authentication__input" id="code" type="password" />
+
+        <button class="authentication__button">Sign in</button>
+    </div>
+
+</form>

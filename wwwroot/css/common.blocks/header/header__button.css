@@ -1,0 +1,12 @@
+﻿.header__button {
+    width: 150px;
+    height: 43px;
+    background-color: #33429E;
+    color: white;
+    border-radius: 5px;
+    border: solid 0px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 50px 0px 50px;
+}
