@@ -1,0 +1,23 @@
+﻿@import url('accounts/accounts__add-accounts.css');
+@import url('accounts/accounts__search-filter.css');
+@import url('accounts/accounts__search.css');
+@import url('accounts/accounts__search-form.css');
+@import url('accounts/accounts__search-input.css');
+@import url('accounts/accounts__search-button.css');
+@import url('accounts/accounts__search-icon.css');
+@import url('accounts/accounts__toolbar.css');
+@import url('accounts/accounts__table.css');
+@import url('accounts/accounts__header.css');
+@import url('accounts/accounts__header-title.css');
+@import url('accounts/accounts__header-button.css');
+@import url('accounts/accounts__header-icon.css');
+@import url('accounts/accounts_content.css');
+
+
+
+.accounts {
+    width: 100%;
+    height: calc(100% - 64.5px);
+    display: flex;
+    flex-direction: column;
+}

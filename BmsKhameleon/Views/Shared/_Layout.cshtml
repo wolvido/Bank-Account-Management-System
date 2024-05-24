@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/common.blocks/page.css" rel="stylesheet" />
+    <link href="~/css/common.blocks/main.css" rel="stylesheet" />
+    <link href="~/css/common.blocks/header.css" rel="stylesheet" />
+
+
+    @RenderSection("styles", false)
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__main">
+            <img class="header__logo" src="~/css/common.blocks/BMS-Logo.png" />
+            <button class="header__button">Log Out</button> 
+        </div>
+
+        <div class="header__details">
+            <span class="header__user-details">Welcome <strong class="header__username">WINZYL C OLVIDO</strong> </span>
+            <time class="header__time" datetime="2024-04-09T12:00">04/09/2024 12:00</time>
+        </div>
+    </header>
+    @RenderBody()
+</body>
+
+</html>

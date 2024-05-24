@@ -1,0 +1,80 @@
+﻿@section styles {
+    <link href="~/css/accounts.css" rel="stylesheet" type="text/css" />
+}
+
+<main class="main">
+    <div class="accounts">
+
+        <div class="accounts__toolbar">
+            <a class="accounts__add-accounts">
+                Add Bank Account
+            </a>
+
+            <search class="accounts__search">
+
+                <form class="accounts__search-form">
+                    <button class="accounts__search-button">
+                        <img class="accounts__search-icon" src="~/css/accounts/search.png" />
+                    </button>
+                    <input class="accounts__search-input" name="" id="" placeholder="Search">
+                </form>
+                <select class="accounts__search-filter">
+                    <option value="All">Any Bank</option>
+                    <option value="RCBC"> RCBC</option>
+                    <option value="Land-Bank"> Land Bank </option>
+                    <option value="BDO"> BDO </option>
+                    <option value="BPI"> BPI </option>
+                    <option value="Metrobank"> Metrobank </option>
+                    <option value="Unionbank"> Unionbank </option>
+                    <option value="Security Bank"> Security Bank </option>
+                    <option value="PNB"> PNB </option>
+                    <option value="China Bank"> China Bank </option>
+                    <option value="Eastwest Bank"> Eastwest Bank </option>
+                    <option value="PS Bank"> PS Bank </option>
+                    <option value="Maybank"> Maybank </option>
+                    <option value="UCPB"> UCPB </option>
+                    <option value="DBP"> DBP </option>
+                    <option value="HSBC"> HSBC </option>
+                </select>
+            </search>
+        </div>
+
+
+
+        <div class="accounts__table">
+
+            <div class="accounts__header">
+                <div class="accounts__header-title">
+                    <button class="accounts__header-button accounts__header-icon">
+                        Bank
+                    </button>
+                </div>
+
+                <div class="accounts__header-title">
+                    <button class="accounts__header-button accounts__header-icon">Account Number</button>
+                </div>
+
+                <div class="accounts__header-title">
+                    <button class="accounts__header-button accounts__header-icon">Payor</button>
+                </div>
+
+                <div class="accounts__header-title">
+                    <button class="accounts__header-button accounts__header-icon">Working Balance</button>
+                </div>
+            </div>
+
+            <div class="accounts_content">
+                <a class="accounts__item">
+                    <div class="accounts__item-bank">Bank</div>
+                    <div class="accounts__item-account">Account</div>
+                    <div class="accounts__item-payor">Balance</div>
+                    <div class="accounts__item-balance">Actions</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</main>
