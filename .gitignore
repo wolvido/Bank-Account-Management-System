@@ -1,4 +1,4 @@
-.vsidx
-.cache
-.props
-.target
+*.vsidx
+*.cache
+*.props
+*.target
