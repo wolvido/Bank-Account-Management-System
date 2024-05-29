@@ -12,6 +12,11 @@ namespace BmsKhameleon.UI.Controllers
             return View();
         }
 
+        [Route("[action]")]
+        public IActionResult CreateBankAccount()
+        {
+            return View();
+        }
 
     }
 }
