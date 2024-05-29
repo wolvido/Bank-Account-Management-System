@@ -10,4 +10,6 @@
     flex-direction: row;
     justify-content: space-between;
     padding-right: 14px;
+
+    font-size: 14px;
 }

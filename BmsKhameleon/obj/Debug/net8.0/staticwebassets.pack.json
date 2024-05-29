@@ -73,6 +73,14 @@
       "PackagePath": "staticwebassets\\css\\accounts\\__item\\accounts__item-payor.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\delete-icon.png",
+      "PackagePath": "staticwebassets\\css\\accounts\\__item\\delete-icon.png"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\edit-icon.png",
+      "PackagePath": "staticwebassets\\css\\accounts\\__item\\edit-icon.png"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__search\\accounts__search-button.css",
       "PackagePath": "staticwebassets\\css\\accounts\\__search\\accounts__search-button.css"
     },
@@ -91,6 +99,14 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__search\\accounts__search-input.css",
       "PackagePath": "staticwebassets\\css\\accounts\\__search\\accounts__search-input.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__search\\filter-icon.png",
+      "PackagePath": "staticwebassets\\css\\accounts\\__search\\filter-icon.png"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__search\\search.png",
+      "PackagePath": "staticwebassets\\css\\accounts\\__search\\search.png"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__add-accounts.css",
@@ -119,22 +135,6 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__toolbar.css",
       "PackagePath": "staticwebassets\\css\\accounts\\accounts__toolbar.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\delete-icon.png",
-      "PackagePath": "staticwebassets\\css\\accounts\\delete-icon.png"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\edit-icon.png",
-      "PackagePath": "staticwebassets\\css\\accounts\\edit-icon.png"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\filter-icon.png",
-      "PackagePath": "staticwebassets\\css\\accounts\\filter-icon.png"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\search.png",
-      "PackagePath": "staticwebassets\\css\\accounts\\search.png"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\authentication.css",
