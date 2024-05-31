@@ -1,44 +1,48 @@
-﻿
+﻿@section styles {
+    <link href="~/css/create-account.css" rel="stylesheet" type="text/css" />
+}
+
 <main class="main">
     <div class="create-account">
         <div class="create-account__toolbar">
             <input class="create-account__create-button" type="submit"></input>
             <button class="create-account__cancel-button"></button>
         </div>
+    
+
+        <div class="create-account__validation-errors" asp-validation-summary="All">Error message will show here</div>
+
+        <form class="create-account__form">
+            <div class="create-account__form-group">
+                <label class="create-account__form-label">Bank Name </label>
+                <input class="create-account__form-input" placeholder="Bank Name" />
+            </div>
+
+            <div class="create-account__form-group">
+                <label class="create-account__form-label">Account Name </label>
+                <input class="create-account__form-input" placeholder="Account Name" />
+            </div>
+
+            <div class="create-account__form-group">
+                <label class="create-account__form-label">Account Number </label>
+                <input class="create-account__form-input" placeholder="Account Number" />
+            </div>
+
+            <div class="create-account__form-group">
+                <label class="create-account__form-label">Select Branch (Region/Province-City) </label>
+                <input class="create-account__form-input" placeholder="Branch"/>
+            </div>
+
+            <div class="create-account__form-group">
+                <label class="create-account__form-label"> </label>
+                <select class="create-account__form-input">
+                    <option>Savings Account</option>
+                    <option>Checking Account</option>
+                    <option>Joint Account</option>
+                    <option>Payroll</option>
+                </select>
+            </div>
+        </form>
     </div>
-
-    <div class="create-account__validation-errors" asp-validation-summary="All">Error message will show here</div>
-
-    <form class="create-account__form">
-        <div class="create-account__form-group">
-            <label class="create-account__form-label">Bank Name </label>
-            <input class="create-account__form-input" placeholder="Bank Name" />
-        </div>
-
-        <div class="create-account__form-group">
-            <label class="create-account__form-label">Account Name </label>
-            <input class="create-account__form-input" placeholder="Account Name" />
-        </div>
-
-        <div class="create-account__form-group">
-            <label class="create-account__form-label">Account Number </label>
-            <input class="create-account__form-input" placeholder="Account Number" />
-        </div>
-
-        <div class="create-account__form-group">
-            <label class="create-account__form-label">Select Branch (Region/Province-City) </label>
-            <input class="create-account__form-input" placeholder="Branch"/>
-        </div>
-
-        <div class="create-account__form-group">
-            <label class="create-account__form-label"> </label>
-            <select class="create-account__form-input">
-                <option>Savings Account</option>
-                <option>Checking Account</option>
-                <option>Joint Account</option>
-                <option>Payroll</option>
-            </select>
-        </div>
-    </form>
 
 </main>

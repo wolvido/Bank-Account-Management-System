@@ -2,3 +2,5 @@
 *.cache
 *.props
 *.target
+appsettings.json
+bin/

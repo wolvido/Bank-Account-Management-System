@@ -1,2 +1,6 @@
 ﻿.accounts__item-buttons{
+    width: 62px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
