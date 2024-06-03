@@ -1,16 +1,23 @@
 ﻿@section styles {
-    <link href="~/css/create-account.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/create-account/create-account.css" rel="stylesheet" type="text/css" />
 }
 
 <main class="main">
+
     <div class="create-account">
         <div class="create-account__toolbar">
-            <input class="create-account__create-button" type="submit"></input>
-            <button class="create-account__cancel-button"></button>
+            <input class="create-account__toolbar-button create-account__toolbar-button_create" type="submit" value="Create"/>
+            <button class="create-account__toolbar-button create-account__toolbar-button_cancel">Cancel</button>
         </div>
-    
 
-        <div class="create-account__validation-errors" asp-validation-summary="All">Error message will show here</div>
+        @if (@ViewBag.HasErrors)
+        {
+            <div class="create-account__validation-errors">Please provide information to all & nbsp;<em>required</em>&nbsp; fields.</div>
+        }
+        else
+        {
+            <div class="create-account__validation-errors"></div>
+        }
 
         <form class="create-account__form">
             <div class="create-account__form-group">

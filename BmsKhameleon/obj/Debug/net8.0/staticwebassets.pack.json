@@ -1,8 +1,12 @@
 {
   "Files": [
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts.css",
-      "PackagePath": "staticwebassets\\css\\accounts.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__add-accounts\\accounts__add-accounts.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__add-accounts\\accounts__add-accounts.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__content\\accounts__content.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__content\\accounts__content.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__header\\accounts__header-account.css",
@@ -27,6 +31,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__header\\accounts__header-payor.css",
       "PackagePath": "staticwebassets\\css\\accounts\\__header\\accounts__header-payor.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__header\\accounts__header.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__header\\accounts__header.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__header\\fonts\\accounts__header-icon.eot",
@@ -61,8 +69,8 @@
       "PackagePath": "staticwebassets\\css\\accounts\\__item\\accounts__item-button.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\accounts__item-buttons.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\__item\\accounts__item-buttons.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\accounts__item-controls.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__item\\accounts__item-controls.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\accounts__item-icon.css",
@@ -71,6 +79,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\accounts__item-payor.css",
       "PackagePath": "staticwebassets\\css\\accounts\\__item\\accounts__item-payor.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\accounts__item.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__item\\accounts__item.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__item\\delete-icon.png",
@@ -101,6 +113,10 @@
       "PackagePath": "staticwebassets\\css\\accounts\\__search\\accounts__search-input.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__search\\accounts__search.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__search\\accounts__search.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__search\\filter-icon.png",
       "PackagePath": "staticwebassets\\css\\accounts\\__search\\filter-icon.png"
     },
@@ -109,36 +125,20 @@
       "PackagePath": "staticwebassets\\css\\accounts\\__search\\search.png"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__add-accounts.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\accounts__add-accounts.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__table\\accounts__table.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__table\\accounts__table.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__content.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\accounts__content.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\__toolbar\\accounts__toolbar.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\__toolbar\\accounts__toolbar.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__header.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\accounts__header.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts.css",
+      "PackagePath": "staticwebassets\\css\\accounts\\accounts.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__item.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\accounts__item.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__search.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\accounts__search.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__table.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\accounts__table.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\accounts\\accounts__toolbar.css",
-      "PackagePath": "staticwebassets\\css\\accounts\\accounts__toolbar.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\authentication.css",
-      "PackagePath": "staticwebassets\\css\\authentication.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\authentication\\authentication.css",
+      "PackagePath": "staticwebassets\\css\\authentication\\authentication.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\authentication\\authentication__button.css",
@@ -169,12 +169,12 @@
       "PackagePath": "staticwebassets\\css\\authentication\\authentication__logo.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\BMS-Logo.png",
-      "PackagePath": "staticwebassets\\css\\common.blocks\\BMS-Logo.png"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\header\\BMS-Logo.png",
+      "PackagePath": "staticwebassets\\css\\common.blocks\\header\\BMS-Logo.png"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\header.css",
-      "PackagePath": "staticwebassets\\css\\common.blocks\\header.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\header\\header.css",
+      "PackagePath": "staticwebassets\\css\\common.blocks\\header\\header.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\header\\header__button.css",
@@ -205,16 +205,40 @@
       "PackagePath": "staticwebassets\\css\\common.blocks\\header\\header__username.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\main.css",
-      "PackagePath": "staticwebassets\\css\\common.blocks\\main.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\main\\main.css",
+      "PackagePath": "staticwebassets\\css\\common.blocks\\main\\main.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\page.css",
-      "PackagePath": "staticwebassets\\css\\common.blocks\\page.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\page\\page.css",
+      "PackagePath": "staticwebassets\\css\\common.blocks\\page\\page.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\page\\page__authentication.css",
       "PackagePath": "staticwebassets\\css\\common.blocks\\page\\page__authentication.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__toolbar\\create-account__toolbar-button.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__toolbar\\create-account__toolbar-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__toolbar\\create-account__toolbar-button_cancel.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__toolbar\\create-account__toolbar-button_cancel.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__toolbar\\create-account__toolbar-button_create.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__toolbar\\create-account__toolbar-button_create.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__toolbar\\create-account__toolbar.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__toolbar\\create-account__toolbar.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__validation-errors\\create-account__validation-errors.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__validation-errors\\create-account__validation-errors.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\create-account.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\create-account.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\favicon.ico",

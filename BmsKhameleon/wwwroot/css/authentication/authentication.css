@@ -1,10 +1,10 @@
-﻿@import url('authentication/authentication__logo.css');
-@import url('authentication/authentication__field.css');
-@import url('authentication/authentication__field-details.css');
-@import url('authentication/authentication__change.css');
-@import url('authentication/authentication__label.css');
-@import url('authentication/authentication__input.css');
-@import url('authentication/authentication__button.css');
+﻿@import url('authentication__logo.css');
+@import url('authentication__field.css');
+@import url('authentication__field-details.css');
+@import url('authentication__change.css');
+@import url('authentication__label.css');
+@import url('authentication__input.css');
+@import url('authentication__button.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
