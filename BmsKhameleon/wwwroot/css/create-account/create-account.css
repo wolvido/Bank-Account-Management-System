@@ -5,6 +5,12 @@
 
 @import url('__validation-errors/create-account__validation-errors.css');
 
+@import url('__form/create-account__form-group.css');
+@import url('__form/create-account__form-label.css');
+@import url('__form/create-account__form-input.css');
+@import url('__form/create-account__form-container.css');
+@import url('__form/create-account__form-input_select.css');
+@import url('__form/create-account__form-label_error.css');
 
 .create-account{
 

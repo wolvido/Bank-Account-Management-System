@@ -5,50 +5,55 @@
 <main class="main">
 
     <div class="create-account">
-        <div class="create-account__toolbar">
-            <input class="create-account__toolbar-button create-account__toolbar-button_create" type="submit" value="Create"/>
-            <button class="create-account__toolbar-button create-account__toolbar-button_cancel">Cancel</button>
-        </div>
-
-        @if (@ViewBag.HasErrors)
-        {
-            <div class="create-account__validation-errors">Please provide information to all & nbsp;<em>required</em>&nbsp; fields.</div>
-        }
-        else
-        {
-            <div class="create-account__validation-errors"></div>
-        }
-
         <form class="create-account__form">
-            <div class="create-account__form-group">
-                <label class="create-account__form-label">Bank Name </label>
-                <input class="create-account__form-input" placeholder="Bank Name" />
+            <div class="create-account__toolbar">
+                <input class="create-account__toolbar-button create-account__toolbar-button_create" type="submit" value="Create"/>
+                <button class="create-account__toolbar-button create-account__toolbar-button_cancel">Cancel</button>
             </div>
 
-            <div class="create-account__form-group">
-                <label class="create-account__form-label">Account Name </label>
-                <input class="create-account__form-input" placeholder="Account Name" />
+            @if (@ViewBag.HasErrors)
+            {
+                <div class="create-account__validation-errors">Please provide information to all&nbsp;<em>required</em>&nbsp;fields.</div>
+            }
+            else
+            {
+                <div class="create-account__validation-errors"></div>
+            }
+
+            <div class="create-account__form-container">
+
+                <div class="create-account__form-group">
+                    <label class="create-account__form-label create-account__form-label_error">Bank Name </label>
+                    <input class="create-account__form-input" placeholder="Bank Name" />
+                </div>
+
+                <div class="create-account__form-group">
+                    <label class="create-account__form-label">Account Name </label>
+                    <input class="create-account__form-input" placeholder="Account Name" />
+                </div>
+
+                <div class="create-account__form-group">
+                    <label class="create-account__form-label">Account Number </label>
+                    <input class="create-account__form-input" placeholder="Account Number" />
+                </div>
+
+                <div class="create-account__form-group">
+                    <label class="create-account__form-label">Select Branch (Region/Province-City) </label>
+                    <input class="create-account__form-input" placeholder="Branch"/>
+                </div>
+
+                <div class="create-account__form-group">
+                    <label class="create-account__form-label">Account Type</label>
+                    <select class="create-account__form-input create-account__form-input_select">
+                        <option>Savings Account</option>
+                        <option>Checking Account</option>
+                        <option>Joint Account</option>
+                        <option>Payroll</option>
+                    </select>
+                </div>
+
             </div>
 
-            <div class="create-account__form-group">
-                <label class="create-account__form-label">Account Number </label>
-                <input class="create-account__form-input" placeholder="Account Number" />
-            </div>
-
-            <div class="create-account__form-group">
-                <label class="create-account__form-label">Select Branch (Region/Province-City) </label>
-                <input class="create-account__form-input" placeholder="Branch"/>
-            </div>
-
-            <div class="create-account__form-group">
-                <label class="create-account__form-label"> </label>
-                <select class="create-account__form-input">
-                    <option>Savings Account</option>
-                    <option>Checking Account</option>
-                    <option>Joint Account</option>
-                    <option>Payroll</option>
-                </select>
-            </div>
         </form>
     </div>
 

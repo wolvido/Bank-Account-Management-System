@@ -137,6 +137,10 @@
       "PackagePath": "staticwebassets\\css\\accounts\\accounts.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\authentication\\BMS-Logo.png",
+      "PackagePath": "staticwebassets\\css\\authentication\\BMS-Logo.png"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\authentication\\authentication.css",
       "PackagePath": "staticwebassets\\css\\authentication\\authentication.css"
     },
@@ -215,6 +219,26 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\common.blocks\\page\\page__authentication.css",
       "PackagePath": "staticwebassets\\css\\common.blocks\\page\\page__authentication.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__form\\create-account__form-container.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__form\\create-account__form-container.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__form\\create-account__form-group.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__form\\create-account__form-group.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__form\\create-account__form-input.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__form\\create-account__form-input.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__form\\create-account__form-input_select.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__form\\create-account__form-input_select.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__form\\create-account__form-label.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__form\\create-account__form-label.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__toolbar\\create-account__toolbar-button.css",

@@ -1,0 +1,7 @@
+﻿.create-account__form-container
+{
+    height: 340px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

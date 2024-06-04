@@ -1,0 +1,8 @@
+﻿.create-account__form-label_error {
+/*    color: red;*/
+}
+
+.create-account__form-label_error::before {
+    content: "*";
+    color: red;
+}
