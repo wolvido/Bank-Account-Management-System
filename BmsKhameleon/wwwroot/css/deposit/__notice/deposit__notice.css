@@ -1,0 +1,6 @@
+﻿.deposit__notice {
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

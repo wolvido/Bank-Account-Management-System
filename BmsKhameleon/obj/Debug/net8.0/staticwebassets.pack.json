@@ -241,6 +241,10 @@
       "PackagePath": "staticwebassets\\css\\create-account\\__form\\create-account__form-label.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__form\\create-account__form-label_error.css",
+      "PackagePath": "staticwebassets\\css\\create-account\\__form\\create-account__form-label_error.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\__toolbar\\create-account__toolbar-button.css",
       "PackagePath": "staticwebassets\\css\\create-account\\__toolbar\\create-account__toolbar-button.css"
     },
@@ -263,6 +267,38 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\create-account\\create-account.css",
       "PackagePath": "staticwebassets\\css\\create-account\\create-account.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\__notice\\deposit__notice-deposit-type.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\__notice\\deposit__notice-deposit-type.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\__notice\\deposit__notice-validation.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\__notice\\deposit__notice-validation.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\__notice\\deposit__notice.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\__notice\\deposit__notice.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\__toolbar\\deposit__toolbar-button.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\__toolbar\\deposit__toolbar-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\__toolbar\\deposit__toolbar-button_cancel.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\__toolbar\\deposit__toolbar-button_cancel.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\__toolbar\\deposit__toolbar-button_create.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\__toolbar\\deposit__toolbar-button_create.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\__toolbar\\deposit__toolbar.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\__toolbar\\deposit__toolbar.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\css\\deposit\\deposit.css",
+      "PackagePath": "staticwebassets\\css\\deposit\\deposit.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\favicon.ico",

@@ -1,0 +1,37 @@
+﻿@section styles {
+    <link href="~/css/deposit/deposit.css" rel="stylesheet" type="text/css" />
+}
+
+<main class="main">
+
+    <div class="deposit">
+        <form class="deposit__form">
+            <div class="deposit__toolbar">
+                <input class="deposit__toolbar-button deposit__toolbar-button_create" type="submit" value="Deposit"/>
+                <button class="deposit__toolbar-button deposit__toolbar-button_cancel">Cancel</button>
+            </div>
+
+            <div class="deposit__notice">
+                <div class="deposit__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields.</div>
+                <div class="deposit__notice-deposit-type">You are about to deposit <strong>Cash</strong> on April 11, 2024</div>
+            </div>
+
+            <fieldset class="deposit__control">
+                <div class="deposit__control-group">
+                    <input class="deposit__control-radio" name="deposit-type" type="radio" value="cash" checked />
+                    <label class="deposit__control-label">Cash Deposit</label>
+                </div>
+
+                <div class="deposit__control-group">
+                    <input class="deposit__control-radio" name="deposit-type" type="radio" value="check" />
+                    <label class="deposit__control-label">Check Deposit</label>
+                </div>
+            </fieldset>
+
+
+
+        </form>
+    </div>
+
+
+</main>

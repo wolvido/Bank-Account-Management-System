@@ -32,6 +32,17 @@ namespace BmsKhameleon.UI.Controllers
             return View();
         }
 
+        [Route("[action]")]
+        public IActionResult Deposit()
+        {
+            bool hasErrors = ModelState.Values.Any(v => v.Errors.Count > 0);
+
+            hasErrors = true;
+            ViewBag.HasErrors = hasErrors;
+
+            return View();
+        }
+
 
     }
 }
