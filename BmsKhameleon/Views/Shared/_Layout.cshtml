@@ -5,10 +5,9 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>@ViewBag.Title</title>
-    <link href="~/css/common.blocks/page/page.css" rel="stylesheet" />
-    <link href="~/css/common.blocks/main/main.css" rel="stylesheet" />
-    <link href="~/css/common.blocks/header/header.css" rel="stylesheet" />
-
+    <link href="~/common.blocks/common-blocks.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery-3.7.1.min.js" async defer></script>
+    <script src="~/lib/moment/moment.js" async defer> </script>
 
     @await RenderSectionAsync("styles", false)
 </head>
@@ -16,7 +15,7 @@
 <body class="page">
     <header class="header">
         <div class="header__main">
-            <img class="header__logo" src="~/css/common.blocks/header/BMS-Logo.png" />
+            <img class="header__logo" src="~/common.blocks/header/BMS-Logo.png" />
             <button class="header__button">Log Out</button> 
         </div>
 

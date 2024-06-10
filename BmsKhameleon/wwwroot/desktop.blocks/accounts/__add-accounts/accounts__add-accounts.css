@@ -1,0 +1,10 @@
+﻿.accounts__add-accounts {
+    width: 365px;
+    height: 43px;
+
+    font-size: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

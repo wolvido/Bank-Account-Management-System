@@ -1,0 +1,22 @@
+﻿@import url('authentication__logo.css');
+@import url('authentication__field.css');
+@import url('authentication__field-details.css');
+@import url('authentication__change.css');
+@import url('authentication__label.css');
+@import url('authentication__input.css');
+@import url('authentication__button.css');
+
+
+
+.authentication {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #D9DBDB;
+    width: 450px;
+    height: 355px;
+    border: 1px solid #D9DBDB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

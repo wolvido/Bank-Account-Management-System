@@ -1,0 +1,25 @@
+﻿@import url('button/button.css');
+@import url('button/button_cancel.css');
+
+@import url('header/header.css');
+@import url('header/header__logo.css');
+@import url('header/header__main.css');
+@import url('header/header__details.css');
+@import url('header/header__button.css');
+@import url('header/header__user-details.css');
+@import url('header/header__username.css');
+@import url('header/header__time.css');
+
+
+@import url('main/main.css');
+
+
+@import url('page/page.css');
+@import url('page/page__authentication.css');
+
+@import url('form-group/form-group.css');
+@import url('form-group/form-group__input.css');
+@import url('form-group/form-group__input_select.css');
+@import url('form-group/form-group__label.css');
+@import url('form-group/form-group__label_error.css');
+@import url('form-group/form-group__input_date.css');

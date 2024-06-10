@@ -1,0 +1,27 @@
+﻿.form-group__input_date {
+    position: relative;
+    width: 150px;
+    height: 20px;
+    color: white;
+}
+
+.form-group__input_date:before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    content: attr(data-date);
+    display: inline-block;
+    color: black;
+}
+
+.form-group__input_date::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+    display: none;
+}
+
+.form-group__input_date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: black;
+    opacity: 1;
+}

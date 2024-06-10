@@ -1,5 +1,5 @@
 ﻿@section styles {
-    <link href="~/css/create-account/create-account.css" rel="stylesheet" type="text/css" />
+    <link href="~/desktop.blocks/create-account/create-account.css" rel="stylesheet" type="text/css" />
 }
 
 <main class="main">
@@ -7,8 +7,8 @@
     <div class="create-account">
         <form class="create-account__form">
             <div class="create-account__toolbar">
-                <input class="create-account__toolbar-button create-account__toolbar-button_create" type="submit" value="Create"/>
-                <button class="create-account__toolbar-button create-account__toolbar-button_cancel">Cancel</button>
+                <input class="create-account__toolbar-button button" type="submit" value="Create"/>
+                <button class="create-account__toolbar-button create-account__toolbar-button_cancel button button_cancel">Cancel</button>
             </div>
 
             @if (@ViewBag.HasErrors)
@@ -22,29 +22,29 @@
 
             <div class="create-account__form-container">
 
-                <div class="create-account__form-group">
-                    <label class="create-account__form-label create-account__form-label_error">Bank Name </label>
-                    <input class="create-account__form-input" placeholder="Bank Name" />
+                <div class="create-account__form-group form-group">
+                    <label class="create-account__form-label form-group__label form-group__label_error">Bank Name </label>
+                    <input class="create-account__form-input form-group__input" placeholder="Bank Name" />
                 </div>
 
-                <div class="create-account__form-group">
-                    <label class="create-account__form-label">Account Name </label>
-                    <input class="create-account__form-input" placeholder="Account Name" />
+                <div class="create-account__form-group form-group">
+                    <label class="create-account__form-label form-group__label">Account Name </label>
+                    <input class="create-account__form-input form-group__input" placeholder="Account Name" />
                 </div>
 
-                <div class="create-account__form-group">
-                    <label class="create-account__form-label">Account Number </label>
-                    <input class="create-account__form-input" placeholder="Account Number" />
+                <div class="create-account__form-group form-group">
+                    <label class="create-account__form-label form-group__label">Account Number </label>
+                    <input class="create-account__form-input form-group__input" placeholder="Account Number" />
                 </div>
 
-                <div class="create-account__form-group">
-                    <label class="create-account__form-label">Select Branch (Region/Province-City) </label>
-                    <input class="create-account__form-input" placeholder="Branch"/>
+                <div class="create-account__form-group form-group">
+                    <label class="create-account__form-label form-group__label">Select Branch (Region/Province-City) </label>
+                    <input class="create-account__form-input form-group__input" placeholder="Branch" />
                 </div>
 
-                <div class="create-account__form-group">
-                    <label class="create-account__form-label">Account Type</label>
-                    <select class="create-account__form-input create-account__form-input_select">
+                <div class="create-account__form-group form-group">
+                    <label class="create-account__form-label form-group__label">Account Type</label>
+                    <select class="create-account__form-input form-group__input form-group__input_select ">
                         <option>Savings Account</option>
                         <option>Checking Account</option>
                         <option>Joint Account</option>

@@ -1,5 +1,6 @@
 ﻿@section styles {
-    <link href="~/css/deposit/deposit.css" rel="stylesheet" type="text/css" />
+    <link href="~/desktop.blocks/deposit/deposit.css" rel="stylesheet" type="text/css" />
+    <script src="~/common.blocks/form-group/form-group__input_date.js" async defer></script>
 }
 
 <main class="main">
@@ -7,8 +8,8 @@
     <div class="deposit">
         <form class="deposit__form">
             <div class="deposit__toolbar">
-                <input class="deposit__toolbar-button deposit__toolbar-button_create" type="submit" value="Deposit"/>
-                <button class="deposit__toolbar-button deposit__toolbar-button_cancel">Cancel</button>
+                <input class="deposit__toolbar-button button" type="submit" value="Deposit" />
+                <button class="deposit__toolbar-button deposit__toolbar-button_cancel button button_cancel">Cancel</button>
             </div>
 
             <div class="deposit__notice">
@@ -28,6 +29,21 @@
                 </div>
             </fieldset>
 
+            <div class="deposit__form-container">
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Placeholder</label>
+                    <input class="deposit__form-input form-group__input" placeholder="Placeholder" />
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label">Placeholder</label>
+                    <input class="deposit__form-input form-group__input form-group__input_date" type="date" data-date="" data-date-format="MMMM DD YYYY" value="2015-08-09">
+                </div>
+
+            </div>
+
+
 
 
         </form>
@@ -35,3 +51,4 @@
 
 
 </main>
+
