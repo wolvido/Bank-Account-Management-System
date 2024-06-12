@@ -1,27 +1,46 @@
-﻿.form-group__input_date {
-    position: relative;
-    width: 150px;
-    height: 20px;
-    color: white;
+﻿@supports (-moz-appearance:none) {
+    .form-group__input_date {
+        color: black;
+    }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .form-group__input_date {
+        position: relative;
+        padding: 0px 0px;
+    }
 }
 
 .form-group__input_date:before {
+    content: attr(data-date);
     position: absolute;
     top: 3px;
     left: 3px;
-    content: attr(data-date);
     display: inline-block;
-    color: black;
+    color: #1A203D;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    padding-left: 12px;
+    margin-top: 4px;
 }
 
-.form-group__input_date::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+.form-group__input_date::-webkit-inner-spin-button, ::-webkit-datetime-edit {
     display: none;
 }
 
 .form-group__input_date::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 3px;
-    right: 0;
-    color: black;
-    opacity: 1;
+    background-image: url(calendar-icon.png);
+    width: 33px;
+    height: 32px;
 }
+
+
+.form-group__input_date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    bottom: 0px;
+    top: 0px;
+}
+

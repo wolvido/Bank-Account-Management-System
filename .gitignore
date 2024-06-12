@@ -4,3 +4,4 @@
 *.target
 appsettings.json
 bin/
+.vs/

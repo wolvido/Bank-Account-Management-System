@@ -1,6 +1,7 @@
-﻿.deposit__form-container
-{
-    /*height: 340px;*/
-    display:flex;
+﻿.deposit__form-container {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin-top: 18px;
+    width: 365px;
 }

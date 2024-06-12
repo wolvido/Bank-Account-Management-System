@@ -1,6 +1,7 @@
 ﻿@section styles {
     <link href="~/desktop.blocks/deposit/deposit.css" rel="stylesheet" type="text/css" />
     <script src="~/common.blocks/form-group/form-group__input_date.js" async defer></script>
+    <script src="~/desktop.blocks/deposit/deposit.js" async defer></script>
 }
 
 <main class="main">
@@ -12,39 +13,83 @@
                 <button class="deposit__toolbar-button deposit__toolbar-button_cancel button button_cancel">Cancel</button>
             </div>
 
-            <div class="deposit__notice">
+            <div class="deposit__notice deposit__notice_cash">
                 <div class="deposit__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields.</div>
                 <div class="deposit__notice-deposit-type">You are about to deposit <strong>Cash</strong> on April 11, 2024</div>
             </div>
 
             <fieldset class="deposit__control">
                 <div class="deposit__control-group">
-                    <input class="deposit__control-radio" name="deposit-type" type="radio" value="cash" checked />
+                    <input class="deposit__control-radio deposit__control-radio_cash" name="deposit-type" type="radio" value="cash" checked />
                     <label class="deposit__control-label">Cash Deposit</label>
                 </div>
 
                 <div class="deposit__control-group">
-                    <input class="deposit__control-radio" name="deposit-type" type="radio" value="check" />
+                    <input class="deposit__control-radio deposit__control-radio_cheque" name="deposit-type" type="radio" value="check" />
                     <label class="deposit__control-label">Check Deposit</label>
                 </div>
             </fieldset>
 
-            <div class="deposit__form-container">
-
+            <div class="deposit__form-container deposit__form-container_cash">
                 <div class="deposit__form-group form-group">
-                    <label class="deposit__form-label form-group__label form-group__label_error">Placeholder</label>
-                    <input class="deposit__form-input form-group__input" placeholder="Placeholder" />
+                    <label class="deposit__form-label form-group__label form-group__label_error">Reference Number</label>
+                    <input class="deposit__form-input form-group__input" placeholder="1" />
                 </div>
 
                 <div class="deposit__form-group form-group">
-                    <label class="deposit__form-label form-group__label">Placeholder</label>
-                    <input class="deposit__form-input form-group__input form-group__input_date" type="date" data-date="" data-date-format="MMMM DD YYYY" value="2015-08-09">
+                    <label class="deposit__form-label form-group__label">Cash Deposit Date</label>
+                    <input class="deposit__form-input form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Cash Amount</label>
+                    <input class="deposit__form-input form-group__input" placeholder="0.00" />
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Note</label>
+                    <input class="deposit__form-input form-group__input" placeholder="Add Note" />
+                </div>
+            </div>
+
+            
+            <div class="deposit__form-container deposit__form-container_cheque">
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Reference Number</label>
+                    <input class="deposit__form-input form-group__input" placeholder="1" />
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label">Check Deposit Date</label>
+                    <input class="deposit__form-input form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Check Bank Name</label>
+                    <input class="deposit__form-input form-group__input" placeholder="LANDBANK" />
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Check Number</label>
+                    <input class="deposit__form-input form-group__input" placeholder="1234567890" />
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Payor (Company/Supplier/Customer Name)</label>
+                    <input class="deposit__form-input form-group__input" placeholder="Office of the Vice President" />
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Check Amount</label>
+                    <input class="deposit__form-input form-group__input" placeholder="0.00" />
+                </div>
+
+                <div class="deposit__form-group form-group">
+                    <label class="deposit__form-label form-group__label form-group__label_error">Note</label>
+                    <input class="deposit__form-input form-group__input" placeholder="Add Note" />
                 </div>
 
             </div>
-
-
-
 
         </form>
     </div>
