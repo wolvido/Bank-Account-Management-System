@@ -1,6 +1,5 @@
 ﻿$(function () {
-
-    console.log("form-group__input_date.js loaded");
+    //custom input date design
 	$("input").on("change", function () {
     this.setAttribute(
         "data-date",
@@ -8,7 +7,6 @@
         .format( this.getAttribute("data-date-format") )
     )
     }).trigger("change")
-
 });
 
 

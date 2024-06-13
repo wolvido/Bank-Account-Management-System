@@ -1,0 +1,17 @@
+﻿.withdraw__notice_validation {
+    height: 95px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #434C52;
+}
+
+.withdraw__notice_validation em {
+    color: red;
+    font-style: inherit;
+}
+
+.withdraw__notice_validation em::before {
+    content: "*";
+}

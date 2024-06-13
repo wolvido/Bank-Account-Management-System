@@ -14,6 +14,8 @@
 @import url('__form/deposit__form-container.css');
 @import url('__form/deposit__form-group.css');
 @import url('__form/deposit__form-input.css');
+@import url('__form/deposit__form-container_cash.css');
+@import url('__form/deposit__form-container_cheque.css');
 
 
 .deposit {

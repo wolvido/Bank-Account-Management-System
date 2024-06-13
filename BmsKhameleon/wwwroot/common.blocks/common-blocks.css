@@ -23,3 +23,8 @@
 @import url('form-group/form-group__label.css');
 @import url('form-group/form-group__label_error.css');
 @import url('form-group/form-group__input_date.css');
+
+@import url('radio-controls/radio-controls.css');
+@import url('radio-controls/radio-controls__group.css');
+@import url('radio-controls/radio-controls__label.css');
+@import url('radio-controls/radio-controls__radio.css');

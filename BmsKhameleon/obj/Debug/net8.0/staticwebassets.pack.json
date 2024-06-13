@@ -369,6 +369,10 @@
       "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar.css"
     },

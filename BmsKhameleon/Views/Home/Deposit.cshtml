@@ -4,6 +4,10 @@
     <script src="~/desktop.blocks/deposit/deposit.js" async defer></script>
 }
 
+@{
+    var date = "April 11, 2024";
+}
+
 <main class="main">
 
     <div class="deposit">
@@ -15,18 +19,18 @@
 
             <div class="deposit__notice deposit__notice_cash">
                 <div class="deposit__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields.</div>
-                <div class="deposit__notice-deposit-type">You are about to deposit <strong>Cash</strong> on April 11, 2024</div>
+                <div class="deposit__notice-deposit-type">You are about to deposit <strong>Cash</strong> on @date</div>
             </div>
 
-            <fieldset class="deposit__control">
-                <div class="deposit__control-group">
-                    <input class="deposit__control-radio deposit__control-radio_cash" name="deposit-type" type="radio" value="cash" checked />
-                    <label class="deposit__control-label">Cash Deposit</label>
+            <fieldset class="deposit__control radio-controls">
+                <div class="deposit__control-group radio-controls__group">
+                    <input class="deposit__control-radio deposit__control-radio_cash radio-controls__radio" name="deposit-type" type="radio" value="cash" checked />
+                    <label class="deposit__control-label radio-controls__label">Cash Deposit</label>
                 </div>
 
-                <div class="deposit__control-group">
-                    <input class="deposit__control-radio deposit__control-radio_cheque" name="deposit-type" type="radio" value="check" />
-                    <label class="deposit__control-label">Check Deposit</label>
+                <div class="deposit__control-group radio-controls__group">
+                    <input class="deposit__control-radio deposit__control-radio_cheque radio-controls__radio" name="deposit-type" type="radio" value="check" />
+                    <label class="deposit__control-label radio-controls__label">Check Deposit</label>
                 </div>
             </fieldset>
 

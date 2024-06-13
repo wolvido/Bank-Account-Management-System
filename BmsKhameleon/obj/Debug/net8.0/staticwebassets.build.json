@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5W8iAY9/8yQ55k897kOO7N8VYIse+xB1JSRMWDrD2rA=",
+  "Hash": "fXfhuZTNhlyBktpz6KY6n1bGzXEVX/pZ0/26EOapucE=",
   "Source": "BmsKhameleon.UI",
   "BasePath": "_content/BmsKhameleon.UI",
   "Mode": "Default",
@@ -1782,6 +1782,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/withdraw/__toolbar/withdraw__toolbar-button_cancel.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\withdraw.css",

@@ -1,5 +1,11 @@
 ﻿@section styles {
     <link href="~/desktop.blocks/withdraw/withdraw.css" rel="stylesheet" type="text/css" />
+    <script src="~/common.blocks/form-group/form-group__input_date.js" async defer></script>
+    <script src="~/desktop.blocks/withdraw/withdraw.js" async defer></script>
+}
+
+@{
+    var date = "April 11, 2024";
 }
 
 <main class="main">
@@ -10,6 +16,77 @@
                 <input class="withdraw__toolbar-button button" type="submit" value="Withdraw" />
                 <button class="withdraw__toolbar-button withdraw__toolbar-button_cancel button button_cancel">Cancel</button>
             </div>
+
+            <div class="withdraw__notice_validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields.</div>
+
+            <fieldset class="withdraw__control radio-controls">
+                <div class="withdraw__control-group radio-controls__group">
+                    <input class="withdraw__control-radio withdraw__control-radio_cheque radio-controls__radio" name="withdraw-type" type="radio" value="check" checked />
+                    <label class="withdraw__control-label radio-controls__label">Issue Check</label>
+                </div>
+
+                <div class="withdraw__control-group radio-controls__group">
+                    <input class="withdraw__control-radio withdraw__control-radio_cash radio-controls__radio" name="withdraw-type" type="radio" value="cash" />
+                    <label class="withdraw__control-label radio-controls__label">Cash Withdrawal</label>
+                </div>
+            </fieldset>
+
+            <div class="withdraw__notice_withdraw-type"> <span class="withdraw__notice-message">You are about to issue a Check — dated on </span>&nbsp;@date</div>
+
+            <div class="withdraw__form-container withdraw__form-container_cheque">
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label form-group__label">Reference Number</label>
+                    <input class="withdraw__form-input form-group__input" placeholder="1" />
+                </div>
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label  form-group__label form-group__label_error">Check Number</label>
+                    <input class="withdraw__form-input form-group__input" placeholder="123456789" />
+                </div>
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label  form-group__label">Check Issuance Date</label>
+                    <input class="withdraw__form-input form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+                </div>
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label  form-group__label">Check Issuance Amount</label>
+                    <input class="withdraw__form-input form-group__input" placeholder="0.00" />
+                </div>
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label  form-group__label">Note</label>
+                    <input class="withdraw__form-input form-group__input" placeholder="Add Note" />
+                </div>
+
+            </div>
+
+
+            <div class="withdraw__form-container withdraw__form-container_cash">
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label form-group__label">Reference Number</label>
+                    <input class="withdraw__form-input form-group__input" placeholder="1" />
+                </div>
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label  form-group__label">Check Issuance Date</label>
+                    <input class="withdraw__form-input form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+                </div>
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label form-group__label">Cash Withdraw Amount</label>
+                    <input class="withdraw__form-input form-group__input" placeholder="0.00" />
+                </div>
+
+                <div class="withdraw__form-group form-group">
+                    <label class="withdraw__form-label form-group__label">Note</label>
+                    <input class="withdraw__form-input form-group__input" placeholder="Add Note" />
+                </div>
+
+            </div>
+
+
 
         </form>
 

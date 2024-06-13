@@ -1,5 +1,5 @@
-﻿.deposit__form-group {
+﻿.withdraw__form-group
+{
     display: flex;
     flex-direction: column;
-    width: 365px;
 }
