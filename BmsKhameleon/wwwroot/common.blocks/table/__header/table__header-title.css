@@ -1,0 +1,8 @@
+﻿.table__header-title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 13px;
+    box-shadow: -10.5px 1px 1px -9px #CFD0D7;
+}

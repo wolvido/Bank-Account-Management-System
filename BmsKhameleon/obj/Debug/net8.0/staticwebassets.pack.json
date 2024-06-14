@@ -93,6 +93,30 @@
       "PackagePath": "staticwebassets\\common.blocks\\page\\page__authentication.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls.css",
+      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__group.css",
+      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__group.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css",
+      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__label.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__radio.css",
+      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__radio.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__header\\table__header.css",
+      "PackagePath": "staticwebassets\\common.blocks\\table\\__header\\table__header.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\table.css",
+      "PackagePath": "staticwebassets\\common.blocks\\table\\table.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css"
     },
@@ -365,6 +389,46 @@
       "PackagePath": "staticwebassets\\desktop.blocks\\deposit\\deposit.js"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control-group.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__control\\withdraw__control-group.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control-label.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__control\\withdraw__control-label.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control-radio.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__control\\withdraw__control-radio.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__control\\withdraw__control.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__form\\withdraw__form-container.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container_cash.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__form\\withdraw__form-container_cash.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container_cheque.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__form\\withdraw__form-container_cheque.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-group.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__form\\withdraw__form-group.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice_validation.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__notice\\withdraw__notice_validation.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice_withdraw-type.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__notice\\withdraw__notice_withdraw-type.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button.css"
     },
@@ -379,6 +443,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\withdraw.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\withdraw.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\withdraw.js",
+      "PackagePath": "staticwebassets\\desktop.blocks\\withdraw\\withdraw.js"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\favicon.ico",

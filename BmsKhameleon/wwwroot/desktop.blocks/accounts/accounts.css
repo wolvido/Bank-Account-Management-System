@@ -30,7 +30,6 @@
 @import url('__toolbar/accounts__toolbar.css');
 
 .accounts {
-    width: 100%;
     height: calc(100% - 64.5px);
     display: flex;
     flex-direction: column;

@@ -1,0 +1,56 @@
+﻿.table__header-button {
+    background: none;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: inherit;
+    border: none;
+    text-align: left;
+    color: #434C52;
+    padding: 0px 0px 0px 0px;
+
+    width: max-content;
+}
+
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: "table__header-button";
+    src: url("fonts/table__header-button.eot");
+    src: url("fonts/table__header-button.eot?#iefix") format("embedded-opentype"), url("fonts/table__header-button.woff") format("woff"), url("fonts/table__header-button.ttf") format("truetype"), url("fonts/table__header-button.svg#table__header-button") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: "untitled-font-2" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="table__header-button"]:after,
+[class*="table__header-button"]:after {
+    font-family: "table__header-button" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.table__header-button:after {
+    position: relative;
+    content: "\62";
+    top: 10%;
+}

@@ -2,10 +2,9 @@
     <link href="~/desktop.blocks/accounts/accounts.css" rel="stylesheet" type="text/css" />
 }
 
-<main class="main">
-    <div class="accounts">
+<main class="main accounts">
 
-        <div class="accounts__toolbar">
+        <section class="accounts__toolbar">
             <a class="accounts__add-accounts button">
                 Add Bank Account
             </a>
@@ -18,6 +17,7 @@
                     </button>
                     <input class="accounts__search-input" name="" id="" placeholder="Search">
                 </form>
+
                 <select class="accounts__search-filter">
                     <option value="All">Any Bank</option>
                     <option value="RCBC"> RCBC</option>
@@ -37,29 +37,27 @@
                     <option value="HSBC"> HSBC </option>
                 </select>
             </search>
-        </div>
+        </section>
 
+        <section class="accounts__table table">
 
-
-        <div class="accounts__table">
-
-            <header class="accounts__header">
-                <div class="accounts__header-bank">
-                    <button class="accounts__header-button accounts__header-icon">
+            <header class="accounts__header table__header">
+                <div class="accounts__header-bank table__header-title">
+                    <button class="accounts__header-button table__header-button">
                         Bank
                     </button>
                 </div>
 
-                <div class="accounts__header-account">
-                    <button class="accounts__header-button accounts__header-icon">Account Number</button>
+                <div class="accounts__header-account table__header-title">
+                    <button class="accounts__header-button table__header-button">Account Number</button>
                 </div>
 
-                <div class="accounts__header-payor">
-                    <button class="accounts__header-button accounts__header-icon">Payor</button>
+                <div class="accounts__header-payor table__header-title">
+                    <button class="accounts__header-button table__header-button">Payor</button>
                 </div>
 
-                <div class="accounts__header-balance">
-                    <button class="accounts__header-button accounts__header-icon">Working Balance</button>
+                <div class="accounts__header-balance table__header-title">
+                    <button class="accounts__header-button table__header-button">Working Balance</button>
                 </div>
             </header>
 
@@ -89,9 +87,8 @@
 
 
             </div>
-        </div>
+        </section>
 
-    </div>
 
 
 

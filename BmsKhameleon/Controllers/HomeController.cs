@@ -54,6 +54,12 @@ namespace BmsKhameleon.UI.Controllers
             return View();
         }
 
+        [Route("[action]")]
+        public IActionResult AccountOverview()
+        {
+            return View();
+        }
+
 
     }
 }
