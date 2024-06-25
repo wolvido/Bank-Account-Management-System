@@ -1,0 +1,10 @@
+﻿.account-overview__balance-deposits-section {
+    flex-basis: 43.75%;
+    width: 533px;
+
+    display:flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+}

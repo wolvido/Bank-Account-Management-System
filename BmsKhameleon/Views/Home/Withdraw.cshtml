@@ -13,7 +13,7 @@
         <form class="withdraw__form">
             <div class="withdraw__toolbar">
                 <input class="withdraw__toolbar-button button" type="submit" value="Withdraw" />
-                <button class="withdraw__toolbar-button withdraw__toolbar-button_cancel button button_cancel">Cancel</button>
+                <a class="withdraw__toolbar-button withdraw__toolbar-button_cancel button button_cancel button_link">Cancel</a>
             </div>
 
             <div class="withdraw__notice_validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields.</div>
@@ -32,7 +32,7 @@
 
             <div class="withdraw__notice_withdraw-type"> <span class="withdraw__notice-message">You are about to issue a Check — dated on </span>&nbsp;@date</div>
 
-            <div class="withdraw__form-container withdraw__form-container_cheque">
+            <fieldset class="withdraw__form-container withdraw__form-container_cheque">
 
                 <div class="withdraw__form-group form-group">
                     <label class="withdraw__form-label form-group__label">Reference Number</label>
@@ -56,13 +56,13 @@
 
                 <div class="withdraw__form-group form-group">
                     <label class="withdraw__form-label  form-group__label">Note</label>
-                    <input class="withdraw__form-input form-group__input" placeholder="Add Note" />
+                    <textarea class="withdraw__form-input form-group__input" placeholder="Add Note"></textarea>
                 </div>
 
-            </div>
+            </fieldset>
 
 
-            <div class="withdraw__form-container withdraw__form-container_cash">
+            <fieldset class="withdraw__form-container withdraw__form-container_cash">
                 <div class="withdraw__form-group form-group">
                     <label class="withdraw__form-label form-group__label">Reference Number</label>
                     <input class="withdraw__form-input form-group__input" placeholder="1" />
@@ -80,12 +80,10 @@
 
                 <div class="withdraw__form-group form-group">
                     <label class="withdraw__form-label form-group__label">Note</label>
-                    <input class="withdraw__form-input form-group__input" placeholder="Add Note" />
+                    <textarea class="withdraw__form-input form-group__input" placeholder="Add Note" ></textarea>
                 </div>
 
-            </div>
-
-
+            </fieldset>
 
         </form>
 

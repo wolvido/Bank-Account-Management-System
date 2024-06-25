@@ -5,7 +5,6 @@ namespace BmsKhameleon.UI.Controllers
 {
     public class HomeController : Controller
     {
-
         [Route("[action]")]
         public IActionResult Index()
         {

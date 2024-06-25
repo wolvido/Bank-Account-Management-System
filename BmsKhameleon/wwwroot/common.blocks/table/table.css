@@ -1,5 +1,5 @@
 ﻿.table {
-    flex-grow: 1;
+    height: 500px;
     display: flex;
     flex-direction: column;
 }

@@ -1,0 +1,8 @@
+﻿.table__item-field_controller {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    position:relative;
+}

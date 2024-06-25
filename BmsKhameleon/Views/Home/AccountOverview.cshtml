@@ -1,65 +1,245 @@
-﻿<main class="main account-overview">
+﻿@section styles{
+    <link href="~/desktop.blocks/account-overview/account-overview.css" rel="stylesheet" type="text/css" />
+}
 
-        <section class="account-overview__session-toolbar-section">
-            <section class="account-overview__session-info">
-                <div class="account-overview__session-info_date"></div>
-                <div class="account-overview__session-info_account"></div>
-            </section>
 
-            <div class="account-overview__toolbar">
-                <button class="account-overview__toolbar-button account-overview__toolbar-button_deposit">Add Cash / Check Deposit</button>
-                <button class="account-overview__toolbar-button account-overview__toolbar-button_withdraw">Add Check Issuance / Cash Withdrawal</button>
-            </div>
+<main class="main account-overview">
+
+    <section class="account-overview__toolbar-section">
+        <section class="account-overview__session-info">
+            <div class="account-overview__session-info-date">June 19, 2024</div> @* date selected sa calendar *@
+            <div class="account-overview__session-info-account"> RCBC WINZYL C OLVIDO  9039000000 </div>
         </section>
 
-        <section class="account-overview__finance-section">
-            <section class="account-overview__balance-deposits-section">
-                <section class="account-overview__balance-section">
+        <div class="account-overview__toolbar">
+            <button class="account-overview__toolbar-button account-overview__toolbar-button_deposit button">Add Cash / Check Deposit</button>
+            <button class="account-overview__toolbar-button account-overview__toolbar-button_withdraw button">Add Check Issuance / Cash Withdrawal</button>
+        </div>
+    </section>
 
-                </section>
-                <a href="palceholder" class="account-overview__back-button"> Back To Calendar </a>
-                <section class="account-overview__deposits-section">
+    <section class="account-overview__finance-section">
 
-                </section>
+        <section class="account-overview__balance-deposits-section">
+
+            <section class="account-overview__balance-section">
+                <div class="account-overview__balance-label-group">
+                    <label class="account-overview__balance-label account-overview__balance-label_working-balance">Working Balance</label>
+                    <textarea readonly class="account-overview__balance-value account-overview__balance-value_total" maxlength="25">0.00</textarea>
+                </div>
+
+                <div class="account-overview__balance-label-group">
+                    <label class="account-overview__balance-label">Total Deposits for the Day</label>
+                    <textarea readonly class="account-overview__balance-value account-overview__balance-value_deposit" maxlength="25">828,532.11</textarea>
+                </div>
+
+                <div class="account-overview__balance-label-group">
+                    <label class="account-overview__balance-label">Total Withdrawals for the Day</label>
+                    <textarea readonly class="account-overview__balance-value account-overview__balance-value_withdraw" maxlength="25">777,657.46</textarea>
+                </div>
             </section>
 
-             <section class="account-overview__withdraw-section">
-                 <section class="account-overview__withdrawal-info">
-                     <div class="account-overview__withdrawal-label">
+            <div class="account-overview__back-button-container">
+                <a href="/" class="account-overview__back-button button button_cancel button_link"> Back To Calendar </a>
+            </div>
 
-                     </div>
-                     <div class="account-overview__withdrawal-total">
-                        <div class="account-overview__withdrawal-total-cash"></div>
-                        <div class="account-overview__withdrawal-total-check"></div>
-                     </div>
-                 </section>
 
-                 <section class="account-overview__table table">
-                     <div class="account-overview__table-header table__header">
-                         <div class="table__header-title">
-                             <button class="table__header-button">
-                                 Test
-                             </button>
-                         </div>
-                         <div class="table__header-title">
-                             <button class="table__header-button">
-                                 Test
-                             </button>
-                         </div>
-                         <div class="table__header-title">
-                             <button class="table__header-button">
-                                 Test
-                             </button>
-                         </div>
 
-                     </div>
-                    <div class="account-overview__table-content">
+            <section class="account-overview__deposits-section">
+
+                <section class="account-overview__deposits-cash">
+
+                    <div class="account-overview__table-caption">
+                        <div class="account-overview__table-label">
+                            Cash Deposits
+                        </div>
+
+                        <div class="account-overview__table-total">
+                            Php 784,670.00
+                        </div>
+                    </div>
+
+                    <div class="account-overview__deposits-table table">
+
+                        <div class="account-overview__table-container table__item-container">
+                        @for (int i = 0; i < 2; i++)
+                        {
+                            <div class="account-overview__table-item table__item">
+
+                                <div class="table__item-field">
+                                    Cash Deposits
+                                </div>
+
+                                <div class="table__item-field table__item-field_controller">
+
+                                    <div class="table__item-field-label">
+                                        783,670.00
+                                    </div>
+
+                                    <div class="table__item-controls">
+
+                                        <button class="table__item-button">
+                                            <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                                        </button>
+
+                                        <button class="table__item-button">
+                                            <img class="table__item-icon" src="~/common.blocks/table/__item/delete-icon.png" />
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                    
+                            </div>
+                        }
+                        </div>
 
                     </div>
 
-                 </section>
+                </section>
 
-             </section>
+                <section class="account-overview__deposits-cheque">
+                    <div class="account-overview__table-caption">
+                        <div class="account-overview__table-label">
+                            Check Deposits
+                        </div>
+
+                        <div class="account-overview__table-total">
+                            Php 43,862.10
+                        </div>
+                    </div>
+
+                    <div class="account-overview__deposits-table table">
+
+                        <div class="account-overview__table-container table__item-container">
+                            @for (int i = 0; i < 2; i++)
+                            {
+                                <div class="account-overview__table-item table__item">
+
+                                    <div class="account-overview__item-cheque table__item-field">
+                                        2038624
+                                    </div>
+
+                                    <div class="account-overview__item-bank table__item-field">
+                                        RB Mati
+                                    </div>
+
+                                    <div class="account-overview__item-amount-deposit table__item-field table__item-field_controller">
+
+                                        <div class="table__item-field-label">
+                                            43,862.10
+                                        </div>
+
+                                        <div class="table__item-controls">
+
+                                            <button class="table__item-button">
+                                                <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                                            </button>
+
+                                            <button class="table__item-button">
+                                                <img class="table__item-icon" src="~/common.blocks/table/__item/delete-icon.png" />
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+            </section>
 
         </section>
+
+        <section class="account-overview__withdrawals-section">
+            <div class="account-overview__table-caption">
+                <div class="account-overview__table-label">
+                    Issuance & Withdrawals
+                </div>
+
+                <div class="account-overview__table-total">
+                    <div class="account-overview__withdrawals-total account-overview__withdrawals-total-value_cash"> Cash: Php 359,917.69 </div>
+                    <div class="account-overview__withdrawals-total account-overview__withdrawals-total-value_cheque"> Check: Php 417,739.77 </div>
+                </div>
+            </div>
+
+            <div class="account-overview__withdrawals-table table">
+                <header class="account-overview__table-header table__header">
+                    <div class="account-overview__header-payment table__header-title">
+                        <button class="account-overview__header-button table__header-button">
+                            Check #<br />
+                            / Cash
+                        </button>
+                    </div>
+
+                    <div class="account-overview__header-payee table__header-title">
+                        <button class="account-overview__header-button table__header-button">
+                            Payee
+                        </button>
+                    </div>
+
+                    <div class="account-overview__header-amount table__header-title">
+                        <button class="account-overview__header-button table__header-button">
+                            Amount
+                        </button>
+                    </div>
+
+                    <div class="account-overview__header-notes table__header-title">
+                        <button class="account-overview__header-button table__header-button">
+                            Notes
+                        </button>
+                    </div>
+
+                </header>
+
+                <div class="account-overview__table-container table__item-container">
+
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <div class="account-overview__table-item table__item">
+                            <div class="account-overview__item-payment table__item-field">
+                                123
+                            </div>
+
+                            <div class="account-overview__item-payee table__item-field">
+                                Alice Gou
+                            </div>
+
+                            <div class="account-overview__item-amount-withdrawal table__item-field">
+                                1,000.00
+                            </div>
+
+                            <div class="account-overview__item-notes table__item-field table__item-field_controller">
+                                <div class="account-overview__item-notes-label table__item-field-label">
+                                    POGO Payment
+                                </div>
+                                    
+                                <div class="table__item-controls">
+
+                                    <button class="table__item-button">
+                                        <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                                    </button>
+
+                                    <button class="table__item-button">
+                                        <img class="table__item-icon" src="~/common.blocks/table/__item/delete-icon.png" />
+                                    </button>
+
+                                </div>
+
+                            </div>
+                    
+                        </div>
+                    }
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
 </main>

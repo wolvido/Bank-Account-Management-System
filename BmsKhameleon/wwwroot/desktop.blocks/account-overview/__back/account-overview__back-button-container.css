@@ -1,0 +1,9 @@
+﻿.account-overview__back-button-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+/*    height: 94px;*/
+}

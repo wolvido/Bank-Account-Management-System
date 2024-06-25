@@ -52,5 +52,5 @@
 .table__header-button:after {
     position: relative;
     content: "\62";
-    top: 10%;
+    top: 11%;
 }

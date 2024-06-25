@@ -3,5 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 365px;
-    margin-top: 19px;
+    margin: 18px 0px 0px 0px;
+    padding: 0;
+    border: 0px;
 }

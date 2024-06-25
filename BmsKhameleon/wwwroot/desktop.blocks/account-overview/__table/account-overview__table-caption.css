@@ -1,5 +1,4 @@
-﻿.accounts__item-controls{
-    width: 62px;
+﻿.account-overview__table-caption {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

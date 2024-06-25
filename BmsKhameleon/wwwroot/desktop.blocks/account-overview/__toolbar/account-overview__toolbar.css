@@ -1,0 +1,10 @@
+﻿.account-overview__toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 56.25%;
+    width: 760px;
+
+    gap: 30px;
+}

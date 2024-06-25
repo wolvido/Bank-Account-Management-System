@@ -1,10 +1,5 @@
 ﻿.accounts__item-payor {
-    flex-grow: 1;
-    flex-basis: 25%;
-    padding-left: 13px;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box; /* Firefox, other Gecko */
-    box-sizing: border-box; /* Opera/IE 8+ */
 
-    font-size: 14px;
+    flex-basis: 25%;
+
 }

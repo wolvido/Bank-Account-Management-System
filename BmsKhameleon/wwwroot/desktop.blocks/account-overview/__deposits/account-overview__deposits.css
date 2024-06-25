@@ -1,0 +1,5 @@
+﻿.account-overview__deposits {
+    height: 171px;
+    display: flex;
+    flex-direction: column;
+}

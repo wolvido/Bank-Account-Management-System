@@ -1,9 +1,5 @@
 ﻿.accounts__item {
     display: flex;
     flex-direction: row;
-    background-color: #D7E4F2;
-    min-height: 50px;
-    align-items: center;
-    border: 1px solid #CFD0D7;
-    border-top: 0px;
+
 }

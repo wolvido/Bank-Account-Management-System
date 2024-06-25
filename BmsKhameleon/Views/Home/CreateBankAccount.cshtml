@@ -6,7 +6,7 @@
         <form class="create-account__form">
             <div class="create-account__toolbar">
                 <input class="create-account__toolbar-button button" type="submit" value="Create"/>
-                <button class="create-account__toolbar-button create-account__toolbar-button_cancel button button_cancel">Cancel</button>
+                <a class="create-account__toolbar-button create-account__toolbar-button_cancel button button_cancel button_link">Cancel</a>
             </div>
 
             @if (@ViewBag.HasErrors)
@@ -18,7 +18,7 @@
                 <div class="create-account__validation-errors"></div>
             }
 
-            <div class="create-account__form-container">
+            <fieldset class="create-account__form-container">
 
                 <div class="create-account__form-group form-group">
                     <label class="create-account__form-label form-group__label form-group__label_error">Bank Name </label>
@@ -50,7 +50,7 @@
                     </select>
                 </div>
 
-            </div>
+            </fieldset>
 
         </form>
 </main>

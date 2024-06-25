@@ -5,7 +5,7 @@
 <main class="main accounts">
 
         <section class="accounts__toolbar">
-            <a class="accounts__add-accounts button">
+            <a href="/" class="accounts__add-accounts button button_link">
                 Add Bank Account
             </a>
 
@@ -61,25 +61,28 @@
                 </div>
             </header>
 
-            <div class="accounts__content">
+            <div class="accounts__table-container table__item-container">
                 @for (int i = 0; i < 20; i++)
                 {
-                    <div class="accounts__item">
-                        <div class="accounts__item-bank">POGO</div>
-                        <div class="accounts__item-account">123456789</div>
-                        <div class="accounts__item-payor">Alice Gou</div>
-                        <div class="accounts__item-balance">
-                            123,456.78
-                            <div class="accounts__item-controls">
-                                <button class="accounts__item-button accounts__item-button_edit">
-                                    <img class="accounts__item-icon" src="~/desktop.blocks/accounts/__item/edit-icon.png" />
+                    <div class="accounts__item table__item">
+                        <div class="accounts__item-bank table__item-field">POGO</div>
+                        <div class="accounts__item-account table__item-field">123456789</div>
+                        <div class="accounts__item-payor table__item-field">Alice Gou</div>
+                        <div class="accounts__item-balance table__item-field table__item-field_controller">
+
+                            <div class="table__item-field-label">123,456.78</div>
+
+                            <div class="accounts__item-controls table__item-controls">
+                                <button class="accounts__item-button accounts__item-button_edit table__item-button">
+                                    <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
                                 </button>
 
-                                <button class="accounts__item-button accounts__item-button_delete">
-                                    <img class="accounts__item-icon" src="~/desktop.blocks/accounts/__item/delete-icon.png" />
+                                <button class="accounts__item-button accounts__item-button_delete table__item-button">
+                                    <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/delete-icon.png" />
                                 </button>
 
                             </div>
+
                         </div>
                     </div>
                 }
