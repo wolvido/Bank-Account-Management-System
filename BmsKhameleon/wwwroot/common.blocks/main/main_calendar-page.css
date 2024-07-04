@@ -1,0 +1,8 @@
+﻿.main_calendar-page
+{
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    height: 81vh;
+}

@@ -1,96 +1,112 @@
 ﻿@section styles {
     <link href="~/desktop.blocks/accounts/accounts.css" rel="stylesheet" type="text/css" />
+    <script src="~/desktop.blocks/accounts/accounts.js" async defer></script>
+
+
 }
 
 <main class="main accounts">
 
-        <section class="accounts__toolbar">
-            <a href="/" class="accounts__add-accounts button button_link">
-                Add Bank Account
-            </a>
 
-            <search class="accounts__search">
 
-                <form class="accounts__search-form">
-                    <button class="accounts__search-button">
-                        <img class="accounts__search-icon" src="~/desktop.blocks/accounts/__search/search.png" />
-                    </button>
-                    <input class="accounts__search-input" name="" id="" placeholder="Search">
-                </form>
+    <section class="accounts__toolbar">
+        <a href="/" class="accounts__add-accounts button button_link">
+            Add Bank Account
+        </a>
 
-                <select class="accounts__search-filter">
-                    <option value="All">Any Bank</option>
-                    <option value="RCBC"> RCBC</option>
-                    <option value="Land-Bank"> Land Bank </option>
-                    <option value="BDO"> BDO </option>
-                    <option value="BPI"> BPI </option>
-                    <option value="Metrobank"> Metrobank </option>
-                    <option value="Unionbank"> Unionbank </option>
-                    <option value="Security Bank"> Security Bank </option>
-                    <option value="PNB"> PNB </option>
-                    <option value="China Bank"> China Bank </option>
-                    <option value="Eastwest Bank"> Eastwest Bank </option>
-                    <option value="PS Bank"> PS Bank </option>
-                    <option value="Maybank"> Maybank </option>
-                    <option value="UCPB"> UCPB </option>
-                    <option value="DBP"> DBP </option>
-                    <option value="HSBC"> HSBC </option>
-                </select>
-            </search>
-        </section>
+        <search class="accounts__search">
 
-        <section class="accounts__table table">
+            <form class="accounts__search-form">
+                <button class="accounts__search-button">
+                    <img class="accounts__search-icon" src="~/desktop.blocks/accounts/__search/search.png" />
+                </button>
+                <input class="accounts__search-input" name="" id="" placeholder="Search">
+            </form>
 
-            <header class="accounts__header table__header">
-                <div class="accounts__header-bank table__header-title">
-                    <button class="accounts__header-button table__header-button">
-                        Bank
-                    </button>
-                </div>
+            <select class="accounts__search-filter">
+                <option class="accounts__search-option" value="All">&nbsp;&nbsp;&nbsp; Any Bank</option>
+                <option class="accounts__search-option" value="RCBC">&nbsp;&nbsp;&nbsp; RCBC</option>
+                <option class="accounts__search-option" value="Land-Bank">&nbsp;&nbsp;&nbsp; Land Bank </option>
+                <option class="accounts__search-option" value="BDO">&nbsp;&nbsp;&nbsp; BDO </option>
+                <option class="accounts__search-option" value="BPI">&nbsp;&nbsp;&nbsp; BPI </option>
+                <option class="accounts__search-option" value="Metrobank"> &nbsp;&nbsp;&nbsp; Metrobank </option>
+                <option class="accounts__search-option" value="Unionbank"> &nbsp;&nbsp;&nbsp; Unionbank </option>
+                <option class="accounts__search-option" value="Security Bank"> &nbsp;&nbsp;&nbsp; Security Bank </option>
+                <option class="accounts__search-option" value="PNB"> &nbsp;&nbsp;&nbsp; PNB </option>
+                <option class="accounts__search-option" value="China Bank"> &nbsp;&nbsp;&nbsp; China Bank </option>
+                <option class="accounts__search-option" value="Eastwest Bank"> &nbsp;&nbsp;&nbsp; Eastwest Bank </option>
+                <option class="accounts__search-option" value="PS Bank"> &nbsp;&nbsp;&nbsp; PS Bank </option>
+                <option class="accounts__search-option" value="Maybank"> &nbsp;&nbsp;&nbsp; Maybank </option>
+                <option class="accounts__search-option" value="UCPB"> &nbsp;&nbsp;&nbsp; UCPB </option>
+                <option class="accounts__search-option" value="DBP"> &nbsp;&nbsp;&nbsp; DBP </option>
+                <option class="accounts__search-option" value="HSBC"> &nbsp;&nbsp;&nbsp; HSBC </option>
+            </select>
+        </search>
+    </section>
 
-                <div class="accounts__header-account table__header-title">
-                    <button class="accounts__header-button table__header-button">Account Number</button>
-                </div>
+    <section class="accounts__table table">
 
-                <div class="accounts__header-payor table__header-title">
-                    <button class="accounts__header-button table__header-button">Payor</button>
-                </div>
+        <header class="accounts__header table__header">
+            <div class="accounts__header-bank table__header-title">
+                <button class="accounts__header-button table__header-button">
+                    Bank
+                </button>
+            </div>
 
-                <div class="accounts__header-balance table__header-title">
-                    <button class="accounts__header-button table__header-button">Working Balance</button>
-                </div>
-            </header>
+            <div class="accounts__header-account table__header-title">
+                <button class="accounts__header-button table__header-button">Account Number</button>
+            </div>
 
-            <div class="accounts__table-container table__item-container">
-                @for (int i = 0; i < 20; i++)
-                {
-                    <div class="accounts__item table__item">
-                        <div class="accounts__item-bank table__item-field">POGO</div>
-                        <div class="accounts__item-account table__item-field">123456789</div>
-                        <div class="accounts__item-payor table__item-field">Alice Gou</div>
-                        <div class="accounts__item-balance table__item-field table__item-field_controller">
+            <div class="accounts__header-payor table__header-title">
+                <button class="accounts__header-button table__header-button">Payor</button>
+            </div>
 
-                            <div class="table__item-field-label">123,456.78</div>
+            <div class="accounts__header-balance table__header-title">
+                <button class="accounts__header-button table__header-button">Working Balance</button>
+            </div>
+        </header>
 
-                            <div class="accounts__item-controls table__item-controls">
-                                <button class="accounts__item-button accounts__item-button_edit table__item-button">
-                                    <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
-                                </button>
+        <div class="accounts__table-container table__item-container">
+            @for (int i = 0; i < 20; i++)
+            {
+                <div class="accounts__item table__item">
+                    <div class="accounts__item-bank table__item-field">POGO</div>
+                    <div class="accounts__item-account table__item-field">@i</div>
+                    <div class="accounts__item-payor table__item-field">Alice Gou</div>
+                    <div class="accounts__item-balance table__item-field table__item-field_controller">
 
-                                <button class="accounts__item-button accounts__item-button_delete table__item-button">
-                                    <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/delete-icon.png" />
-                                </button>
+                        <div class="table__item-field-label">123,456.78</div>
 
-                            </div>
+                        <div class="accounts__item-controls table__item-controls">
+
+
+                            <button class="accounts__item-button accounts__item-button_edit table__item-button">
+                                <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                            </button>
+
+                            <button class="accounts__item-button accounts__item-button_delete table__item-button">
+                                <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/delete-icon.png" />
+                            </button>
+
 
                         </div>
+
                     </div>
-                }
 
 
+                </div>
+            }
 
+            <div class="overlay">
+                <section class="overlay__content">
+                    test
+                </section>
             </div>
-        </section>
+
+
+
+        </div>
+    </section>
 
 
 

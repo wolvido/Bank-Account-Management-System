@@ -1,0 +1,114 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    //sample data for calendar
+    var sampleTransaction1 = new
+    {
+        date = new DateTime(2024, 7, 1),
+        balance = 1000,
+        withdrawal = 100
+    };
+
+    var sampleTransaction2 = new
+    {
+        date = new DateTime(2024, 4, 2),
+        balance = 900,
+        withdrawal = 50
+    };
+
+    var sampleTransaction3 = new
+    {
+        date = new DateTime(2024, 7, 3),
+        balance = 850,
+        withdrawal = 200
+    };
+
+    var transactions = new[] { sampleTransaction1, sampleTransaction2, sampleTransaction3 };
+}
+
+@section styles {
+    <link href="~/desktop.blocks/calendar/calendar.css" rel="stylesheet" type="text/css" />
+    <script src="~/desktop.blocks/calendar/calendar.js" async defer>  </script>
+
+    <script>
+        var transactions = '@Html.Raw(System.Text.Json.JsonSerializer.Serialize(transactions))';
+    </script>
+}
+
+<main class="main main_calendar-page">
+
+    <section class="toolbar toolbar_vertical-margin main__padding ">
+        <button class="toolbar__button button"> Add Deposit</button>
+        <button class="toolbar__button button"> Add Withdrawal</button>
+        <a href="/" class="toolbar__button button button_link button_cancel"> Back to Bank Accounts</a>
+        <div class="toolbar__legend">
+            <div class="toolbar__legend-item">Total Working Balance</div>
+            <div class="toolbar__legend-item toolbar__legend-item_red">Total Issued</div>
+        </div>
+    </section>
+
+    <section class="calendar">
+        <section class="calendar__toolbar main__padding">
+            <fieldset class="calendar__select-date">
+                <label class="calendar__select-label">
+                    Select Date
+                </label>
+
+                <select class="calendar__select-month">
+                    //generate month options
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
+                    }
+                </select>
+
+                <select class="calendar__select-year">
+                    //generate year options
+                    @for (int i = DateTime.Now.Year; i >= 2000; i--)
+                    {
+                        <option value="@i"> @i</option>
+                    }
+                </select>
+
+            </fieldset>
+
+            <div class="calendar__account-number">
+                9039000000
+            </div>
+        </section>
+
+        <section class="calendar__week-header main__padding">
+            <div class="calendar__week-day">Sun</div>
+            <div class="calendar__week-day">Mon</div>
+            <div class="calendar__week-day">Tue</div>
+            <div class="calendar__week-day">Wed</div>
+            <div class="calendar__week-day">Thu</div>
+            <div class="calendar__week-day">Fri</div>
+            <div class="calendar__week-day">Sat</div>
+        </section>
+
+        <section class="calendar__date-container main__padding">
+            @*
+            <div class="calendar__date-item">
+
+                    <div class="calendar__date-day">
+                    </div>
+
+                    <div class="calendar__date-transactions">
+                        <div class="calendar__date-balance">
+                        </div>
+
+                        <div class ="calendar__date-withrawal">
+                        </div>
+
+                    </div>
+                </div>
+            *@               
+
+
+        </section>
+
+    </section>
+
+</main>

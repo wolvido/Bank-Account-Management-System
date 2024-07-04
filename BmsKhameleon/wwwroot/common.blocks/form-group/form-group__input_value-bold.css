@@ -1,0 +1,8 @@
+﻿.form-group__input_value-bold{
+
+}
+
+.form-group__input_value-bold::placeholder {
+    font-weight: 700;
+    color: black;
+}

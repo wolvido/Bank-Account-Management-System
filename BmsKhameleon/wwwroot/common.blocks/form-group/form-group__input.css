@@ -1,6 +1,6 @@
 ﻿.form-group__input {
     height: 36px;
-    padding: 0px 0px;
+    padding: 0px 12px;
     border: 1px solid #CFD0D7;
     border-radius: 2px;
 }
@@ -8,7 +8,6 @@
 .form-group__input::placeholder {
     color: #1A203D;
     opacity: 0.3;
-    padding-left: 12px;
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
 }

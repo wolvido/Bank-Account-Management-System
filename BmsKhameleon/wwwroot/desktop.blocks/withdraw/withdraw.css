@@ -4,6 +4,7 @@
 
 @import url('__notice/withdraw__notice_validation.css');
 @import url('__notice/withdraw__notice_withdraw-type.css');
+@import url('__notice/withdraw__notice.css');
 
 @import url('__control/withdraw__control.css');
 @import url('__control/withdraw__control-group.css');
@@ -14,6 +15,7 @@
 @import url('__form/withdraw__form-group.css');
 @import url('__form/withdraw__form-container_cheque.css');
 @import url('__form/withdraw__form-container_cash.css');
+@import url('__form/withdraw__form-group_radio-group.css');
 
 
 .withdraw{

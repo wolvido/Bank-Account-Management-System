@@ -1,6 +1,7 @@
-﻿.header__main{
+﻿.header__main {
     height: 100px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 50px 0px 50px;
 }

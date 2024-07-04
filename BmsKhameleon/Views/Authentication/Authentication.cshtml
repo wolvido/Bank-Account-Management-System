@@ -2,13 +2,28 @@
     <link href="~/desktop.blocks/authentication/authentication.css" rel="stylesheet" type="text/css" />
 }
 
+
+
 <main>
-    <form class="authentication page__authentication" asp-controller="Authentication" asp-action="Authentication">
+    <form class="authentication" asp-controller="Authentication" asp-action="Authentication">
+
+        <div class="authentication__error authentication__error_active">
+            Your mom Gay
+        </div>
 
         <img class="authentication__logo" src="~/desktop.blocks/authentication/BMS-Logo.png" />
 
+        <div class="authentication__header-container">
+            <header class="authentication__header">
+                Accounts Overview System
+            </header>
+            <div class="authentication__version">
+                version 0.1.0
+            </div>
+        </div>
+
         <div>
-            <fieldset class="authentication__field">
+            <fieldset class="authentication__fieldset">
                 <span class="authentication__field-details">
                     <label class="authentication__label" for="code">Access Code</label>
                     <a class="authentication__change" href="">Change?</a>

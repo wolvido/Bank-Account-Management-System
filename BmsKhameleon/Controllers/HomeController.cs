@@ -59,6 +59,12 @@ namespace BmsKhameleon.UI.Controllers
             return View();
         }
 
+        [HttpGet]
+        [Route("[action]")]
+        public IActionResult Calendar()
+        {
+            return View();
+        }
 
     }
 }

@@ -1,0 +1,12 @@
+D:\repo\BmsKhameleon\BmsKhameleon.Core\bin\Debug\net8.0\BmsKhameleon.Core.deps.json
+D:\repo\BmsKhameleon\BmsKhameleon.Core\bin\Debug\net8.0\BmsKhameleon.Core.dll
+D:\repo\BmsKhameleon\BmsKhameleon.Core\bin\Debug\net8.0\BmsKhameleon.Core.pdb
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\BmsKhameleon.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\BmsKhameleon.Core.AssemblyInfoInputs.cache
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\BmsKhameleon.Core.AssemblyInfo.cs
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\BmsKhameleon.Core.csproj.CoreCompileInputs.cache
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\BmsKhameleon.Core.sourcelink.json
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\BmsKhameleon.Core.dll
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\refint\BmsKhameleon.Core.dll
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\BmsKhameleon.Core.pdb
+D:\repo\BmsKhameleon\BmsKhameleon.Core\obj\Debug\net8.0\ref\BmsKhameleon.Core.dll

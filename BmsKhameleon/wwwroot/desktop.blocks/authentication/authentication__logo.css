@@ -1,4 +1,5 @@
 ﻿.authentication__logo {
-    width: 345px;
-    height: 103px;
+    width: 320px;
+    height: 90px;
+    object-fit: scale-down;
 }

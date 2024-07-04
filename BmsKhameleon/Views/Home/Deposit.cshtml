@@ -15,8 +15,8 @@
                 <a class="deposit__toolbar-button deposit__toolbar-button_cancel button button_cancel button_link">Cancel</a>
             </div>
 
-            <div class="deposit__notice deposit__notice_cash">
-                <div class="deposit__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields.</div>
+            <div class="deposit__notice">
+                <div class="deposit__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
                 <div class="deposit__notice-deposit-type">You are about to deposit <strong>Cash</strong> on @date</div>
             </div>
 
@@ -33,10 +33,6 @@
             </fieldset>
 
             <fieldset class="deposit__form-container deposit__form-container_cash">
-                <div class="deposit__form-group form-group">
-                    <label class="deposit__form-label form-group__label form-group__label_error">Reference Number</label>
-                    <input class="deposit__form-input form-group__input" placeholder="1" />
-                </div>
 
                 <div class="deposit__form-group form-group">
                     <label class="deposit__form-label form-group__label">Cash Deposit Date</label>
@@ -45,7 +41,28 @@
 
                 <div class="deposit__form-group form-group">
                     <label class="deposit__form-label form-group__label form-group__label_error">Cash Amount</label>
-                    <input class="deposit__form-input form-group__input" placeholder="0.00" />
+                    <input class="deposit__form-input form-group__input form-group__input_value-bold" placeholder="0.00" />
+                </div>
+
+                <div>
+                    <fieldset class="deposit__form-group deposit__form-group_radio-group radio-controls">
+                        <label class="form-group__label">Transaction Type, select one:</label>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio" name="transaction-type"/>
+                            <label class="radio-controls__label">Over-the-Counter </label>
+                        </div>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio" name="transaction-type"/>
+                            <label class="radio-controls__label">Bank Pick-up </label>
+                        </div>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio" name="transaction-type" />
+                            <label class="radio-controls__label">Online Fund Transfer </label>
+                        </div>
+                    </fieldset>
                 </div>
 
                 <div class="deposit__form-group form-group">
@@ -56,10 +73,6 @@
 
             
             <fieldset class="deposit__form-container deposit__form-container_cheque">
-                <div class="deposit__form-group form-group">
-                    <label class="deposit__form-label form-group__label form-group__label_error">Reference Number</label>
-                    <input class="deposit__form-input form-group__input" placeholder="1" />
-                </div>
 
                 <div class="deposit__form-group form-group">
                     <label class="deposit__form-label form-group__label">Check Deposit Date</label>
@@ -77,18 +90,18 @@
                 </div>
 
                 <div class="deposit__form-group form-group">
-                    <label class="deposit__form-label form-group__label form-group__label_error">Payor (Company/Supplier/Customer Name)</label>
+                    <label class="deposit__form-label form-group__label form-group__label_error">Payee (Company/Supplier/Customer Name)</label>
                     <input class="deposit__form-input form-group__input" placeholder="Office of the Vice President" />
                 </div>
 
                 <div class="deposit__form-group form-group">
                     <label class="deposit__form-label form-group__label form-group__label_error">Check Amount</label>
-                    <input class="deposit__form-input form-group__input" placeholder="0.00" />
+                <input class="deposit__form-input form-group__input form-group__input_value-bold" placeholder="0.00" />
                 </div>
 
                 <div class="deposit__form-group form-group">
                     <label class="deposit__form-label form-group__label form-group__label_error">Note</label>
-                    <input class="deposit__form-input form-group__input" placeholder="Add Note" />
+                    <textarea class="deposit__form-input form-group__input" placeholder="Add Note"></textarea>
                 </div>
 
             </fieldset>
