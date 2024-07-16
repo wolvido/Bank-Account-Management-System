@@ -14,7 +14,9 @@
     });
 
     deleteForm.find("*button").on("click", function () {
+
         deleteForm.hide();
+
     });
 
 

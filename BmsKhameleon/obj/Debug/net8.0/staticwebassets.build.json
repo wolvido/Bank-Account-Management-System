@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BOKZMK3O+ijpg4A6RuQCB4FlD1R3shWBMQLQfELvBYU=",
+  "Hash": "viPf4i3GCzIpEZ3AVth/sz75eeKOpbNpxthuFVeBSLo=",
   "Source": "BmsKhameleon.UI",
   "BasePath": "_content/BmsKhameleon.UI",
   "Mode": "Default",
@@ -908,6 +908,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls__group.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__group_column.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/radio-controls/radio-controls__group_column.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls__group_column.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css",

@@ -137,10 +137,18 @@
     });
 
     //popup control
+    let depositForm = $(".calendar__overlay-deposit");
+    let withdrawForm = $(".calendar__overlay-withdraw");
+
     $(".calendar__add-deposit").on("click", function () {
-        $(".calendar__overlay").showFlex();
+        depositForm.showFlex();
+        withdrawForm.detach();
+        $("body").append(depositForm);
     });
 
-
-
+    $(".calendar__add-withdrawal").on("click", function () {
+        withdrawForm.showFlex();
+        depositForm.detach();
+        $("body").append(withdrawForm);
+    });
 });

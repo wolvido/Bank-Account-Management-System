@@ -36,6 +36,7 @@
 @import url('radio-controls/radio-controls__group.css');
 @import url('radio-controls/radio-controls__label.css');
 @import url('radio-controls/radio-controls__radio.css');
+@import url('radio-controls/radio-controls__label-group.css');
 
 @import url('table/table.css');
 @import url('table/__header/table__header.css');

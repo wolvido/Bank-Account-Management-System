@@ -36,7 +36,7 @@
         overlayEdit.showFlex();
         editForm.showFlex();
 
-
+        //clear all input fields when adding new account
         editForm.find(".accounts__modify-bank").val("");
         editForm.find(".accounts__modify-account-number").val("");
         editForm.find(".accounts__modify-balance").val("");
@@ -47,16 +47,16 @@
         editForm.find(".accounts__button_delete").hide();
     });
 
-    $(".accounts__modify-account-type").on("change", function () {
+    //$(".accounts__modify-account-type").on("change", function () {
 
-        if ($(this).val() == "Joint Account") {
-            $(".accounts__modify-form-group_joint").showFlex();
-        }
-        else {
-            $(".accounts__modify-form-group_joint").hide();
-        }
+    //    if ($(this).val() == "Joint Account") {
+    //        $(".accounts__modify-form-group_joint").showFlex();
+    //    }
+    //    else {
+    //        $(".accounts__modify-form-group_joint").hide();
+    //    }
 
-    });
+    //});
 
 
 });

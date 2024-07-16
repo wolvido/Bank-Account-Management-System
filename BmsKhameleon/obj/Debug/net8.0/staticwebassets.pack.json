@@ -189,6 +189,10 @@
       "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__group.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__group_column.css",
+      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__group_column.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css",
       "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__label.css"
     },
