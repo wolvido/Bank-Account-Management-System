@@ -1,5 +1,10 @@
 ﻿$(function () {
 
+    $.fn.showFlex = function() {
+        this.css('display','flex');
+    }
+
+    //calendar control
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
 
@@ -124,12 +129,18 @@
 
     populateCalendar(transactions);
 
-
     $(".calendar__select-date").find('*').on("change", function () {
 
         dePopulateCalendar();
         populateCalendar(transactions);
 
     });
+
+    //popup control
+    $(".calendar__add-deposit").on("click", function () {
+        $(".calendar__overlay").showFlex();
+    });
+
+
 
 });

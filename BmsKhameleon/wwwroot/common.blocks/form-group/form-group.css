@@ -1,6 +1,5 @@
 ﻿.form-group {
     height: 62px;
-    width: 365px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

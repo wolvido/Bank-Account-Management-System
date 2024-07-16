@@ -1,0 +1,12 @@
+﻿.transaction-form__notice-validation {
+
+}
+
+.transaction-form__notice-validation em {
+    color: red;
+    font-style: inherit;
+}
+
+.transaction-form__notice-validation em::before {
+    content: "*";
+}

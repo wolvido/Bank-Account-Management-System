@@ -1,0 +1,5 @@
+﻿.transaction-form__control {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

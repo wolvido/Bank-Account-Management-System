@@ -7,7 +7,6 @@
 @import url('__header/accounts__header-button.css');
 @import url('__header/accounts__header-payor.css');
 
-
 @import url('__item/accounts__item.css');
 @import url('__item/accounts__item-account.css');
 @import url('__item/accounts__item-balance.css');
@@ -24,8 +23,12 @@
 
 @import url('__table/accounts__table.css');
 @import url('__toolbar/accounts__toolbar.css');
-@import url('__table/accounts__table-container.css');
 
+@import url('__small-button/accounts__small-button.css');
+
+@import url('__delete/accounts__delete.css');
+
+@import url('__modify/accounts__modify-form-group_joint.css');
 
 
 .accounts {

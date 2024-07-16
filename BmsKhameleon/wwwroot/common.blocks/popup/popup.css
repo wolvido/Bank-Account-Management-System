@@ -1,0 +1,9 @@
+﻿.popup {
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    min-width: 500px;
+    border-radius: 5px;
+    border: 0px solid #FFF;
+    gap: 20px;
+}

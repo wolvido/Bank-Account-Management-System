@@ -6,22 +6,22 @@
     var sampleTransaction1 = new
     {
         date = new DateTime(2024, 7, 1),
-        balance = 1000,
+        balance = 2000,  //Edit initial balance
         withdrawal = 100
     };
 
     var sampleTransaction2 = new
     {
-        date = new DateTime(2024, 4, 2),
-        balance = 900,
+        date = new DateTime(2024, 7, 2),
+        balance = sampleTransaction1.balance - sampleTransaction1.withdrawal,
         withdrawal = 50
     };
 
     var sampleTransaction3 = new
     {
         date = new DateTime(2024, 7, 3),
-        balance = 850,
-        withdrawal = 200
+        balance = sampleTransaction2.balance - sampleTransaction2.withdrawal, //Edit current balance
+        withdrawal = 0
     };
 
     var transactions = new[] { sampleTransaction1, sampleTransaction2, sampleTransaction3 };
@@ -29,7 +29,11 @@
 
 @section styles {
     <link href="~/desktop.blocks/calendar/calendar.css" rel="stylesheet" type="text/css" />
-    <script src="~/desktop.blocks/calendar/calendar.js" async defer>  </script>
+    <script src="~/desktop.blocks/calendar/calendar.js" async defer></script>
+    <script src="~/common.blocks/overlay/overlay.js" async defer></script>
+    <script src="~/common.blocks/transaction-form/transaction-form.js" async defer></script>
+    <script src="~/common.blocks/form-group/form-group__input_date.js" async></script>
+
 
     <script>
         var transactions = '@Html.Raw(System.Text.Json.JsonSerializer.Serialize(transactions))';
@@ -39,7 +43,7 @@
 <main class="main main_calendar-page">
 
     <section class="toolbar toolbar_vertical-margin main__padding ">
-        <button class="toolbar__button button"> Add Deposit</button>
+        <button class="toolbar__button button calendar__add-deposit"> Add Deposit</button>
         <button class="toolbar__button button"> Add Withdrawal</button>
         <a href="/" class="toolbar__button button button_link button_cancel"> Back to Bank Accounts</a>
         <div class="toolbar__legend">
@@ -89,7 +93,7 @@
         </section>
 
         <section class="calendar__date-container main__padding">
-            @*
+            
             <div class="calendar__date-item">
 
                     <div class="calendar__date-day">
@@ -104,11 +108,116 @@
 
                     </div>
                 </div>
-            *@               
-
-
+             
         </section>
 
     </section>
 
 </main>
+
+
+
+<section class="calendar__overlay overlay">
+    <form class="transaction-form popup">
+        <header class="popup__header">
+            Add Deposit
+        </header>
+
+        <div class="popup__content transaction-form__notice ">
+            <div class="transaction-form__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
+            <div class="transaction-form__notice-transaction-type">You are about to deposit <strong>Cash</strong> on @sampleTransaction1.date</div>
+        </div>
+
+        <fieldset class="popup__content radio-controls transaction-form__control">
+            <div class="radio-controls__group">
+                <input class="transaction-form__radio-cash radio-controls__radio" name="deposit-type" type="radio" value="cash" checked />
+                <label class="radio-controls__label">Cash Deposit</label>
+            </div>
+
+            <div class="radio-controls__group">
+                <input class="transaction-form__radio-cheque radio-controls__radio" name="deposit-type" type="radio" value="check" />
+                <label class="radio-controls__label">Check Deposit</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="popup__content transaction-form__fieldset transaction-form__fieldset_cash">
+
+            <div class="form-group">
+                <label class="form-group__label">Cash Deposit Date</label>
+                <input class="form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label form-group__label_error">Cash Amount</label>
+                <input class="form-group__input form-group__input_value-bold" placeholder="0.00" />
+            </div>
+
+            <div>
+                <fieldset class="form-group radio-controls">
+                    <label class="form-group__label">Transaction Type, select one:</label>
+
+                    <div class="radio-controls__group">
+                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
+                        <label class="radio-controls__label">Over-the-Counter </label>
+                    </div>
+
+                    <div class="radio-controls__group">
+                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
+                        <label class="radio-controls__label">Bank Pick-up </label>
+                    </div>
+
+                    <div class="radio-controls__group">
+                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
+                        <label class="radio-controls__label">Online Fund Transfer </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label form-group__label_error">Note</label>
+                <textarea class="form-group__input" placeholder="Add Note"></textarea>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="popup__content transaction-form__fieldset transaction-form__fieldset_cheque">
+
+            <div class="form-group">
+                <label class="form-group__label">Check Deposit Date</label>
+                <input class="form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label form-group__label_error">Check Bank Name</label>
+                <input class="form-group__input" placeholder="LANDBANK" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label form-group__label_error">Check Number</label>
+                <input class="form-group__input" placeholder="1234567890" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label form-group__label_error">Payee (Company/Supplier/Customer Name)</label>
+                <input class="form-group__input" placeholder="Office of the Vice President" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label form-group__label_error">Check Amount</label>
+                <input class="form-group__input form-group__input_value-bold" placeholder="0.00" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label form-group__label_error">Note</label>
+                <textarea class="form-group__input" placeholder="Add Note"></textarea>
+            </div>
+
+        </fieldset>
+
+        <footer class="popup__footer">
+            <input type="submit" class="button " value="Add" />
+            <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
+        </footer>
+
+    </form>
+</section>

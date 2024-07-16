@@ -10,6 +10,8 @@
     <Folder Include="Filters\" />
     <Folder Include="Middleware\" />
     <Folder Include="StartupExtensions\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Views\Shared\Components\" />
     <Folder Include="wwwroot\exps\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
