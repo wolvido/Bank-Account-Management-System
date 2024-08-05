@@ -1,8 +1,8 @@
 ﻿$(function () {
 
-    $.fn.showFlex = function() {
-        this.css('display','flex');
-    }
+    $.fn.showFlex = function () {
+        this.css('display', 'flex');
+    };
 
     //calendar control
     let currentMonth = new Date().getMonth();
@@ -10,7 +10,7 @@
 
     $(".calendar__select-month").val(currentMonth + 1); //set dropdown default to current month
 
-    let transactions = JSON.parse(window.transactions);
+    let transactions = JSON.parse(window.transactions); //inject data here
 
     function calendarDay(day, adjacentMonths = false, balance = '0.00', withdrawal = '0.00') {
         let fadedDesign;
@@ -118,7 +118,7 @@
         let daysInNextMonth = 32 - new Date(nextYear, nextMonth, 32).getDate();
 
         for (day = 1; calendarContainer.children().length < 42; day++) {
-            calendarContainer.append(calendarDay(day, true));
+            calendarContainer.append( calendarDay(day, true) );
         };
 
     };
@@ -136,19 +136,9 @@
 
     });
 
-    //popup control
-    let depositForm = $(".calendar__overlay-deposit");
-    let withdrawForm = $(".calendar__overlay-withdraw");
-
-    $(".calendar__add-deposit").on("click", function () {
-        depositForm.showFlex();
-        withdrawForm.detach();
-        $("body").append(depositForm);
+    //account info control
+    $(".calendar__account-info-button").on("click", function () {
+        $(".calendar__overlay-account-info").showFlex();
     });
 
-    $(".calendar__add-withdrawal").on("click", function () {
-        withdrawForm.showFlex();
-        depositForm.detach();
-        $("body").append(withdrawForm);
-    });
 });

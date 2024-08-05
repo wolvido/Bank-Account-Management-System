@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\common.blocks\transaction-controller\__button\transaction-controller__button_edit.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Filters\" />
     <Folder Include="Middleware\" />
     <Folder Include="StartupExtensions\" />
@@ -14,6 +18,10 @@
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="wwwroot\exps\" />
     <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BmsKhameleon.Core\BmsKhameleon.Core.csproj" />
   </ItemGroup>
 
 </Project>

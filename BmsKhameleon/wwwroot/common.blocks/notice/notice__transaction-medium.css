@@ -1,0 +1,10 @@
+﻿.notice__transaction-medium
+{
+
+}
+
+.notice__transaction-medium em
+{
+    color: red;
+    font-style: inherit;
+}

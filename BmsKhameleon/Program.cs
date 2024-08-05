@@ -1,3 +1,5 @@
+using BmsKhameleon.Core.ServiceContracts;
+using BmsKhameleon.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,10 @@ builder.Services.AddHsts(options =>
     options.MaxAge = TimeSpan.FromDays(365);
 });
 
+//services
+builder.Services.AddSingleton<IAccountsService, AccountsService>();
+
+//build
 var app = builder.Build();
 
 app.MapControllers();

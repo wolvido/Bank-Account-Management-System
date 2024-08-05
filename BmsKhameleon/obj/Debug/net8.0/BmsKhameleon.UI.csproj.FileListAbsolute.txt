@@ -27,3 +27,7 @@ D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\BmsKhameleon.UI.pdb
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\BmsKhameleon.UI.genruntimeconfig.cache
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\ref\BmsKhameleon.UI.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\BmsKhameleon.UI.sourcelink.json
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Debug\net8.0\BmsKhameleon.Core.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Debug\net8.0\BmsKhameleon.Core.pdb
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\BmsKhameleon.UI.csproj.AssemblyReference.cache
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\BmsKhame.06FC9082.Up2Date

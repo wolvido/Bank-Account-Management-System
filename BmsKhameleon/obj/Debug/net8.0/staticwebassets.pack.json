@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\common.blocks\\button\\button_green.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\button\\button_large.css",
+      "PackagePath": "staticwebassets\\common.blocks\\button\\button_large.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\button\\button_link.css",
       "PackagePath": "staticwebassets\\common.blocks\\button\\button_link.css"
     },
@@ -121,6 +125,18 @@
       "PackagePath": "staticwebassets\\common.blocks\\main\\main_calendar-page.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\notice\\notice.css",
+      "PackagePath": "staticwebassets\\common.blocks\\notice\\notice.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\notice\\notice__transaction-medium.css",
+      "PackagePath": "staticwebassets\\common.blocks\\notice\\notice__transaction-medium.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\notice\\notice__validation.css",
+      "PackagePath": "staticwebassets\\common.blocks\\notice\\notice__validation.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\overlay\\overlay.css",
       "PackagePath": "staticwebassets\\common.blocks\\overlay\\overlay.css"
     },
@@ -189,16 +205,16 @@
       "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__group.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__group_column.css",
-      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__group_column.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label-group.css",
+      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__label-group.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css",
       "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__label.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__radio.css",
-      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__radio.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__radio-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\radio-controls\\radio-controls__radio-input.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__header\\fonts\\table__header-button.eot",
@@ -273,72 +289,208 @@
       "PackagePath": "staticwebassets\\common.blocks\\table\\table.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\toolbar\\__button\\toolbar__button.css",
-      "PackagePath": "staticwebassets\\common.blocks\\toolbar\\__button\\toolbar__button.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__button\\transaction-controller__button.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\toolbar\\__legend\\toolbar__legend-item.css",
-      "PackagePath": "staticwebassets\\common.blocks\\toolbar\\__legend\\toolbar__legend-item.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_deposit.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_deposit.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\toolbar\\__legend\\toolbar__legend-item_red.css",
-      "PackagePath": "staticwebassets\\common.blocks\\toolbar\\__legend\\toolbar__legend-item_red.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_edit.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_edit.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\toolbar\\__legend\\toolbar__legend.css",
-      "PackagePath": "staticwebassets\\common.blocks\\toolbar\\__legend\\toolbar__legend.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_withdraw.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_withdraw.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\toolbar\\_vertical-margin\\toolbar_vertical-margin.css",
-      "PackagePath": "staticwebassets\\common.blocks\\toolbar\\_vertical-margin\\toolbar_vertical-margin.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-amount-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-amount-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\toolbar\\toolbar.css",
-      "PackagePath": "staticwebassets\\common.blocks\\toolbar\\toolbar.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-date-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-date-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__control\\transaction-form__control.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__control\\transaction-form__control.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-note-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-note-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__fieldset\\transaction-form__fieldset.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__fieldset\\transaction-form__fieldset.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-transaction.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-transaction.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__fieldset\\transaction-form__fieldset_cash.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__fieldset\\transaction-form__fieldset_cash.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-amount-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-amount-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__fieldset\\transaction-form__fieldset_cheque.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__fieldset\\transaction-form__fieldset_cheque.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-bank-name-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-bank-name-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__notice\\transaction-form__notice-transaction-type.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__notice\\transaction-form__notice-transaction-type.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-date-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-date-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__notice\\transaction-form__notice-validation.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__notice\\transaction-form__notice-validation.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-note-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-note-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__notice\\transaction-form__notice.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__notice\\transaction-form__notice.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-number-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-number-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__radio\\transaction-form__radio-cash.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__radio\\transaction-form__radio-cash.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-payee-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__cheque\\transaction-controller__cheque-payee-input.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\__radio\\transaction-form__radio-cheque.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\__radio\\transaction-form__radio-cheque.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__currency-type\\transaction-controller__currency-type.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__currency-type\\transaction-controller__currency-type.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\transaction-form.css",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\transaction-form.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-amount.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-amount.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-form\\transaction-form.js",
-      "PackagePath": "staticwebassets\\common.blocks\\transaction-form\\transaction-form.js"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-bank-name.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-bank-name.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-currency-type.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-currency-type.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-date.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-date.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note_invisible.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note_invisible.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-payee.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-payee.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-transaction-type.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-transaction-type.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_cash.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_cash.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_cheque.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_cheque.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_deposit.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_deposit.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_withdraw.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_withdraw.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__item\\transaction-controller__item.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__item\\transaction-controller__item.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay_deposit.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay_deposit.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay_withdraw.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay_withdraw.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_deposit.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_deposit.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_withdraw.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_withdraw.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_bank-pick-up.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_bank-pick-up.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_cash.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_cash.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_cheque.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_cheque.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_online-transfer.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_online-transfer.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_over-the-counter.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_over-the-counter.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__transaction-type\\transaction-controller__transaction-medium.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\__transaction-type\\transaction-controller__transaction-medium.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\transaction-controller.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\transaction-controller.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\transaction-controller.js",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-controller\\transaction-controller.js"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__button\\transaction-toolbar__button.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\__button\\transaction-toolbar__button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__inner\\transaction-toolbar__inner.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\__inner\\transaction-toolbar__inner.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item_red.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item_red.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\_vertical-margin\\transaction-toolbar_vertical-margin.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\_vertical-margin\\transaction-toolbar_vertical-margin.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\transaction-toolbar.css",
+      "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\transaction-toolbar.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__back\\account-overview__back-button-container.css",
@@ -503,6 +655,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\account-overview.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\account-overview.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\account-overview.js",
+      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\account-overview.js"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css",
@@ -673,8 +829,12 @@
       "PackagePath": "staticwebassets\\desktop.blocks\\authentication\\authentication__version.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__account-number\\calendar__account-number.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\calendar\\__account-number\\calendar__account-number.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__account\\calendar__account-info-button.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\calendar\\__account\\calendar__account-info-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__account\\info-icon.png",
+      "PackagePath": "staticwebassets\\desktop.blocks\\calendar\\__account\\info-icon.png"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-balance.css",

@@ -1,8 +1,0 @@
-﻿@import url('__button/toolbar__button.css');
-
-.toolbar{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
-}

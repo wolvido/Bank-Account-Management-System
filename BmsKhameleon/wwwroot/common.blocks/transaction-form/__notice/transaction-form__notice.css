@@ -1,9 +1,0 @@
-﻿.transaction-form__notice {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: #434C52;
-    font-size: 14px;
-    font-weight: 600;
-    gap: 0px;
-}

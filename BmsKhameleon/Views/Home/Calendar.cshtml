@@ -1,4 +1,5 @@
 ﻿@using System.Globalization
+@using BmsKhameleon.Core.Enums
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -30,55 +31,59 @@
 @section styles {
     <link href="~/desktop.blocks/calendar/calendar.css" rel="stylesheet" type="text/css" />
     <script src="~/common.blocks/form-group/form-group__input_date.js" async></script>
+    <script src="~/common.blocks/transaction-controller/transaction-controller.js" async defer></script>
     <script src="~/desktop.blocks/calendar/calendar.js" async defer></script>
     <script src="~/common.blocks/overlay/overlay.js" async defer></script>
-    <script src="~/common.blocks/transaction-form/transaction-form.js" async defer></script>
+
 
     <script>
         var transactions = '@Html.Raw(System.Text.Json.JsonSerializer.Serialize(transactions))';
     </script>
 }
 
-<main class="main main_calendar-page">
+<main class="main main_calendar-page transaction-controller">
 
-    <section class="toolbar toolbar_vertical-margin main__padding ">
-        <button class="toolbar__button button calendar__add-deposit"> Add Deposit</button>
-        <button class="toolbar__button button calendar__add-withdrawal"> Add Withdrawal</button>
-        <a href="/" class="toolbar__button button button_link button_cancel"> Back to Bank Accounts</a>
-        <div class="toolbar__legend">
-            <div class="toolbar__legend-item">Total Working Balance</div>
-            <div class="toolbar__legend-item toolbar__legend-item_red">Total Issued</div>
+    <section class="transaction-toolbar transaction-toolbar_vertical-margin main__padding ">
+        <div class="transaction-toolbar__inner">
+            <button class="button button_large transaction-controller__button_deposit"> Add Deposit</button>
+            <button class="button button_large transaction-controller__button transaction-controller__button_withdraw"> Add Withdrawal</button>
         </div>
+
+        <div class="transaction-toolbar__legend">
+            <div class="transaction-toolbar__legend-item">Total Working Balance</div>
+            <div class="transaction-toolbar__legend-item transaction-toolbar__legend-item_red">Total Issued</div>
+        </div>
+
     </section>
 
     <section class="calendar">
         <section class="calendar__toolbar main__padding">
-            <fieldset class="calendar__select-date">
-                <label class="calendar__select-label">
-                    Select Date
-                </label>
 
-                <select class="calendar__select-month">
-                    //generate month options
-                    @for (int i = 1; i <= 12; i++)
-                    {
-                        <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
-                    }
-                </select>
+                <form class="calendar__select-date">
+                    <label class="calendar__select-label">
+                        Select Date
+                    </label>
+                 
+                    <select class="calendar__select-month">
+                        //generate month options
+                        @for (int i = 1; i <= 12; i++)
+                        {
+                            <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
+                        }
+                    </select>
 
-                <select class="calendar__select-year">
-                    //generate year options
-                    @for (int i = DateTime.Now.Year; i >= 2000; i--)
-                    {
-                        <option value="@i"> @i</option>
-                    }
-                </select>
+                    <select class="calendar__select-year">
+                        //generate year options
+                        @for (int i = DateTime.Now.Year; i >= 2000; i--)
+                        {
+                            <option value="@i"> @i</option>
+                        }
+                    </select>
+                </form>
 
-            </fieldset>
+            <button class="calendar__account-info-button">
 
-            <div class="calendar__account-number">
-                9039000000
-            </div>
+            </button>
         </section>
 
         <section class="calendar__week-header main__padding">
@@ -110,210 +115,239 @@
              
         </section>
 
+
+
+    </section>
+
+    <section class="overlay transaction-controller__overlay transaction-controller__overlay_deposit">
+        <form class="popup">
+            <header class="popup__header">
+                Add Deposit
+            </header>
+
+            <div class="popup__content notice">
+                <div class="notice__validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
+                <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to deposit <strong>Cash</strong> on @DateTime.Now</div>
+            </div>
+
+            <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_deposit">
+
+                <div class="radio-controls__group">
+                    <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cash" name="deposit-type" type="radio" value="Cash" checked />
+                    <label class="radio-controls__label">Cash Deposit</label>
+                </div>
+
+                <div class="radio-controls__group">
+                    <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cheque" name="deposit-type" type="radio" value="Cheque" />
+                    <label class="radio-controls__label">Check Deposit</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_deposit transaction-controller__fieldset_cash">
+
+                <div class="form-group">
+                    <label class="form-group__label">Cash Deposit Date</label>
+                    <input class="form-group__input form-group__input_date transaction-controller__cash-date-input" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label form-group__label_error">Cash Amount</label>
+                    <input class="form-group__input form-group__input_value-bold" placeholder="0.00" />
+                </div>
+
+                <div>
+                    <fieldset class="form-group radio-controls">
+                        <label class="form-group__label">Transaction Type, select one:</label>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio-input" name="transaction-type" />
+                            <label class="radio-controls__label">Over-the-Counter </label>
+                        </div>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio-input" name="transaction-type" />
+                            <label class="radio-controls__label">Bank Pick-up </label>
+                        </div>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio-input" name="transaction-type" />
+                            <label class="radio-controls__label">Online Fund Transfer </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label form-group__label_error">Note</label>
+                    <textarea class="form-group__input" placeholder="Add Note"></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_deposit transaction-controller__fieldset_cheque">
+
+                <div class="form-group">
+                    <label class="form-group__label">Check Deposit Date</label>
+                    <input class="form-group__input form-group__input_date transaction-controller__cheque-date-input" type="date" data-date="" data-date-format="ll" value="2024-08-11">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label form-group__label_error">Check Bank Name</label>
+                    <input class="form-group__input" placeholder="LANDBANK" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label form-group__label_error">Check Number</label>
+                    <input class="form-group__input" placeholder="1234567890" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label form-group__label_error">Payee (Company/Supplier/Customer Name)</label>
+                    <input class="form-group__input" placeholder="Office of the Vice President" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label form-group__label_error">Check Amount</label>
+                    <input class="form-group__input form-group__input_value-bold" placeholder="0.00" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label form-group__label_error">Note</label>
+                    <textarea class="form-group__input" placeholder="Add Note"></textarea>
+                </div>
+
+            </fieldset>
+
+            <footer class="popup__footer">
+                <input type="submit" class="button " value="Add" />
+                <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
+            </footer>
+
+        </form>
+    </section>
+
+    <section class="overlay transaction-controller__overlay transaction-controller__overlay_withdraw">
+        <form class="popup">
+
+            <header class="popup__header">
+                Add Withdrawal
+            </header>
+
+            <div class="popup__content notice ">
+                <div class="notice__validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
+                <div class="notice__transaction-medium transaction-controller__transaction-medium"> You are about to Issue <strong>Cash</strong> on @DateTime.Now </div>
+            </div>
+
+            <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_withdraw">
+                <div class="radio-controls__group">
+                    <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cash" name="withdraw-type" type="radio" value="Cash" checked />
+                    <label class="radio-controls__label">Cash Withdrawal</label>
+                </div>
+
+                <div class="radio-controls__group">
+                    <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cheque" name="withdraw-type" type="radio" value="Cheque" />
+                    <label class="radio-controls__label">Issue Check</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_withdraw transaction-controller__fieldset_cheque">
+
+                <div class="form-group">
+                    <label class="form-group__label">Check Issue Date</label>
+                    <input class="form-group__input form-group__input_date transaction-controller__cheque-date-input" type="date" data-date="" data-date-format="ll" value="2024-08-11" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label">Check Number</label>
+                    <input class="form-group__input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label">Payee (Company/Supplier/Customer Name)</label>
+                    <input class="form-group__input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label">Check Issuance Amount</label>
+                    <input class="form-group__input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label">Note</label>
+                    <textarea class="form-group__input"></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_withdraw transaction-controller__fieldset_cash">
+
+                <div class="form-group">
+                    <label class="form-group__label">Cash Withdraw Date</label>
+                    <input class="form-group__input form-group__input_date transaction-controller__cash-date-input" type="date" data-date="" data-date-format="ll" value="2024-08-11" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label">Cash Withdraw Amount</label>
+                    <input class="form-group__input" />
+                </div>
+
+                <div>
+                    <fieldset class="form-group radio-controls">
+                        <label class="form-group__label">Transaction Type, select one:</label>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio-input" name="transaction-type" />
+                            <label class="radio-controls__label">Over-the-Counter </label>
+                        </div>
+
+                        <div class="radio-controls__group">
+                            <input type="radio" class="radio-controls__radio-input" name="transaction-type" />
+                            <label class="radio-controls__label">Online Fund Transfer</label>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group__label">Note</label>
+                    <textarea class="form-group__input"></textarea>
+                </div>
+
+            </fieldset>
+
+            <footer class="popup__footer">
+                <input type="submit" class="button " value="Add" />
+                <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
+            </footer>
+        </form>
+
+    </section>
+
+    <section class="calendar__overlay-account-info overlay">
+        <div class="calendar__account-info popup">
+            <header class="popup__header">
+                Bank Account Information
+            </header>
+
+            <ul class="popup__content">
+                <li>Created by Alias: WINZYL C OLVIDO</li>
+                <li>Date Created on System: July 01, 2024</li>
+                <li>Bank Account Visibility: Shared</li>
+                <li>Initial Balance Enrolled Date: July 01, 2024</li>
+                <li>Account Name: WINZYL C OLVIDO</li>
+                <li>Account Number: 9039000000 </li>
+                <li>Account Type: Savings</li>
+                <li>Bank Name: LANDBANK </li>
+                <li>Branch of Account: LANDBANK - CEBU</li>
+            </ul>
+
+            <footer class="popup__footer">
+                <button type="button" class="button  button_cancel overlay__cancel">Close</button>
+            </footer>
+
+        </div>
     </section>
 
 </main>
 
 
 
-<section class="calendar__overlay-deposit overlay">
-    <form class="transaction-form popup">
-        <header class="popup__header">
-            Add Deposit
-        </header>
-
-        <div class="popup__content transaction-form__notice ">
-            <div class="transaction-form__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
-            <div class="transaction-form__notice-transaction-type">You are about to deposit <strong>Cash</strong> on @sampleTransaction1.date</div>
-        </div>
-
-        <fieldset class="popup__content radio-controls transaction-form__control">
-            <div class="radio-controls__group">
-                <input class="transaction-form__radio-cash radio-controls__radio" name="deposit-type" type="radio" value="cash" checked />
-                <label class="radio-controls__label">Cash Deposit</label>
-            </div>
-
-            <div class="radio-controls__group">
-                <input class="transaction-form__radio-cheque radio-controls__radio" name="deposit-type" type="radio" value="check" />
-                <label class="radio-controls__label">Check Deposit</label>
-            </div>
-        </fieldset>
-
-        <fieldset class="popup__content transaction-form__fieldset transaction-form__fieldset_cash">
-
-            <div class="form-group">
-                <label class="form-group__label">Cash Deposit Date</label>
-                <input class="form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label form-group__label_error">Cash Amount</label>
-                <input class="form-group__input form-group__input_value-bold" placeholder="0.00" />
-            </div>
-
-            <div>
-                <fieldset class="form-group radio-controls">
-                    <label class="form-group__label">Transaction Type, select one:</label>
-
-                    <div class="radio-controls__group">
-                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
-                        <label class="radio-controls__label">Over-the-Counter </label>
-                    </div>
-
-                    <div class="radio-controls__group">
-                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
-                        <label class="radio-controls__label">Bank Pick-up </label>
-                    </div>
-
-                    <div class="radio-controls__group">
-                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
-                        <label class="radio-controls__label">Online Fund Transfer </label>
-                    </div>
-                </fieldset>
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label form-group__label_error">Note</label>
-                <textarea class="form-group__input" placeholder="Add Note"></textarea>
-            </div>
-
-        </fieldset>
-
-        <fieldset class="popup__content transaction-form__fieldset transaction-form__fieldset_cheque">
-
-            <div class="form-group">
-                <label class="form-group__label">Check Deposit Date</label>
-                <input class="form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11">
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label form-group__label_error">Check Bank Name</label>
-                <input class="form-group__input" placeholder="LANDBANK" />
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label form-group__label_error">Check Number</label>
-                <input class="form-group__input" placeholder="1234567890" />
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label form-group__label_error">Payee (Company/Supplier/Customer Name)</label>
-                <input class="form-group__input" placeholder="Office of the Vice President" />
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label form-group__label_error">Check Amount</label>
-                <input class="form-group__input form-group__input_value-bold" placeholder="0.00" />
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label form-group__label_error">Note</label>
-                <textarea class="form-group__input" placeholder="Add Note"></textarea>
-            </div>
-
-        </fieldset>
-
-        <footer class="popup__footer">
-            <input type="submit" class="button " value="Add" />
-            <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
-        </footer>
-
-    </form>
-</section>
-
-<section class="calendar__overlay-withdraw overlay">
-    <form class="transaction-form popup">
-
-        <header class="popup__header">
-            Add Withdrawal
-        </header>
-
-        <div class="popup__content transaction-form__notice ">
-            <div class="transaction-form__notice-validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
-            <div class="transaction-form__notice-transaction-type">You are about to Issue a <strong>Check</strong> on @sampleTransaction1.date</div>
-        </div>
-
-        <fieldset class="popup__content radio-controls transaction-form__control">
-            <div class="radio-controls__group">
-                <input class="transaction-form__radio-cash radio-controls__radio" name="withdraw-type" type="radio" value="cash" checked />
-                <label class="radio-controls__label">Cash Withdrawal</label>
-            </div>
-
-            <div class="radio-controls__group">
-                <input class="transaction-form__radio-cheque radio-controls__radio" name="withdraw-type" type="radio" value="check" />
-                <label class="radio-controls__label">Issue Check</label>
-            </div>
-        </fieldset>
-
-        <fieldset class="popup__content transaction-form__fieldset transaction-form__fieldset_cheque">
-
-            <div class="form-group">
-                <label class="form-group__label">Check Issue Date</label>
-                <input class="form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11"/>
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label">Check Number</label>
-                <input class="form-group__input" />
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label">Payee (Company/Supplier/Customer Name)</label>
-                <input class="form-group__input" />
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label">Check Issuance Amount</label>
-                <input class="form-group__input" />
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label">Note</label>
-                <textarea class="form-group__input" ></textarea>
-            </div>
-
-        </fieldset>
-
-        <fieldset class="popup__content transaction-form__fieldset transaction-form__fieldset_cash">
-
-            <div class="form-group">
-                <label class="form-group__label">Cash Withdraw Date</label>
-                <input class="form-group__input form-group__input_date" type="date" data-date="" data-date-format="ll" value="2024-08-11"/>
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label">Cash Withdraw Amount</label>
-                <input class="form-group__input" />
-            </div>
-
-            <div>
-                <fieldset class="form-group radio-controls">
-                    <label class="form-group__label">Transaction Type, select one:</label>
-
-                    <div class="radio-controls__group">
-                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
-                        <label class="radio-controls__label">Over-the-Counter </label>
-                    </div>
-
-                    <div class="radio-controls__group">
-                        <input type="radio" class="radio-controls__radio" name="transaction-type" />
-                        <label class="radio-controls__label">Online Fund Transfer</label>
-                    </div>
-
-                </fieldset>
-            </div>
-
-            <div class="form-group">
-                <label class="form-group__label">Note</label>
-                <textarea class="form-group__input" ></textarea>
-            </div>
-
-        </fieldset>
-
-        <footer class="popup__footer">
-            <input type="submit" class="button " value="Add" />
-            <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
-        </footer>
-    </form>
-
-</section>

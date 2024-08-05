@@ -47,16 +47,4 @@
         editForm.find(".accounts__button_delete").hide();
     });
 
-    //$(".accounts__modify-account-type").on("change", function () {
-
-    //    if ($(this).val() == "Joint Account") {
-    //        $(".accounts__modify-form-group_joint").showFlex();
-    //    }
-    //    else {
-    //        $(".accounts__modify-form-group_joint").hide();
-    //    }
-
-    //});
-
-
 });
