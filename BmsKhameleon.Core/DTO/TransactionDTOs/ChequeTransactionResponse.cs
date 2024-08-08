@@ -1,51 +1,45 @@
-﻿using System;
+﻿using BmsKhameleon.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BmsKhameleon.Core.Domain.Entities;
-using BmsKhameleon.Core.Enums;
+
 
 namespace BmsKhameleon.Core.DTO.TransactionDTOs
 {
-    public class TransactionResponse
+    public class ChequeTransactionResponse
     {
         public Guid TransactionId { get; set; }
         public Guid AccountId { get; set; }
         public DateTime? TransactionDate { get; set; }
         public int? Amount { get; set; }
         public string? TransactionType { get; set; }
-        public string? TransactionMedium { get; set; }
         public string? Note { get; set; }
-
-        //cash transaction properties
-        public string? CashTransactionType { get; set; }
 
         //cheque transaction properties
         public string? Payee { get; set; }
         public string? ChequeBankName { get; set; }
         public int? ChequeNumber { get; set; }
-
     }
 
-    public static partial class TransactionExtensions
+    public partial class TransactionExtensions
     {
-       public static TransactionResponse ToTransactionResponse(this Transaction transaction)
-       {
-            return new TransactionResponse
+        public static ChequeTransactionResponse ToTransactionChequeResponse(this Transaction transaction)
+        {
+            return new ChequeTransactionResponse
             {
                 TransactionId = transaction.TransactionId,
                 AccountId = transaction.AccountId,
                 TransactionDate = transaction.TransactionDate,
                 Amount = transaction.Amount,
                 TransactionType = transaction.TransactionType,
-                TransactionMedium = transaction.TransactionMedium,
                 Note = transaction.Note,
-                CashTransactionType = transaction.CashTransactionType,
                 Payee = transaction.Payee,
                 ChequeBankName = transaction.ChequeBankName,
                 ChequeNumber = transaction.ChequeNumber
             };
-       }
+        }
     }
 }

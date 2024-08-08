@@ -19,7 +19,7 @@ builder.Services.AddHsts(options =>
 });
 
 //services
-builder.Services.AddSingleton<IAccountsService, AccountsService>();
+builder.Services.AddScoped<IAccountsService, AccountsService>();
 
 //build
 var app = builder.Build();

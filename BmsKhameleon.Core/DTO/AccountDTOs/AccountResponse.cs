@@ -1,22 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BmsKhameleon.Core.Domain.Entities;
 
 namespace BmsKhameleon.Core.DTO.AccountDTOs
 {
     public class AccountResponse
     {
-        Guid AccountId { get; set; }
-        string? AccountName { get; set; }
-        string? BankName { get; set; }
-        int? AccountNumber { get; set; }
-        string? AccountType { get; set; }
-        string? BankBranch { get; set; }
-        int? InitialBalance { get; set; }
-        int? WorkingBalance { get; set; }
-        DateTime? DateEnrolled { get; set; }
-        bool Visibility { get; set; }
+        public Guid AccountId { get; set; }
+        public string? AccountName { get; set; }
+        public string? BankName { get; set; }
+        public int? AccountNumber { get; set; }
+        public string? AccountType { get; set; }
+        public string? BankBranch { get; set; }
+        public int? InitialBalance { get; set; }
+        public int? WorkingBalance { get; set; }
+        public DateTime? DateEnrolled { get; set; }
+        public bool Visibility { get; set; }
+    }
+
+    public static class AccountExtensions
+    {
+        public static AccountResponse ToAccountResponse(this Account account)
+        {
+            return new AccountResponse
+            {
+                AccountId = account.AccountId,
+                AccountName = account.AccountName,
+                BankName = account.BankName,
+                AccountNumber = account.AccountNumber,
+                AccountType = account.AccountType,
+                BankBranch = account.BankBranch,
+                InitialBalance = account.InitialBalance,
+                WorkingBalance = account.WorkingBalance,
+                DateEnrolled = account.DateEnrolled,
+                Visibility = account.Visibility
+            };
+        }
     }
 }

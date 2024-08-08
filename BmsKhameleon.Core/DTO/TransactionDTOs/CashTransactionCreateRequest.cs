@@ -8,42 +8,28 @@ using BmsKhameleon.Core.Enums;
 
 namespace BmsKhameleon.Core.DTO.TransactionDTOs
 {
-    public class TransactionUpdateRequest
+    public class CashTransactionCreateRequest
     {
-        public Guid TransactionId { get; set; }
         public Guid AccountId { get; set; }
         public DateTime? TransactionDate { get; set; }
         public int? Amount { get; set; }
         public TransactionType? TransactionType { get; set; }
-        public TransactionMedium? TransactionMedium { get; set; }
         public string? Note { get; set; }
 
         //cash transaction properties
         public string? CashTransactionType { get; set; }
 
-        //cheque transaction properties
-        public string? Payee { get; set; }
-        public string? ChequeBankName { get; set; }
-        public int? ChequeNumber { get; set; }
-
         public Transaction ToTransaction()
-        {
-
-           return new Transaction
+        { 
+            return new Transaction
             {
-                TransactionId = TransactionId,
                 AccountId = AccountId,
                 TransactionDate = TransactionDate,
                 Amount = Amount,
                 TransactionType = TransactionType.ToString(),
-                TransactionMedium = TransactionMedium.ToString(),
                 Note = Note,
-                CashTransactionType = CashTransactionType,
-                Payee = Payee,
-                ChequeBankName = ChequeBankName,
-                ChequeNumber = ChequeNumber
+                CashTransactionType = CashTransactionType
             };
         }
-
     }
 }

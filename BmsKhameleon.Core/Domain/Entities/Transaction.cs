@@ -8,21 +8,21 @@ namespace BmsKhameleon.Core.Domain.Entities
 {
     public class Transaction
     {
-        Guid TransactionId { get; set; }
-        Guid AccountId { get; set; }
+        public Guid TransactionId { get; set; }
+        public Guid AccountId { get; set; }
         Account Account { get; set; } = null!; //navigation property
-        DateTime? TransactionDate { get; set; }
-        int? TransactionAmount { get; set; }
-        string? TransactionType { get; set; }
-        string? TransactionMedium { get; set; }
-        string? Note { get; set; }
+        public DateTime? TransactionDate { get; set; }
+        public int? Amount { get; set; }
+        public string? TransactionType { get; set; }
+        public string? TransactionMedium { get; set; }
+        public string? Note { get; set; }
 
         //cash transaction properties
-        string? CashTransactionType { get; set; }
+        public string? CashTransactionType { get; set; }
 
         //cheque transaction properties
-        string? Payee { get; set; }
-        string? ChequeBankName { get; set; }
-        int? ChequeNumber { get; set; }
+        public string? Payee { get; set; }
+        public string? ChequeBankName { get; set; }
+        public int? ChequeNumber { get; set; }
     }
 }
