@@ -8,10 +8,10 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
     {
         public string? AccountName { get; set; }
         public string? BankName { get; set; }
-        public int? AccountNumber { get; set; }
+        public string? AccountNumber { get; set; }
         public string? AccountType { get; set; }
         public string? BankBranch { get; set; }
-        public int? InitialBalance { get; set; }
+        public decimal InitialBalance { get; set; }
         public DateTime? DateEnrolled { get; set; }
         public bool Visibility { get; set; }
 

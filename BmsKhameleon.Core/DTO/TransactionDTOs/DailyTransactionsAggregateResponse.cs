@@ -6,7 +6,7 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
     {
         public Guid AccountId { get; set; }
         public DateTime Date { get; set; }
-        public int? TotalBalance { get; set; }
-        public int? TotalWithdrawal { get; set; }
+        public decimal? TotalBalance { get; set; }
+        public decimal? TotalWithdrawal { get; set; }
     }
 }

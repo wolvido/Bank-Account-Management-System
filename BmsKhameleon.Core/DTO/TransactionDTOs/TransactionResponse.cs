@@ -13,7 +13,7 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
         public Guid TransactionId { get; set; }
         public Guid AccountId { get; set; }
         public DateTime? TransactionDate { get; set; }
-        public int? Amount { get; set; }
+        public decimal Amount { get; set; }
         public string? TransactionType { get; set; }
         public string? TransactionMedium { get; set; }
         public string? Note { get; set; }
@@ -24,7 +24,7 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
         //cheque transaction properties
         public string? Payee { get; set; }
         public string? ChequeBankName { get; set; }
-        public int? ChequeNumber { get; set; }
+        public string? ChequeNumber { get; set; }
 
     }
 
