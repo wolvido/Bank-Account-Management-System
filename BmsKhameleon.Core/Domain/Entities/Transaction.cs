@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,8 @@ namespace BmsKhameleon.Core.Domain.Entities
         public Guid TransactionId { get; set; }
         [Required(ErrorMessage = "Account ID is required.")]
         public Guid AccountId { get; set; }
-        Account Account { get; set; } = null!; //navigation property
+        [ForeignKey("AccountId")]
+        public Account Account { get; set; } = null!; //navigation property
         [Required(ErrorMessage = "Transaction date is required.")]
         [DataType(DataType.Date, ErrorMessage = "Transaction date must be a valid date.")]
         public DateTime? TransactionDate { get; set; }

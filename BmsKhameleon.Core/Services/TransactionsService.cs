@@ -92,9 +92,9 @@ namespace BmsKhameleon.Core.Services
                 var deposits = await GetDepositsForDay(currentDate, accountId);
                 var withdrawals = await GetWithdrawalsForDay(currentDate, accountId);
                 
-                int? totalDeposits = deposits.Sum(transaction => transaction.Amount);
-                int? totalWithdrawals = withdrawals.Sum(transaction => transaction.Amount);
-                int? totalBalance = account.InitialBalance;
+                decimal? totalDeposits = deposits.Sum(transaction => transaction.Amount);
+                decimal? totalWithdrawals = withdrawals.Sum(transaction => transaction.Amount);
+                decimal? totalBalance = account.InitialBalance;
 
                 totalBalance += totalDeposits;
                 totalBalance -= totalWithdrawals;

@@ -21,7 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BmsKhameleon.Core\BmsKhameleon.Core.csproj" />
+    <ProjectReference Include="..\BmsKhameleon.Infrastructure\BmsKhameleon.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

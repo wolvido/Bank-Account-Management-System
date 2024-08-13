@@ -1512,6 +1512,38 @@
         "runtime": {
           "bin/placeholder/BmsKhameleon.Core.dll": {}
         }
+      },
+      "BmsKhameleon.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BmsKhameleon.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
+        },
+        "compile": {
+          "bin/placeholder/BmsKhameleon.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BmsKhameleon.Infrastructure.dll": {}
+        }
+      },
+      "BmsKhameleon.UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BmsKhameleon.Core": "1.0.0",
+          "BmsKhameleon.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BmsKhameleon.UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BmsKhameleon.UI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -4111,15 +4143,24 @@
       "type": "project",
       "path": "../BmsKhameleon.Core/BmsKhameleon.Core.csproj",
       "msbuildProject": "../BmsKhameleon.Core/BmsKhameleon.Core.csproj"
+    },
+    "BmsKhameleon.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../BmsKhameleon.Infrastructure/BmsKhameleon.Infrastructure.csproj",
+      "msbuildProject": "../BmsKhameleon.Infrastructure/BmsKhameleon.Infrastructure.csproj"
+    },
+    "BmsKhameleon.UI/1.0.0": {
+      "type": "project",
+      "path": "../BmsKhameleon/BmsKhameleon.UI.csproj",
+      "msbuildProject": "../BmsKhameleon/BmsKhameleon.UI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "BmsKhameleon.Core >= 1.0.0",
+      "BmsKhameleon.Infrastructure >= 1.0.0",
+      "BmsKhameleon.UI >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.7",
-      "Microsoft.EntityFrameworkCore.Relational >= 8.0.7",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7"
     ]
   },
@@ -4129,11 +4170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj",
-      "projectName": "BmsKhameleon.Infrastructure",
-      "projectPath": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj",
+      "projectUniqueName": "D:\\repo\\BmsKhameleon\\BmsKhamaleon.Migrations\\BmsKhamaleon.Migrations.csproj",
+      "projectName": "BmsKhamaleon.Migrations",
+      "projectPath": "D:\\repo\\BmsKhameleon\\BmsKhamaleon.Migrations\\BmsKhamaleon.Migrations.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\obj\\",
+      "outputPath": "D:\\repo\\BmsKhameleon\\BmsKhamaleon.Migrations\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4151,8 +4192,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\repo\\BmsKhameleon\\BmsKhameleon.Core\\BmsKhameleon.Core.csproj": {
-              "projectPath": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Core\\BmsKhameleon.Core.csproj"
+            "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj": {
+              "projectPath": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj"
+            },
+            "D:\\repo\\BmsKhameleon\\BmsKhameleon\\BmsKhameleon.UI.csproj": {
+              "projectPath": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\BmsKhameleon.UI.csproj"
             }
           }
         }
@@ -4179,14 +4223,6 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
-            "target": "Package",
-            "version": "[8.0.7, )"
-          },
-          "Microsoft.EntityFrameworkCore.Relational": {
-            "target": "Package",
-            "version": "[8.0.7, )"
-          },
-          "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[8.0.7, )"
           },

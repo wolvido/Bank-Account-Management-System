@@ -37,7 +37,7 @@ namespace BmsKhameleon.Core.Domain.Entities
         public DateTime? DateEnrolled { get; set; }
         [Required(ErrorMessage = "Visibility is required.")]
         public bool Visibility { get; set; }
-        ICollection<Transaction>? Transactions { get; } = new List<Transaction>();
+        public ICollection<Transaction> Transactions { get; } = new List<Transaction>();
 
 
     }

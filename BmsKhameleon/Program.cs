@@ -1,6 +1,9 @@
+using BmsKhameleon.Core.Domain.RepositoryContracts;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.Core.Services;
+using BmsKhameleon.Infrastructure.DbContexts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +21,15 @@ builder.Services.AddHsts(options =>
     options.MaxAge = TimeSpan.FromDays(365);
 });
 
+//DbContext
+builder.Services.AddDbContext<AccountDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 //services
-builder.Services.AddScoped<IAccountsService, AccountsService>();
+//builder.Services.AddScoped<IAccountsService, AccountsService>();
+//builder.Services.AddScoped<ITransactionsService, TransactionsService>();
 
 //build
 var app = builder.Build();
