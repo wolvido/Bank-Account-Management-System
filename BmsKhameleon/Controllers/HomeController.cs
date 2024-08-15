@@ -1,27 +1,45 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BmsKhameleon.Core.DTO.AccountDTOs;
+using BmsKhameleon.Core.ServiceContracts;
+using BmsKhameleon.UI.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace BmsKhameleon.UI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(IAccountsService accountsService) : Controller
     {
-        [Route("[action]")]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        private readonly IAccountsService _accountsService = accountsService;
 
         [Route("[action]")]
-        public IActionResult AccountOverview()
-        {
-            return View();
-        }
-
         [HttpGet]
-        [Route("[action]")]
-        public IActionResult Calendar()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<AccountResponse> accounts = await _accountsService.GetAllAccounts();
+
+            AccountViewModel accountViewModel = new AccountViewModel() { }; 
+
+            accountViewModel.AccountResponses = accounts;
+
+            return View(accountViewModel);
+        }
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<IActionResult> CreateBankAccount(AccountViewModel? accountViewModel)
+        {
+            if(accountViewModel == null || accountViewModel.AccountCreateRequest == null)
+            {
+                return BadRequest("Invalid account request.");
+            }
+
+            bool result = await _accountsService.CreateAccount(accountViewModel.AccountCreateRequest);
+
+            if (result == false)
+            {
+                return BadRequest("Unable to create the account. Please try again.");
+            }
+
+            return RedirectToAction("Index");
         }
 
     }

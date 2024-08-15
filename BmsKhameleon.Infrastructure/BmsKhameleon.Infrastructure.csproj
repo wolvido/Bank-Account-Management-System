@@ -24,8 +24,4 @@
     <ProjectReference Include="..\BmsKhameleon.Core\BmsKhameleon.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

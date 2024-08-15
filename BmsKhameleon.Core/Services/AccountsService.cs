@@ -36,9 +36,10 @@ namespace BmsKhameleon.Core.Services
 
         private async Task<List<Account>> GetAccountsBySearchQuery(string searchQuery)
         {
-            if (int.TryParse(searchQuery, out int accountNumber))
+            //check if search query are all numbers
+            if (searchQuery.All(char.IsDigit))
             {
-                return await _accountsRepository.GetAccountsByNumber(accountNumber);
+                return await _accountsRepository.GetAccountsByNumber(searchQuery);
             }
 
             return await _accountsRepository.GetAccountsByName(searchQuery);
@@ -51,9 +52,9 @@ namespace BmsKhameleon.Core.Services
                 return await _accountsRepository.GetAccountsByBank(bankName);
             }
 
-            if (int.TryParse(searchQuery, out int accountNumber))
+            if (searchQuery.All(char.IsDigit))
             {
-                return await _accountsRepository.GetAccountsByBankAndNumber(bankName, accountNumber);
+                return await _accountsRepository.GetAccountsByBankAndNumber(bankName, searchQuery);
             }
 
             return await _accountsRepository.GetAccountsByBankAndName(bankName, searchQuery);

@@ -2,6 +2,7 @@ using BmsKhameleon.Core.Domain.RepositoryContracts;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.Core.Services;
 using BmsKhameleon.Infrastructure.DbContexts;
+using BmsKhameleon.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,8 +29,12 @@ builder.Services.AddDbContext<AccountDbContext>(options =>
 });
 
 //services
-//builder.Services.AddScoped<IAccountsService, AccountsService>();
-//builder.Services.AddScoped<ITransactionsService, TransactionsService>();
+builder.Services.AddScoped<IAccountsService, AccountsService>();
+builder.Services.AddScoped<ITransactionsService, TransactionsService>();
+
+//repositories
+builder.Services.AddScoped<IAccountsRepository, AccountsRepository>();
+builder.Services.AddScoped<ITransactionsRepository, TransactionsRepository>();
 
 //build
 var app = builder.Build();

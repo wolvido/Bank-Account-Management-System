@@ -1093,6 +1093,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery-3.7.1.min.js"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\lib\\jquery\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\lib\\jquery\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\lib\\moment\\moment.js",
       "PackagePath": "staticwebassets\\lib\\moment\\moment.js"
     },

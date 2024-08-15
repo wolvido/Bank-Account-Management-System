@@ -15,7 +15,7 @@ namespace BmsKhameleon.Core.ServiceContracts
         Task<bool> CreateChequeTransaction(ChequeTransactionCreateRequest chequeTransactionCreateRequest);
         Task<bool> CreateCashTransaction(CashTransactionCreateRequest cashTransactionCreateRequest);
 
-        Task<TransactionResponse> GetTransaction(Guid transactionId);
+        Task<TransactionResponse?> GetTransaction(Guid transactionId);
 
         Task<List<TransactionResponse>> GetDepositsForDay(DateTime date, Guid accountId);
         Task<List<TransactionResponse>> GetWithdrawalsForDay(DateTime date, Guid accountId);

@@ -39,9 +39,13 @@ namespace BmsKhameleon.Core.Services
             return result;
         }
 
-        public async Task<TransactionResponse> GetTransaction(Guid transactionId)
+        public async Task<TransactionResponse?> GetTransaction(Guid transactionId)
         {
-            Transaction transaction = await _transactionsRepository.GetTransaction(transactionId);
+            Transaction? transaction = await _transactionsRepository.GetTransaction(transactionId);
+            if (transaction == null)
+            {
+                return null;
+            }
             return transaction.ToTransactionResponse();
         }
 
@@ -81,6 +85,11 @@ namespace BmsKhameleon.Core.Services
         {
             var account = await _accountsRepository.GetAccount(accountId);
 
+            if (account == null)
+            {
+                return new List<DailyTransactionsAggregateResponse>();
+            }
+
             var monthTransactions = await _transactionsRepository.GetAllTransactionsForMonth(date, accountId);
 
             List<DailyTransactionsAggregateResponse> monthlyTransactionsAggregate = new List<DailyTransactionsAggregateResponse>();
@@ -89,13 +98,17 @@ namespace BmsKhameleon.Core.Services
             {
                 DateTime currentDate = new DateTime(date.Year, date.Month, i);
 
-                var deposits = await GetDepositsForDay(currentDate, accountId);
-                var withdrawals = await GetWithdrawalsForDay(currentDate, accountId);
-                
-                decimal? totalDeposits = deposits.Sum(transaction => transaction.Amount);
-                decimal? totalWithdrawals = withdrawals.Sum(transaction => transaction.Amount);
-                decimal? totalBalance = account.InitialBalance;
+                var depositTask = GetDepositsForDay(currentDate, accountId);
+                var withdrawalTask = GetWithdrawalsForDay(currentDate, accountId);
 
+                await Task.WhenAll(depositTask, withdrawalTask);
+
+                var deposits = await depositTask;
+                var withdrawals = await withdrawalTask;
+                
+                decimal totalDeposits = deposits.Sum(transaction => transaction.Amount);
+                decimal totalWithdrawals = withdrawals.Sum(transaction => transaction.Amount);
+                decimal totalBalance = account.InitialBalance;
                 totalBalance += totalDeposits;
                 totalBalance -= totalWithdrawals;
 

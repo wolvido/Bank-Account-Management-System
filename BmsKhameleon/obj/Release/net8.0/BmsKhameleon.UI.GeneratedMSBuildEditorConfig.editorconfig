@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\repo\BmsKhameleon\BmsKhameleon
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/repo/BmsKhameleon/BmsKhameleon/Views/AccountOverview/AccountOverview.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudE92ZXJ2aWV3XEFjY291bnRPdmVydmlldy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/repo/BmsKhameleon/BmsKhameleon/Views/Authentication/Authentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,8 +26,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repo/BmsKhameleon/BmsKhameleon/Views/Calendar/Calendar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcQ2FsZW5kYXIuY3NodG1s
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Home/AccountOverview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NvdW50T3ZlcnZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Home/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWxlbmRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/repo/BmsKhameleon/BmsKhameleon/Views/Home/Index.cshtml]
