@@ -5,3 +5,15 @@
 appsettings.json
 bin/
 .vs/
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.AssemblyInfo.cs
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.AssemblyInfo.cs
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.GeneratedMSBuildEditorConfig.editorconfig
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.GlobalUsings.g.cs
+BmsKhameleon.Infrastructure/obj/BmsKhameleon.Infrastructure.csproj.nuget.dgspec.json
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.AssemblyInfo.cs
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.GlobalUsings.g.cs
+BmsKhameleon/obj/BmsKhameleon.UI.csproj.nuget.dgspec.json
+BmsKhameleon/obj/Debug/net8.0/BmsKhameleon.UI.GeneratedMSBuildEditorConfig.editorconfig
+BmsKhameleon/obj/Debug/net8.0/BmsKhameleon.UI.GlobalUsings.g.cs
+BmsKhameleon/obj/Debug/net8.0/project.razor.vs.bin

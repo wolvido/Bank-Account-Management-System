@@ -67,15 +67,15 @@
         </header>
 
         <div class="accounts__table-container table__item-container">
-            @for (int i = 1; i < 20; i++)
+            @foreach (var account in Model.AccountResponses!)
             {
                 <div class="accounts__item table__item">
-                    <div class="accounts__item-bank table__item-field">@("POGO "+i)</div>
-                    <div class="accounts__item-account table__item-field">@(i+1000)</div>
-                    <div class="accounts__item-payor table__item-field">Alice Gou</div>
+                    <div class="accounts__item-bank table__item-field">@account.BankName</div>
+                    <div class="accounts__item-account table__item-field">@account.AccountNumber</div>
+                    <div class="accounts__item-payor table__item-field">@account.AccountName</div>
                     <div class="accounts__item-balance table__item-field table__item-field_controller">
 
-                        <div class="table__item-field-label">123,456.78</div>
+                        <div class="table__item-field-label">@account.WorkingBalance</div>
 
                         <div class="accounts__item-controls table__item-controls">
 
@@ -93,103 +93,10 @@
 
 </main>
 
+<section class="accounts__overlay accounts__overlay_create overlay">
+    <partial name="~/Views/Shared/AccountForms/_CreateAccountPartialView.cshtml" model="Model.AccountCreateRequest"></partial>
+</section>
+
 <section class="accounts__overlay accounts__overlay_modify overlay">
-
-    <form method="post">
-        <section class="accounts__modify popup popup_modify">
-
-            <header class="accounts__modify-header popup__header">
-                Modify Bank Account
-            </header>
-
-            <fieldset class="accounts__modify-fieldset popup__content">
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Account Name (Payor)</label>
-                    <input asp-for="AccountCreateRequest.AccountName" class="accounts__modify-payor form-group__input" placeholder="Alice Gou" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Bank Name</label>
-                    <input asp-for="AccountCreateRequest.BankName" class="accounts__modify-bank form-group__input" type="text" placeholder="Union Bank" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Account Number</label>
-                    <input asp-for="AccountCreateRequest.AccountNumber" class="accounts__modify-account-number form-group__input" type="text" placeholder="1234567890" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Account Type</label>
-                    <select asp-for="AccountCreateRequest.AccountType" class="accounts__modify-account-type form-group__input form-group__input_select">
-                        <option>Savings Account</option>
-                        <option>Checking Account</option>
-                        <option>Joint Account</option>
-                        <option>Payroll</option>
-                    </select>
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Bank Branch of Account</label>
-                    <input asp-for="AccountCreateRequest.BankBranch" class="accounts__modify-branch form-group__input" type="text" placeholder="Makati" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label accounts__modify-label_balance form-group__label">Initial Balance</label>
-                    <input asp-for="AccountCreateRequest.InitialBalance" class="accounts__modify-balance form-group__input form-group__input_value-bold" type="text" placeholder="123456.78" />
-                </div>
-
-                <div>
-                    <fieldset class="form-group radio-controls">
-                        <legend class="form-group__label">Bank Account Visibility</legend>
-
-                        <div class="radio-controls__group ">
-                            <input asp-for="AccountCreateRequest.Visibility" type="radio" class="radio-controls__radio" name="visibility" value="true" />
-                            <div class="radio-controls__label-group">
-                                <label class="radio-controls__label">Shared </label>
-                                <span>All users with active access code can access</span>
-                            </div>
-                        </div>
-
-                        <div class="radio-controls__group">
-                            <input asp-for="AccountCreateRequest.Visibility" type="radio" class="radio-controls__radio" name="visibility" value="false" />
-                            <div class="radio-controls__label-group">
-                                <label class="radio-controls__label">Private </label>
-                                <span>Only you can access this Bank Account</span>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-
-            </fieldset>
-
-            <div asp-validation-summary="All">Error message will show here</div>
-
-            <footer class="accounts__modify-footer popup__footer">
-                <button type="button" class="accounts__button_delete button button_cancel popup__show-delete-button">Delete</button>
-                <input asp-controller="Home" asp-action="CreateBankAccount" type="submit" class="accounts__button_update button" value="Submit" />
-                <button type="button" class="accounts__button_cancel button button_cancel overlay__cancel">Cancel</button>
-            </footer>
-
-        </section>
-
-        <section class="popup popup_delete">
-            <header class="popup__header">
-                Delete Account?
-            </header>
-
-            <section class="popup__content">
-                <p>
-                    You are about to delete a Bank Account. This action cannot be undone.
-                </p>
-            </section>
-
-            <footer class="popup__footer">
-                <input type="submit" class="button " value="Delete" />
-                <button type="button" class="accounts__button_cancel button button_cancel overlay__cancel">Cancel</button>
-            </footer>
-        </section>
-
-    </form>
-
+    <partial name="~/Views/Shared/AccountForms/_UpdateAccountPartialView.cshtml" model="Model.AccountUpdateRequest"></partial>
 </section>

@@ -16,23 +16,24 @@ namespace BmsKhameleon.UI.Controllers
         {
             List<AccountResponse> accounts = await _accountsService.GetAllAccounts();
 
-            AccountViewModel accountViewModel = new AccountViewModel() { }; 
-
-            accountViewModel.AccountResponses = accounts;
+            AccountViewModel accountViewModel = new AccountViewModel
+            {
+                AccountResponses = accounts
+            };
 
             return View(accountViewModel);
         }
 
         [Route("[action]")]
         [HttpPost]
-        public async Task<IActionResult> CreateBankAccount(AccountViewModel? accountViewModel)
+        public async Task<IActionResult> CreateBankAccount(AccountCreateRequest? accountCreateRequest)
         {
-            if(accountViewModel == null || accountViewModel.AccountCreateRequest == null)
+            if(accountCreateRequest == null)
             {
                 return BadRequest("Invalid account request.");
             }
 
-            bool result = await _accountsService.CreateAccount(accountViewModel.AccountCreateRequest);
+            bool result = await _accountsService.CreateAccount(accountCreateRequest);
 
             if (result == false)
             {
