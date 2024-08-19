@@ -1,4 +1,6 @@
-﻿@import url('button/button.css');
+﻿@import url('input-validation-error/input-validation-error.css');
+
+@import url('button/button.css');
 @import url('button/button_cancel.css');
 @import url('button/button_link.css');
 @import url('button/button_green.css');
@@ -32,6 +34,7 @@
 @import url('form-group/form-group__input_date.css');
 @import url('form-group/form-group_invisible.css');
 @import url('form-group/form-group__input_value-bold.css');
+@import url('form-group/form-group__label_notice.css');
 
 @import url('radio-controls/radio-controls.css');
 @import url('radio-controls/radio-controls__group.css');

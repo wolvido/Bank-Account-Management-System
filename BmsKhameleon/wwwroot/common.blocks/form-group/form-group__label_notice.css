@@ -1,0 +1,8 @@
+﻿.form-group__label_notice
+{
+    color: red;
+}
+
+.form-group__label_notice::before {
+    content: "*";
+}

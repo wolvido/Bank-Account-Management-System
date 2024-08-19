@@ -4,7 +4,7 @@
         this.css('display', 'flex');
     }
 
-    $('.overlay__cancel').on("click", function () {
+    $('.overlay').on("click",'.overlay__cancel', function () {
         $('.overlay').hide();
     });
 

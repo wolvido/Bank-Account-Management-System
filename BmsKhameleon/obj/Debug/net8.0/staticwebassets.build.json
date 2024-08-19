@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xyX8/7Wz4vrOvZXXQ25dw8K9AwNAeosNZh7DWItA5b8=",
+  "Hash": "p9dg9uUzyqKgkJT7AGr/wnSMKjcj/ICytrIR7wS+MoI=",
   "Source": "BmsKhameleon.UI",
   "BasePath": "_content/BmsKhameleon.UI",
   "Mode": "Default",
@@ -321,6 +321,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__label_error.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__label_notice.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/form-group/form-group__label_notice.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__label_notice.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group_invisible.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -547,6 +566,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\header\\header__username.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\input-validation-error\\input-validation-error.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/input-validation-error/input-validation-error.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\input-validation-error\\input-validation-error.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\main\\main.css",

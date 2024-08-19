@@ -16,6 +16,18 @@ namespace BmsKhameleon.Core.Services
             return result;
         }
 
+        public async Task<AccountResponse?> GetAccountById(Guid accountId)
+        {
+            Account? account = await _accountsRepository.GetAccount(accountId);
+
+            if (account == null)
+            {
+                return null;
+            }
+
+            return account.ToAccountResponse();
+        }
+
         public async Task<List<AccountResponse>> GetAllAccounts()
         {
             List<Account> accounts = await _accountsRepository.GetAllAccounts();

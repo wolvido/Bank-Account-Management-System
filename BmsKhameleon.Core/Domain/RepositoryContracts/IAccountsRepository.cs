@@ -10,7 +10,6 @@ namespace BmsKhameleon.Core.Domain.RepositoryContracts
     public interface IAccountsRepository
     {
         public Task<bool> CreateAccount(Account account);
-
         public Task<Account?> GetAccount(Guid accountId);
         public Task<List<Account>> GetAllAccounts();
         public Task<bool> UpdateAccount(Account account);

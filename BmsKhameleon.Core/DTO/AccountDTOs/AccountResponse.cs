@@ -5,10 +5,10 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
     public class AccountResponse
     {
         public Guid AccountId { get; set; }
-        public string? AccountName { get; set; }
-        public string? BankName { get; set; }
-        public string? AccountNumber { get; set; }
-        public string? AccountType { get; set; }
+        public required string AccountName { get; set; }
+        public required string BankName { get; set; }
+        public required string AccountNumber { get; set; }
+        public required string AccountType { get; set; }
         public string? BankBranch { get; set; }
         public decimal InitialBalance { get; set; }
         public decimal? WorkingBalance { get; set; }

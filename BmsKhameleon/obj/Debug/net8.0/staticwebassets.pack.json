@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__label_error.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__label_notice.css",
+      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__label_notice.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group_invisible.css",
       "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group_invisible.css"
     },
@@ -111,6 +115,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header__username.css",
       "PackagePath": "staticwebassets\\common.blocks\\header\\header__username.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\input-validation-error\\input-validation-error.css",
+      "PackagePath": "staticwebassets\\common.blocks\\input-validation-error\\input-validation-error.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\main\\main.css",

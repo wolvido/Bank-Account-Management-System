@@ -1,0 +1,12 @@
+﻿/*.input-validation-error{
+    color: red;
+}
+*/
+
+label:has(+ .input-validation-error) {
+    color: red;
+}
+
+label:has(+ .input-validation-error)::before {
+    content: "*";
+}

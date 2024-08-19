@@ -13,6 +13,8 @@ namespace BmsKhameleon.Core.ServiceContracts
     {
         public Task<bool> CreateAccount(AccountCreateRequest accountCreateRequest);
 
+        public Task<AccountResponse?> GetAccountById(Guid accountId);
+
         public Task<List<AccountResponse>> GetAllAccounts();
 
         public Task<bool> UpdateAccount(AccountUpdateRequest accountUpdateRequest);

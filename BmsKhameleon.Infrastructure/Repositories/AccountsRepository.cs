@@ -24,7 +24,8 @@ namespace BmsKhameleon.Infrastructure.Repositories
 
         public async Task<Account?> GetAccount(Guid accountId)
         {
-            return await _db.Accounts.FindAsync(accountId);
+            Account? account = await _db.Accounts.FindAsync(accountId);
+            return account;
         }
 
         public async Task<List<Account>> GetAllAccounts()
@@ -41,7 +42,15 @@ namespace BmsKhameleon.Infrastructure.Repositories
                 return false;
             };
 
-            _db.Entry(existingAccount).CurrentValues.SetValues(account);
+            existingAccount.AccountName = account.AccountName;
+            existingAccount.BankName = account.BankName;
+            existingAccount.AccountNumber = account.AccountNumber;
+            existingAccount.AccountType = account.AccountType;
+            existingAccount.BankBranch = account.BankBranch;
+            existingAccount.WorkingBalance = (existingAccount.WorkingBalance - existingAccount.InitialBalance) + account.InitialBalance;
+            existingAccount.InitialBalance = account.InitialBalance;
+            existingAccount.Visibility = account.Visibility;
+
             _db.Entry(existingAccount).State = EntityState.Modified;
 
             await _db.SaveChangesAsync();
