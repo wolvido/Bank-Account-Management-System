@@ -1,34 +1,7 @@
 ﻿@using System.Globalization
-@using BmsKhameleon.Core.Enums
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
 @model List<DailyTransactionsAggregateResponse>
-
-@{
-    //sample data for calendar
-    var sampleTransaction1 = new
-    {
-        date = new DateTime(2024, 7, 1),
-        balance = 2000,  //Edit initial balance
-        withdrawal = 100
-    };
-
-    var sampleTransaction2 = new
-    {
-        date = new DateTime(2024, 7, 2),
-        balance = sampleTransaction1.balance - sampleTransaction1.withdrawal,
-        withdrawal = 50
-    };
-
-    var sampleTransaction3 = new
-    {
-        date = new DateTime(2024, 7, 3),
-        balance = sampleTransaction2.balance - sampleTransaction2.withdrawal, //Edit current balance
-        withdrawal = 0
-    };
-
-    var transactions = new[] { sampleTransaction1, sampleTransaction2, sampleTransaction3 };
-}
 
 @section styles {
     <link href="~/desktop.blocks/calendar/calendar.css" rel="stylesheet" type="text/css" />
@@ -37,9 +10,8 @@
     <script src="~/desktop.blocks/calendar/calendar.js" async defer></script>
     <script src="~/common.blocks/overlay/overlay.js" async defer></script>
 
-
     <script>
-        var transactions = '@Html.Raw(System.Text.Json.JsonSerializer.Serialize(transactions))';
+        var transactions = '@Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model))';
     </script>
 }
 
@@ -60,28 +32,27 @@
 
     <section class="calendar">
         <section class="calendar__toolbar main__padding">
-
-                <form class="calendar__select-date">
-                    <label class="calendar__select-label">
-                        Select Date
-                    </label>
+            <form class="calendar__select-date">
+                <label class="calendar__select-label">
+                    Select Date
+                </label>
                  
-                    <select class="calendar__select-month">
-                        //generate month options
-                        @for (int i = 1; i <= 12; i++)
-                        {
-                            <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
-                        }
-                    </select>
+                <select class="calendar__select-month">
+                    //generate month options
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
+                    }
+                </select>
 
-                    <select class="calendar__select-year">
-                        //generate year options
-                        @for (int i = DateTime.Now.Year; i >= 2000; i--)
-                        {
-                            <option value="@i"> @i</option>
-                        }
-                    </select>
-                </form>
+                <select class="calendar__select-year">
+                    //generate year options
+                    @for (int i = DateTime.Now.Year; i >= 2000; i--)
+                    {
+                        <option value="@i"> @i</option>
+                    }
+                </select>
+            </form>
 
             <button class="calendar__account-info-button">
 
@@ -100,7 +71,7 @@
 
         <section class="calendar__date-container main__padding">
             
-            <div class="calendar__date-item">
+                <div class="calendar__date-item">
 
                     <div class="calendar__date-day">
                     </div>
@@ -116,8 +87,6 @@
                 </div>
              
         </section>
-
-
 
     </section>
 

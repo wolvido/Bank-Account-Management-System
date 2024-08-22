@@ -32,3 +32,12 @@ BmsKhameleon/obj/Debug/net8.0/refint/BmsKhameleon.UI.dll
 BmsKhameleon/obj/Debug/net8.0/staticwebassets.build.json
 BmsKhameleon/obj/Debug/net8.0/staticwebassets.development.json
 BmsKhameleon/obj/Debug/net8.0/staticwebassets.pack.json
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.AssemblyInfo.cs
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.AssemblyInfo.cs
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.AssemblyInfo.cs
+.vs/BmsKhameleonSolution/v17/.suo
+/BmsKhameleon.Infrastructure/obj/Debug
+.vs/BmsKhameleonSolution/DesignTimeBuild/.dtbcache.v2
+/.vs/BmsKhameleonSolution/v17
+/BmsKhameleon.Core/obj/Debug/net8.0
+/BmsKhameleon/obj/Debug/net8.0

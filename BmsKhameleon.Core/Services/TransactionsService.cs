@@ -96,29 +96,40 @@ namespace BmsKhameleon.Core.Services
 
             for (int i = 1; i <= DateTime.DaysInMonth(date.Year, date.Month); i++)
             {
+                var daysInMonth = DateTime.DaysInMonth(date.Year, date.Month);
                 DateTime currentDate = new DateTime(date.Year, date.Month, i);
 
-                var depositTask = GetDepositsForDay(currentDate, accountId);
-                var withdrawalTask = GetWithdrawalsForDay(currentDate, accountId);
-
-                await Task.WhenAll(depositTask, withdrawalTask);
-
-                var deposits = await depositTask;
-                var withdrawals = await withdrawalTask;
+                var deposits = await GetDepositsForDay(currentDate, accountId);
+                var withdrawals = await GetWithdrawalsForDay(currentDate, accountId);
                 
                 decimal totalDeposits = deposits.Sum(transaction => transaction.Amount);
                 decimal totalWithdrawals = withdrawals.Sum(transaction => transaction.Amount);
                 decimal totalBalance = account.InitialBalance;
-                totalBalance += totalDeposits;
-                totalBalance -= totalWithdrawals;
 
-                monthlyTransactionsAggregate.Add(new DailyTransactionsAggregateResponse
+                if (true/*totalDeposits > 0 || totalWithdrawals > 0*/)
                 {
-                    AccountId = accountId,
-                    Date = currentDate,
-                    TotalBalance = totalBalance,
-                    TotalWithdrawal = totalWithdrawals
-                });
+                    totalBalance += totalDeposits;
+                    totalBalance -= totalWithdrawals;
+
+                    monthlyTransactionsAggregate.Add(new DailyTransactionsAggregateResponse
+                    {
+                        AccountId = accountId,
+                        Date = currentDate,
+                        TotalBalance = totalBalance,
+                        TotalWithdrawal = totalWithdrawals
+                    });
+                }
+                else if(monthlyTransactionsAggregate.Count > 0)
+                {
+                    //add the same total balance as the last previous added
+                    monthlyTransactionsAggregate.Add(new DailyTransactionsAggregateResponse
+                    {
+                        AccountId = accountId,
+                        Date = currentDate,
+                        TotalBalance = monthlyTransactionsAggregate.Last().TotalBalance,
+                        TotalWithdrawal = 0
+                    });
+                }
             }
             
             return monthlyTransactionsAggregate;

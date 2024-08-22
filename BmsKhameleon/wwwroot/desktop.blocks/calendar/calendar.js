@@ -11,22 +11,22 @@
     $(".calendar__select-month").val(currentMonth + 1); //set dropdown default to current month
 
     let transactions = JSON.parse(window.transactions); //inject data here
-
-    function calendarDay(day, adjacentMonths = false, balance = '0.00', withdrawal = '0.00') {
-        let fadedDesign;
+    async function calendarDay(day, adjacentMonths = false, balance = '0.00', withdrawal = '0.00', date = '', accountId = '') {
         let transactions =
             `
             <div class="calendar__date-transactions">
                 <div class="calendar__date-balance">
-                    `+ balance+`
+                    ${balance}
                 </div>
 
                 <div class ="calendar__date-withrawal">
-                    `+ withdrawal+`
+                    ${withdrawal}
                 </div>
             </div>
             `;
 
+
+        let fadedDesign;
         if (adjacentMonths == true) {
             fadedDesign = " calendar__date-day_faded";
             transactions =
@@ -46,62 +46,94 @@
             fadedDesign = " ";
         }
 
-        let calendarDay =
-            `
-            <a class="calendar__date-item">
+        let calendarDay = ''; // Default value if date or accountId is not provided
 
-                <div class="calendar__date-day`+ fadedDesign + `">
-                `+ day + `
+        if (date !== '' && accountId !== '') {
+            try {
+                // Fetch data
+                const response = await fetch(`/TransactionsOverview/${accountId}/${date}`, {
+                    method: 'GET'
+                });
+                const transactionOverviewUrl = response.url; // Get the URL
+
+                // Construct calendarDay with the fetched URL
+                calendarDay = `
+                <a href="${transactionOverviewUrl}" class="calendar__date-item">
+                    <div class="calendar__date-day${fadedDesign}">
+                        ${day}
+                    </div>
+                    ${transactions}
+                </a>
+                `;
+            } catch (error) {
+                console.error('Error fetching URL:', error);
+                // Fallback if fetch fails
+                calendarDay = `
+                <div class="calendar__date-item">
+                    <div class="calendar__date-day${fadedDesign}">
+                        ${day}
+                    </div>
+                    ${transactions}
                 </div>
-
-                `+ transactions + `
-
-            </a>
+                `;
+            }
+        } else {
+            calendarDay = `
+            <div class="calendar__date-item">
+                <div class="calendar__date-day${fadedDesign}">
+                    ${day}
+                </div>
+                ${transactions}
+            </div>
             `;
+        }
 
-        return calendarDay;
+        return calendarDay;  
     }
 
-    function populateCalendar(transactions) {
+    async function populateCalendar(transactions) {
         let selectedMonth = $(".calendar__select-month").find(":selected").val() - 1;
         let selectedYear = $(".calendar__select-year").find(":selected").val();
         let daysInSelectedMonth = 32 - new Date(selectedYear, selectedMonth, 32).getDate();
-        let transactionsInSelectedMonth = transactions.filter(transaction => new Date(transaction.date).getMonth() == selectedMonth && new Date(transaction.date).getFullYear() == selectedYear);
+        let transactionsInSelectedMonth = transactions.filter(transaction => new Date(transaction.Date).getMonth() == selectedMonth && new Date(transaction.Date).getFullYear() == selectedYear);
         let calendarContainer = $(".calendar__date-container");
 
-
-        //previous month days
         let previousMonth = selectedMonth - 1;
         let previousYear = selectedYear;
-
+        //previous year if the month is january
         if (previousMonth < 0) {
             previousMonth = 11;
             previousYear = selectedYear - 1;
         };
-
+        //previous month days
         let daysInPreviousMonth = 32 - new Date(previousYear, previousMonth, 32).getDate();
 
         for (day = daysInPreviousMonth - new Date(selectedYear, selectedMonth, 1).getDay() + 1; day < daysInPreviousMonth + 1; day++) {
-            calendarContainer.append(calendarDay(day, true));
+            let transactionToday = transactionsInSelectedMonth.filter(transactionDay => new Date(transactionDay.Date).getDate() == day);
+
+            calendarContainer.append(await calendarDay(day, true));
         }
 
-        
-        let transactionToday; //transaction for the day when the loop is running
 
         //current month days
         for (day = 1; day < daysInSelectedMonth + 1; day++) {
 
-            if (transactionsInSelectedMonth.filter(transactionDay => new Date(transactionDay.date).getDay() == day).length > 0) { //check if a transaction on this day exists
+            if (transactionsInSelectedMonth.filter(transactionDay => new Date(transactionDay.Date).getDate() == day).length > 0) { //check if a transaction on this day exists
 
-                transactionToday = transactionsInSelectedMonth.filter(transactionDay => new Date(transactionDay.date).getDay() == day);
-                let dayBalance = transactionToday[0].balance;
+                let transactionToday = transactionsInSelectedMonth.filter(transactionDay => new Date(transactionDay.Date).getDate() == day);
+                let dayBalance = transactionToday[0].TotalBalance;
 
-                let dayWithdrawal = transactionToday[0].withdrawal;
+                let dayWithdrawal = transactionToday[0].TotalWithdrawal;
 
-                calendarContainer.append(calendarDay(day, false, dayBalance, dayWithdrawal));
+                let transactionDate = transactionToday[0].Date;
+                let transactionAccountId = transactionToday[0].AccountId;
+
+
+                //display transaction for current day
+                calendarContainer.append(await calendarDay(day, false, dayBalance, dayWithdrawal, transactionDate, transactionAccountId));
             }
             else {
-                calendarContainer.append(calendarDay(day));
+                calendarContainer.append(await calendarDay(day));
             }
 
         }
@@ -118,7 +150,7 @@
         let daysInNextMonth = 32 - new Date(nextYear, nextMonth, 32).getDate();
 
         for (day = 1; calendarContainer.children().length < 42; day++) {
-            calendarContainer.append( calendarDay(day, true) );
+            calendarContainer.append(await calendarDay(day, true) );
         };
 
     };
