@@ -49,6 +49,7 @@ namespace BmsKhameleon.Core.Domain.Entities
         [Required(ErrorMessage = "Visibility is required.")]
         public bool Visibility { get; set; }
         public ICollection<Transaction> Transactions { get; } = new List<Transaction>();
+        public ICollection<MonthlyWorkingBalance> MonthlyWorkingBalances { get; } = new List<MonthlyWorkingBalance>();
 
 
     }
