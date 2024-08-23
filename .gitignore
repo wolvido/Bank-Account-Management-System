@@ -44,3 +44,10 @@ BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.Assembl
 /BmsKhameleon.Core/obj/Debug/net8.0
 /.vs/BmsKhameleonSolution/v17
 /.vs/BmsKhameleonSolution/DesignTimeBuild
+/.vs/BmsKhameleonSolution/DesignTimeBuild
+/.vs/BmsKhameleonSolution/v17
+/.vs/BmsKhameleonSolution/v17
+/BmsKhameleon.Core/obj/Debug
+/.vs/BmsKhameleonSolution/DesignTimeBuild
+/BmsKhameleon.Infrastructure/obj/Debug
+*.dll

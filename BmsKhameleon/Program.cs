@@ -31,10 +31,12 @@ builder.Services.AddDbContext<AccountDbContext>(options =>
 //services
 builder.Services.AddScoped<IAccountsService, AccountsService>();
 builder.Services.AddScoped<ITransactionsService, TransactionsService>();
+builder.Services.AddScoped<IMonthlyBalancesService, MonthlyBalancesService>();
 
 //repositories
 builder.Services.AddScoped<IAccountsRepository, AccountsRepository>();
 builder.Services.AddScoped<ITransactionsRepository, TransactionsRepository>();
+builder.Services.AddScoped<IMonthlyBalancesRepository, MonthlyBalancesRepository>();
 
 //build
 var app = builder.Build();

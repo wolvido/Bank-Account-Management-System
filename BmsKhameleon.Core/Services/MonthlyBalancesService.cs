@@ -22,7 +22,7 @@ namespace BmsKhameleon.Core.Services
                 throw new InvalidOperationException("Account does not exist");
             }
 
-            var existingMonthlyBalance = await GetMonthlyBalance(accountId, date);
+            MonthlyWorkingBalance? existingMonthlyBalance = await GetMonthlyBalance(accountId, date);
             if (existingMonthlyBalance != null && 
                 existingMonthlyBalance.Date.Month == date.Month && 
                 existingMonthlyBalance.Date.Year == date.Year)
@@ -60,21 +60,43 @@ namespace BmsKhameleon.Core.Services
             }
 
             var monthDate = new DateTime(transaction.TransactionDate.Year, transaction.TransactionDate.Month, 1);
-            var existingMonthlyBalance = await GetMonthlyBalance(transaction.AccountId, monthDate);
-            if (existingMonthlyBalance == null)
+            var existingMonthBalance = await GetMonthlyBalance(transaction.AccountId, monthDate);
+            if (existingMonthBalance == null)
             {
                 var createResult = await CreateMonthlyBalance(transaction.AccountId, monthDate, transactionAmount);
                 return createResult;
             }
 
-            var result = await _monthlyBalanceRepository.AddToMonthlyBalance(existingMonthlyBalance, transactionAmount);
+            var result = await _monthlyBalanceRepository.AddToMonthlyBalance(existingMonthBalance, transactionAmount);
             return result;
         }
 
-        public async Task<bool> EditTransactionFromMonth(Guid accountId, DateTime date, decimal formerTransactionAmount,
-            decimal newTransactionAmount)
+        public async Task<bool> RemoveTransactionFromMonth(Transaction transaction)
         {
-            throw new NotImplementedException();
+            var date = new DateTime(transaction.TransactionDate.Year, transaction.TransactionDate.Month, 1);
+
+            decimal amount;
+            if(transaction.TransactionType.ToLower() == "deposit")
+            {
+                amount = transaction.Amount;
+            }
+            else if(transaction.TransactionType.ToLower() == "withdrawal")
+            {
+                amount = transaction.Amount * -1;
+            }
+            else
+            {
+                throw new ArgumentException("Invalid transaction type.");
+            }
+
+            var existingMonthBalance = await GetMonthlyBalance(transaction.AccountId, date);
+            if (existingMonthBalance == null)
+            {
+                throw new InvalidOperationException("Monthly balance does not exist for this month");
+            }
+
+            var result = await _monthlyBalanceRepository.RemoveFromMonthlyBalance(existingMonthBalance, amount);
+            return result;
         }
 
         public async Task<MonthlyWorkingBalance?> GetMonthlyBalance(Guid accountId, DateTime date)
@@ -85,6 +107,12 @@ namespace BmsKhameleon.Core.Services
                 return null;
             }
             return monthlyBalance;
+        }
+
+        public async Task<bool> InitialBalanceMonthAdjustment(Guid accountId, decimal amountToRemove, decimal amountToAdd)
+        {
+            bool result = await _monthlyBalanceRepository.InitialBalanceMonthAdjustment(accountId, amountToRemove, amountToAdd);
+            return result;
         }
     }
 }

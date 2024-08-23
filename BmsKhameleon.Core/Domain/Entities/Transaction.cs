@@ -10,6 +10,7 @@ namespace BmsKhameleon.Core.Domain.Entities
 {
     public class Transaction
     {
+        [Key]
         public Guid TransactionId { get; set; }
 
         [Required(ErrorMessage = "Account ID is required.")]

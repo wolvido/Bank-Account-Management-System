@@ -11,31 +11,77 @@ using BmsKhameleon.Core.ServiceContracts;
 
 namespace BmsKhameleon.Core.Services
 {
-    public class TransactionsService(ITransactionsRepository transactionsRepository, IAccountsRepository accountsRepository) : ITransactionsService
+    public class TransactionsService(ITransactionsRepository transactionsRepository, IAccountsRepository accountsRepository, IMonthlyBalancesService monthlyBalances) : ITransactionsService
     {
         private readonly ITransactionsRepository _transactionsRepository = transactionsRepository;
         private readonly IAccountsRepository _accountsRepository = accountsRepository;
+        private readonly IMonthlyBalancesService _monthlyBalances = monthlyBalances;
         public async Task<bool> UpdateTransaction(TransactionUpdateRequest transactionUpdateRequest)
         {
+            Transaction? existingTransaction = await _transactionsRepository.GetTransaction(transactionUpdateRequest.TransactionId);
+            if (existingTransaction == null)
+            {
+                return false;
+            }
+
             bool result = await _transactionsRepository.UpdateTransaction(transactionUpdateRequest.ToTransaction());
+
+            var removeFromMonthBalance =  await _monthlyBalances.RemoveTransactionFromMonth(existingTransaction);
+            var addToMonthBalance = await _monthlyBalances.AddTransactionToMonth(transactionUpdateRequest.ToTransaction());
+
+            if(removeFromMonthBalance == false || addToMonthBalance == false)
+            {
+                throw new ArgumentException("Failed to update monthly balances");
+            }
+
             return result;
         }
 
         public async Task<bool> DeleteTransaction(Guid transactionId)
         {
+            var transaction = await _transactionsRepository.GetTransaction(transactionId);
+
+            if(transaction == null)
+            {
+                throw new ArgumentException("Transaction does not exist");
+            }
+
             bool result = await _transactionsRepository.DeleteTransaction(transactionId);
+
+            bool removeFromMonthBalance = await _monthlyBalances.RemoveTransactionFromMonth(transaction);
+            if(removeFromMonthBalance == false)
+            {
+                throw new ArgumentException("Failed to update monthly balances");
+            }
+
             return result;
         }
 
         public async Task<bool> CreateChequeTransaction(ChequeTransactionCreateRequest chequeTransactionCreateRequest)
         {
             bool result = await _transactionsRepository.CreateTransaction(chequeTransactionCreateRequest.ToTransaction());
+
+            bool monthlyBalanceUpdateResult = await _monthlyBalances.AddTransactionToMonth(chequeTransactionCreateRequest.ToTransaction());
+            if(monthlyBalanceUpdateResult == false)
+            {
+
+               throw new ArgumentException("Failed to update monthly balances");
+            }
+
             return result;
         }
 
         public async Task<bool> CreateCashTransaction(CashTransactionCreateRequest cashTransactionCreateRequest)
         {
             bool result = await _transactionsRepository.CreateTransaction(cashTransactionCreateRequest.ToTransaction());
+
+            bool monthlyBalanceUpdateResult = await _monthlyBalances.AddTransactionToMonth(cashTransactionCreateRequest.ToTransaction());
+
+            if(monthlyBalanceUpdateResult == false)
+            {
+                throw new ArgumentException("Failed to update monthly balances");
+            }
+
             return result;
         }
 

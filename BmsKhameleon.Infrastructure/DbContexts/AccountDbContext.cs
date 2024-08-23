@@ -17,12 +17,19 @@ namespace BmsKhameleon.Infrastructure.DbContexts
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
 
+        public virtual DbSet<MonthlyWorkingBalance> MonthlyWorkingBalances { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Account>().ToTable("Accounts");
             modelBuilder.Entity<Transaction>().ToTable("Transactions");
+            modelBuilder.Entity<MonthlyWorkingBalance>().ToTable("MonthlyWorkingBalances");
+
+            modelBuilder.Entity<MonthlyWorkingBalance>()
+                .HasIndex(m => new { m.AccountId, m.Date })
+                .IsUnique();
 
             foreach (var property in modelBuilder.Model.GetEntityTypes()
                          .SelectMany(t => t.GetProperties())

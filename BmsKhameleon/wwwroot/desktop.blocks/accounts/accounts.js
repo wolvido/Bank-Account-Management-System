@@ -40,6 +40,4 @@
         $(".popup_delete").showFlex();
     });
 
-
-
 });

@@ -6,9 +6,10 @@ using BmsKhameleon.Core.ServiceContracts;
 
 namespace BmsKhameleon.Core.Services
 {
-    public class AccountsService(IAccountsRepository accountsRepository) : IAccountsService
+    public class AccountsService(IAccountsRepository accountsRepository, IMonthlyBalancesService monthlyBalances) : IAccountsService
     {
         private readonly IAccountsRepository _accountsRepository = accountsRepository;
+        private readonly IMonthlyBalancesService _monthlyBalances = monthlyBalances;
 
         public async Task<bool> CreateAccount(AccountCreateRequest accountCreateRequest)
         {
@@ -36,6 +37,24 @@ namespace BmsKhameleon.Core.Services
 
         public async Task<bool> UpdateAccount(AccountUpdateRequest accountUpdateRequest)
         {
+            Account? existingAccount = await _accountsRepository.GetAccount(accountUpdateRequest.AccountId);
+            if (existingAccount == null)
+            {
+                return false;
+            }
+
+            bool monthlyBalanceUpdateResult = true;
+            if(existingAccount.InitialBalance != accountUpdateRequest.InitialBalance)
+            {
+                monthlyBalanceUpdateResult = await _monthlyBalances.InitialBalanceMonthAdjustment(accountUpdateRequest.AccountId, existingAccount.InitialBalance, accountUpdateRequest.InitialBalance);
+
+            }
+
+            if (monthlyBalanceUpdateResult == false) 
+            {
+                throw new ArgumentException("Failed to update monthly balances");
+            }
+
             bool result = await _accountsRepository.UpdateAccount(accountUpdateRequest.ToAccount());
             return result;
         }
