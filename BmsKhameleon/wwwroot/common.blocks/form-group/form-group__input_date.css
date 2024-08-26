@@ -4,7 +4,6 @@
     }
 }
 
-
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .form-group__input_date {
         position: relative;
@@ -34,7 +33,6 @@
     width: 33px;
     height: 32px;
 }
-
 
 .form-group__input_date::-webkit-calendar-picker-indicator {
     position: absolute;

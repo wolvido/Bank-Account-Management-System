@@ -1,0 +1,63 @@
+﻿
+
+<form class="popup">
+
+    <header class="popup__header">
+        Add Deposit
+    </header>
+
+    <div class="popup__content notice">
+        <div class="notice__validation" asp-validation-summary="All">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
+        <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to deposit <strong>Cash</strong> on @DateTime.Now</div>
+    </div>
+
+    <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_deposit">
+        <div class="radio-controls__group">
+            <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cash" name="deposit-type" type="radio" value="Cash"  />
+            <label class="radio-controls__label">Cash Deposit</label>
+        </div>
+
+        <div class="radio-controls__group">
+            <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cheque" name="deposit-type" type="radio" value="Cheque" checked />
+            <label class="radio-controls__label">Check Deposit</label>
+        </div>
+    </fieldset>
+
+    <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_deposit transaction-controller__fieldset_cheque">
+        <div class="form-group">
+            <label class="form-group__label">Check Deposit Date</label>
+            <input class="form-group__input form-group__input_date transaction-controller__cheque-date-input" type="date" data-date="@DateTime.Now.ToString("MMM d, yyyy")" data-date-format="ll" value="2024-08-11">
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label form-group__label_error">Check Bank Name</label>
+            <input class="form-group__input transaction-controller__cheque-bank-name-input" placeholder="LANDBANK" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label form-group__label_error">Check Number</label>
+            <input class="form-group__input transaction-controller__cheque-number-input" placeholder="1234567890" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label form-group__label_error">Payee (Company/Supplier/Customer Name)</label>
+            <input class="form-group__input transaction-controller__cheque-payee-input" placeholder="Office of the Vice President" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label form-group__label_error">Check Amount</label>
+            <input class="form-group__input form-group__input_value-bold transaction-controller__cheque-amount-input" placeholder="0.00" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label form-group__label_error">Note</label>
+            <textarea class="form-group__input transaction-controller__cheque-note-input" placeholder="Add Note"></textarea>
+        </div>
+    </fieldset>
+
+    <footer class="popup__footer">
+        <input type="submit" class="button " value="Add" />
+        <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
+    </footer>
+
+</form>

@@ -501,174 +501,6 @@
       "PackagePath": "staticwebassets\\common.blocks\\transaction-toolbar\\transaction-toolbar.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__back\\account-overview__back-button-container.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__back\\account-overview__back-button-container.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__back\\account-overview__back-button.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__back\\account-overview__back-button.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-deposits-section.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-deposits-section.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-label-group.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-label-group.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-label.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-label.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-label_working-balance.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-label_working-balance.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-section.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-section.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-value.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__balance\\account-overview__balance-value.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-cash.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-cash.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-cheque.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-cheque.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-section.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-section.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-table.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits-table.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__deposits\\account-overview__deposits.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__finance\\account-overview__finance-section.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__finance\\account-overview__finance-section.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__header\\account-overview__header-amount.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__header\\account-overview__header-amount.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__header\\account-overview__header-notes.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__header\\account-overview__header-notes.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__header\\account-overview__header-payee.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__header\\account-overview__header-payee.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__header\\account-overview__header-payment.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__header\\account-overview__header-payment.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-amount-deposit.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-amount-deposit.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-amount-withdrawal.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-amount-withdrawal.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-bank.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-bank.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-cheque.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-cheque.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-notes-label.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-notes-label.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-notes.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-notes.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-payee.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-payee.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__item\\account-overview__item-payment.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__item\\account-overview__item-payment.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__session\\account-overview__session-info-account.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__session\\account-overview__session-info-account.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__session\\account-overview__session-info-date.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__session\\account-overview__session-info-date.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__session\\account-overview__session-info.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__session\\account-overview__session-info.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__table\\account-overview__table-caption.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__table\\account-overview__table-caption.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__table\\account-overview__table-header.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__table\\account-overview__table-header.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__table\\account-overview__table-item.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__table\\account-overview__table-item.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__table\\account-overview__table-label.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__table\\account-overview__table-label.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__table\\account-overview__table-total.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__table\\account-overview__table-total.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__toolbar\\account-overview__toolbar-button.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__toolbar\\account-overview__toolbar-button.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__toolbar\\account-overview__toolbar-section.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__toolbar\\account-overview__toolbar-section.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__toolbar\\account-overview__toolbar.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__toolbar\\account-overview__toolbar.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__withdrawals\\account-overview__withdrawals-section.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__withdrawals\\account-overview__withdrawals-section.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__withdrawals\\account-overview__withdrawals-table.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__withdrawals\\account-overview__withdrawals-table.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\__withdrawals\\account-overview__withdrawals-total.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\__withdrawals\\account-overview__withdrawals-total.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\account-overview.css",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\account-overview.css"
-    },
-    {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\account-overview\\account-overview.js",
-      "PackagePath": "staticwebassets\\desktop.blocks\\account-overview\\account-overview.js"
-    },
-    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css"
     },
@@ -1023,6 +855,174 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\deposit.js",
       "PackagePath": "staticwebassets\\desktop.blocks\\deposit\\deposit.js"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button-container.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button-container.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-deposits-section.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-deposits-section.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label-group.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label-group.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label_working-balance.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label_working-balance.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-section.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-section.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-value.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-value.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-cash.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-cash.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-cheque.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-cheque.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-section.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-section.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-table.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-table.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__finance\\transactions-overview__finance-section.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__finance\\transactions-overview__finance-section.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-amount.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-amount.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-notes.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-notes.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-payee.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-payee.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-payment.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__header\\transactions-overview__header-payment.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-amount-deposit.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-amount-deposit.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-amount-withdrawal.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-amount-withdrawal.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-bank.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-bank.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-cheque.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-cheque.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes-label.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes-label.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-payee.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-payee.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-payment.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-payment.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info-account.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info-account.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info-date.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info-date.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-caption.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-caption.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-header.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-header.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-item.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-item.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-label.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-label.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-total.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-total.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar-button.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar-section.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar-section.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__withdrawals\\transactions-overview__withdrawals-section.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__withdrawals\\transactions-overview__withdrawals-section.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__withdrawals\\transactions-overview__withdrawals-table.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__withdrawals\\transactions-overview__withdrawals-table.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__withdrawals\\transactions-overview__withdrawals-total.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\__withdrawals\\transactions-overview__withdrawals-total.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\transactions-overview.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\transactions-overview.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\transactions-overview.js",
+      "PackagePath": "staticwebassets\\desktop.blocks\\transactions-overview\\transactions-overview.js"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control-group.css",

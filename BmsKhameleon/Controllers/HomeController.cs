@@ -65,7 +65,7 @@ namespace BmsKhameleon.UI.Controllers
         {
             if (accountUpdateRequest == null)
             {
-                return BadRequest("Invalid account request. Please fill the required fields.");
+                return BadRequest("Invalid account request.");
             }
 
             bool result = await _accountsService.UpdateAccount(accountUpdateRequest);
