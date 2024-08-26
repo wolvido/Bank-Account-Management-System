@@ -16,6 +16,7 @@ namespace BmsKhameleon.Core.Domain.RepositoryContracts
         Task<List<Transaction>> GetAllTransactionsForMonth(DateTime date, Guid accountId);
         Task<List<Transaction>> GetDepositsForDay(DateTime date, Guid accountId);
         Task<List<Transaction>> GetWithdrawalsForDay(DateTime date, Guid accountId);
+        Task<List<Transaction>> GetTransactionsForAccount(Guid accountId);
 
     }
 }

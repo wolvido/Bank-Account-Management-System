@@ -23,6 +23,8 @@ namespace BmsKhameleon.Core.ServiceContracts
         Task<List<TransactionResponse>> GetCashWithdrawalsForDay(DateTime date, Guid accountId);
         Task<List<TransactionResponse>> GetChequeWithdrawalsForDay(DateTime date, Guid accountId);
         Task<List<DailyTransactionsAggregateResponse>> GetMonthlyTransactionsAggregate(DateTime date, Guid accountId);
+
+        Task<List<TransactionResponse>> GetTransactionsForAccount(Guid accountId);
             
     }
 }

@@ -68,5 +68,18 @@ namespace BmsKhameleon.Infrastructure.Repositories
             bool result = await _db.SaveChangesAsync() > 0;
             return result;
         }
+
+        public async Task<bool> DeleteMonthBalance(Guid accountId, DateTime date)
+        {
+            _db.MonthlyWorkingBalances.RemoveRange(_db.MonthlyWorkingBalances.Where(m => m.AccountId == accountId && m.Date.Month == date.Month && m.Date.Year == date.Year));
+            bool result = await _db.SaveChangesAsync() > 0;
+            return result;
+        }
+
+        public async Task<List<MonthlyWorkingBalance>> GetAllMonthlyBalances(Guid accountId)
+        {
+            var monthlyBalances = await _db.MonthlyWorkingBalances.Where(m => m.AccountId == accountId).ToListAsync();
+            return monthlyBalances;
+        }
     }
 }

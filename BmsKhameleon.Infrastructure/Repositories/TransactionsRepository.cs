@@ -81,5 +81,12 @@ namespace BmsKhameleon.Infrastructure.Repositories
                 transaction.AccountId == accountId)
                     .ToListAsync();
         }
+
+        public async Task<List<Transaction>> GetTransactionsForAccount(Guid accountId)
+        {
+            var transactions = await _db.Transactions.Where(transaction => transaction.AccountId == accountId).ToListAsync();
+            return transactions;
+        }
+
     }
 }

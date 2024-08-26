@@ -6,10 +6,11 @@ using BmsKhameleon.Core.ServiceContracts;
 
 namespace BmsKhameleon.Core.Services
 {
-    public class AccountsService(IAccountsRepository accountsRepository, IMonthlyBalancesService monthlyBalances) : IAccountsService
+    public class AccountsService(IAccountsRepository accountsRepository, IMonthlyBalancesService monthlyBalances, ITransactionsService transactionsService) : IAccountsService
     {
         private readonly IAccountsRepository _accountsRepository = accountsRepository;
         private readonly IMonthlyBalancesService _monthlyBalances = monthlyBalances;
+        private readonly ITransactionsService _transactionsService = transactionsService;
 
         public async Task<bool> CreateAccount(AccountCreateRequest accountCreateRequest)
         {
@@ -61,6 +62,30 @@ namespace BmsKhameleon.Core.Services
 
         public async Task<bool> DeleteAccount(Guid accountId)
         {
+            //delete associated transactions
+            var transactions = await _transactionsService.GetTransactionsForAccount(accountId);
+            foreach(var transaction in transactions)
+            {
+                bool deleteTransactionResult = await _transactionsService.DeleteTransaction(transaction.TransactionId);
+                if(deleteTransactionResult == false)
+                {
+                    throw new ArgumentException("Failed to delete transactions");
+                }
+            }
+
+            //delete associated monthly balances
+            var monthlyBalances = await _monthlyBalances.GetAllMonthlyBalances(accountId);
+            foreach(var monthlyBalance in monthlyBalances)
+            {
+                var monthDate = new DateTime(monthlyBalance.Date.Year, monthlyBalance.Date.Month, 1);
+
+                bool deleteMonthlyBalanceResult = await _monthlyBalances.DeleteMonthBalance(accountId, monthDate);
+                if(deleteMonthlyBalanceResult == false)
+                {
+                    throw new ArgumentException("Failed to delete monthly balances");
+                }
+            }
+
             bool result = await _accountsRepository.DeleteAccount(accountId);
             return result;
         }

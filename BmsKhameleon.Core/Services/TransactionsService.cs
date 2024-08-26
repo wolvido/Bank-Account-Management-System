@@ -140,45 +140,50 @@ namespace BmsKhameleon.Core.Services
 
             List<DailyTransactionsAggregateResponse> monthlyTransactionsAggregate = new List<DailyTransactionsAggregateResponse>();
 
+            //populate each day with aggregated transactions of the day
             for (int i = 1; i <= DateTime.DaysInMonth(date.Year, date.Month); i++)
             {
-                var daysInMonth = DateTime.DaysInMonth(date.Year, date.Month);
                 DateTime currentDate = new DateTime(date.Year, date.Month, i);
 
-                var deposits = await GetDepositsForDay(currentDate, accountId);
-                var withdrawals = await GetWithdrawalsForDay(currentDate, accountId);
-                
-                decimal totalDeposits = deposits.Sum(transaction => transaction.Amount);
-                decimal totalWithdrawals = withdrawals.Sum(transaction => transaction.Amount);
-                decimal totalBalance = account.InitialBalance;
+                //grab all deposits and withdrawals for the day
+                var depositsForDay = await GetDepositsForDay(currentDate, accountId);
+                decimal totalDepositsForDay = depositsForDay.Sum(transaction => transaction.Amount);
+                var withdrawalsForDay = await GetWithdrawalsForDay(currentDate, accountId);
+                decimal totalWithdrawalsForDay = withdrawalsForDay.Sum(transaction => transaction.Amount);
 
-                if (true/*totalDeposits > 0 || totalWithdrawals > 0*/)
-                {
-                    totalBalance += totalDeposits;
-                    totalBalance -= totalWithdrawals;
+                //add previous day total balance to the current day total balance
+                var lastAggregatedDay = monthlyTransactionsAggregate.LastOrDefault();
+                decimal totalBalance = lastAggregatedDay?.TotalBalance ?? 0;
 
-                    monthlyTransactionsAggregate.Add(new DailyTransactionsAggregateResponse
-                    {
-                        AccountId = accountId,
-                        Date = currentDate,
-                        TotalBalance = totalBalance,
-                        TotalWithdrawal = totalWithdrawals
-                    });
-                }
-                else if(monthlyTransactionsAggregate.Count > 0)
+                //aggregate and inject
+                totalBalance += totalDepositsForDay;
+                totalBalance -= totalWithdrawalsForDay;
+                monthlyTransactionsAggregate.Add(new DailyTransactionsAggregateResponse
                 {
-                    //add the same total balance as the last previous added
-                    monthlyTransactionsAggregate.Add(new DailyTransactionsAggregateResponse
-                    {
-                        AccountId = accountId,
-                        Date = currentDate,
-                        TotalBalance = monthlyTransactionsAggregate.Last().TotalBalance,
-                        TotalWithdrawal = 0
-                    });
-                }
+                    AccountId = accountId,
+                    Date = currentDate,
+                    TotalBalance = totalBalance,
+                    TotalWithdrawal = totalWithdrawalsForDay
+                });
+
             }
-            
+
+            //for each item in monthlyTransactionsAggregate add in the total balance the previousMonthBalance
+            DateTime previousMonth = new DateTime(date.AddMonths(-1).Year, date.AddMonths(-1).Month, 1);
+            MonthlyWorkingBalance? previousMonthWorkingBalance = await _monthlyBalances.GetMonthlyBalance(accountId, previousMonth);
+            decimal previousMonthBalance = previousMonthWorkingBalance?.WorkingBalance ?? account.InitialBalance;
+            foreach (var dailyAggregate in monthlyTransactionsAggregate)
+            {
+                dailyAggregate.TotalBalance += previousMonthBalance;
+            }
+
             return monthlyTransactionsAggregate;
+        }
+
+        public async Task<List<TransactionResponse>> GetTransactionsForAccount(Guid accountId)
+        {
+            List<Transaction> transactions = await _transactionsRepository.GetTransactionsForAccount(accountId);
+            return transactions.Select(transaction => transaction.ToTransactionResponse()).ToList();
         }
     }
 }

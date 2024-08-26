@@ -51,3 +51,17 @@ BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.Assembl
 /.vs/BmsKhameleonSolution/DesignTimeBuild
 /BmsKhameleon.Infrastructure/obj/Debug
 *.dll
+.vs/BmsKhameleonSolution/DesignTimeBuild/.dtbcache.v2
+.vs/BmsKhameleonSolution/v17/.futdcache.v2
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.dll
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.pdb
+BmsKhameleon.Core/obj/Debug/net8.0/ref/BmsKhameleon.Core.dll
+BmsKhameleon.Core/obj/Debug/net8.0/refint/BmsKhameleon.Core.dll
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.AssemblyInfo.cs
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.dll
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.pdb
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.sourcelink.json
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/ref/BmsKhameleon.Infrastructure.dll
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/refint/BmsKhameleon.Infrastructure.dll
+BmsKhameleon/obj/Debug/net8.0/BmsKhameleon.UI.dll
+BmsKhameleon/obj/Debug/net8.0/BmsKhameleon.UI.pdb

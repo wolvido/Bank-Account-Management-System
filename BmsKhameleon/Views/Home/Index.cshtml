@@ -77,7 +77,7 @@
                         <div class="table__item-field-label">@account.WorkingBalance</div>
 
                         <div class="accounts__item-controls table__item-controls">
-                            <button data-accountId="@account.AccountId" class="accounts__item-button accounts__item-button_edit table__item-button">
+                            <button data-accountId="@account.AccountId" class="accounts__item-button accounts__item-button_edit table__item-button" onclick="event.stopPropagation();">
                                 <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
                             </button>
                         </div>

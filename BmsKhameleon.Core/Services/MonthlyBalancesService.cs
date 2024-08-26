@@ -101,6 +101,11 @@ namespace BmsKhameleon.Core.Services
 
         public async Task<MonthlyWorkingBalance?> GetMonthlyBalance(Guid accountId, DateTime date)
         {
+            if(date.Day != 1)
+            {
+                date = new DateTime(date.Year, date.Month, 1);
+            }
+
             var monthlyBalance = await _monthlyBalanceRepository.GetMonthlyBalance(accountId, date);
             if (monthlyBalance == null)
             {
@@ -112,6 +117,26 @@ namespace BmsKhameleon.Core.Services
         public async Task<bool> InitialBalanceMonthAdjustment(Guid accountId, decimal amountToRemove, decimal amountToAdd)
         {
             bool result = await _monthlyBalanceRepository.InitialBalanceMonthAdjustment(accountId, amountToRemove, amountToAdd);
+            return result;
+        }
+
+        public async Task<bool> DeleteMonthBalance(Guid accountId, DateTime date)
+        {
+            var result = await _monthlyBalanceRepository.DeleteMonthBalance(accountId, date);
+            if (result == false)
+            {
+                throw new InvalidOperationException("Monthly balance does not exist for this month");
+            }
+            return result;
+        }
+
+        public async Task<List<MonthlyWorkingBalance>> GetAllMonthlyBalances(Guid accountId)
+        {
+            var result = await _monthlyBalanceRepository.GetAllMonthlyBalances(accountId);
+            if (result == null)
+            {
+                throw new InvalidOperationException("No monthly balances found for this account");
+            }
             return result;
         }
     }
