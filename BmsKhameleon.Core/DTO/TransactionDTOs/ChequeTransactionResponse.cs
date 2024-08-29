@@ -43,5 +43,23 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
                 ChequeNumber = transaction.ChequeNumber
             };
         }
+
+        public static ChequeTransactionResponse ToTransactionChequeResponse(this TransactionResponse transactionResponse)
+        {
+            return new ChequeTransactionResponse
+            {
+                TransactionId = transactionResponse.TransactionId,
+                AccountId = transactionResponse.AccountId,
+                TransactionDate = transactionResponse.TransactionDate,
+                Amount = transactionResponse.Amount,
+                TransactionType = transactionResponse.TransactionType,
+                TransactionMedium = "Cheque",
+                Note = transactionResponse.Note,
+                Payee = transactionResponse.Payee,
+                ChequeBankName = transactionResponse.ChequeBankName,
+                ChequeNumber = transactionResponse.ChequeNumber
+            };
+        }
+
     }
 }

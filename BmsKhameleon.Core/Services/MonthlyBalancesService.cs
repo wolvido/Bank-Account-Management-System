@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BmsKhameleon.Core.Domain.Entities;
 using BmsKhameleon.Core.Domain.RepositoryContracts;
+using BmsKhameleon.Core.DTO.MonthlyWokingBalanceDTOs;
 using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
 
@@ -23,7 +24,7 @@ namespace BmsKhameleon.Core.Services
                 throw new InvalidOperationException("Account does not exist");
             }
 
-            MonthlyWorkingBalance? existingMonthlyBalance = await GetMonthlyBalance(accountId, date);
+            MonthlyWorkingBalanceResponse? existingMonthlyBalance = await GetMonthlyBalance(accountId, date);
             if (existingMonthlyBalance != null && 
                 existingMonthlyBalance.Date.Month == date.Month && 
                 existingMonthlyBalance.Date.Year == date.Year)
@@ -61,12 +62,19 @@ namespace BmsKhameleon.Core.Services
             }
 
             var monthDate = new DateTime(transaction.TransactionDate.Year, transaction.TransactionDate.Month, 1);
-            var existingMonthBalance = await GetMonthlyBalance(transaction.AccountId, monthDate);
-            if (existingMonthBalance == null)
+            var existingMonthBalanceResponse = await GetMonthlyBalance(transaction.AccountId, monthDate);
+            if (existingMonthBalanceResponse == null)
             {
                 var createResult = await CreateMonthlyBalance(transaction.AccountId, monthDate, transactionAmount);
                 return createResult;
             }
+
+            var existingMonthBalance = new MonthlyWorkingBalance() { 
+                MonthlyWorkingBalanceId = existingMonthBalanceResponse.MonthlyWorkingBalanceId,
+                AccountId = existingMonthBalanceResponse.AccountId,
+                Date = existingMonthBalanceResponse.Date, 
+                WorkingBalance = existingMonthBalanceResponse.WorkingBalance
+            };
 
             var result = await _monthlyBalanceRepository.AddToMonthlyBalance(existingMonthBalance, transactionAmount);
             return result;
@@ -91,17 +99,25 @@ namespace BmsKhameleon.Core.Services
                 throw new ArgumentException("Invalid transaction type.");
             }
 
-            var existingMonthBalance = await GetMonthlyBalance(transaction.AccountId, date);
-            if (existingMonthBalance == null)
+            var existingMonthBalanceResponse = await GetMonthlyBalance(transaction.AccountId, date);
+            if (existingMonthBalanceResponse == null)
             {
                 throw new InvalidOperationException("Monthly balance does not exist for this month");
             }
+
+            var existingMonthBalance = new MonthlyWorkingBalance()
+            {
+                MonthlyWorkingBalanceId = existingMonthBalanceResponse.MonthlyWorkingBalanceId,
+                AccountId = existingMonthBalanceResponse.AccountId,
+                Date = existingMonthBalanceResponse.Date,
+                WorkingBalance = existingMonthBalanceResponse.WorkingBalance
+            };
 
             var result = await _monthlyBalanceRepository.RemoveFromMonthlyBalance(existingMonthBalance, amount);
             return result;
         }
 
-        public async Task<MonthlyWorkingBalance?> GetMonthlyBalance(Guid accountId, DateTime date)
+        public async Task<MonthlyWorkingBalanceResponse?> GetMonthlyBalance(Guid accountId, DateTime date)
         {
             if(date.Day != 1)
             {
@@ -113,7 +129,7 @@ namespace BmsKhameleon.Core.Services
             {
                 return null;
             }
-            return monthlyBalance;
+            return monthlyBalance.ToMonthlyWorkingBalanceResponse();
         }
 
         public async Task<bool> InitialBalanceMonthAdjustment(Guid accountId, decimal amountToRemove, decimal amountToAdd)
@@ -132,14 +148,19 @@ namespace BmsKhameleon.Core.Services
             return result;
         }
 
-        public async Task<List<MonthlyWorkingBalance>> GetAllMonthlyBalances(Guid accountId)
+        public async Task<List<MonthlyWorkingBalanceResponse>> GetAllMonthlyBalances(Guid accountId)
         {
             var result = await _monthlyBalanceRepository.GetAllMonthlyBalances(accountId);
+
             if (result == null)
             {
                 throw new InvalidOperationException("No monthly balances found for this account");
             }
-            return result;
+
+            //convert every result of result into onthly working balance response
+            var resultConverted =  result.Select(x => x.ToMonthlyWorkingBalanceResponse()).ToList();
+
+            return resultConverted;
         }
     }
 }

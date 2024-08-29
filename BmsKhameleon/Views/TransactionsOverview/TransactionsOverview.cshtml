@@ -1,4 +1,4 @@
-﻿@model List<TransactionResponse?>
+﻿
 
 @section styles{
     <link href="~/desktop.blocks/transactions-overview/transactions-overview.css" rel="stylesheet" type="text/css" />
@@ -49,12 +49,12 @@
 
             <section class="transactions-overview__deposits-section">
 
-                <section class="transactions-overview__deposits-cash">
+                <section data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__deposits-cash">
                     <partial name="~/Views/Shared/TransactionTables/_CashDepositTransactionsTablePartial.cshtml"></partial>
                     @* deposit cash table *@
                 </section>
 
-                <section class="transactions-overview__deposits-cheque">
+                <section data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__deposits-cheque">
                     <partial name="~/Views/Shared/TransactionTables/_ChequeDepositTransactionsTablePartial.cshtml"></partial>
                     @* deposit cheque table *@
                 </section>
@@ -63,7 +63,7 @@
 
         </section>
 
-        <section class="transactions-overview__withdrawals-section">
+        <section data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__withdrawals-section">
             <partial name="~/Views/Shared/TransactionTables/_WithdrawalTransactionsTablePartial.cshtml"></partial>
             @* withdrawals table *@
         </section>

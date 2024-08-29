@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BmsKhameleon.Core.Domain.Entities;
 using BmsKhameleon.Core.Domain.RepositoryContracts;
+using BmsKhameleon.Core.DTO.MonthlyWokingBalanceDTOs;
 using BmsKhameleon.Core.DTO.TransactionDTOs;
 using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
@@ -115,24 +116,42 @@ namespace BmsKhameleon.Core.Services
             return transactions.Select(transaction => transaction.ToTransactionResponse()).ToList();
         }
 
+        public async Task<List<CashTransactionResponse>> GetCashDepositsForDay(DateTime date, Guid accountId)
+        {
+            var deposits = await GetDepositsForDay(date, accountId);
+            var cashDeposits = deposits.Where(transaction => transaction.TransactionMedium == TransactionMedium.Cash.ToString()).ToList();
+            var cashDepositsResponse = cashDeposits.Select(transaction => transaction.ToTransactionCashResponse()).ToList();
+            return cashDepositsResponse;
+        }
+
+        public async Task<List<ChequeTransactionResponse>> GetChequeDepositsForDay(DateTime date, Guid accountId)
+        {
+            var deposits = await GetDepositsForDay(date, accountId);
+            var chequeDeposits = deposits.Where(transaction => transaction.TransactionMedium == TransactionMedium.Cheque.ToString()).ToList();
+            var chequeDepositsResponse = chequeDeposits.Select(transaction => transaction.ToTransactionChequeResponse()).ToList();
+            return chequeDepositsResponse;
+        }
+
         public async Task<List<TransactionResponse>> GetWithdrawalsForDay(DateTime date, Guid accountId)
         {
             List<Transaction> transactions = await _transactionsRepository.GetWithdrawalsForDay(date, accountId);
             return transactions.Select(transaction => transaction.ToTransactionResponse()).ToList();
         }
 
-        public async Task<List<TransactionResponse>> GetCashWithdrawalsForDay(DateTime date, Guid accountId)
+        public async Task<List<CashTransactionResponse>> GetCashWithdrawalsForDay(DateTime date, Guid accountId)
         {
             var withdrawals = await GetWithdrawalsForDay(date, accountId);
             var cashWithdrawals = withdrawals.Where(transaction => transaction.TransactionMedium == TransactionMedium.Cash.ToString()).ToList();
-            return cashWithdrawals;
+            var cashWithdrawalsResponse = cashWithdrawals.Select(transaction => transaction.ToTransactionCashResponse()).ToList();
+            return cashWithdrawalsResponse;
         }
 
-        public async Task<List<TransactionResponse>> GetChequeWithdrawalsForDay(DateTime date, Guid accountId)
+        public async Task<List<ChequeTransactionResponse>> GetChequeWithdrawalsForDay(DateTime date, Guid accountId)
         {
             var withdrawals = await GetWithdrawalsForDay(date, accountId);
             var chequeWithdrawals = withdrawals.Where(transaction => transaction.TransactionMedium == TransactionMedium.Cheque.ToString()).ToList();
-            return chequeWithdrawals;
+            var chequeWithdrawalsResponse = chequeWithdrawals.Select(transaction => transaction.ToTransactionChequeResponse()).ToList();
+            return chequeWithdrawalsResponse;
         }
 
         /// <summary>
@@ -184,7 +203,7 @@ namespace BmsKhameleon.Core.Services
 
             //for each item in monthlyTransactionsAggregate add in the total balance the previousMonthBalance
             DateTime previousMonth = new DateTime(date.AddMonths(-1).Year, date.AddMonths(-1).Month, 1);
-            MonthlyWorkingBalance? previousMonthWorkingBalance = await _monthlyBalances.GetMonthlyBalance(accountId, previousMonth);
+            MonthlyWorkingBalanceResponse? previousMonthWorkingBalance = await _monthlyBalances.GetMonthlyBalance(accountId, previousMonth);
             decimal previousMonthBalance = previousMonthWorkingBalance?.WorkingBalance ?? account.InitialBalance;
             foreach (var dailyAggregate in monthlyTransactionsAggregate)
             {

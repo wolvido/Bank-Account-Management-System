@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BmsKhameleon.Core.DTO.MonthlyWokingBalanceDTOs;
 
 namespace BmsKhameleon.Core.ServiceContracts
 {
@@ -12,11 +13,11 @@ namespace BmsKhameleon.Core.ServiceContracts
         public Task<bool> AddTransactionToMonth(Transaction transaction);
 
         public Task<bool> RemoveTransactionFromMonth(Transaction transaction);
-        public Task<MonthlyWorkingBalance?> GetMonthlyBalance(Guid accountId, DateTime date);
+        public Task<MonthlyWorkingBalanceResponse?> GetMonthlyBalance(Guid accountId, DateTime date);
 
         public Task<bool> InitialBalanceMonthAdjustment(Guid accountId, decimal amountToRemove, decimal amountToAdd);
 
         public Task<bool> DeleteMonthBalance(Guid accountId, DateTime date);
-        public Task<List<MonthlyWorkingBalance>> GetAllMonthlyBalances(Guid accountId);
+        public Task<List<MonthlyWorkingBalanceResponse>> GetAllMonthlyBalances(Guid accountId);
     }
 }

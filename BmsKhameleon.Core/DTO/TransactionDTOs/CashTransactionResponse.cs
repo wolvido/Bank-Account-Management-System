@@ -39,5 +39,20 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
                 CashTransactionType = transaction.CashTransactionType
             };
         }
+
+        public static CashTransactionResponse ToTransactionCashResponse(this TransactionResponse transactionResponse)
+        {
+            return new CashTransactionResponse
+            {
+                TransactionId = transactionResponse.TransactionId,
+                AccountId = transactionResponse.AccountId,
+                TransactionDate = transactionResponse.TransactionDate,
+                Amount = transactionResponse.Amount,
+                TransactionType = transactionResponse.TransactionType,
+                TransactionMedium = "Cash",
+                Note = transactionResponse.Note,
+                CashTransactionType = transactionResponse.CashTransactionType
+            };
+        }
     }
 }

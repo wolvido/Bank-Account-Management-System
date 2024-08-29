@@ -18,6 +18,28 @@ namespace BmsKhameleon.UI.Controllers
             return View();
         }
 
+        [Route("[action]/{accountId}/{date}")]
+        public async Task<IActionResult> CashDepositsTable(Guid accountId, DateTime date)
+        {
+            var transactions = await _transactionsService.GetCashDepositsForDay(date, accountId);
 
+            return PartialView("~/Views/Shared/Transactiontables/_CashDepositTransactionsTablePartial.cshtml", transactions);
+        }
+
+        [Route("[action]/{accountId}/{date}")]
+        public async Task<IActionResult> ChequeDepositsTable(Guid accountId, DateTime date)
+        {
+            var transactions = await _transactionsService.GetChequeDepositsForDay(date, accountId);
+
+            return PartialView("~/Views/Shared/Transactiontables/_ChequeDepositTransactionsTablePartial.cshtml", transactions);
+        }
+
+        [Route("[action]/{accountId}/{date}")]
+        public async Task<IActionResult> WithdrawalsTable(Guid accountId, DateTime date)
+        {
+            var transactions = await _transactionsService.GetWithdrawalsForDay(date, accountId);
+
+            return PartialView("~/Views/Shared/Transactiontables/_WithdrawalTransactionsTablePartial.cshtml", transactions);
+        }
     }
 }
