@@ -58,6 +58,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uRm9ybXNcX1dpdGhkcmF3Q2hlcXVlVHJhbnNhY3Rpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionTables/_CashDepositTransactionsTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uVGFibGVzXF9DYXNoRGVwb3NpdFRyYW5zYWN0aW9uc1RhYmxlUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionTables/_ChequeDepositTransactionsTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uVGFibGVzXF9DaGVxdWVEZXBvc2l0VHJhbnNhY3Rpb25zVGFibGVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionTables/_WithdrawalTransactionsTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uVGFibGVzXF9XaXRoZHJhd2FsVHJhbnNhY3Rpb25zVGFibGVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/_AuthenticationLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoZW50aWNhdGlvbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

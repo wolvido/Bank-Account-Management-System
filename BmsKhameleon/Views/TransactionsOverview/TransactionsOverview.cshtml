@@ -1,4 +1,6 @@
-﻿@section styles{
+﻿@model List<TransactionResponse?>
+
+@section styles{
     <link href="~/desktop.blocks/transactions-overview/transactions-overview.css" rel="stylesheet" type="text/css" />
     <script src="~/desktop.blocks/transactions-overview/transactions-overview.js" async defer></script>
     <script src="~/common.blocks/form-group/form-group__input_date.js" async defer></script>
@@ -15,8 +17,8 @@
         </section>
 
         <div class="transactions-overview__toolbar transaction-toolbar">
-            <button class="transactions-overview__deposit-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_deposit">Add Cash / Check Deposit</button>
-            <button class="transactions-overview__withdraw-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_withdraw">Add Check Issuance / Cash Withdrawal</button>
+            <button data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__deposit-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_deposit">Add Cash / Check Deposit</button>
+            <button data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__withdraw-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_withdraw">Add Check Issuance / Cash Withdrawal</button>
         </div>
     </section>
 
@@ -48,133 +50,13 @@
             <section class="transactions-overview__deposits-section">
 
                 <section class="transactions-overview__deposits-cash">
-
-                    <div class="transactions-overview__table-caption">
-                        <div class="transactions-overview__table-label">
-                            Cash Deposits
-                        </div>
-
-                        <div class="transactions-overview__table-total">
-                            Php 784,670.00
-                        </div>
-                    </div>
-
-                    <div class="transactions-overview__deposits-table table">
-
-                        <div class="transactions-overview__table-container table__item-container">
-                        @for (int i = 0; i < 2; i++)
-                        {
-                            <div class="transactions-overview__table-item table__item transaction-controller__item">
-
-                                <div class="transaction-controller__field-transaction-type">
-                                    deposit
-                                </div>
-
-                                <div class="table__item-field transaction-controller__field-currency-type">
-                                    Cash
-                                </div>
-
-                                <div class="transaction-controller__cash-transaction">
-                                    bank-pick-up
-                                </div>
-
-                                <div class="transaction-controller__field-date">
-                                    2026-08-11
-                                </div>
-
-                                <div class="transaction-controller__field-note transaction-controller__field-note transaction-controller__field-note_invisible">
-                                    secret note cash deposit bank-pick-up
-                                </div>
-
-                                <div class="table__item-field table__item-field_controller">
-
-                                    <div class="table__item-field-label transaction-controller__field-amount">
-                                        @(i*1000)
-                                    </div>
-
-                                    <div class="table__item-controls">
-
-                                        <button class="table__item-button transaction-controller__button_edit">
-                                            <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
-                                        </button>
-
-                                    </div>
-
-                                </div>
-                    
-                            </div>
-                        }
-                        </div>
-
-                    </div>
-
+                    <partial name="~/Views/Shared/TransactionTables/_CashDepositTransactionsTablePartial.cshtml"></partial>
+                    @* deposit cash table *@
                 </section>
 
                 <section class="transactions-overview__deposits-cheque">
-                    <div class="transactions-overview__table-caption">
-                        <div class="transactions-overview__table-label">
-                            Check Deposits
-                        </div>
-
-                        <div class="transactions-overview__table-total">
-                            Php 43,862.10
-                        </div>
-                    </div>
-
-                    <div class="transactions-overview__deposits-table table">
-
-                        <div class="transactions-overview__table-container table__item-container">
-                            @for (int i = 0; i < 2; i++)
-                            {
-                                <div class="transactions-overview__table-item table__item transaction-controller__item">
-
-                                    <div class="transaction-controller__field-transaction-type">
-                                        deposit
-                                    </div>
-
-                                    <div class="transactions-overview__item-cheque table__item-field transaction-controller__field-currency-type">
-                                        2038624
-                                    </div>
-
-                                    <div class="transactions-overview__item-bank table__item-field transaction-controller__field-bank-name">
-                                        RB Mati
-                                    </div>
-
-                                    <div class="transaction-controller__field-date">
-                                        2026-08-11
-                                    </div>
-
-                                    <div class="transaction-controller__field-note transaction-controller__field-note transaction-controller__field-note_invisible">
-                                        secret note cash deposit bank-pick-up
-                                    </div>
-
-                                    <div class="transaction-controller__field-payee">
-                                        Alice Gou
-                                    </div>
-
-                                    <div class="transactions-overview__item-amount-deposit table__item-field table__item-field_controller">
-
-                                        <div class="table__item-field-label transaction-controller__field-amount">
-                                            @(i*1000/3)
-                                        </div>
-
-                                        <div class="table__item-controls">
-
-                                            <button class="table__item-button transaction-controller__button_edit">
-                                                <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
-                                            </button>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            }
-                        </div>
-
-                    </div>
-
-
+                    <partial name="~/Views/Shared/TransactionTables/_ChequeDepositTransactionsTablePartial.cshtml"></partial>
+                    @* deposit cheque table *@
                 </section>
 
             </section>
@@ -182,118 +64,8 @@
         </section>
 
         <section class="transactions-overview__withdrawals-section">
-            <div class="transactions-overview__table-caption">
-                <div class="transactions-overview__table-label">
-                    Issuance & Withdrawals
-                </div>
-
-                <div class="transactions-overview__table-total">
-                    <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cash"> Cash: Php 359,917.69 </div>
-                    <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cheque"> Check: Php 417,739.77 </div>
-                </div>
-            </div>
-
-            <div class="transactions-overview__withdrawals-table table">
-                <header class="transactions-overview__table-header table__header">
-                    <div class="transactions-overview__header-payment table__header-title">
-                        <button class="transactions-overview__header-button table__header-button">
-                            Check #<br />
-                            / Cash
-                        </button>
-                    </div>
-
-                    <div class="transactions-overview__header-payee table__header-title">
-                        <button class="transactions-overview__header-button table__header-button">
-                            Payee
-                        </button>
-                    </div>
-
-                    <div class="transactions-overview__header-amount table__header-title">
-                        <button class="transactions-overview__header-button table__header-button">
-                            Amount
-                        </button>
-                    </div>
-
-                    <div class="transactions-overview__header-notes table__header-title">
-                        <button class="transactions-overview__header-button table__header-button">
-                            Notes
-                        </button>
-                    </div>
-
-                </header>
-
-                <div class="transactions-overview__table-content table__item-container">
-
-                    @for (int i = 0; i < 4; i++)
-                    {
-
-                        <div class="transactions-overview__table-item table__item transaction-controller__item">
-
-                            <div class="transaction-controller__field-transaction-type">
-                                withdraw
-                            </div>
-
-                            <div class="transaction-controller__field-date">
-                                2026-08-11
-                            </div>
-
-                            <div class="transaction-controller__cash-transaction">
-                                @{
-                                    string valueCash;
-                                    if (i == 3){
-                                        valueCash = "over-the-counter";
-                                    }
-                                    else{
-                                        valueCash = "";
-                                    }
-                                }
-                                @valueCash
-                            </div>
-
-                            <div class="transactions-overview__item-payment table__item-field transaction-controller__field-currency-type">
-                                
-                                @{
-                                    string value;
-                                    if (i == 3){
-                                        value = "Cash";
-                                    }
-                                    else{
-                                        value = i.ToString();
-                                    }
-                                }
-                                @value
-
-                            </div>
-
-                            <div class="transactions-overview__item-payee table__item-field transaction-controller__field-payee">
-                                Alice Gou
-                            </div>
-
-                            <div class="transactions-overview__item-amount-withdrawal table__item-field transaction-controller__field-amount">
-                                @(i*1000)
-                            </div>
-
-                            <div class="transactions-overview__item-notes table__item-field table__item-field_controller">
-                                <div class="transactions-overview__item-notes-label table__item-field-label transaction-controller__field-note">
-                                    POGO Payment
-                                </div>
-                                    
-                                <div class="table__item-controls">
-
-                                    <button class="table__item-button transaction-controller__button_edit">
-                                        <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
-                                    </button>
-
-                                </div>
-
-                            </div>
-                    
-                        </div>
-                    }
-                </div>
-
-            </div>
-
+            <partial name="~/Views/Shared/TransactionTables/_WithdrawalTransactionsTablePartial.cshtml"></partial>
+            @* withdrawals table *@
         </section>
 
     </section>
@@ -302,101 +74,8 @@
         @* deposit *@
     </section>
 
-    <section class="overlay transaction-controller__overlay transaction-controller__overlay_withdraw">
-        <form class="popup">
-
-            <header class="popup__header">
-                Add Withdrawal
-            </header>
-
-            <div class="popup__content notice ">
-                <div class="notice__validation">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
-                <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to Issue a <strong>Check</strong> on @DateTime.Now</div>
-            </div>
-
-            <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_withdraw">
-                <div class="radio-controls__group">
-                    <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cash" name="withdraw-type" type="radio" value="Cash" checked />
-                    <label class="radio-controls__label">Cash Withdrawal</label>
-                </div>
-
-                <div class="radio-controls__group">
-                    <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cheque" name="withdraw-type" type="radio" value="Cheque" />
-                    <label class="radio-controls__label">Issue Check</label>
-                </div>
-            </fieldset>
-
-            <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_withdraw transaction-controller__fieldset_cheque">
-
-                <div class="form-group">
-                    <label class="form-group__label">Check Issue Date</label>
-                    <input class="form-group__input form-group__input_date transaction-controller__cheque-date-input" type="date" data-date="" data-date-format="ll" value="2024-08-11" />
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group__label">Check Number</label>
-                    <input class="form-group__input transaction-controller__cheque-number-input" />
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group__label">Payee (Company/Supplier/Customer Name)</label>
-                    <input class="form-group__input transaction-controller__cheque-payee-input" />
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group__label">Check Issuance Amount</label>
-                    <input class="form-group__input transaction-controller__cheque-amount-input" />
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group__label">Note</label>
-                    <textarea class="form-group__input transaction-controller__cheque-note-input"></textarea>
-                </div>
-
-            </fieldset>
-
-            <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_withdraw transaction-controller__fieldset_cash">
-
-                <div class="form-group">
-                    <label class="form-group__label">Cash Withdraw Date</label>
-                    <input class="form-group__input form-group__input_date transaction-controller__cash-date-input" type="date" data-date="" data-date-format="ll" value="2025-08-11" />
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group__label">Cash Withdraw Amount</label>
-                    <input class="form-group__input transaction-controller__cash-amount-input" />
-                </div>
-
-                <div>
-                    <fieldset class="form-group radio-controls">
-                        <label class="form-group__label">Transaction Type, select one:</label>
-
-                        <div class="radio-controls__group">
-                            <input type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_over-the-counter" name="cash-transaction-type" value="Over-the-counter" />
-                            <label class="radio-controls__label">Over-the-Counter </label>
-                        </div>
-
-                        <div class="radio-controls__group">
-                            <input type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_online-transfer" name="cash-transaction-type" value="Online-transfer" />
-                            <label class="radio-controls__label">Online Fund Transfer</label>
-                        </div>
-
-                    </fieldset>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group__label">Note</label>
-                    <textarea class="form-group__input transaction-controller__cash-note-input"></textarea>
-                </div>
-
-            </fieldset>
-
-            <footer class="popup__footer">
-                <input type="submit" class="button " value="Add" />
-                <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
-            </footer>
-        </form>
-
+    <section class="overlay transactions-overview__withdraw_overlay transaction-controller__overlay transaction-controller__overlay_withdraw">
+        @* withdraw *@
     </section>
 
 </main>

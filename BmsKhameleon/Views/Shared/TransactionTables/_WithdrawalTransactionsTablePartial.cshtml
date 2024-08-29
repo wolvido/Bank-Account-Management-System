@@ -1,0 +1,117 @@
+﻿
+
+<div class="transactions-overview__table-caption">
+    <div class="transactions-overview__table-label">
+        Issuance & Withdrawals
+    </div>
+
+    <div class="transactions-overview__table-total">
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cash"> Cash: Php 359,917.69 </div>
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cheque"> Check: Php 417,739.77 </div>
+    </div>
+</div>
+
+<div class="transactions-overview__withdrawals-table table">
+    <header class="transactions-overview__table-header table__header">
+        <div class="transactions-overview__header-payment table__header-title">
+            <button class="transactions-overview__header-button table__header-button">
+                Check #<br />
+                / Cash
+            </button>
+        </div>
+
+        <div class="transactions-overview__header-payee table__header-title">
+            <button class="transactions-overview__header-button table__header-button">
+                Payee
+            </button>
+        </div>
+
+        <div class="transactions-overview__header-amount table__header-title">
+            <button class="transactions-overview__header-button table__header-button">
+                Amount
+            </button>
+        </div>
+
+        <div class="transactions-overview__header-notes table__header-title">
+            <button class="transactions-overview__header-button table__header-button">
+                Notes
+            </button>
+        </div>
+
+    </header>
+
+    <div class="transactions-overview__table-content table__item-container">
+
+        @for (int i = 0; i < 4; i++)
+        {
+
+            <div class="transactions-overview__table-item table__item transaction-controller__item">
+
+                <div class="transaction-controller__field-transaction-type">
+                    withdraw
+                </div>
+
+                <div class="transaction-controller__field-date">
+                    2026-08-11
+                </div>
+
+                <div class="transaction-controller__cash-transaction">
+                    @{
+                        string valueCash;
+                        if (i == 3)
+                        {
+                            valueCash = "over-the-counter";
+                        }
+                        else
+                        {
+                            valueCash = "";
+                        }
+                    }
+                    @valueCash
+                </div>
+
+                <div class="transactions-overview__item-payment table__item-field transaction-controller__field-currency-type">
+
+                    @{
+                        string value;
+                        if (i == 3)
+                        {
+                            value = "Cash";
+                        }
+                        else
+                        {
+                            value = i.ToString();
+                        }
+                    }
+                    @value
+
+                </div>
+
+                <div class="transactions-overview__item-payee table__item-field transaction-controller__field-payee">
+                    Alice Gou
+                </div>
+
+                <div class="transactions-overview__item-amount-withdrawal table__item-field transaction-controller__field-amount">
+                    @(i * 1000)
+                </div>
+
+                <div class="transactions-overview__item-notes table__item-field table__item-field_controller">
+                    <div class="transactions-overview__item-notes-label table__item-field-label transaction-controller__field-note">
+                        POGO Payment
+                    </div>
+
+                    <div class="table__item-controls">
+
+                        <button class="table__item-button transaction-controller__button_edit">
+                            <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

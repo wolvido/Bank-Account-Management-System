@@ -1,1 +1,77 @@
-﻿
+﻿@model CashTransactionCreateRequest
+
+@{
+    Guid accountId = ViewBag.AccountId;
+    DateTime date = ViewBag.Date;
+}
+
+<form class="popup" method="post">
+
+    <header class="popup__header">
+        Add Withdrawal
+    </header>
+
+    <div class="popup__content notice ">
+        <div class="notice__validation" asp-validation-summary="All">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
+        <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to Issue a <strong>Check</strong> on @date.ToString("MMM d, yyyy")</div>
+    </div>
+
+    <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_withdraw">
+        <div class="radio-controls__group">
+            <input class="radio-controls__radio-input transactions-overview__cash-withdraw-radio" name="withdraw-type" type="radio" value="Cash" checked />
+            <label class="radio-controls__label">Cash Withdrawal</label>
+        </div>
+
+        <div class="radio-controls__group">
+            <input class="radio-controls__radio-input transactions-overview__cheque-withdraw-radio" name="withdraw-type" type="radio" value="Cheque" />
+            <label class="radio-controls__label">Issue Check</label>
+        </div>
+    </fieldset>
+
+    <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_withdraw transaction-controller__fieldset_cash">
+
+        <input asp-for="AccountId" type="hidden" value="@accountId" />
+        @{
+            var withdrawEnum = Enum.Parse<TransactionType>("Withdraw");
+        }
+        <input asp-for="TransactionType" type="hidden" value="@withdrawEnum" />
+
+        <div class="form-group">
+            <label class="form-group__label">Cash Withdraw Date</label>
+            <input asp-for="TransactionDate" class="form-group__input form-group__input_date transaction-controller__cash-date-input" type="date" data-date="@date.ToString("MMM d, yyyy")" data-date-format="ll" value="@date.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label">Cash Withdraw Amount</label>
+            <input asp-for="Amount" class="form-group__input transaction-controller__cash-amount-input" />
+        </div>
+
+        <div>
+            <fieldset class="form-group radio-controls">
+                <label class="form-group__label">Transaction Type, select one:</label>
+
+                <div class="radio-controls__group">
+                    <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_over-the-counter" name="CashTransactionType" value="Over-the-counter" />
+                    <label class="radio-controls__label">Over-the-Counter </label>
+                </div>
+
+                <div class="radio-controls__group">
+                    <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_online-transfer" name="CashTransactionType" value="Online-transfer" />
+                    <label class="radio-controls__label">Online Fund Transfer</label>
+                </div>
+
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label">Note</label>
+            <textarea asp-for="Note" class="form-group__input transaction-controller__cash-note-input"></textarea>
+        </div>
+
+    </fieldset>
+
+    <footer class="popup__footer">
+        <input asp-controller="TransactionForms" asp-action="CreateWithdrawCash" type="submit" class="button" value="Add" />
+        <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
+    </footer>
+</form>

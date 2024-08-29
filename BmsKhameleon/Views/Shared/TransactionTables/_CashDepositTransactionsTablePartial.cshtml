@@ -1,0 +1,60 @@
+﻿
+
+<div class="transactions-overview__table-caption">
+    <div class="transactions-overview__table-label">
+        Cash Deposits
+    </div>
+
+    <div class="transactions-overview__table-total">
+        Php 784,670.00
+    </div>
+</div>
+
+<div class="transactions-overview__deposits-table table">
+
+    <div class="transactions-overview__table-container table__item-container">
+        @for (int i = 0; i < 2; i++)
+        {
+            <div class="transactions-overview__table-item table__item transaction-controller__item">
+
+                <div class="transaction-controller__field-transaction-type">
+                    deposit
+                </div>
+
+                <div class="table__item-field transaction-controller__field-currency-type">
+                    Cash
+                </div>
+
+                <div class="transaction-controller__cash-transaction">
+                    bank-pick-up
+                </div>
+
+                <div class="transaction-controller__field-date">
+                    2026-08-11
+                </div>
+
+                <div class="transaction-controller__field-note transaction-controller__field-note transaction-controller__field-note_invisible">
+                    secret note cash deposit bank-pick-up
+                </div>
+
+                <div class="table__item-field table__item-field_controller">
+
+                    <div class="table__item-field-label transaction-controller__field-amount">
+                        @(i * 1000)
+                    </div>
+
+                    <div class="table__item-controls">
+
+                        <button class="table__item-button transaction-controller__button_edit">
+                            <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

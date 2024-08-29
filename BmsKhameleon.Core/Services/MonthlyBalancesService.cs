@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BmsKhameleon.Core.Domain.Entities;
 using BmsKhameleon.Core.Domain.RepositoryContracts;
+using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
 
 namespace BmsKhameleon.Core.Services
@@ -50,7 +51,7 @@ namespace BmsKhameleon.Core.Services
             {
                 transactionAmount = transaction.Amount;
             }
-            else if (transactionType == "withdrawal")
+            else if (transactionType is "withdrawal" or "withdraw")
             {
                 transactionAmount = transaction.Amount * -1;
             }
@@ -76,11 +77,12 @@ namespace BmsKhameleon.Core.Services
             var date = new DateTime(transaction.TransactionDate.Year, transaction.TransactionDate.Month, 1);
 
             decimal amount;
+            var transactionType = transaction.TransactionType.ToLower();
             if(transaction.TransactionType.ToLower() == "deposit")
             {
                 amount = transaction.Amount;
             }
-            else if(transaction.TransactionType.ToLower() == "withdrawal")
+            else if(transactionType is "withdrawal" or "withdraw")
             {
                 amount = transaction.Amount * -1;
             }

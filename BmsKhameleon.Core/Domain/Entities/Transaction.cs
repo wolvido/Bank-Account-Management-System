@@ -40,7 +40,7 @@ namespace BmsKhameleon.Core.Domain.Entities
         public string? Note { get; set; }
 
         //cash transaction properties
-        [StringLength(15, ErrorMessage = "Cash transaction type cannot exceed 15 characters.")]
+        [StringLength(20, ErrorMessage = "Cash transaction type cannot exceed 20 characters.")]
         public string? CashTransactionType { get; set; }
 
         //cheque transaction properties

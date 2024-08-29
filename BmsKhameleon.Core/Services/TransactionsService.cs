@@ -59,6 +59,20 @@ namespace BmsKhameleon.Core.Services
 
         public async Task<bool> CreateChequeTransaction(ChequeTransactionCreateRequest chequeTransactionCreateRequest)
         {
+            string transactionType = chequeTransactionCreateRequest.TransactionType.ToString().ToLower();
+
+            if(transactionType is "withdrawal" or "withdraw")
+            {
+                var account = await _accountsRepository.GetAccount(chequeTransactionCreateRequest.AccountId);
+                if (account == null)
+                {
+                    throw new ArgumentException("Account does not exist");
+                }
+
+                var bankName = account.BankName;
+                chequeTransactionCreateRequest.ChequeBankName = bankName;
+            }
+
             bool result = await _transactionsRepository.CreateTransaction(chequeTransactionCreateRequest.ToTransaction());
 
             bool monthlyBalanceUpdateResult = await _monthlyBalances.AddTransactionToMonth(chequeTransactionCreateRequest.ToTransaction());

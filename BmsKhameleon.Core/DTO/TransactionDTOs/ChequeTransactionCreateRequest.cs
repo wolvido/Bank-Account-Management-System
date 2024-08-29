@@ -24,7 +24,6 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
         public decimal Amount { get; set; }
 
         [Required(ErrorMessage = "Transaction type is required.")]
-        [StringLength(10, ErrorMessage = "Transaction type cannot exceed 10 characters.")]
         public TransactionType TransactionType { get; set; }
 
         [StringLength(70, ErrorMessage = "Note cannot exceed 70 characters.")]
@@ -32,12 +31,15 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
 
         //cheque transaction properties
         [StringLength(50, ErrorMessage = "Payee name cannot exceed 70 characters.")]
+        [Required(ErrorMessage = "Name is required")]
         public required string Payee { get; set; }
 
         [StringLength(25, ErrorMessage = "Cheque bank name cannot exceed 25 characters.")]
+        [Required(ErrorMessage = "Bank name is required")]
         public required string ChequeBankName { get; set; }
 
         [StringLength(15, ErrorMessage = "Cheque number cannot exceed 15 characters.")]
+        [Required(ErrorMessage = "Cheque Number is required")]
         public required string ChequeNumber { get; set; }
 
         public Transaction ToTransaction()

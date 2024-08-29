@@ -1,1 +1,71 @@
-﻿
+﻿@model ChequeTransactionCreateRequest
+
+@{
+    Guid accountId = ViewBag.AccountId;
+    DateTime date = ViewBag.Date;
+}
+
+<form class="popup" method="post">
+
+    <header class="popup__header">
+        Add Withdrawal
+    </header>
+
+    <div class="popup__content notice ">
+        <div class="notice__validation" asp-validation-summary="All">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
+        <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to Issue a <strong>Check</strong> on @date.ToString("MMM d, yyyy")</div>
+    </div>
+
+    <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_withdraw">
+        <div class="radio-controls__group">
+            <input class="radio-controls__radio-input transactions-overview__cash-withdraw-radio" name="withdraw-type" type="radio" value="Cash"  />
+            <label class="radio-controls__label">Cash Withdrawal</label>
+        </div>
+
+        <div class="radio-controls__group">
+            <input class="radio-controls__radio-input transactions-overview__cheque-withdraw-radio" name="withdraw-type" type="radio" value="Cheque" checked />
+            <label class="radio-controls__label">Issue Check</label>
+        </div>
+    </fieldset>
+
+    <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_withdraw transaction-controller__fieldset_cheque">
+
+        <input asp-for="AccountId" type="hidden" value="@accountId" />
+        @{
+            var withdrawEnum = Enum.Parse<TransactionType>("Withdraw");
+        }
+        <input asp-for="TransactionType" type="hidden" value="@withdrawEnum" />
+
+
+        <div class="form-group">
+            <label class="form-group__label">Check Issue Date</label>
+            <input asp-for="TransactionDate" class="form-group__input form-group__input_date transaction-controller__cheque-date-input" type="date" data-date="@date.ToString("MMM d, yyyy")" data-date-format="ll" value="@date.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label">Check Number</label>
+            <input asp-for="ChequeNumber" class="form-group__input transaction-controller__cheque-number-input" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label">Payee (Company/Supplier/Customer Name)</label>
+            <input asp-for="Payee" class="form-group__input transaction-controller__cheque-payee-input" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label">Check Issuance Amount</label>
+            <input asp-for="Amount" class="form-group__input transaction-controller__cheque-amount-input" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label">Note</label>
+            <textarea asp-for="Note" class="form-group__input transaction-controller__cheque-note-input"></textarea>
+        </div>
+
+    </fieldset>
+
+    <footer class="popup__footer">
+        <input asp-controller="TransactionForms" asp-action="CreateWithdrawCheque" type="submit" class="button" value="Add" />
+        <button type="button" class="button  button_cancel overlay__cancel">Cancel</button>
+    </footer>
+</form>
