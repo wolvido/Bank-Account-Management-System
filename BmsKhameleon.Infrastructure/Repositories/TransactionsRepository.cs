@@ -24,7 +24,6 @@ namespace BmsKhameleon.Infrastructure.Repositories
             };
 
             _db.Entry(existingTransaction).CurrentValues.SetValues(transaction);
-            _db.Entry(existingTransaction).State = EntityState.Modified;
 
             await _db.SaveChangesAsync();
             return true;
@@ -67,7 +66,7 @@ namespace BmsKhameleon.Infrastructure.Repositories
         public async Task<List<Transaction>> GetDepositsForDay(DateTime date, Guid accountId)
         {
             return await _db.Transactions.Where(transaction => 
-                transaction.TransactionDate.Day == date.Day && 
+                transaction.TransactionDate == date && 
                 transaction.TransactionType == "Deposit" && 
                 transaction.AccountId == accountId)
                     .ToListAsync();
@@ -76,8 +75,8 @@ namespace BmsKhameleon.Infrastructure.Repositories
         public async Task<List<Transaction>> GetWithdrawalsForDay(DateTime date, Guid accountId)
         {
             return await _db.Transactions.Where(transaction => 
-                transaction.TransactionDate.Day == date.Day && 
-                transaction.TransactionType == "Withdrawal" && 
+                transaction.TransactionDate == date && 
+                (transaction.TransactionType == "Withdrawal" || transaction.TransactionType == "Withdraw") && 
                 transaction.AccountId == accountId)
                     .ToListAsync();
         }

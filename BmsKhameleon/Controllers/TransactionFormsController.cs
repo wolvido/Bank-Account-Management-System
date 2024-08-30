@@ -1,6 +1,9 @@
 ﻿using BmsKhameleon.Core.DTO.TransactionDTOs;
+using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
+using BmsKhameleon.UI.Factories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 
 namespace BmsKhameleon.UI.Controllers
 {
@@ -21,14 +24,14 @@ namespace BmsKhameleon.UI.Controllers
         [Route("[action]")]
         public async Task<IActionResult> CreateDepositCash(CashTransactionCreateRequest? depositCashTransactionRequest)
         {
-            if(depositCashTransactionRequest == null)
+            if (depositCashTransactionRequest == null)
             {
                 return BadRequest("Invalid deposit cash transaction request.");
             }
 
             bool result = await _transactionsService.CreateCashTransaction(depositCashTransactionRequest);
 
-            if(result == false)
+            if (result == false)
             {
                 return BadRequest("Unable to create the deposit cash transaction. Please try again.");
             }
@@ -55,7 +58,7 @@ namespace BmsKhameleon.UI.Controllers
         [Route("[action]")]
         public async Task<IActionResult> CreateDepositCheque(ChequeTransactionCreateRequest? chequeTransactionCreateRequest)
         {
-            if(chequeTransactionCreateRequest == null)
+            if (chequeTransactionCreateRequest == null)
             {
                 return BadRequest("Invalid deposit cheque transaction request.");
             }
@@ -69,7 +72,7 @@ namespace BmsKhameleon.UI.Controllers
 
             var formattedDate = chequeTransactionCreateRequest.TransactionDate.ToString("yyyy-MM-dd");
 
-            return RedirectToAction("TransactionsOverview","TransactionsOverview",
+            return RedirectToAction("TransactionsOverview", "TransactionsOverview",
                 new
                 {
                     accountId = chequeTransactionCreateRequest.AccountId,
@@ -104,7 +107,7 @@ namespace BmsKhameleon.UI.Controllers
 
             var formattedDate = withdrawCashTransactionRequest.TransactionDate.ToString("yyyy-MM-dd");
 
-            return RedirectToAction("TransactionsOverview","TransactionsOverview",
+            return RedirectToAction("TransactionsOverview", "TransactionsOverview",
                 new {
                     accountId = withdrawCashTransactionRequest.AccountId,
                     date = formattedDate
@@ -139,12 +142,39 @@ namespace BmsKhameleon.UI.Controllers
 
             var formattedDate = withdrawChequeTransactionRequest.TransactionDate.ToString("yyyy-MM-dd");
 
-            return RedirectToAction("TransactionsOverview","TransactionsOverview",
+            return RedirectToAction("TransactionsOverview", "TransactionsOverview",
                 new
                 {
                     accountId = withdrawChequeTransactionRequest.AccountId,
                     date = formattedDate
                 });
         }
-    }
+
+        [HttpGet]
+        [Route("[action]/{transactionId}")]
+        public async Task<IActionResult> UpdateTransactionPartial(Guid transactionId, [FromServices] UpdateTransactionHandlerFactory updateTransactionHandlerFactory)
+        {
+            var transaction = await _transactionsService.GetTransaction(transactionId);
+            if(transaction == null)
+            {
+                return BadRequest("Transaction not found.");
+            }
+
+            var transactionType = transaction.TransactionType;
+            if(transactionType == null)
+            {
+                return BadRequest("Transaction type not found.");
+            }
+
+            var transactionMedium = transaction.TransactionMedium;
+            if(transactionMedium == null)
+            {
+                return BadRequest("Transaction medium not found.");
+            }
+
+            var handler = updateTransactionHandlerFactory.GetHandler(transactionType, transactionMedium);
+            return handler.HandleUpdateTransaction(transaction);
+
+        }
+    }   
 }

@@ -1,4 +1,4 @@
-﻿
+﻿@model TransactionOverviewViewModel
 
 @section styles{
     <link href="~/desktop.blocks/transactions-overview/transactions-overview.css" rel="stylesheet" type="text/css" />
@@ -8,17 +8,17 @@
     <script src="~/common.blocks/overlay/overlay.js" async defer></script>
 }
 
-<main class="main transactions-overview transaction-controller">
+<main class="main transactions-overview transaction-controller" data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date">
 
     <section class="transactions-overview__toolbar-section ">
         <section class="transactions-overview__session-info">
-            <div class="transactions-overview__session-info-date">June 19, 2024</div> @* date selected sa calendar *@
-            <div class="transactions-overview__session-info-account"> RCBC WINZYL C OLVIDO  9039000000 </div>
+            <div class="transactions-overview__session-info-date">@ViewBag.Date.ToString("MMM d, yyyy")</div> @* date selected sa calendar *@
+            <div class="transactions-overview__session-info-account"> @Model.AccountResponse.BankName  @Model.AccountResponse.AccountName  @Model.AccountResponse.AccountNumber</div>
         </section>
 
         <div class="transactions-overview__toolbar transaction-toolbar">
-            <button data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__deposit-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_deposit">Add Cash / Check Deposit</button>
-            <button data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__withdraw-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_withdraw">Add Check Issuance / Cash Withdrawal</button>
+            <button class="transactions-overview__deposit-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_deposit">Add Cash / Check Deposit</button>
+            <button class="transactions-overview__withdraw-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_withdraw">Add Check Issuance / Cash </button>
         </div>
     </section>
 
@@ -29,17 +29,17 @@
             <section class="transactions-overview__balance-section">
                 <div class="transactions-overview__balance-label-group">
                     <label class="transactions-overview__balance-label transactions-overview__balance-label_working-balance">Working Balance</label>
-                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_total" maxlength="25">0.00</textarea>
+                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_total" maxlength="25">@Model.DailyTransactionsAggregateResponse.TotalBalance</textarea>
                 </div>
 
                 <div class="transactions-overview__balance-label-group">
                     <label class="transactions-overview__balance-label">Total Deposits for the Day</label>
-                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_deposit" maxlength="25">828,532.11</textarea>
+                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_deposit" maxlength="25">0.00</textarea>
                 </div>
 
                 <div class="transactions-overview__balance-label-group">
                     <label class="transactions-overview__balance-label">Total Withdrawals for the Day</label>
-                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_withdraw" maxlength="25">777,657.46</textarea>
+                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_withdraw" maxlength="25">0.00</textarea>
                 </div>
             </section>
 
@@ -49,33 +49,27 @@
 
             <section class="transactions-overview__deposits-section">
 
-                <section data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__deposits-cash">
-                    <partial name="~/Views/Shared/TransactionTables/_CashDepositTransactionsTablePartial.cshtml"></partial>
-                    @* deposit cash table *@
+                <section class="transactions-overview__deposits-cash">
+                    deposit cash table
                 </section>
 
-                <section data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__deposits-cheque">
-                    <partial name="~/Views/Shared/TransactionTables/_ChequeDepositTransactionsTablePartial.cshtml"></partial>
-                    @* deposit cheque table *@
+                <section class="transactions-overview__deposits-cheque">
+                     deposit cheque table 
                 </section>
 
             </section>
 
         </section>
 
-        <section data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" class="transactions-overview__withdrawals-section">
-            <partial name="~/Views/Shared/TransactionTables/_WithdrawalTransactionsTablePartial.cshtml"></partial>
-            @* withdrawals table *@
+        <section class="transactions-overview__withdrawals-section">
+             withdrawals table
         </section>
 
     </section>
 
-    <section class="overlay transactions-overview__deposit_overlay transaction-controller__overlay transaction-controller__overlay_deposit">
-        @* deposit *@
+    <section class="overlay transactions-overview__overlay">
+        form
     </section>
 
-    <section class="overlay transactions-overview__withdraw_overlay transaction-controller__overlay transaction-controller__overlay_withdraw">
-        @* withdraw *@
-    </section>
 
 </main>

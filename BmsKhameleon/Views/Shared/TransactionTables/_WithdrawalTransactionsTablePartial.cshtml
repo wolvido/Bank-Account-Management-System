@@ -6,8 +6,16 @@
     </div>
 
     <div class="transactions-overview__table-total">
-        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cash"> Cash: Php 359,917.69 </div>
-        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cheque"> Check: Php 417,739.77 </div>
+        @{
+            //get total cash amount withdrawn
+            var totalCash = Model.Where(x => x is { TransactionType: "Withdraw", ChequeNumber: null }).Sum(x => x.Amount);
+        }
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cash"> Cash: Php @totalCash </div>
+        @{
+            //get total cheque amount withdrawn
+            var totalCheque = Model.Where(x => x is { TransactionType: "Withdraw", ChequeNumber: not null }).Sum(x => x.Amount);
+        }
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cheque"> Check: Php @totalCheque </div>
     </div>
 </div>
 
@@ -42,67 +50,44 @@
 
     <div class="transactions-overview__table-content table__item-container">
 
-        @for (int i = 0; i < 4; i++)
+        @foreach (var transaction in Model)
         {
-
             <div class="transactions-overview__table-item table__item transaction-controller__item">
 
                 <div class="transaction-controller__field-transaction-type">
-                    withdraw
+                    @transaction.TransactionType
                 </div>
 
                 <div class="transaction-controller__field-date">
-                    2026-08-11
+                    @transaction.TransactionDate
                 </div>
 
-                <div class="transaction-controller__cash-transaction">
+                <div class="transactions-overview__item-payment table__item-field">
                     @{
-                        string valueCash;
-                        if (i == 3)
-                        {
-                            valueCash = "over-the-counter";
-                        }
-                        else
-                        {
-                            valueCash = "";
-                        }
+                        transaction.ChequeNumber ??= "Cash";
                     }
-                    @valueCash
-                </div>
-
-                <div class="transactions-overview__item-payment table__item-field transaction-controller__field-currency-type">
-
-                    @{
-                        string value;
-                        if (i == 3)
-                        {
-                            value = "Cash";
-                        }
-                        else
-                        {
-                            value = i.ToString();
-                        }
-                    }
-                    @value
-
+                    @transaction.ChequeNumber
                 </div>
 
                 <div class="transactions-overview__item-payee table__item-field transaction-controller__field-payee">
-                    Alice Gou
+                    @{
+                        transaction.Payee ??= "N/A";
+                    }
+                    @transaction.Payee
                 </div>
 
                 <div class="transactions-overview__item-amount-withdrawal table__item-field transaction-controller__field-amount">
-                    @(i * 1000)
+                    @transaction.Amount
                 </div>
 
                 <div class="transactions-overview__item-notes table__item-field table__item-field_controller">
                     <div class="transactions-overview__item-notes-label table__item-field-label transaction-controller__field-note">
-                        POGO Payment
+                        @transaction.Note
                     </div>
 
                     <div class="table__item-controls">
 
-                        <button class="table__item-button transaction-controller__button_edit">
+                        <button data-transactionId="@transaction.TransactionId" class="table__item-button transaction-overview__button_edit">
                             <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
                         </button>
 

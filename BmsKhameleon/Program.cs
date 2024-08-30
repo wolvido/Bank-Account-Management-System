@@ -3,6 +3,8 @@ using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.Core.Services;
 using BmsKhameleon.Infrastructure.DbContexts;
 using BmsKhameleon.Infrastructure.Repositories;
+using BmsKhameleon.UI.Factories;
+using BmsKhameleon.UI.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,6 +39,13 @@ builder.Services.AddScoped<IMonthlyBalancesService, MonthlyBalancesService>();
 builder.Services.AddScoped<IAccountsRepository, AccountsRepository>();
 builder.Services.AddScoped<ITransactionsRepository, TransactionsRepository>();
 builder.Services.AddScoped<IMonthlyBalancesRepository, MonthlyBalancesRepository>();
+
+//factories
+builder.Services.AddTransient<IUpdateTransactionHandler, DepositCashUpdateTransactionHandler>();
+builder.Services.AddTransient<IUpdateTransactionHandler, DepositChequeUpdateTransactionHandler>();
+builder.Services.AddTransient<IUpdateTransactionHandler, WithdrawCashUpdateTransactionHandler>();
+builder.Services.AddTransient<IUpdateTransactionHandler, WithdrawChequeUpdateTransactionHandler>();
+builder.Services.AddTransient<UpdateTransactionHandlerFactory>();
 
 //build
 var app = builder.Build();

@@ -1,6 +1,12 @@
 ﻿@model ChequeTransactionCreateRequest
 
 @{
+    if (ViewBag.AccountId == null && ViewBag.Date == null)
+    {
+        ViewBag.AccountId = Model.AccountId;
+        ViewBag.Date = Model.TransactionDate;
+    }
+
     Guid accountId = ViewBag.AccountId;
     DateTime date = ViewBag.Date;
 }

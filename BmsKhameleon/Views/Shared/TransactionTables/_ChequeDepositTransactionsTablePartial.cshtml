@@ -5,51 +5,55 @@
         Check Deposits
     </div>
 
-    <div class="transactions-overview__table-total">
-        Php 43,862.10
+    <div class="transactions-overview__table-total transactions-overview__deposits-total-value_cheque">
+        @{
+            //get total cheque amount deposited
+            var totalCheque = Model.Sum(x => x.Amount);
+        }
+        Php @totalCheque
     </div>
 </div>
 
 <div class="transactions-overview__deposits-table table">
 
     <div class="transactions-overview__table-container table__item-container">
-        @for (int i = 0; i < 2; i++)
+        @foreach (var transaction in Model)
         {
             <div class="transactions-overview__table-item table__item transaction-controller__item">
 
                 <div class="transaction-controller__field-transaction-type">
-                    deposit
+                    @transaction.TransactionType
                 </div>
 
                 <div class="transactions-overview__item-cheque table__item-field transaction-controller__field-currency-type">
-                    2038624
+                    @transaction.ChequeNumber
                 </div>
 
                 <div class="transactions-overview__item-bank table__item-field transaction-controller__field-bank-name">
-                    RB Mati
+                    @transaction.ChequeBankName
                 </div>
 
                 <div class="transaction-controller__field-date">
-                    2026-08-11
+                    @transaction.TransactionDate
                 </div>
 
                 <div class="transaction-controller__field-note transaction-controller__field-note transaction-controller__field-note_invisible">
-                    secret note cash deposit bank-pick-up
+                    @transaction.Note
                 </div>
 
                 <div class="transaction-controller__field-payee">
-                    Alice Gou
+                    @transaction.Payee
                 </div>
 
                 <div class="transactions-overview__item-amount-deposit table__item-field table__item-field_controller">
 
                     <div class="table__item-field-label transaction-controller__field-amount">
-                        @(i * 1000 / 3)
+                        @transaction.Amount
                     </div>
 
                     <div class="table__item-controls">
 
-                        <button class="table__item-button transaction-controller__button_edit">
+                        <button data-transactionId="@transaction.TransactionId" class="table__item-button transaction-overview__button_edit">
                             <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
                         </button>
 

@@ -24,6 +24,18 @@ namespace BmsKhameleon.Infrastructure.Repositories
             return monthlyWorkingBalance;
         }
 
+        public async Task<MonthlyWorkingBalance?> GetPreviousMonthlyBalance(Guid accountId, DateTime date)
+        {
+            //get the last monthly balance before the given date
+            MonthlyWorkingBalance? monthlyWorkingBalance = await _db.MonthlyWorkingBalances.Where(m => 
+                m.AccountId == accountId && 
+                m.Date < date)
+                .OrderByDescending(m => m.Date)
+                .FirstOrDefaultAsync();
+
+            return monthlyWorkingBalance ?? null;
+        }
+
         public async Task<bool> CreateMonthlyBalance(MonthlyWorkingBalance monthlyWorkingBalance)
         {
             _db.MonthlyWorkingBalances.Add(monthlyWorkingBalance);
@@ -40,8 +52,14 @@ namespace BmsKhameleon.Infrastructure.Repositories
         /// <exception cref="NotImplementedException"></exception>
         public async Task<bool> AddToMonthlyBalance(MonthlyWorkingBalance existingMonthBalance, decimal amount)
         {
-            existingMonthBalance.WorkingBalance += amount;
-            _db.Entry(existingMonthBalance).State = EntityState.Modified;
+            var monthlyWorkingBalance = await _db.MonthlyWorkingBalances.FindAsync(existingMonthBalance.MonthlyWorkingBalanceId);
+
+            if (monthlyWorkingBalance == null)
+            {
+                throw new NotImplementedException("Monthly balance does not exist");
+            }
+
+            monthlyWorkingBalance.WorkingBalance += amount;
             bool result = await _db.SaveChangesAsync() > 0;
             return result;
         }
@@ -54,7 +72,6 @@ namespace BmsKhameleon.Infrastructure.Repositories
             {
                 monthlyBalance.WorkingBalance -= amountToRemove;
                 monthlyBalance.WorkingBalance += amountToAdd;
-                _db.Entry(monthlyBalance).State = EntityState.Modified;
             }
 
             bool result = await _db.SaveChangesAsync() > 0;
@@ -63,8 +80,14 @@ namespace BmsKhameleon.Infrastructure.Repositories
 
         public async Task<bool> RemoveFromMonthlyBalance(MonthlyWorkingBalance existingMonthBalance, decimal amountToRemove)
         {
-            existingMonthBalance.WorkingBalance -= amountToRemove;
-            _db.Entry(existingMonthBalance).State = EntityState.Modified;
+            var monthlyWorkingBalance = await _db.MonthlyWorkingBalances.FindAsync(existingMonthBalance.MonthlyWorkingBalanceId);
+
+            if (monthlyWorkingBalance == null)
+            {
+                throw new NotImplementedException("Monthly balance does not exist");
+            }
+
+            monthlyWorkingBalance.WorkingBalance -= amountToRemove;
             bool result = await _db.SaveChangesAsync() > 0;
             return result;
         }

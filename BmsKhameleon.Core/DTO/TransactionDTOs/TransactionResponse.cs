@@ -12,7 +12,7 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
     {
         public Guid TransactionId { get; set; }
         public Guid AccountId { get; set; }
-        public DateTime? TransactionDate { get; set; }
+        public DateTime TransactionDate { get; set; }
         public decimal Amount { get; set; }
         public string? TransactionType { get; set; }
         public string? TransactionMedium { get; set; }

@@ -8,9 +8,17 @@
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
 
-    $(".calendar__select-month").val(currentMonth + 1); //set dropdown default to current month
+
 
     let transactions = JSON.parse(window.transactions); //inject data here
+
+    let transactionsMonth = transactions[0].Date.split('-')[1] * 1;
+    let transactionsYear = transactions[0].Date.split('-')[0] * 1;
+
+    console.log(transactionsMonth);
+
+    $(".calendar__select-month").val(transactionsMonth); //set dropdown default to current month
+    $(".calendar__select-year").val(transactionsYear); //set dropdown default to current year"
     async function calendarDay(day, adjacentMonths = false, balance = '0.00', withdrawal = '0.00', date = '', accountId = '') {
         let transactions =
             `
@@ -158,19 +166,35 @@
     function dePopulateCalendar(){
         $(".calendar__date-container").find("*").remove();
     };
-
+    function reloadWithRouteParameter(newParam) {
+        const currentUrl = window.location.pathname; // Get the current path, e.g., "/view"
+        const newUrl = `${currentUrl}/${newParam}`; // Create the new route with the added parameter
+  
+        // Reload the page with the new route
+        window.location.href = newUrl;
+    }
     populateCalendar(transactions);
 
     $(".calendar__select-date").find('*').on("change", function () {
-
         dePopulateCalendar();
         populateCalendar(transactions);
+    });
 
+    $(".calendar__select-date").on("change", function () {
+        let selectedMonth = $(".calendar__select-month").find(":selected").val();
+        let selectedYear = $(".calendar__select-year").find(":selected").val();
+
+        let date = new Date(selectedYear, selectedMonth, 1).toISOString();
+        reloadWithRouteParameter(date); 
     });
 
     //account info control
     $(".calendar__account-info-button").on("click", function () {
         $(".calendar__overlay-account-info").showFlex();
     });
+
+
+
+    //reloadWithRouteParameter('2024-02-01T00:00:00');
 
 });

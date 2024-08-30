@@ -11,6 +11,8 @@ namespace BmsKhameleon.Core.Domain.RepositoryContracts
     {
         public Task<MonthlyWorkingBalance?> GetMonthlyBalance(Guid accountId, DateTime date);
 
+        public Task<MonthlyWorkingBalance?> GetPreviousMonthlyBalance(Guid accountId, DateTime date);
+
         public Task<bool> CreateMonthlyBalance(MonthlyWorkingBalance monthlyWorkingBalance);
 
         public Task<bool> AddToMonthlyBalance(MonthlyWorkingBalance existingMonthBalance, decimal amount);

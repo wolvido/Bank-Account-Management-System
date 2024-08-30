@@ -51,8 +51,6 @@ namespace BmsKhameleon.Infrastructure.Repositories
             existingAccount.InitialBalance = account.InitialBalance;
             existingAccount.Visibility = account.Visibility;
 
-            _db.Entry(existingAccount).State = EntityState.Modified;
-
             await _db.SaveChangesAsync();
             return true;
         }

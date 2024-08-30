@@ -132,6 +132,21 @@ namespace BmsKhameleon.Core.Services
             return monthlyBalance.ToMonthlyWorkingBalanceResponse();
         }
 
+        public async Task<MonthlyWorkingBalanceResponse?> GetPreviousMonthlyBalance(Guid accountId, DateTime date)
+        {
+            if(date.Day != 1)
+            {
+                date = new DateTime(date.Year, date.Month, 1);
+            }
+
+            var result = await _monthlyBalanceRepository.GetPreviousMonthlyBalance(accountId, date);
+            if (result == null)
+            {
+                return null;
+            }
+            return  result.ToMonthlyWorkingBalanceResponse();
+        }
+
         public async Task<bool> InitialBalanceMonthAdjustment(Guid accountId, decimal amountToRemove, decimal amountToAdd)
         {
             bool result = await _monthlyBalanceRepository.InitialBalanceMonthAdjustment(accountId, amountToRemove, amountToAdd);
