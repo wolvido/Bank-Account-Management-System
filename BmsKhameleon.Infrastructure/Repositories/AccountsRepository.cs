@@ -97,5 +97,28 @@ namespace BmsKhameleon.Infrastructure.Repositories
         {
             return _db.Accounts.Select(account => account.BankName).Distinct().ToListAsync();
         }
+
+        public async Task<bool> DepositToWorkingBalance(Guid accountId, decimal amount)
+        {
+            var account = await _db.Accounts.FindAsync(accountId);
+            if (account == null)
+            {
+                return false;
+            }
+            account.WorkingBalance += amount;
+            return await _db.SaveChangesAsync() > 0;
+
+        }
+
+        public async Task<bool> WithdrawFromWorkingBalance(Guid accountId, decimal amount)
+        {
+            var account = await _db.Accounts.FindAsync(accountId);
+            if (account == null)
+            {
+                return false;
+            }
+            account.WorkingBalance -= amount;
+            return await _db.SaveChangesAsync() > 0;
+        }
     }
 }

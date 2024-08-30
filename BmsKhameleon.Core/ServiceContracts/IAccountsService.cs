@@ -26,5 +26,8 @@ namespace BmsKhameleon.Core.ServiceContracts
         public Task<List<AccountResponse>> SortAccounts(List<AccountResponse> accounts, string sortBy, SortOrderOptions sortOrder);
 
         public Task<List<string>> GetAllAccountBanks();
+
+        public Task<bool> DepositToWorkingBalance(Guid accountId, decimal amount);
+        public Task<bool> WithdrawFromWorkingBalance(Guid accountId, decimal amount);
     }
 }

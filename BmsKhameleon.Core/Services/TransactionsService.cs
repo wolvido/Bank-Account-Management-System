@@ -27,12 +27,54 @@ namespace BmsKhameleon.Core.Services
 
             bool result = await _transactionsRepository.UpdateTransaction(transactionUpdateRequest.ToTransaction());
 
+            //update monthly balances
             var removeFromMonthBalance =  await _monthlyBalances.RemoveTransactionFromMonth(existingTransaction);
             var addToMonthBalance = await _monthlyBalances.AddTransactionToMonth(transactionUpdateRequest.ToTransaction());
-
             if(removeFromMonthBalance == false || addToMonthBalance == false)
             {
                 throw new ArgumentException("Failed to update monthly balances");
+            }
+
+            //check if account exists
+            var account = await _accountsRepository.GetAccount(existingTransaction.AccountId);
+            if(account == null)
+            {
+                throw new ArgumentException("Account does not exist");
+            }
+
+            //update working balance
+            if (existingTransaction.TransactionType == TransactionType.Deposit.ToString())
+            {
+                var workingBalanceWithdrawResult = await _accountsRepository.WithdrawFromWorkingBalance(existingTransaction.AccountId, existingTransaction.Amount);
+                if (workingBalanceWithdrawResult == false)
+                {
+                    throw new ArgumentException("Failed to withdraw transaction from working balance");
+                }
+            }
+            else
+            {
+                var workingBalanceDepositResult = await _accountsRepository.DepositToWorkingBalance(existingTransaction.AccountId, existingTransaction.Amount);
+                if (workingBalanceDepositResult == false)
+                {
+                    throw new ArgumentException("Failed to deposit transaction to working balance");
+                }
+            }
+
+            if (transactionUpdateRequest.TransactionType == TransactionType.Deposit)
+            {
+                var workingBalanceDepositResult = await _accountsRepository.DepositToWorkingBalance(transactionUpdateRequest.AccountId, transactionUpdateRequest.Amount);
+                if (workingBalanceDepositResult == false)
+                {
+                    throw new ArgumentException("Failed to deposit transaction to working balance");
+                }
+            }
+            else
+            {
+                var workingBalanceWithdrawResult = await _accountsRepository.WithdrawFromWorkingBalance(transactionUpdateRequest.AccountId, transactionUpdateRequest.Amount);
+                if (workingBalanceWithdrawResult == false)
+                {
+                    throw new ArgumentException("Failed to withdraw transaction from working balance");
+                }
             }
 
             return result;
@@ -69,13 +111,32 @@ namespace BmsKhameleon.Core.Services
                 {
                     throw new ArgumentException("Account does not exist");
                 }
-
+                //set bank name for cheque transactions
                 var bankName = account.BankName;
                 chequeTransactionCreateRequest.ChequeBankName = bankName;
+
+                //withdraw transaction from working balance
+                var workingBalanceWithdrawResult = await _accountsRepository.WithdrawFromWorkingBalance(chequeTransactionCreateRequest.AccountId, chequeTransactionCreateRequest.Amount);
+                if(workingBalanceWithdrawResult == false)
+                {
+                    throw new ArgumentException("Failed to withdraw cheque transaction from working balance");
+                }
+
+            }
+            else
+            {
+                //deposit transaction to working balance
+                var workingBalanceDepositResult = await _accountsRepository.DepositToWorkingBalance(chequeTransactionCreateRequest.AccountId, chequeTransactionCreateRequest.Amount);
+                if(workingBalanceDepositResult == false)
+                {
+                    throw new ArgumentException("Failed to deposit cheque transaction to working balance");
+                }
             }
 
+            //create transaction
             bool result = await _transactionsRepository.CreateTransaction(chequeTransactionCreateRequest.ToTransaction());
 
+            //update monthly balances
             bool monthlyBalanceUpdateResult = await _monthlyBalances.AddTransactionToMonth(chequeTransactionCreateRequest.ToTransaction());
             if(monthlyBalanceUpdateResult == false)
             {
@@ -88,10 +149,30 @@ namespace BmsKhameleon.Core.Services
 
         public async Task<bool> CreateCashTransaction(CashTransactionCreateRequest cashTransactionCreateRequest)
         {
+            var transactionType = cashTransactionCreateRequest.TransactionType.ToString().ToLower();
+
+            if(transactionType is "withdrawal" or "withdraw")
+            {
+                //withdraw transaction from working balance
+                var workingBalanceWithdrawResult = await _accountsRepository.WithdrawFromWorkingBalance(cashTransactionCreateRequest.AccountId, cashTransactionCreateRequest.Amount);
+                if(workingBalanceWithdrawResult == false)
+                {
+                    throw new ArgumentException("Failed to withdraw cash transaction from working balance");
+                }
+            }
+            else
+            {
+                //deposit transaction to working balance
+                var workingBalanceDepositResult = await _accountsRepository.DepositToWorkingBalance(cashTransactionCreateRequest.AccountId, cashTransactionCreateRequest.Amount);
+                if(workingBalanceDepositResult == false)
+                {
+                    throw new ArgumentException("Failed to deposit cash transaction to working balance");
+                }
+            }
+
             bool result = await _transactionsRepository.CreateTransaction(cashTransactionCreateRequest.ToTransaction());
 
             bool monthlyBalanceUpdateResult = await _monthlyBalances.AddTransactionToMonth(cashTransactionCreateRequest.ToTransaction());
-
             if(monthlyBalanceUpdateResult == false)
             {
                 throw new ArgumentException("Failed to update monthly balances");

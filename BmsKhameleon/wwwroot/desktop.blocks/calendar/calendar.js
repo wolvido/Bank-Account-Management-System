@@ -8,8 +8,6 @@
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
 
-
-
     let transactions = JSON.parse(window.transactions); //inject data here
 
     let transactionsMonth = transactions[0].Date.split('-')[1] * 1;

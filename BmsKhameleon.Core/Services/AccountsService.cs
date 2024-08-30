@@ -189,5 +189,17 @@ namespace BmsKhameleon.Core.Services
         {
             return _accountsRepository.GetAllAccountBanks();
         }
+
+        public async Task<bool> DepositToWorkingBalance(Guid accountId, decimal amount)
+        {
+            var result = await _accountsRepository.DepositToWorkingBalance(accountId, amount);
+            return result;
+        }
+
+        public async Task<bool> WithdrawFromWorkingBalance(Guid accountId, decimal amount)
+        {
+            var result = await _accountsRepository.WithdrawFromWorkingBalance(accountId, amount);
+            return result;
+        }
     }
 }
