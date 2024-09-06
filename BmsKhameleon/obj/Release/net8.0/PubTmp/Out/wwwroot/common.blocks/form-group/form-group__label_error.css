@@ -1,0 +1,9 @@
+﻿.form-group__label_error
+{
+
+}
+
+.form-group__label_error::before {
+    content: "*";
+    color: red;
+}

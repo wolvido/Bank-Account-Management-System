@@ -1,0 +1,6 @@
+﻿.table__item-field-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*width: 108px;*/
+    width: 200px;
+}

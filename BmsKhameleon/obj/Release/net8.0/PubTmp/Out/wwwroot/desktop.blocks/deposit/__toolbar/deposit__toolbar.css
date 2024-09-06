@@ -1,0 +1,7 @@
+﻿.deposit__toolbar {
+    height: 78px;
+    width: 545px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

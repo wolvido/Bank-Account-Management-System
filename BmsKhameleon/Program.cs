@@ -25,10 +25,21 @@ builder.Services.AddHsts(options =>
 });
 
 //DbContext
-builder.Services.AddDbContext<AccountDbContext>(options =>
+if (builder.Environment.IsDevelopment())
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+    builder.Services.AddDbContext<AccountDbContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    });
+}
+else
+{
+    builder.Services.AddDbContext<AccountDbContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("AspSmarterConnectionString"));
+    });
+}
+
 
 //services
 builder.Services.AddScoped<IAccountsService, AccountsService>();

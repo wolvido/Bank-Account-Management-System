@@ -50,22 +50,22 @@
 
         <div class="form-group">
             <label class="form-group__label">Check Number</label>
-            <input asp-for="ChequeNumber" class="form-group__input transaction-controller__cheque-number-input" />
+            <input asp-for="ChequeNumber" class="form-group__input transaction-controller__cheque-number-input" placeholder="000000000000000" />
         </div>
 
         <div class="form-group">
             <label class="form-group__label">Payee (Company/Supplier/Customer Name)</label>
-            <input asp-for="Payee" class="form-group__input transaction-controller__cheque-payee-input" />
+            <input asp-for="Payee" class="form-group__input transaction-controller__cheque-payee-input" placeholder="John Doe"/>
         </div>
 
         <div class="form-group">
             <label class="form-group__label">Check Issuance Amount</label>
-            <input asp-for="Amount" class="form-group__input transaction-controller__cheque-amount-input" />
+            <input asp-for="Amount" class="form-group__input transaction-controller__cheque-amount-input" placeholder="0.00"/>
         </div>
 
         <div class="form-group">
             <label class="form-group__label">Note</label>
-            <textarea asp-for="Note" class="form-group__input transaction-controller__cheque-note-input"></textarea>
+            <textarea asp-for="Note" class="form-group__input transaction-controller__cheque-note-input" placeholder="Add Note"></textarea>
         </div>
 
     </fieldset>

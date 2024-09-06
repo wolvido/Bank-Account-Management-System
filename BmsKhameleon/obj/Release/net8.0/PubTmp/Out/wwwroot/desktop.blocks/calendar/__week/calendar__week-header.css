@@ -1,0 +1,7 @@
+﻿.calendar__week-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 45px;
+    background: #E2EFFF;
+}

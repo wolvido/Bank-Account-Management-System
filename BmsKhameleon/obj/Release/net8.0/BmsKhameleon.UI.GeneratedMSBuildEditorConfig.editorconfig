@@ -26,16 +26,48 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repo/BmsKhameleon/BmsKhameleon/Views/Home/AccountOverview.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NvdW50T3ZlcnZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repo/BmsKhameleon/BmsKhameleon/Views/Home/Calendar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWxlbmRhci5jc2h0bWw=
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Calendar/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcQ2FsZW5kYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/repo/BmsKhameleon/BmsKhameleon/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/AccountForms/_CreateAccountPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjY291bnRGb3Jtc1xfQ3JlYXRlQWNjb3VudFBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/AccountForms/_UpdateAccountPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjY291bnRGb3Jtc1xfVXBkYXRlQWNjb3VudFBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionForms/_DepositCashTransactionPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uRm9ybXNcX0RlcG9zaXRDYXNoVHJhbnNhY3Rpb25QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionForms/_DepositChequeTransactionPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uRm9ybXNcX0RlcG9zaXRDaGVxdWVUcmFuc2FjdGlvblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionForms/_WithdrawCashTransactionPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uRm9ybXNcX1dpdGhkcmF3Q2FzaFRyYW5zYWN0aW9uUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionForms/_WithdrawChequeTransactionPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uRm9ybXNcX1dpdGhkcmF3Q2hlcXVlVHJhbnNhY3Rpb25QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionTables/_CashDepositTransactionsTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uVGFibGVzXF9DYXNoRGVwb3NpdFRyYW5zYWN0aW9uc1RhYmxlUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionTables/_ChequeDepositTransactionsTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uVGFibGVzXF9DaGVxdWVEZXBvc2l0VHJhbnNhY3Rpb25zVGFibGVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/TransactionTables/_WithdrawalTransactionsTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYW5zYWN0aW9uVGFibGVzXF9XaXRoZHJhd2FsVHJhbnNhY3Rpb25zVGFibGVQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/_AuthenticationLayout.cshtml]
@@ -44,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/repo/BmsKhameleon/BmsKhameleon/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repo/BmsKhameleon/BmsKhameleon/Views/TransactionsOverview/TransactionsOverview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zT3ZlcnZpZXdcVHJhbnNhY3Rpb25zT3ZlcnZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/repo/BmsKhameleon/BmsKhameleon/Views/_ViewImports.cshtml]

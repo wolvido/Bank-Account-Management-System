@@ -1,0 +1,25 @@
+﻿@import url('__toolbar/deposit__toolbar.css');
+@import url('__toolbar/deposit__toolbar-button.css');
+@import url('__toolbar/deposit__toolbar-button_cancel.css');
+
+@import url('__notice/deposit__notice.css');
+@import url('__notice/deposit__notice-validation.css');
+@import url('__notice/deposit__notice-deposit-type.css');
+
+@import url('__control/deposit__control.css');
+@import url('__control/deposit__control-group.css');
+@import url('__control/deposit__control-label.css');
+@import url('__control/deposit__control-radio.css');
+
+@import url('__form/deposit__form-container.css');
+@import url('__form/deposit__form-group.css');
+@import url('__form/deposit__form-input.css');
+@import url('__form/deposit__form-container_cash.css');
+@import url('__form/deposit__form-container_cheque.css');
+@import url('__form/deposit__form-group_radio-group.css');
+@import url('__form/deposit__form-group_row.css');
+@import url('__form/deposit__form-group_radio-group.css');
+
+
+.deposit {
+}

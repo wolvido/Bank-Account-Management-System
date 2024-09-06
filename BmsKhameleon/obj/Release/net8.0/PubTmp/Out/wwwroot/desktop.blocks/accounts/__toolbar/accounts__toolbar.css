@@ -1,0 +1,7 @@
+﻿.accounts__toolbar {
+    display: flex;
+    flex-direction: row;
+    height: 115px;
+    justify-content: space-between;
+    align-items: center;
+}

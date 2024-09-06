@@ -1,0 +1,14 @@
+﻿.table__item-container {
+    flex-grow: 1;
+    overflow: auto;
+    background-color: #F0F8FF;
+}
+
+.table__item-container::-webkit-scrollbar {
+    width: 3px;
+    z-index: -1;
+}
+
+.table__item-container::-webkit-scrollbar-thumb {
+    background: #808080;
+}

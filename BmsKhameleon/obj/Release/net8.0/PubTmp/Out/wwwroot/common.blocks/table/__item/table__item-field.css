@@ -1,0 +1,13 @@
+﻿.table__item-field {
+    flex-grow: 1;
+    padding-left: 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    flex-basis: 10%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 108px;
+}

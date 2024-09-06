@@ -1,0 +1,11 @@
+﻿.authentication__fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    height: 112px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}

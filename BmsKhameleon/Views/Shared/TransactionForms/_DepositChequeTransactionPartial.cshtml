@@ -19,7 +19,7 @@
 
     <div class="popup__content notice">
         <div class="notice__validation" asp-validation-summary="All">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
-        <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to deposit <strong>Cheque</strong> on @date.ToString("MMM d, yyyy")</div>
+        <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to deposit <strong>Check</strong> on @date.ToString("MMM d, yyyy")</div>
     </div>
 
     <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_deposit">
@@ -55,12 +55,12 @@
 
         <div class="form-group">
             <label class="form-group__label">Check Number</label>
-            <input asp-for="ChequeNumber" class="form-group__input transaction-controller__cheque-number-input" placeholder="9098322123" />
+            <input asp-for="ChequeNumber" class="form-group__input transaction-controller__cheque-number-input" placeholder="000000000000000" />
         </div>
 
         <div class="form-group">
             <label class="form-group__label">Payee (Company/Supplier/Customer Name)</label>
-            <input asp-for="Payee" class="form-group__input transaction-controller__cheque-payee-input" placeholder="Office of the Vice President" />
+            <input asp-for="Payee" class="form-group__input transaction-controller__cheque-payee-input" placeholder="John Doe" />
         </div>
 
         <div class="form-group">

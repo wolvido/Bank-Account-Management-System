@@ -1,0 +1,14 @@
+﻿.popup__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: #EFEEEF;
+    padding: 0px 30px 0px 30px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.popup__footer > *:only-child {
+    margin: 0 auto; 
+}

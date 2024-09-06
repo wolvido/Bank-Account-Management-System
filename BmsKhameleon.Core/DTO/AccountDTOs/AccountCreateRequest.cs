@@ -12,7 +12,7 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
         [StringLength(25, ErrorMessage = "Bank name cannot exceed 25 characters.")]
         public required string BankName { get; set; }
         [Required(ErrorMessage = "Account number is required.")]
-        [StringLength(60, ErrorMessage = "Account number cannot exceed 60 characters.")]
+        [StringLength(15, ErrorMessage = "Account number cannot exceed 60 characters.")]
         [RegularExpression(@"^\d+$", ErrorMessage = "Account number must be numeric.")]
         public required string AccountNumber { get; set; }
         [Required(ErrorMessage = "Account type is required.")]
@@ -21,7 +21,6 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
         [StringLength(30, ErrorMessage = "Bank branch cannot exceed 30 characters.")]
         public string? BankBranch { get; set; }
         [Required(ErrorMessage = "Initial balance is required.")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Initial balance must be greater than zero.")]
         [DataType(DataType.Currency, ErrorMessage = "must be a valid currency.")]
         public decimal InitialBalance { get; set; }
 

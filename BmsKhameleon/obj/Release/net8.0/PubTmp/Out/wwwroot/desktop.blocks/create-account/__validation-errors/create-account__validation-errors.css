@@ -1,0 +1,18 @@
+﻿.create-account__validation-errors {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #434C52;
+}
+
+
+.create-account__validation-errors em{
+    color:red;
+    font-style: inherit;
+}
+
+.create-account__validation-errors em::before{
+    content: "*";
+}

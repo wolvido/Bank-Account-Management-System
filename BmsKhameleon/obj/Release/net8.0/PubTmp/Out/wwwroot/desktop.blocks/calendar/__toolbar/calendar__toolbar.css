@@ -1,0 +1,9 @@
+﻿.calendar__toolbar {
+    height: 67px;
+    background: #FFF;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}

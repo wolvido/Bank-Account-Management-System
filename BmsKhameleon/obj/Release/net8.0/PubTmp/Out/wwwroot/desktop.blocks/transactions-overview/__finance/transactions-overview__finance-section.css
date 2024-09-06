@@ -1,0 +1,7 @@
+﻿.transactions-overview__finance-section {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 46px;
+}

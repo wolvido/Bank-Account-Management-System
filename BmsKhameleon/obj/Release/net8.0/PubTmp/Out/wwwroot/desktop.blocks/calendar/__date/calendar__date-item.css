@@ -1,0 +1,8 @@
+﻿.calendar__date-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 14%;
+    border: 0.5px solid #F4F4F8;
+    color: inherit;
+    text-decoration: inherit;
+}

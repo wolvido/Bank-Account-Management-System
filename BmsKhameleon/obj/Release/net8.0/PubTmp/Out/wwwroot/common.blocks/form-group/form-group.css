@@ -1,0 +1,6 @@
+﻿.form-group {
+    height: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

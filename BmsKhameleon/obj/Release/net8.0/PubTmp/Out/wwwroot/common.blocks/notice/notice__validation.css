@@ -1,0 +1,13 @@
+﻿.notice__validation
+{
+
+}
+
+.notice__validation em {
+    color: red;
+    font-style: inherit;
+}
+
+.notice__validation em::before {
+    content: "*";
+}
