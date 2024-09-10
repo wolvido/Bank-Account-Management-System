@@ -23,6 +23,14 @@ namespace BmsKhameleon.UI.Controllers
                 return BadRequest("Account does not exist");
             }
 
+            var accountDateEnrolled = accountExists.DateEnrolled ?? throw new InvalidOperationException("Account has no enrolled date");
+
+            var accountMonthEnrolled = accountDateEnrolled.Month;
+            var accountYearEnrolled = accountDateEnrolled.Year;
+
+            ViewBag.accountMonthEnrolled = accountMonthEnrolled;
+            ViewBag.accountYearEnrolled = accountYearEnrolled;
+
             List<DailyTransactionsAggregateResponse> monthlyTransactionsAggregate = await _transactionsService.GetMonthlyTransactionsAggregate(date.Value, accountId);
 
             return View(monthlyTransactionsAggregate);

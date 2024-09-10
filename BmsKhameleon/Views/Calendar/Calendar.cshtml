@@ -37,8 +37,8 @@
                 </label>
                  
                 <select class="calendar__select-month">
-                    //generate month options
-                    @for (int i = 1; i <= 12; i++)
+                    //generate month options 
+                    @for (int i = ViewBag.accountMonthEnrolled; i <= 12; i++)
                     {
                         <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
                     }
@@ -46,7 +46,7 @@
 
                 <select class="calendar__select-year">
                     //generate year options
-                    @for (int i = DateTime.Now.Year; i >= 2000; i--)
+                    @for (int i = DateTime.Now.Year; i >= ViewBag.accountYearEnrolled; i--)
                     {
                         <option value="@i"> @i</option>
                     }

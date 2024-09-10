@@ -3,6 +3,7 @@
     padding: 0px 12px;
     border: 1px solid #CFD0D7;
     border-radius: 2px;
+    font-family: "Open Sans", sans-serif;
 }
 
 .form-group__input::placeholder {

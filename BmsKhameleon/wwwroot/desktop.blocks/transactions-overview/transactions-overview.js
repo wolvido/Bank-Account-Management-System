@@ -120,9 +120,16 @@
         $(".transactions-overview__overlay form").data("validator", null);
         $.validator.unobtrusive.parse(".transactions-overview__overlay form");
     }
+    async function backToCalendarLink(accountId, dateString) {
+        let date = await parseToISO(dateString);
+        $(".transactions-overview__back-button").prop("href", `/Calendar/${accountId}/${date}`);
+    }
 
     let accountId = $("main").attr('data-accountId');
     let dateString = $("main").attr('data-date');
+
+    //generate link to go back to calendar
+    await backToCalendarLink(accountId, dateString);
 
     //load withdrawals table
     await loadWithdrawalsTable(accountId, dateString);
@@ -173,4 +180,17 @@
         $(".transactions-overview__overlay").showFlex();
     });
 
+    //update date notice
+    $(document).on("change", ".transactions-overview__input-date", async function () {
+        let newDate = $(".transactions-overview__input-date").val();
+
+        let oldDate = $(".transactions-overview__notice-date").text();
+
+        console.log(newDate);
+        console.log(oldDate);
+        let formattedNewDate = moment(newDate, "YYYY-MM-DD").format(this.getAttribute("data-date-format"));
+
+        $(".transactions-overview__notice-date").text(formattedNewDate);
+
+    });
 });

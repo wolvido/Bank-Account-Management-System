@@ -90,6 +90,16 @@ namespace BmsKhameleon.UI.Controllers
                 return BadRequest("Account not found.");
             }
 
+            if (account.DateEnrolled == null)
+            {
+                throw new Exception("Date enrolled is null.");
+            }
+
+            var dateEnrolled = account.DateEnrolled.Value;
+            var dateEnrolledFormatted = dateEnrolled.ToString("MMMM d, yyyy");
+
+            ViewBag.DateEnrolled = dateEnrolledFormatted;
+
             AccountUpdateRequest accountUpdateRequest = new AccountUpdateRequest
             {
                 AccountId = account.AccountId,

@@ -43,7 +43,7 @@ namespace BmsKhameleon.Core.Domain.Entities
 
         [Required(ErrorMessage = "Date enrolled is required.")]
         [DataType(DataType.Date, ErrorMessage = "Date enrolled must be a valid date.")]
-        public DateTime? DateEnrolled { get; set; }
+        public DateTime DateEnrolled { get; set; }
 
         [Required(ErrorMessage = "Visibility is required.")]
         public bool Visibility { get; set; }
