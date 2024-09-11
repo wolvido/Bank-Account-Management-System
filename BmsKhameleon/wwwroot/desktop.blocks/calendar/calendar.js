@@ -13,8 +13,6 @@
     let transactionsMonth = transactions[0].Date.split('-')[1] * 1;
     let transactionsYear = transactions[0].Date.split('-')[0] * 1;
 
-    console.log(transactionsMonth);
-
     $(".calendar__select-month").val(transactionsMonth); //set dropdown default to current month
     $(".calendar__select-year").val(transactionsYear); //set dropdown default to current year"
     async function calendarDay(day, adjacentMonths = false, balance = '0.00', withdrawal = '0.00', date = '', accountId = '') {

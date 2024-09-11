@@ -4,16 +4,18 @@
     };
     async function parseToISO(dateStr) {
         // Extract the date and time parts
-        const [datePart, timePart] = dateStr.split(' ');
+        const [datePart] = dateStr.split(' ');
 
         // Split the date into day, month, and year
-        const [day, month, year] = datePart.split('/');
+        const [day, month, year] = datePart.split('/').map(Number);
 
-        // Create a new Date object using the correct order (YYYY-MM-DD)
-        const formattedDate = `${year}-${month}-${day}`;
+        // Create the date using Date.UTC, adjusting the month to zero-indexed
+        const dateObj = new Date(Date.UTC(year, month - 1, day));
 
-        // Convert to a Date object
-        const dateObj = new Date(formattedDate);
+        // Check if the date is valid
+        if (isNaN(dateObj.getTime())) {
+            throw new Error('Invalid date value');
+        }
 
         // Return the ISO string without milliseconds
         return dateObj.toISOString().split('T')[0];

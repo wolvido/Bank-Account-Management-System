@@ -4,16 +4,18 @@
     };
     async function parseToISO(dateStr) {
         // Extract the date and time parts
-        const [datePart, timePart] = dateStr.split(' ');
+        const [datePart] = dateStr.split(' ');
 
         // Split the date into day, month, and year
-        const [day, month, year] = datePart.split('/');
+        const [day, month, year] = datePart.split('/').map(Number);
 
-        // Create a new Date object using the correct order (YYYY-MM-DD)
-        const formattedDate = `${year}-${month}-${day}`;
+        // Create the date using Date.UTC, adjusting the month to zero-indexed
+        const dateObj = new Date(Date.UTC(year, month - 1, day));
 
-        // Convert to a Date object
-        const dateObj = new Date(formattedDate);
+        // Check if the date is valid
+        if (isNaN(dateObj.getTime())) {
+            throw new Error('Invalid date value');
+        }
 
         // Return the ISO string without milliseconds
         return dateObj.toISOString().split('T')[0];
@@ -120,9 +122,16 @@
         $(".transactions-overview__overlay form").data("validator", null);
         $.validator.unobtrusive.parse(".transactions-overview__overlay form");
     }
+    async function backToCalendarLink(accountId, dateString) {
+        let date = await parseToISO(dateString);
+        $(".transactions-overview__back-button").prop("href", `/Calendar/${accountId}/${date}`);
+    }
 
     let accountId = $("main").attr('data-accountId');
     let dateString = $("main").attr('data-date');
+
+    //generate link to go back to calendar
+    await backToCalendarLink(accountId, dateString);
 
     //load withdrawals table
     await loadWithdrawalsTable(accountId, dateString);
@@ -173,4 +182,17 @@
         $(".transactions-overview__overlay").showFlex();
     });
 
+    //update date notice
+    $(document).on("change", ".transactions-overview__input-date", async function () {
+        let newDate = $(".transactions-overview__input-date").val();
+
+        let oldDate = $(".transactions-overview__notice-date").text();
+
+        console.log(newDate);
+        console.log(oldDate);
+        let formattedNewDate = moment(newDate, "YYYY-MM-DD").format(this.getAttribute("data-date-format"));
+
+        $(".transactions-overview__notice-date").text(formattedNewDate);
+
+    });
 });

@@ -26,10 +26,9 @@
 
 @import url('__small-button/accounts__small-button.css');
 
-@import url('__delete/accounts__delete.css');
+/*@import url('__delete/accounts__delete.css');*/
 
 @import url('__modify/accounts__modify-form-group_joint.css');
-
 
 .accounts {
     height: 73vh;
