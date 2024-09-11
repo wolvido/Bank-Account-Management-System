@@ -1,3 +1,4 @@
+using System.Globalization;
 using BmsKhameleon.Core.Domain.RepositoryContracts;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.Core.Services;
@@ -11,7 +12,6 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews(options =>
 {
     options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
@@ -60,6 +60,15 @@ builder.Services.AddTransient<UpdateTransactionHandlerFactory>();
 
 //build
 var app = builder.Build();
+
+// Ensure the app uses PH culture
+var supportedCultures = new[] { "en-PH" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+app.UseRequestLocalization(localizationOptions);
+
 
 app.MapControllers();
 

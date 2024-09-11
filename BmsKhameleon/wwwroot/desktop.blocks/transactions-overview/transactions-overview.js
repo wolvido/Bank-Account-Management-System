@@ -3,14 +3,21 @@
         this.css('display', 'flex');
     };
     async function parseToISO(dateStr) {
+        //console.log("date raw: " + dateStr);
+
         // Extract the date and time parts
         const [datePart] = dateStr.split(' ');
+        //console.log("date part: " + datePart);
 
         // Split the date into day, month, and year
         const [day, month, year] = datePart.split('/').map(Number);
+        //console.log("day: " + day);
+        //console.log("month: " + month);
+        //console.log("year: " + year);
 
         // Create the date using Date.UTC, adjusting the month to zero-indexed
         const dateObj = new Date(Date.UTC(year, month - 1, day));
+        //console.log("date object: " + dateObj);
 
         // Check if the date is valid
         if (isNaN(dateObj.getTime())) {
@@ -22,6 +29,8 @@
     }
     async function depositCash(accountId, dateString) {
         let date = await parseToISO(dateString);
+
+        //console.log("date to Iso: " + date);
 
         let response = await fetch(`/CreateDepositCashPartial/${accountId}/${date}`);
         let depositCashData = await response.text();
@@ -188,8 +197,6 @@
 
         let oldDate = $(".transactions-overview__notice-date").text();
 
-        console.log(newDate);
-        console.log(oldDate);
         let formattedNewDate = moment(newDate, "YYYY-MM-DD").format(this.getAttribute("data-date-format"));
 
         $(".transactions-overview__notice-date").text(formattedNewDate);

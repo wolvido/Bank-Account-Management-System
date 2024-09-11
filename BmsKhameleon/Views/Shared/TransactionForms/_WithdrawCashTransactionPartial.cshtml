@@ -7,8 +7,6 @@
         ViewBag.Date = Model.TransactionDate;
     }
 
-    Guid accountId = ViewBag.AccountId;
-    DateTime date = ViewBag.Date;
 }
 
 <form class="popup" method="post">
@@ -19,7 +17,7 @@
 
     <div class="popup__content notice ">
         <div class="notice__validation" asp-validation-summary="All">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
-        <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to record a withdrawal of <strong>Cash</strong> on <span class="transactions-overview__notice-date">@date.ToString("MMM d, yyyy")</span></div>
+        <div class="notice__transaction-medium transaction-controller__transaction-medium">You are about to record a withdrawal of <strong>Cash</strong> on <span class="transactions-overview__notice-date">@ViewBag.Date.ToString("MMM d, yyyy")</span></div>
     </div>
 
     <fieldset class="popup__content radio-controls transaction-controller__radio-controls transaction-controller__radio-controls_withdraw">
@@ -36,7 +34,7 @@
 
     <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_withdraw transaction-controller__fieldset_cash">
 
-        <input asp-for="AccountId" type="hidden" value="@accountId" />
+        <input asp-for="AccountId" type="hidden" value="@ViewBag.AccountId" />
         @{
             var withdrawEnum = Enum.Parse<TransactionType>("Withdraw");
         }
@@ -44,7 +42,7 @@
 
         <div class="form-group">
             <label class="form-group__label">Cash Withdraw Date</label>
-            <input asp-for="TransactionDate" class="form-group__input form-group__input_date transaction-controller__cash-date-input transactions-overview__input-date" type="date" data-date="@date.ToString("MMM d, yyyy")" data-date-format="ll" value="@date.ToString("yyyy-MM-dd")" />
+            <input asp-for="TransactionDate" class="form-group__input form-group__input_date transaction-controller__cash-date-input transactions-overview__input-date" type="date" data-date="@ViewBag.Date.ToString("MMM d, yyyy")" data-date-format="ll" value="@ViewBag.Date.ToString("yyyy-MM-dd")" />
         </div>
 
         <div class="form-group">
