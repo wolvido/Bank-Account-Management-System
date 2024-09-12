@@ -163,9 +163,19 @@
         $(".calendar__date-container").find("*").remove();
     };
     function reloadWithRouteParameter(newParam) {
-        const currentUrl = window.location.pathname; // Get the current path, e.g., "/view"
-        const newUrl = `${currentUrl}/${newParam}`; // Create the new route with the added parameter
-  
+        let currentUrl = window.location.pathname; // Get the current path
+        let newUrl = `${currentUrl}/${newParam}`; // Create the new route with the added parameter
+
+        //count the number of forward slash in the new url
+        let forwardSlashCount = (newUrl.match(/\//g) || []).length;
+
+        if (forwardSlashCount > 3) { // If there are more there is already a date in the url
+            let urlSplit = currentUrl.split('/'); // Split the url into an array
+            urlSplit.pop(); // Remove the old date from the array
+            currentUrl = urlSplit.join('/'); //combine the array back into a string
+            newUrl = `${currentUrl}/${newParam}`; // Create the new route with the new date
+        }
+
         // Reload the page with the new route
         window.location.href = newUrl;
     }
@@ -189,8 +199,5 @@
         $(".calendar__overlay-account-info").showFlex();
     });
 
-
-
-    //reloadWithRouteParameter('2024-02-01T00:00:00');
 
 });

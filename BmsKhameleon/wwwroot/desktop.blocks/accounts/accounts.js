@@ -26,6 +26,12 @@
         editForm.find(".accounts__button_delete").show();
     });
 
+    //update account button prevent default
+    $(".accounts__item-button").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    });
+
     //add account
     $(".accounts__add-accounts").on("click", async function () {
         overlayCreate.showFlex();
