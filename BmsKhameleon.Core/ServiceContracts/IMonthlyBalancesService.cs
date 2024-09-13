@@ -15,7 +15,7 @@ namespace BmsKhameleon.Core.ServiceContracts
         public Task<bool> RemoveTransactionFromMonth(Transaction transaction);
         public Task<MonthlyWorkingBalanceResponse?> GetMonthlyBalance(Guid accountId, DateTime date);
 
-        public Task<MonthlyWorkingBalanceResponse?> GetPreviousMonthlyBalance(Guid accountId, DateTime date);
+        public Task<MonthlyWorkingBalanceResponse?> GetLastMonthlyBalance(Guid accountId, DateTime date);
 
         public Task<bool> InitialBalanceMonthAdjustment(Guid accountId, decimal amountToRemove, decimal amountToAdd);
 

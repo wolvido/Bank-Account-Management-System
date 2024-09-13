@@ -29,7 +29,7 @@
             </div>
             `;
 
-
+        //faded day from previous and next month
         let fadedDesign;
         if (adjacentMonths == true) {
             fadedDesign = " calendar__date-day_faded";
@@ -53,35 +53,20 @@
         let calendarDay = ''; // Default value if date or accountId is not provided
 
         if (date !== '' && accountId !== '') {
-            try {
-                // Fetch data
-                const response = await fetch(`/TransactionsOverview/${accountId}/${date}`, {
-                    method: 'GET'
-                });
-                const transactionOverviewUrl = response.url; // Get the URL
+            const transactionOverviewUrl = `/TransactionsOverview/${accountId}/${date}`; // form the URL
 
-                // Construct calendarDay with the fetched URL
-                calendarDay = `
-                <a href="${transactionOverviewUrl}" class="calendar__date-item">
-                    <div class="calendar__date-day${fadedDesign}">
-                        ${day}
-                    </div>
-                    ${transactions}
-                </a>
-                `;
-            } catch (error) {
-                console.error('Error fetching URL:', error);
-                // Fallback if fetch fails
-                calendarDay = `
-                <div class="calendar__date-item">
-                    <div class="calendar__date-day${fadedDesign}">
-                        ${day}
-                    </div>
-                    ${transactions}
+            // Construct calendarDay with the fetched URL
+            calendarDay = `
+            <a href="${transactionOverviewUrl}" class="calendar__date-item">
+                <div class="calendar__date-day${fadedDesign}">
+                    ${day}
                 </div>
-                `;
-            }
-        } else {
+                ${transactions}
+            </a>
+            `;
+        }
+        else
+        {
             calendarDay = `
             <div class="calendar__date-item">
                 <div class="calendar__date-day${fadedDesign}">

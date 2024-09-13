@@ -24,12 +24,12 @@ namespace BmsKhameleon.Infrastructure.Repositories
             return monthlyWorkingBalance;
         }
 
-        public async Task<MonthlyWorkingBalance?> GetPreviousMonthlyBalance(Guid accountId, DateTime date)
+        public async Task<MonthlyWorkingBalance?> GetLastMonthlyBalance(Guid accountId, DateTime date)
         {
-            //get the last monthly balance before the given date
+            //get the last monthly balance before or equal the given date
             MonthlyWorkingBalance? monthlyWorkingBalance = await _db.MonthlyWorkingBalances.Where(m => 
                 m.AccountId == accountId && 
-                m.Date < date)
+                m.Date <= date)
                 .OrderByDescending(m => m.Date)
                 .FirstOrDefaultAsync();
 

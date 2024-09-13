@@ -236,21 +236,20 @@ namespace BmsKhameleon.Core.Services
         }
 
         /// <summary>
-        ///     aggregates all transactions of a given day and aggregates them into a given month
+        ///     aggregates all transactions of a given day then aggregates them into the given
         /// </summary>
         /// <param name="date"></param>
         /// <param name="accountId"></param>
-        /// <returns> returns a list of daily transactions aggregates for a given month </returns>
+        /// <returns> returns a list of daily transactions aggregates for the given month </returns>
         public async Task<List<DailyTransactionsAggregateResponse>> GetMonthlyTransactionsAggregate(DateTime date, Guid accountId)
         {
             var account = await _accountsRepository.GetAccount(accountId);
-
             if (account == null)
             {
                 return new List<DailyTransactionsAggregateResponse>();
             }
 
-            var monthTransactions = await _transactionsRepository.GetAllTransactionsForMonth(date, accountId);
+            //var monthTransactions = await _transactionsRepository.GetAllTransactionsForMonth(date, accountId);
 
             List<DailyTransactionsAggregateResponse> monthlyTransactionsAggregate = new List<DailyTransactionsAggregateResponse>();
 
@@ -259,7 +258,7 @@ namespace BmsKhameleon.Core.Services
             {
                 DateTime currentDate = new DateTime(date.Year, date.Month, i);
 
-                //grab all deposits and withdrawals for the day
+                //sum all deposits and withdrawals for the day
                 var depositsForDay = await GetDepositsForDay(currentDate, accountId);
                 decimal totalDepositsForDay = depositsForDay.Sum(transaction => transaction.Amount);
                 var withdrawalsForDay = await GetWithdrawalsForDay(currentDate, accountId);
@@ -269,7 +268,7 @@ namespace BmsKhameleon.Core.Services
                 var lastAggregatedDay = monthlyTransactionsAggregate.LastOrDefault();
                 decimal totalBalance = lastAggregatedDay?.TotalBalance ?? 0;
 
-                //aggregate and inject
+                //aggregate the day and inject to the month
                 totalBalance += totalDepositsForDay;
                 totalBalance -= totalWithdrawalsForDay;
                 monthlyTransactionsAggregate.Add(new DailyTransactionsAggregateResponse
@@ -284,7 +283,7 @@ namespace BmsKhameleon.Core.Services
 
             //for each item in monthlyTransactionsAggregate add in the total balance the previousMonthBalance
             DateTime previousMonth = new DateTime(date.AddMonths(-1).Year, date.AddMonths(-1).Month, 1);
-            MonthlyWorkingBalanceResponse? previousMonthWorkingBalance = await _monthlyBalances.GetPreviousMonthlyBalance(accountId, previousMonth);
+            MonthlyWorkingBalanceResponse? previousMonthWorkingBalance = await _monthlyBalances.GetLastMonthlyBalance(accountId, previousMonth);
             decimal previousMonthBalance = previousMonthWorkingBalance?.WorkingBalance ?? account.InitialBalance;
             foreach (var dailyAggregate in monthlyTransactionsAggregate)
             {

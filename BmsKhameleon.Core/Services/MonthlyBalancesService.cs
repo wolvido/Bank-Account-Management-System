@@ -132,14 +132,14 @@ namespace BmsKhameleon.Core.Services
             return monthlyBalance.ToMonthlyWorkingBalanceResponse();
         }
 
-        public async Task<MonthlyWorkingBalanceResponse?> GetPreviousMonthlyBalance(Guid accountId, DateTime date)
+        public async Task<MonthlyWorkingBalanceResponse?> GetLastMonthlyBalance(Guid accountId, DateTime date)
         {
             if(date.Day != 1)
             {
                 date = new DateTime(date.Year, date.Month, 1);
             }
 
-            var result = await _monthlyBalanceRepository.GetPreviousMonthlyBalance(accountId, date);
+            var result = await _monthlyBalanceRepository.GetLastMonthlyBalance(accountId, date);
             if (result == null)
             {
                 return null;
