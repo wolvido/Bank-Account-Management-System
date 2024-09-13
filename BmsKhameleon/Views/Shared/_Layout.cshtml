@@ -24,7 +24,10 @@
             <div class="header__toolbar">
                 <button class="header__button header__button_small button button_green">Admin</button>
                 <button class="header__button header__button_small button button_green">User Manual</button>
-                <button class="header__button button">Log Out</button>
+                <form method="get">
+                    <button asp-controller="Authentication" asp-action="Authentication" class="header__button button">Log Out</button>
+                </form>
+                
             </div>
 
         </div>

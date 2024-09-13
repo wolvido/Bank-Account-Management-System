@@ -301,7 +301,7 @@ namespace BmsKhameleon.Core.Services
                 throw new Exception("Account does not exist");
             }
 
-            var lastMonthWorkingBalance = await _monthlyBalances.GetMonthlyBalance(accountId, date.AddMonths(-1));
+            var lastMonthWorkingBalance = await _monthlyBalances.GetLastMonthlyBalance(accountId, date.AddMonths(-1));
             var lastMonthBalance = lastMonthWorkingBalance?.WorkingBalance ?? account.InitialBalance;
 
             //get every transaction from the first day of this month to the given date
