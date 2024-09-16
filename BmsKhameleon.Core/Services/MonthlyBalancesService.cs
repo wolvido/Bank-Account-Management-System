@@ -18,12 +18,12 @@ namespace BmsKhameleon.Core.Services
         private async Task<bool> CreateMonthlyBalance(Guid accountId, DateTime date, decimal workingBalance)
         {
             Account? account = await _accountsRepository.GetAccount(accountId);
-
             if (account == null)
             {
                 throw new InvalidOperationException("Account does not exist");
             }
 
+            //already exists validation
             MonthlyWorkingBalanceResponse? existingMonthlyBalance = await GetMonthlyBalance(accountId, date);
             if (existingMonthlyBalance != null && 
                 existingMonthlyBalance.Date.Month == date.Month && 
@@ -32,20 +32,37 @@ namespace BmsKhameleon.Core.Services
                 throw new InvalidOperationException("Monthly balance already exists for this month");
             }
 
+            //last month's balance to be added to the new one or the initial balance if there is no last month
+            MonthlyWorkingBalanceResponse? lastMonthlyBalance = await GetLastMonthlyBalance(accountId, date);
+            decimal lastMonthBalance = lastMonthlyBalance?.WorkingBalance ?? account.InitialBalance;
+
             var monthlyWorkingBalance = new MonthlyWorkingBalance
                 {
                     MonthlyWorkingBalanceId = Guid.NewGuid(),
                     AccountId = accountId,
                     Date = date,
-                    WorkingBalance = workingBalance+account.InitialBalance
+                    WorkingBalance = workingBalance + lastMonthBalance
                 };
 
             bool result = await _monthlyBalanceRepository.CreateMonthlyBalance(monthlyWorkingBalance);
+
+            //add the new balance to succeeding monthly balances if they exist
+            var succeedingMonth = await _monthlyBalanceRepository.GetMonthlyBalance(accountId, date.AddMonths(1));
+            if (succeedingMonth != null && result)
+            {
+                var addToSucceedingMonths = await _monthlyBalanceRepository.AddToSucceedingMonthlyBalances(accountId, date, workingBalance);
+                if(addToSucceedingMonths == false)
+                {
+                    throw new InvalidOperationException("Failed to add to succeeding months");
+                }
+            }
+
             return result;
         }
 
         public async Task<bool> AddTransactionToMonth(Transaction transaction)
         {
+            //determine if negative or positive based on the transaction type
             var transactionType = transaction.TransactionType.ToLower();
             decimal transactionAmount;
             if (transactionType == "deposit")
@@ -61,6 +78,7 @@ namespace BmsKhameleon.Core.Services
                 throw new ArgumentException("Invalid transaction type.");
             }
 
+            //create a monthly balance if it does not exist
             var monthDate = new DateTime(transaction.TransactionDate.Year, transaction.TransactionDate.Month, 1);
             var existingMonthBalanceResponse = await GetMonthlyBalance(transaction.AccountId, monthDate);
             if (existingMonthBalanceResponse == null)
@@ -69,7 +87,7 @@ namespace BmsKhameleon.Core.Services
                 return createResult;
             }
 
-            var existingMonthBalance = new MonthlyWorkingBalance() { 
+            var existingMonthBalance = new MonthlyWorkingBalance() {
                 MonthlyWorkingBalanceId = existingMonthBalanceResponse.MonthlyWorkingBalanceId,
                 AccountId = existingMonthBalanceResponse.AccountId,
                 Date = existingMonthBalanceResponse.Date, 
@@ -77,6 +95,18 @@ namespace BmsKhameleon.Core.Services
             };
 
             var result = await _monthlyBalanceRepository.AddToMonthlyBalance(existingMonthBalance, transactionAmount);
+
+            //add the new balance to succeeding monthly balances if they exist
+            var succeedingMonth = await _monthlyBalanceRepository.GetMonthlyBalance(transaction.AccountId, monthDate.AddMonths(1));
+            if (succeedingMonth != null && result)
+            {
+                var addToSucceedingMonths = await _monthlyBalanceRepository.AddToSucceedingMonthlyBalances(transaction.AccountId, monthDate, transactionAmount);
+                if (addToSucceedingMonths == false)
+                {
+                    throw new InvalidOperationException("Failed to add to succeeding months");
+                }
+            }
+
             return result;
         }
 
@@ -114,6 +144,17 @@ namespace BmsKhameleon.Core.Services
             };
 
             var result = await _monthlyBalanceRepository.RemoveFromMonthlyBalance(existingMonthBalance, amount);
+
+            //remove the balance from succeeding monthly balances if they exist
+            var succeedingMonth = await _monthlyBalanceRepository.GetMonthlyBalance(transaction.AccountId, date.AddMonths(1));
+            if (succeedingMonth != null && result)
+            {
+                var removeFromSucceedingMonths = await _monthlyBalanceRepository.RemoveFromSucceedingMonthlyBalances(transaction.AccountId, date, amount);
+                if (removeFromSucceedingMonths == false)
+                {
+                    throw new InvalidOperationException("Failed to remove from succeeding months");
+                }
+            }
             return result;
         }
 
@@ -131,7 +172,13 @@ namespace BmsKhameleon.Core.Services
             }
             return monthlyBalance.ToMonthlyWorkingBalanceResponse();
         }
-
+        
+        /// <summary>
+        /// Get the last monthly working balance from before or equal the given date
+        /// </summary>
+        /// <param name="accountId"></param>
+        /// <param name="date"></param>
+        /// <returns>the last monthly working balance from before or equal the given date</returns>
         public async Task<MonthlyWorkingBalanceResponse?> GetLastMonthlyBalance(Guid accountId, DateTime date)
         {
             if(date.Day != 1)
@@ -177,5 +224,6 @@ namespace BmsKhameleon.Core.Services
 
             return resultConverted;
         }
+
     }
 }

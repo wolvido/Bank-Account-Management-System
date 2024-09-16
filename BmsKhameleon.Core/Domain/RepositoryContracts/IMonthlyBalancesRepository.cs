@@ -23,5 +23,8 @@ namespace BmsKhameleon.Core.Domain.RepositoryContracts
 
         public Task<bool> DeleteMonthBalance(Guid accountId, DateTime date);
         public Task<List<MonthlyWorkingBalance>> GetAllMonthlyBalances(Guid accountId);
+
+        public Task<bool> AddToSucceedingMonthlyBalances(Guid accountId, DateTime date, decimal amount);
+        public Task<bool> RemoveFromSucceedingMonthlyBalances(Guid accountId, DateTime date, decimal amount);
     }
 }

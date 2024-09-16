@@ -176,5 +176,5 @@ namespace BmsKhameleon.UI.Controllers
             return handler.HandleUpdateTransaction(transaction);
 
         }
-    }   
+    }
 }

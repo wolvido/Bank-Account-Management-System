@@ -281,7 +281,7 @@ namespace BmsKhameleon.Core.Services
 
             }
 
-            //for each item in monthlyTransactionsAggregate add in the total balance the previousMonthBalance
+            //for each item in monthlyTransactionsAggregate, add in the total balance from the previousMonthBalance
             DateTime previousMonth = new DateTime(date.AddMonths(-1).Year, date.AddMonths(-1).Month, 1);
             MonthlyWorkingBalanceResponse? previousMonthWorkingBalance = await _monthlyBalances.GetLastMonthlyBalance(accountId, previousMonth);
             decimal previousMonthBalance = previousMonthWorkingBalance?.WorkingBalance ?? account.InitialBalance;
@@ -308,12 +308,15 @@ namespace BmsKhameleon.Core.Services
             var transactions = await _transactionsRepository.GetAllTransactionsForMonth(date, accountId);
             var transactionsUpToDate = transactions.Where(transaction => transaction.TransactionDate <= date).ToList();
 
+            //aggregate all deposits and withdrawals
             var deposits = transactionsUpToDate.Where(transaction => transaction.TransactionType == TransactionType.Deposit.ToString()).ToList();
             var withdrawals = transactionsUpToDate.Where(transaction => transaction.TransactionType == TransactionType.Withdraw.ToString()).ToList();
-
+            
+            //sum all deposits and withdrawals
             var totalDepositAmount = deposits.Sum(transaction => transaction.Amount);
             var totalWithdrawalAmount = withdrawals.Sum(transaction => transaction.Amount);
 
+            //calculate total balance
             var totalBalance = lastMonthBalance + totalDepositAmount - totalWithdrawalAmount;
 
             return new DailyTransactionsAggregateResponse
