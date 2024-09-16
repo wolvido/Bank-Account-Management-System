@@ -74,7 +74,7 @@
                     <div class="accounts__item-payor table__item-field">@account.AccountName</div>
                     <div class="accounts__item-balance table__item-field table__item-field_controller">
 
-                        <div class="table__item-field-label">@account.WorkingBalance</div>
+                        <div class="table__item-field-label">@account.WorkingBalance?.ToCurrencyString()</div>
 
                         <div class="accounts__item-controls table__item-controls">
                             <button data-accountId="@account.AccountId" class="accounts__item-button accounts__item-button_edit table__item-button">

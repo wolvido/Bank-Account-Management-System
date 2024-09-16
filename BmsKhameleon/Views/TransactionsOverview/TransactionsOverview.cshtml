@@ -28,7 +28,7 @@
             <section class="transactions-overview__balance-section">
                 <div class="transactions-overview__balance-label-group">
                     <label class="transactions-overview__balance-label transactions-overview__balance-label_working-balance">Working Balance</label>
-                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_total" maxlength="25">@Model.DailyTransactionsAggregateResponse.TotalBalance</textarea>
+                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_total" maxlength="25">@Model.DailyTransactionsAggregateResponse.TotalBalance?.ToCurrencyString()</textarea>
                 </div>
 
                 <div class="transactions-overview__balance-label-group">

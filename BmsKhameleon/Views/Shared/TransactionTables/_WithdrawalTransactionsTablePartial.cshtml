@@ -10,12 +10,12 @@
             //get total cash amount withdrawn
             var totalCash = Model.Where(x => x is { TransactionType: "Withdraw", ChequeNumber: null }).Sum(x => x.Amount);
         }
-        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cash"> Cash: Php @totalCash </div>
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cash"> Cash: Php @totalCash.ToCurrencyString() </div>
         @{
             //get total cheque amount withdrawn
             var totalCheque = Model.Where(x => x is { TransactionType: "Withdraw", ChequeNumber: not null }).Sum(x => x.Amount);
         }
-        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cheque"> Check: Php @totalCheque </div>
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cheque"> Check: Php @totalCheque.ToCurrencyString() </div>
     </div>
 </div>
 
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="transactions-overview__item-amount-withdrawal table__item-field transaction-controller__field-amount">
-                    @transaction.Amount
+                    @transaction.Amount.ToCurrencyString()
                 </div>
 
                 <div class="transactions-overview__item-notes table__item-field table__item-field_controller">

@@ -20,11 +20,11 @@
             `
             <div class="calendar__date-transactions">
                 <div class="calendar__date-balance">
-                    ${balance}
+                    ${Number(balance).toLocaleString('en-PH', {style:"currency", currency:"PHP"})}
                 </div>
 
                 <div class ="calendar__date-withrawal">
-                    ${withdrawal}
+                    ${Number(withdrawal).toLocaleString('en-PH', {style:"currency", currency:"PHP"})}
                 </div>
             </div>
             `;

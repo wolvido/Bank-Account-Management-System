@@ -10,7 +10,7 @@
             //get total cash amount deposited
             var totalCash = Model.Sum(x => x.Amount);
         }
-        Php @totalCash
+        Php @totalCash.ToCurrencyString()
     </div>
 </div>
 
@@ -44,7 +44,7 @@
                 <div class="table__item-field table__item-field_controller">
 
                     <div class="table__item-field-label transaction-controller__field-amount">
-                        @transaction.Amount
+                        @transaction.Amount.ToCurrencyString()
                     </div>
 
                     <div class="table__item-controls">
