@@ -51,8 +51,7 @@ namespace BmsKhameleon.Infrastructure.Repositories
             existingAccount.InitialBalance = account.InitialBalance;
             existingAccount.Visibility = account.Visibility;
 
-            await _db.SaveChangesAsync();
-            return true;
+            return await _db.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> DeleteAccount(Guid accountId)

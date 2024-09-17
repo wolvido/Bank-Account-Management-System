@@ -16,24 +16,16 @@ namespace BmsKhameleon.UI.Handlers
 
         public IActionResult HandleUpdateTransaction(TransactionResponse transactionResponse)
         {
-            var cashTransactionCreateRequest = new CashTransactionCreateRequest
-            {
-                AccountId = transactionResponse.AccountId,
-                TransactionDate = transactionResponse.TransactionDate,
-                Amount = transactionResponse.Amount,
-                TransactionType = Enum.Parse<TransactionType>(transactionResponse.TransactionType ?? throw new InvalidOperationException("Invalid transaction type")),
-                Note = transactionResponse.Note,
-                CashTransactionType = transactionResponse.CashTransactionType ?? throw new InvalidOperationException("Cash Transaction Type empty")
-            };
+            var transactionUpdateRequest = transactionResponse.ToCashTransactionUpdateRequest();
 
             return new PartialViewResult
             {
-                ViewName = "~/Views/Shared/TransactionForms/_WithdrawCashTransactionPartial.cshtml",
-                ViewData = new ViewDataDictionary<CashTransactionCreateRequest>(
+                ViewName = "~/Views/Shared/TransactionForms/_UpdateWithdrawCashTransactionPartial.cshtml",
+                ViewData = new ViewDataDictionary<CashTransactionUpdateRequest>(
                     new EmptyModelMetadataProvider(),
                     new ModelStateDictionary())
                 {
-                    Model = cashTransactionCreateRequest
+                    Model = transactionUpdateRequest
                 }
             };
 

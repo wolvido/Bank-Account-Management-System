@@ -151,8 +151,8 @@ namespace BmsKhameleon.UI.Controllers
         }
 
         [HttpGet]
-        [Route("[action]/{transactionId}")]
-        public async Task<IActionResult> UpdateTransactionPartial(Guid transactionId, [FromServices] UpdateTransactionHandlerFactory updateTransactionHandlerFactory)
+        [Route("[action]/{transactionId}/{transactionType}/{transactionMedium}")]
+        public async Task<IActionResult> UpdateTransactionPartial(Guid transactionId, string transactionType, string transactionMedium, [FromServices] UpdateTransactionHandlerFactory updateTransactionHandlerFactory)
         {
             var transaction = await _transactionsService.GetTransaction(transactionId);
             if(transaction == null)
@@ -160,21 +160,65 @@ namespace BmsKhameleon.UI.Controllers
                 return BadRequest("Transaction not found.");
             }
 
-            var transactionType = transaction.TransactionType;
-            if(transactionType == null)
-            {
-                return BadRequest("Transaction type not found.");
-            }
-
-            var transactionMedium = transaction.TransactionMedium;
-            if(transactionMedium == null)
-            {
-                return BadRequest("Transaction medium not found.");
-            }
-
             var handler = updateTransactionHandlerFactory.GetHandler(transactionType, transactionMedium);
             return handler.HandleUpdateTransaction(transaction);
 
+        }
+
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<IActionResult> UpdateTransactionCash(CashTransactionUpdateRequest? cashTransactionUpdateRequest)
+        {
+            if (cashTransactionUpdateRequest == null)
+            {
+                return BadRequest("Invalid transaction update request.");
+            }
+
+            var transactionUpdateRequest = cashTransactionUpdateRequest.ToTransactionUpdateRequest();
+
+            bool result = await _transactionsService.UpdateTransaction(transactionUpdateRequest);
+
+            if (result == false)
+            {
+                return BadRequest("Unable to update the transaction. Please try again.");
+            }
+
+            var formattedDate = transactionUpdateRequest.TransactionDate.ToString("yyyy-MM-dd");
+
+            return RedirectToAction("TransactionsOverview", "TransactionsOverview",
+                new
+                {
+                    accountId = transactionUpdateRequest.AccountId,
+                    date = formattedDate
+                });
+        }
+
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<IActionResult> UpdateTransactionCheque(ChequeTransactionUpdateRequest? chequeTransactionUpdateRequest)
+        {
+            if (chequeTransactionUpdateRequest == null)
+            {
+                return BadRequest("Invalid transaction update request.");
+            }
+
+            var transactionUpdateRequest = chequeTransactionUpdateRequest.ToTransactionUpdateRequest();
+
+            bool result = await _transactionsService.UpdateTransaction(transactionUpdateRequest);
+
+            if (result == false)
+            {
+                return BadRequest("Unable to update the transaction. Please try again.");
+            }
+
+            var formattedDate = transactionUpdateRequest.TransactionDate.ToString("yyyy-MM-dd");
+
+            return RedirectToAction("TransactionsOverview", "TransactionsOverview",
+                new
+                {
+                    accountId = transactionUpdateRequest.AccountId,
+                    date = formattedDate
+                });
         }
     }
 }

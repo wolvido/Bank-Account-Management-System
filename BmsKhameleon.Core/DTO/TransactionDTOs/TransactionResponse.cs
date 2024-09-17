@@ -26,6 +26,37 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
         public string? ChequeBankName { get; set; }
         public string? ChequeNumber { get; set; }
 
+
+        public CashTransactionUpdateRequest ToCashTransactionUpdateRequest()
+        {
+            return new CashTransactionUpdateRequest
+            {
+                TransactionId = TransactionId,
+                AccountId = AccountId,
+                TransactionDate = TransactionDate,
+                Amount = Amount,
+                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), TransactionType ?? throw new InvalidOperationException($"Invalid Transaction type '{TransactionType}'"), true ),
+                Note = Note,
+                CashTransactionType = CashTransactionType
+            };
+        }
+
+        public ChequeTransactionUpdateRequest ToChequeTransactionUpdateRequest()
+        {
+            return new ChequeTransactionUpdateRequest
+            {
+                TransactionId = TransactionId,
+                AccountId = AccountId,
+                TransactionDate = TransactionDate,
+                Amount = Amount,
+                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), TransactionType ?? throw new InvalidOperationException($"Invalid Transaction type '{TransactionType}'"), true ),
+                Note = Note,
+                Payee = Payee,
+                ChequeBankName = ChequeBankName,
+                ChequeNumber = ChequeNumber
+            };
+        }
+
     }
 
     public static partial class TransactionExtensions

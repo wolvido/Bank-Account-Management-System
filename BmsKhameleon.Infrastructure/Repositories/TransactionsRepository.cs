@@ -21,12 +21,19 @@ namespace BmsKhameleon.Infrastructure.Repositories
             if (existingTransaction == null)
             {
                 return false;
-            };
+            }
 
-            _db.Entry(existingTransaction).CurrentValues.SetValues(transaction);
+            existingTransaction.TransactionDate = transaction.TransactionDate;
+            existingTransaction.Amount = transaction.Amount;
+            existingTransaction.TransactionType = transaction.TransactionType;
+            existingTransaction.TransactionMedium = transaction.TransactionMedium;
+            existingTransaction.Note = transaction.Note;
+            existingTransaction.CashTransactionType = transaction.CashTransactionType;
+            existingTransaction.Payee = transaction.Payee;
+            existingTransaction.ChequeBankName = transaction.ChequeBankName;
+            existingTransaction.ChequeNumber = transaction.ChequeNumber;
 
-            await _db.SaveChangesAsync();
-            return true;
+            return await _db.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> DeleteTransaction(Guid transactionId)

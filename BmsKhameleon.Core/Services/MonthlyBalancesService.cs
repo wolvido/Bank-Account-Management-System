@@ -112,8 +112,7 @@ namespace BmsKhameleon.Core.Services
 
         public async Task<bool> RemoveTransactionFromMonth(Transaction transaction)
         {
-            var date = new DateTime(transaction.TransactionDate.Year, transaction.TransactionDate.Month, 1);
-
+            //determine if negative or positive based on the transaction type
             decimal amount;
             var transactionType = transaction.TransactionType.ToLower();
             if(transaction.TransactionType.ToLower() == "deposit")
@@ -129,6 +128,7 @@ namespace BmsKhameleon.Core.Services
                 throw new ArgumentException("Invalid transaction type.");
             }
 
+            var date = new DateTime(transaction.TransactionDate.Year, transaction.TransactionDate.Month, 1);
             var existingMonthBalanceResponse = await GetMonthlyBalance(transaction.AccountId, date);
             if (existingMonthBalanceResponse == null)
             {

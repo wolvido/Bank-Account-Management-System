@@ -84,8 +84,10 @@
         //grab the total withdraw and populate the total withdraw field on main view
         let cashTotalText = $(".transactions-overview__withdrawals-total-value_cash").text();
         let chequeTotalText = $(".transactions-overview__withdrawals-total-value_cheque").text();
-        let cashTotal = cashTotalText.match(/\d+(\.\d+)?/)[0];
-        let chequeTotal = chequeTotalText.match(/\d+(\.\d+)?/)[0];
+        let cashTotal = cashTotalText.replace(/[^\d.]/g, '');
+        console.log(cashTotal);
+        let chequeTotal = chequeTotalText.replace(/[^\d.]/g, '');
+        console.log(chequeTotal);
         let totalWithdrawals = (parseFloat(cashTotal) + parseFloat(chequeTotal)).toFixed(2);
         await populateTotalWithdrawals(totalWithdrawals);
     }
@@ -110,18 +112,18 @@
         //grab the total deposit and populate the total deposit field on main view
         let cashTotalText = $(".transactions-overview__deposits-total-value_cash").text();
         let chequeTotalText = $(".transactions-overview__deposits-total-value_cheque").text();
-        let cashTotal = cashTotalText.match(/\d+(\.\d+)?/)[0];
-        let chequeTotal = chequeTotalText.match(/\d+(\.\d+)?/)[0];
+        let cashTotal = cashTotalText.replace(/[^\d.]/g, '');
+        let chequeTotal = chequeTotalText.replace(/[^\d.]/g, '');
         let totalDeposits = (parseFloat(cashTotal) + parseFloat(chequeTotal)).toFixed(2);
         await populateTotalDeposits(totalDeposits);
 
     }
     async function populateTotalDeposits(amount) {
-        amountCurrency = Number(amount).toLocaleString('en-PH', {style:"currency", currency:"PHP"})
+        amountCurrency = Number(amount).toLocaleString('en-PH', { style: "currency", currency: "PHP" });
         $(".transactions-overview__balance-value_deposit").text(amountCurrency);
     }
     async function populateTotalWithdrawals(amount) {
-        amountCurrency = Number(amount).toLocaleString('en-PH', {style:"currency", currency:"PHP"})
+        amountCurrency = Number(amount).toLocaleString('en-PH', { style: "currency", currency: "PHP" });
         $(".transactions-overview__balance-value_withdraw").text(amountCurrency);
     }
     async function updateTransaction(transactionId) {

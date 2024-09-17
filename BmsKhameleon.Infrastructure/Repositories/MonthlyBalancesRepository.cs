@@ -131,7 +131,7 @@ namespace BmsKhameleon.Infrastructure.Repositories
 
             foreach (MonthlyWorkingBalance monthlyBalance in succeedingMonthlyBalances)
             {
-                monthlyBalance.WorkingBalance =- amount;
+                monthlyBalance.WorkingBalance -= amount;
             }
 
             bool result = await _db.SaveChangesAsync() > 0;

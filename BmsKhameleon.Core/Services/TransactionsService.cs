@@ -24,8 +24,13 @@ namespace BmsKhameleon.Core.Services
             {
                 return false;
             }
-
-            bool result = await _transactionsRepository.UpdateTransaction(transactionUpdateRequest.ToTransaction());
+            
+            //check if account exists
+            var account = await _accountsRepository.GetAccount(existingTransaction.AccountId);
+            if(account == null)
+            {
+                throw new ArgumentException("Account does not exist");
+            }
 
             //update monthly balances
             var removeFromMonthBalance =  await _monthlyBalances.RemoveTransactionFromMonth(existingTransaction);
@@ -35,15 +40,8 @@ namespace BmsKhameleon.Core.Services
                 throw new ArgumentException("Failed to update monthly balances");
             }
 
-            //check if account exists
-            var account = await _accountsRepository.GetAccount(existingTransaction.AccountId);
-            if(account == null)
-            {
-                throw new ArgumentException("Account does not exist");
-            }
-
             //update working balance
-            if (existingTransaction.TransactionType == TransactionType.Deposit.ToString())
+            if (existingTransaction.TransactionType == TransactionType.Deposit.ToString() || existingTransaction.TransactionType == TransactionType.Deposit.ToString().ToLower())
             {
                 var workingBalanceWithdrawResult = await _accountsRepository.WithdrawFromWorkingBalance(existingTransaction.AccountId, existingTransaction.Amount);
                 if (workingBalanceWithdrawResult == false)
@@ -77,6 +75,7 @@ namespace BmsKhameleon.Core.Services
                 }
             }
 
+            bool result = await _transactionsRepository.UpdateTransaction(transactionUpdateRequest.ToTransaction());
             return result;
         }
 
