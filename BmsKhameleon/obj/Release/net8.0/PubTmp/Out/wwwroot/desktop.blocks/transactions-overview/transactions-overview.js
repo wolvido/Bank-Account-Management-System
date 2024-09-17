@@ -117,10 +117,12 @@
 
     }
     async function populateTotalDeposits(amount) {
-        $(".transactions-overview__balance-value_deposit").text(amount);
+        amountCurrency = Number(amount).toLocaleString('en-PH', {style:"currency", currency:"PHP"})
+        $(".transactions-overview__balance-value_deposit").text(amountCurrency);
     }
     async function populateTotalWithdrawals(amount) {
-        $(".transactions-overview__balance-value_withdraw").text(amount);
+        amountCurrency = Number(amount).toLocaleString('en-PH', {style:"currency", currency:"PHP"})
+        $(".transactions-overview__balance-value_withdraw").text(amountCurrency);
     }
     async function updateTransaction(transactionId) {
         var response = await fetch(`/UpdateTransactionPartial/${transactionId}`);
