@@ -1,75 +1,97 @@
 ﻿@model CashTransactionUpdateRequest
 
-<form class="popup" method="post">
+<form method="post">
 
-    <header class="popup__header">
-        Add Deposit
-    </header>
+    <section class="popup popup_modify">
+        <header class="popup__header">
+            Add Deposit
+        </header>
 
-    <div class="popup__content notice">
-        <div class="notice__validation" asp-validation-summary="All">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
-        <div class="notice__transaction-medium">You are about to deposit <strong>Cash</strong> on <span class="transactions-overview__notice-date">@Model.TransactionDate.Date.ToString("MMM d, yyyy")</span> </div>
-    </div>
-
-    <fieldset class="popup__content radio-controls transaction-controller__radio-controls">
-        <div class="radio-controls__group">
-            <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cash" name="deposit-type" type="radio" value="Cash" checked />
-            <label class="radio-controls__label">Cash Deposit</label>
+        <div class="popup__content notice">
+            <div class="notice__validation" asp-validation-summary="All">Please provide information to all&nbsp;<em>required</em>&nbsp;fields below.</div>
+            <div class="notice__transaction-medium">You are about to deposit <strong>Cash</strong> on <span class="transactions-overview__notice-date">@Model.TransactionDate.Date.ToString("MMM d, yyyy")</span> </div>
         </div>
 
-        <div class="radio-controls__group">
-            <input class="radio-controls__radio-input transactions-overview__cheque-deposit-update" name="deposit-type" type="radio" value="Cheque" />
-            <label class="radio-controls__label">Check Deposit</label>
-        </div>
-    </fieldset>
+        <fieldset class="popup__content radio-controls transaction-controller__radio-controls">
+            <div class="radio-controls__group">
+                <input class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_cash" name="deposit-type" type="radio" value="Cash" checked />
+                <label class="radio-controls__label">Cash Deposit</label>
+            </div>
 
-    <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_deposit transaction-controller__fieldset_cash">
-        
-        <input asp-for="TransactionId" type="hidden"/>
-        <input asp-for="AccountId" type="hidden"/>
-        <input asp-for="TransactionType" type="hidden" />
-        
-        <div class="form-group">
-            <label class="form-group__label">Cash Deposit Date</label>
-            <input asp-for="TransactionDate" class="form-group__input form-group__input_date transactions-overview__input-date" type="date" data-date="@Model.TransactionDate.ToString("MMM d, yyyy")" data-date-format="ll" value="@Model.TransactionDate.Date.ToString("yyyy-MM-dd")">
-        </div>
+            <div class="radio-controls__group">
+                <input class="radio-controls__radio-input transactions-overview__cheque-deposit-update" name="deposit-type" type="radio" value="Cheque" />
+                <label class="radio-controls__label">Check Deposit</label>
+            </div>
+        </fieldset>
 
-        <div class="form-group">
-            <label class="form-group__label">Cash Amount</label>
-            <input asp-for="Amount" class="form-group__input form-group__input_value-bold transaction-controller__cash-amount-input" placeholder="0.00" />
-        </div>
+        <fieldset class="popup__content transaction-controller__fieldset transaction-controller__fieldset_deposit transaction-controller__fieldset_cash">
 
-        <div>
-            <fieldset class="form-group radio-controls">
-                <label class="form-group__label">Transaction Type, select one:</label>
+            <input asp-for="TransactionId" type="hidden" />
+            <input asp-for="AccountId" type="hidden" />
+            <input asp-for="TransactionType" type="hidden" />
 
-                <div class="radio-controls__group">
-                    <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_over-the-counter" name="CashTransactionType" value="Over-the-counter" />
-                    <label class="radio-controls__label">Over-the-Counter </label>
-                </div>
+            <div class="form-group">
+                <label class="form-group__label">Cash Deposit Date</label>
+                <input asp-for="TransactionDate" class="form-group__input form-group__input_date transactions-overview__input-date" type="date" data-date="@Model.TransactionDate.ToString("MMM d, yyyy")" data-date-format="ll" value="@Model.TransactionDate.Date.ToString("yyyy-MM-dd")">
+            </div>
 
-                <div class="radio-controls__group">
-                    <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_bank-pick-up" name="CashTransactionType" value="Bank-pick-up" />
-                    <label class="radio-controls__label">Bank Pick-up </label>
-                </div>
+            <div class="form-group">
+                <label class="form-group__label">Cash Amount</label>
+                <input asp-for="Amount" class="form-group__input form-group__input_value-bold transaction-controller__cash-amount-input" placeholder="0.00" />
+            </div>
 
-                <div class="radio-controls__group">
-                    <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_online-transfer" name="CashTransactionType" value="Online-transfer" />
-                    <label class="radio-controls__label">Online Fund Transfer </label>
-                </div>
-            </fieldset>
-        </div>
+            <div>
+                <fieldset class="form-group radio-controls">
+                    <label class="form-group__label">Transaction Type, select one:</label>
 
-        <div class="form-group">
-            <label class="form-group__label">Note</label>
-            <textarea asp-for="Note" class="form-group__input transaction-controller__cash-note-input" placeholder="Add Note"></textarea>
-        </div>
-    </fieldset>
+                    <div class="radio-controls__group">
+                        <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_over-the-counter" name="CashTransactionType" value="Over-the-counter" />
+                        <label class="radio-controls__label">Over-the-Counter </label>
+                    </div>
 
-    <footer class="popup__footer">
-        <input asp-controller="TransactionForms" asp-action="UpdateTransactionCash" type="submit" class="button" value="Modify" />
-        <button type="button" class="button button_cancel overlay__cancel">Cancel</button>
-    </footer>
+                    <div class="radio-controls__group">
+                        <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_bank-pick-up" name="CashTransactionType" value="Bank-pick-up" />
+                        <label class="radio-controls__label">Bank Pick-up </label>
+                    </div>
+
+                    <div class="radio-controls__group">
+                        <input asp-for="CashTransactionType" type="radio" class="radio-controls__radio-input transaction-controller__radio transaction-controller__radio_online-transfer" name="CashTransactionType" value="Online-transfer" />
+                        <label class="radio-controls__label">Online Fund Transfer </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label">Note</label>
+                <textarea asp-for="Note" class="form-group__input transaction-controller__cash-note-input" placeholder="Add Note"></textarea>
+            </div>
+        </fieldset>
+
+        <footer class="popup__footer">
+            <button type="button" class="button button_cancel popup__show-delete-button">Delete</button>
+            <input asp-controller="TransactionForms" asp-action="UpdateTransactionCash" type="submit" class="button" value="Modify" />
+            <button type="button" class="button button_cancel overlay__cancel">Cancel</button>
+        </footer>
+    </section>
+
+
+
+    <section class="popup popup_delete">
+        <header class="popup__header">
+            Delete Transaction?
+        </header>
+
+        <section class="popup__content">
+            <p>
+                You are about to delete a Transaction. This action cannot be undone.
+            </p>
+        </section>
+
+        <footer class="popup__footer">
+            <input asp-controller="TransactionForms" asp-action="DeleteTransaction" asp-route-transactionId="@Model.TransactionId" type="submit" class="button" value="Delete" />
+            <button type="button" class="button button_cancel overlay__cancel">Cancel</button>
+        </footer>
+    </section>
 
 </form>
 

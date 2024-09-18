@@ -41,9 +41,9 @@
     });
 
     //delete account
-    $(document).on("click", ".accounts__button_delete", async function () {
-        $(".popup_modify").hide();
-        $(".popup_delete").showFlex();
-    });
+    //$(document).on("click", ".accounts__button_delete", async function () {
+    //    $(".popup_modify").hide();
+    //    $(".popup_delete").showFlex();
+    //});
 
 });

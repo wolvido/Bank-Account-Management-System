@@ -220,5 +220,29 @@ namespace BmsKhameleon.UI.Controllers
                     date = formattedDate
                 });
         }
+
+        [HttpPost]
+        [Route("[action]/{transactionId}")]
+        public async Task<IActionResult> DeleteTransaction(Guid transactionId)
+        {
+            var transaction = await _transactionsService.GetTransaction(transactionId);
+            if (transaction == null)
+            {
+                return BadRequest("Transaction not found.");
+            }
+
+            var result = await _transactionsService.DeleteTransaction(transactionId);
+            if (result == false) 
+            {
+                return BadRequest("Unable to delete the transaction. Please try again.");
+            }
+
+            return RedirectToAction("TransactionsOverview", "TransactionsOverview",
+                new
+                {
+                    accountId = transaction.AccountId,
+                    date = transaction.TransactionDate.ToString("yyyy-MM-dd")
+                });
+        }
     }
 }

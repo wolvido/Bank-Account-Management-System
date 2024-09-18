@@ -90,10 +90,29 @@ namespace BmsKhameleon.Core.Services
 
             bool result = await _transactionsRepository.DeleteTransaction(transactionId);
 
+            //update monthly balances
             bool removeFromMonthBalance = await _monthlyBalances.RemoveTransactionFromMonth(transaction);
             if(removeFromMonthBalance == false)
             {
                 throw new ArgumentException("Failed to update monthly balances");
+            }
+
+            //update working balance
+            if (transaction.TransactionType == TransactionType.Deposit.ToString() || transaction.TransactionType == TransactionType.Deposit.ToString().ToLower())
+            {
+                var workingBalanceWithdrawResult = await _accountsRepository.WithdrawFromWorkingBalance(transaction.AccountId, transaction.Amount);
+                if (workingBalanceWithdrawResult == false)
+                {
+                    throw new ArgumentException("Failed to withdraw transaction from working balance");
+                }
+            }
+            else
+            {
+                var workingBalanceDepositResult = await _accountsRepository.DepositToWorkingBalance(transaction.AccountId, transaction.Amount);
+                if (workingBalanceDepositResult == false)
+                {
+                    throw new ArgumentException("Failed to deposit transaction to working balance");
+                }
             }
 
             return result;

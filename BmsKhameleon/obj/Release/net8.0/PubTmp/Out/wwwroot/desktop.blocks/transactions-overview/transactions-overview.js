@@ -85,9 +85,7 @@
         let cashTotalText = $(".transactions-overview__withdrawals-total-value_cash").text();
         let chequeTotalText = $(".transactions-overview__withdrawals-total-value_cheque").text();
         let cashTotal = cashTotalText.replace(/[^\d.]/g, '');
-        console.log(cashTotal);
         let chequeTotal = chequeTotalText.replace(/[^\d.]/g, '');
-        console.log(chequeTotal);
         let totalWithdrawals = (parseFloat(cashTotal) + parseFloat(chequeTotal)).toFixed(2);
         await populateTotalWithdrawals(totalWithdrawals);
     }
@@ -126,8 +124,8 @@
         amountCurrency = Number(amount).toLocaleString('en-PH', { style: "currency", currency: "PHP" });
         $(".transactions-overview__balance-value_withdraw").text(amountCurrency);
     }
-    async function updateTransaction(transactionId) {
-        var response = await fetch(`/UpdateTransactionPartial/${transactionId}`);
+    async function updateTransaction(transactionId, transactionType, transactionMedium) {
+        var response = await fetch(`/UpdateTransactionPartial/${transactionId}/${transactionType}/${transactionMedium}`);
         var updateTransactionData = await response.text();
         $(".transactions-overview__overlay").html(updateTransactionData);
 
@@ -142,6 +140,16 @@
 
     let accountId = $("main").attr('data-accountId');
     let dateString = $("main").attr('data-date');
+    let updateTransactionId;
+
+    //edit transaction
+    $(document).on("click", ".transaction-overview__button_edit", async function () {
+        updateTransactionId = this.getAttribute('data-transactionId');
+        let TransactionType = this.getAttribute('data-transactionType');
+        let TransactionMedium = this.getAttribute('data-transactionMedium');
+        await updateTransaction(updateTransactionId, TransactionType, TransactionMedium);
+        $(".transactions-overview__overlay").showFlex();
+    });
 
     //generate link to go back to calendar
     await backToCalendarLink(accountId, dateString);
@@ -157,16 +165,36 @@
         await depositCash(accountId, dateString);
         $(".transactions-overview__overlay").showFlex();
     });
+
     //deposit cheque popup through radio
     $(document).on("change", ".transactions-overview__cheque-deposit-radio", async function () {
         if ($(".transactions-overview__cheque-deposit-radio").is(':checked')) {
             await depositCheque(accountId, dateString);
         }
     });
+
+    //deposit cheque update through radio 
+    $(document).on("change", ".transactions-overview__cheque-deposit-update", async function () {
+        if ($(".transactions-overview__cheque-deposit-update").is(':checked')) {
+            let updateTransactionType = "Deposit";
+            let updateTransactionMedium = "Cheque";
+            await updateTransaction(updateTransactionId, updateTransactionType, updateTransactionMedium);
+        }
+    });
+
     //deposit cash popup through radio
     $(document).on("change", ".transactions-overview__cash-deposit-radio", async function () {
         if ($(".transactions-overview__cash-deposit-radio").is(':checked')) {
             await depositCash(accountId, dateString);
+        }
+    });
+
+    //deposit cash update through radio 
+    $(document).on("change", ".transactions-overview__cash-deposit-update", async function () {
+        if ($(".transactions-overview__cash-deposit-update").is(':checked')) {
+            let updateTransactionType = "Deposit";
+            let updateTransactionMedium = "Cash";
+            await updateTransaction(updateTransactionId, updateTransactionType, updateTransactionMedium);
         }
     });
 
@@ -181,6 +209,16 @@
             await withdrawCheque(accountId, dateString);
         }
     });
+
+    //withdraw cheque update through radio 
+    $(document).on("change", ".transactions-overview__cheque-withdraw-update", async function () {
+        if ($(".transactions-overview__cheque-withdraw-update").is(':checked')) {
+            let updateTransactionType = "Withdraw";
+            let updateTransactionMedium = "Cheque";
+            await updateTransaction(updateTransactionId, updateTransactionType, updateTransactionMedium);
+        }
+    });
+
     //withdraw cash popup through radio
     $(document).on("change", ".transactions-overview__cash-withdraw-radio", async function () {
         if ($(".transactions-overview__cash-withdraw-radio").is(':checked')) {
@@ -188,11 +226,13 @@
         }
     });
 
-    //edit transaction
-    $(document).on("click", ".transaction-overview__button_edit", async function () {
-        var transactionId = this.getAttribute('data-transactionId');
-        await updateTransaction(transactionId);
-        $(".transactions-overview__overlay").showFlex();
+    //withdraw cash update through radio
+    $(document).on("change", ".transactions-overview__cash-withdraw-update", async function () {
+        if ($(".transactions-overview__cash-withdraw-update").is(':checked')) {
+            let updateTransactionType = "Withdraw";
+            let updateTransactionMedium = "Cash";
+            await updateTransaction(updateTransactionId, updateTransactionType, updateTransactionMedium);
+        }
     });
 
     //update date notice
