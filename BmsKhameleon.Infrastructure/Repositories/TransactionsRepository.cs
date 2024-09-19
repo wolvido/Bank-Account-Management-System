@@ -17,7 +17,6 @@ namespace BmsKhameleon.Infrastructure.Repositories
         public async Task<bool> UpdateTransaction(Transaction transaction)
         {
             Transaction? existingTransaction = await _db.Transactions.FindAsync(transaction.TransactionId);
-
             if (existingTransaction == null)
             {
                 return false;
