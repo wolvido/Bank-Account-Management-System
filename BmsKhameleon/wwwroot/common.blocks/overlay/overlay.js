@@ -10,7 +10,7 @@
 
     //close overlay on submission
     $(document).on("submit","form", function () {
-        $('.overlay').hide();
+        $(this).prop('inert');
     });
 
 });

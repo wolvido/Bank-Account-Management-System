@@ -48,6 +48,12 @@ namespace BmsKhameleon.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteBankAccount(Guid accountId)
         {
+            var existingAccount = await _accountsService.GetAccountById(accountId);
+            if (existingAccount == null)
+            {
+                return BadRequest("Account already deleted or not found");
+            }
+
             bool result = await _accountsService.DeleteAccount(accountId);
 
             if (result == false)
