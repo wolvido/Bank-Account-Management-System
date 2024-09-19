@@ -8,9 +8,9 @@
         $('.overlay').hide();
     });
 
-    //close overlay on submission
+    //prevent double submission on submit
     $(document).on("submit","form", function () {
-        $('.overlay').hide();
+        $(this).find('input[type="submit"]').prop('disabled', true);
     });
 
 });
