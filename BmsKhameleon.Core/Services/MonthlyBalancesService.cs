@@ -196,6 +196,13 @@ namespace BmsKhameleon.Core.Services
 
         public async Task<bool> InitialBalanceMonthAdjustment(Guid accountId, decimal amountToRemove, decimal amountToAdd)
         {
+            var lastMonthlyWorkingBalance = await GetLastMonthlyBalance(accountId, DateTime.MaxValue);
+
+            if (lastMonthlyWorkingBalance == null)
+            {
+                throw new InvalidOperationException("No monthly balance found for this account");
+            }
+
             bool result = await _monthlyBalanceRepository.InitialBalanceMonthAdjustment(accountId, amountToRemove, amountToAdd);
             return result;
         }

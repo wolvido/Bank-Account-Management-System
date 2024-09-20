@@ -23,10 +23,14 @@ namespace BmsKhameleon.Infrastructure.Repositories
 
             return monthlyWorkingBalance;
         }
-
+        /// <summary>
+        /// get the last monthly balance before or equal the given date
+        /// </summary>
+        /// <param name="accountId"></param>
+        /// <param name="date"></param>
+        /// <returns>the last monthly balance from before or equal the given date</returns>
         public async Task<MonthlyWorkingBalance?> GetLastMonthlyBalance(Guid accountId, DateTime date)
         {
-            //get the last monthly balance before or equal the given date
             MonthlyWorkingBalance? monthlyWorkingBalance = await _db.MonthlyWorkingBalances.Where(m => 
                 m.AccountId == accountId && 
                 m.Date <= date)
@@ -68,6 +72,12 @@ namespace BmsKhameleon.Infrastructure.Repositories
         {
             //for all monthly balances of the account, adjust the working balance
             List<MonthlyWorkingBalance> monthlyBalances = await _db.MonthlyWorkingBalances.Where(m => m.AccountId == accountId).ToListAsync();
+
+            if(monthlyBalances.Count == 0)
+            {
+                throw new NotImplementedException("No monthly balances found for the account");
+            }
+
             foreach (MonthlyWorkingBalance monthlyBalance in monthlyBalances)
             {
                 monthlyBalance.WorkingBalance -= amountToRemove;

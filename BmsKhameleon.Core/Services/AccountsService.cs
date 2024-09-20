@@ -44,16 +44,32 @@ namespace BmsKhameleon.Core.Services
                 return false;
             }
 
-            bool monthlyBalanceUpdateResult = true;
-            if(existingAccount.InitialBalance != accountUpdateRequest.InitialBalance)
+            //check if existing is the same as the new account
+            if (existingAccount.AccountName == accountUpdateRequest.AccountName &&
+                existingAccount.BankName == accountUpdateRequest.BankName &&
+                existingAccount.AccountNumber == accountUpdateRequest.AccountNumber &&
+                existingAccount.AccountType == accountUpdateRequest.AccountType &&
+                existingAccount.BankBranch == accountUpdateRequest.BankBranch &&
+                existingAccount.InitialBalance == accountUpdateRequest.InitialBalance &&
+                existingAccount.Visibility == accountUpdateRequest.Visibility)
             {
-                monthlyBalanceUpdateResult = await _monthlyBalances.InitialBalanceMonthAdjustment(accountUpdateRequest.AccountId, existingAccount.InitialBalance, accountUpdateRequest.InitialBalance);
-
+                return true;
             }
 
-            if (monthlyBalanceUpdateResult == false) 
+            //update monthly balances
+            var lastMonthlyWorkingBalance = await _monthlyBalances.GetLastMonthlyBalance(accountUpdateRequest.AccountId, DateTime.MaxValue);
+            if (accountUpdateRequest.InitialBalance != existingAccount.InitialBalance && lastMonthlyWorkingBalance != null)
             {
-                throw new ArgumentException("Failed to update monthly balances");
+                bool monthlyBalanceUpdateResult = true;
+                if(existingAccount.InitialBalance != accountUpdateRequest.InitialBalance)
+                {
+                    monthlyBalanceUpdateResult = await _monthlyBalances.InitialBalanceMonthAdjustment(accountUpdateRequest.AccountId, existingAccount.InitialBalance, accountUpdateRequest.InitialBalance);
+                }
+
+                if (monthlyBalanceUpdateResult == false)
+                {
+                    throw new ArgumentException("Failed to update monthly balances");
+                }
             }
 
             bool result = await _accountsRepository.UpdateAccount(accountUpdateRequest.ToAccount());
