@@ -34,7 +34,12 @@
 
         <div class="header__details">
             <span class="header__user-details">Welcome <strong class="header__username">User</strong> </span>
-            <time class="header__time" datetime="@DateTime.Now">@DateTime.Now</time>
+            @{
+                var utcNow = DateTime.UtcNow;
+                var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Singapore Standard Time");
+                var pstTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, phTimeZone);
+            }
+            <time class="header__time" datetime="@pstTime.ToString("MM/dd/yyyy hh:mm tt")"> @pstTime.ToString("MM/dd/yyyy hh:mm tt") PST</time>
         </div>
     </header>
     @RenderBody()
