@@ -50,14 +50,21 @@
             fadedDesign = " ";
         }
 
+        let higlightToday = ''; //highlight today
+        let today = new Date();
+        if (day == today.getDate()) {
+            higlightToday = 'calendar__date-item_highlight';
+        }
+
         let calendarDay = ''; // Default value if date or accountId is not provided
+
 
         if (date !== '' && accountId !== '') {
             const transactionOverviewUrl = `/TransactionsOverview/${accountId}/${date}`; // form the URL
 
             // Construct calendarDay with the fetched URL
             calendarDay = `
-            <a href="${transactionOverviewUrl}" class="calendar__date-item">
+            <a href="${transactionOverviewUrl}" class="calendar__date-item ${higlightToday}">
                 <div class="calendar__date-day${fadedDesign}">
                     ${day}
                 </div>

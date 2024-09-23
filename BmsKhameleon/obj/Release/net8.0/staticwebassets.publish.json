@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wmeV1hcFl9B+ygyc3soN4ZcxQVojqh5d5xRHBZd7LV0=",
+  "Hash": "wgy0gHmm4DzHqdT6zGYScXRBlN77+Ip1bW3w/IbvV/0=",
   "Source": "BmsKhameleon.UI",
   "BasePath": "_content/BmsKhameleon.UI",
   "Mode": "Default",
@@ -3378,6 +3378,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item_highlight.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/calendar/__date/calendar__date-item_highlight.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item_highlight.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-transactions.css",

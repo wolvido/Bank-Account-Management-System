@@ -12,6 +12,7 @@
 
 @import url('__date/calendar__date-container.css');
 @import url('__date/calendar__date-item.css');
+@import url('__date/calendar__date-item_highlight.css');
 @import url('__date/calendar__date-day.css');
 @import url('__date/calendar__date-transactions.css');
 @import url('__date/calendar__date-balance.css');
