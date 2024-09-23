@@ -40,10 +40,9 @@
         editForm.find(".accounts__button_delete").hide();
     });
 
-    //delete account
-    //$(document).on("click", ".accounts__button_delete", async function () {
-    //    $(".popup_modify").hide();
-    //    $(".popup_delete").showFlex();
-    //});
+    //reload for every filter change
+    $(".accounts__search-filter").on("change", function () {
+        $(this).closest("form").trigger("submit");
+    });
 
 });

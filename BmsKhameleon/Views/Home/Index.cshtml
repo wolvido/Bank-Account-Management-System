@@ -14,34 +14,25 @@
             Add Bank Account
         </button>
 
-        <search class="accounts__search">
+        <form asp-controller="Home" asp-action="Index" method="get">
+            <search class="accounts__search">
+                <div class="accounts__search-form">
+                    <button class="accounts__search-button">
+                        <img class="accounts__search-icon" src="~/desktop.blocks/accounts/__search/search.png" />
+                    </button>
+                    <input class="accounts__search-input" name="searchString" id="" placeholder="Search">
+                </div>
 
-            <form class="accounts__search-form">
-                <button class="accounts__search-button">
-                    <img class="accounts__search-icon" src="~/desktop.blocks/accounts/__search/search.png" />
-                </button>
-                <input class="accounts__search-input" name="" id="" placeholder="Search">
-            </form>
+                <select name="bankFilter" class="accounts__search-filter">
+                    @foreach(var bank in ViewBag.Banks)
+                    {
+                        <option class="accounts__search-option" value="@bank">&nbsp;&nbsp;&nbsp; @bank</option>
+                    }
+                </select>
+            </search>
+        </form>
 
-            <select class="accounts__search-filter">
-                <option class="accounts__search-option" value="All">&nbsp;&nbsp;&nbsp; Any Bank</option>
-                <option class="accounts__search-option" value="RCBC">&nbsp;&nbsp;&nbsp; RCBC</option>
-                <option class="accounts__search-option" value="Land-Bank">&nbsp;&nbsp;&nbsp; Land Bank </option>
-                <option class="accounts__search-option" value="BDO">&nbsp;&nbsp;&nbsp; BDO </option>
-                <option class="accounts__search-option" value="BPI">&nbsp;&nbsp;&nbsp; BPI </option>
-                <option class="accounts__search-option" value="Metrobank"> &nbsp;&nbsp;&nbsp; Metrobank </option>
-                <option class="accounts__search-option" value="Unionbank"> &nbsp;&nbsp;&nbsp; Unionbank </option>
-                <option class="accounts__search-option" value="Security Bank"> &nbsp;&nbsp;&nbsp; Security Bank </option>
-                <option class="accounts__search-option" value="PNB"> &nbsp;&nbsp;&nbsp; PNB </option>
-                <option class="accounts__search-option" value="China Bank"> &nbsp;&nbsp;&nbsp; China Bank </option>
-                <option class="accounts__search-option" value="Eastwest Bank"> &nbsp;&nbsp;&nbsp; Eastwest Bank </option>
-                <option class="accounts__search-option" value="PS Bank"> &nbsp;&nbsp;&nbsp; PS Bank </option>
-                <option class="accounts__search-option" value="Maybank"> &nbsp;&nbsp;&nbsp; Maybank </option>
-                <option class="accounts__search-option" value="UCPB"> &nbsp;&nbsp;&nbsp; UCPB </option>
-                <option class="accounts__search-option" value="DBP"> &nbsp;&nbsp;&nbsp; DBP </option>
-                <option class="accounts__search-option" value="HSBC"> &nbsp;&nbsp;&nbsp; HSBC </option>
-            </select>
-        </search>
+
     </section>
 
     <section class="accounts__table table">

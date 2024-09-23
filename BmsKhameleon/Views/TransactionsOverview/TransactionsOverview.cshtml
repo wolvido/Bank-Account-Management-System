@@ -8,7 +8,7 @@
     <script src="~/common.blocks/popup/popup.js" defer></script>
 }
 
-<main class="main transactions-overview transaction-controller" data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date">
+<main class="main transactions-overview" data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date">
 
     <section class="transactions-overview__toolbar-section ">
         <section class="transactions-overview__session-info">
@@ -17,8 +17,8 @@
         </section>
 
         <div class="transactions-overview__toolbar transaction-toolbar">
-            <button class="transactions-overview__deposit-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_deposit">Add Cash / Check Deposit</button>
-            <button class="transactions-overview__withdraw-button transactions-overview__toolbar-button button transaction-controller__button transaction-controller__button_withdraw">Add Check Issuance / Cash </button>
+            <button class="transactions-overview__deposit-button transactions-overview__toolbar-button button">Add Cash / Check Deposit</button>
+            <button class="transactions-overview__withdraw-button transactions-overview__toolbar-button button">Add Check Issuance / Cash </button>
         </div>
     </section>
 

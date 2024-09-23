@@ -117,7 +117,7 @@ namespace BmsKhameleon.Core.Services
             return await _accountsRepository.GetAccountsByName(searchQuery);
         }
 
-        private async Task<List<Account>> GetAccountsByBankAndSearchQuery(string bankName, string searchQuery)
+        private async Task<List<Account>> GetAccountsByBankAndSearchQuery(string bankName, string? searchQuery)
         {
             if (string.IsNullOrEmpty(searchQuery))
             {

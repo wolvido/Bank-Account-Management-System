@@ -709,6 +709,10 @@
       "PackagePath": "staticwebassets\\desktop.blocks\\calendar\\__date\\calendar__date-item.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item_highlight.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\calendar\\__date\\calendar__date-item_highlight.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-transactions.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\calendar\\__date\\calendar__date-transactions.css"
     },

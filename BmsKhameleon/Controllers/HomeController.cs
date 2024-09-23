@@ -13,9 +13,33 @@ namespace BmsKhameleon.UI.Controllers
 
         [Route("[action]")]
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? bankFilter, string? searchString)
         {
+            var banks = await _accountsService.GetAllAccountBanks();
+            banks.Insert(0, "Any Bank");
+
+            ViewBag.Banks = banks;
+
             List<AccountResponse> accounts = await _accountsService.GetAllAccounts();
+
+            //use search if searchString is not null
+            if (searchString != null)
+            {
+                if (bankFilter == "Any Bank")
+                {
+                    bankFilter = null;
+                }
+
+                accounts = await _accountsService.GetFilteredAccounts(searchString, bankFilter);
+            }
+
+            //filter banks if bankFilter is not null
+            if (bankFilter != null && bankFilter != "Any Bank")
+            {
+                accounts = accounts.Where(account => account.BankName == bankFilter).ToList();
+                banks.Remove(bankFilter);
+                banks.Insert(0, bankFilter);
+            }
 
             AccountViewModel accountViewModel = new AccountViewModel
             {
