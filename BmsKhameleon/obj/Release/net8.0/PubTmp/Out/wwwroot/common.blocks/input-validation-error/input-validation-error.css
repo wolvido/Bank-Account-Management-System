@@ -10,3 +10,11 @@ label:has(+ .input-validation-error) {
 label:has(+ .input-validation-error)::before {
     content: "*";
 }
+
+fieldset:has(.input-validation-error) > label {
+    color: red;
+}
+
+fieldset:has(.input-validation-error) > label::before {
+    content: "*";
+}   
