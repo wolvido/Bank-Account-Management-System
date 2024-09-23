@@ -71,16 +71,17 @@
     $(".transaction-controller__button_deposit").on("click", async function () {
         accountId = this.getAttribute("data-accountId");
         dateString = this.getAttribute("data-date");
-        console.log(dateString);
         await depositCash(accountId, dateString);
         $(".transaction-controller__overlay").showFlex();
     });
+
     //deposit cheque popup through radio
     $(document).on("change", ".transactions-overview__cheque-deposit-radio", async function () {
         if ($(".transactions-overview__cheque-deposit-radio").is(':checked')) {
             await depositCheque(accountId, dateString);
         }
     });
+
     //deposit cash popup through radio
     $(document).on("change", ".transactions-overview__cash-deposit-radio", async function () {
         if ($(".transactions-overview__cash-deposit-radio").is(':checked')) {

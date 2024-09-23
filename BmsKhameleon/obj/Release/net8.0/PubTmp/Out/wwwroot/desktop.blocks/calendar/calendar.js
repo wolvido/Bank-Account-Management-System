@@ -154,6 +154,8 @@
     function dePopulateCalendar(){
         $(".calendar__date-container").find("*").remove();
     };
+
+    //reload link on date change
     function reloadWithRouteParameter(newParam) {
         let currentUrl = window.location.pathname; // Get the current path
         let newUrl = `${currentUrl}/${newParam}`; // Create the new route with the added parameter
@@ -171,13 +173,17 @@
         // Reload the page with the new route
         window.location.href = newUrl;
     }
+
+    //intial load calendar
     populateCalendar(transactions);
 
+    //on date change reload calendar
     $(".calendar__select-date").find('*').on("change", function () {
         dePopulateCalendar();
         populateCalendar(transactions);
     });
 
+    //on date change reload link with the new date
     $(".calendar__select-date").on("change", function () {
         let selectedMonth = $(".calendar__select-month").find(":selected").val();
         let selectedYear = $(".calendar__select-year").find(":selected").val();

@@ -60,7 +60,7 @@
         <div class="accounts__table-container table__item-container">
             @foreach (var account in Model.AccountResponses!)
             {
-                <div class="accounts__item table__item" onclick="window.location.href='@Url.Action("Calendar", "Calendar", new { accountId = account.AccountId })'">
+                <div class="accounts__item table__item" onclick="if (!window.getSelection().toString()) {window.location.href='@Url.Action("Calendar", "Calendar", new { accountId = account.AccountId })'; }">
                     <div class="accounts__item-bank table__item-field">@account.BankName</div>
                     <div class="accounts__item-account table__item-field">@account.AccountNumber</div>
                     <div class="accounts__item-payor table__item-field">@account.AccountName</div>
