@@ -31,10 +31,13 @@
 @import url('form-group/form-group__input_select.css');
 @import url('form-group/form-group__label.css');
 @import url('form-group/form-group__label_error.css');
-@import url('form-group/form-group__input_date.css');
 @import url('form-group/form-group_invisible.css');
 @import url('form-group/form-group__input_value-bold.css');
 @import url('form-group/form-group__label_notice.css');
+@import url('form-group/form-group__date-input.css');
+@import url('form-group/form-group__date-container.css');
+@import url('form-group/form-group__date-icon.css');
+@import url('form-group/form-group__date-display.css');
 
 @import url('radio-controls/radio-controls.css');
 @import url('radio-controls/radio-controls__group.css');

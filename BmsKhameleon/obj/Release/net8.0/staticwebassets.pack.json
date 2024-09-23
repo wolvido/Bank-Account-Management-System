@@ -37,12 +37,24 @@
       "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__input.css",
-      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__input.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__date-container.css",
+      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__date-container.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__input_date.css",
-      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__input_date.css"
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__date-display.css",
+      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__date-display.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__date-icon.css",
+      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__date-icon.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__date-input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__date-input.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__input.css",
+      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__input.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__input_date.js",

@@ -33,9 +33,9 @@
             <div class="form-group">
                 <label class="form-group__label">Cash Deposit Date</label>
                 <div class="form-group__date-container">
-                    <time class="form-group__date-display" datetime="@ViewBag.Date.ToString("yyyy-MM-dd")">@ViewBag.Date.ToString("MMM d, yyyy")</time>
+                    <time class="form-group__date-display" datetime="@Model.TransactionDate.ToString("yyyy-MM-dd")">@Model.TransactionDate.ToString("MMM d, yyyy")</time>
                     <img class="form-group__date-icon" src="~/common.blocks/form-group/calendar-icon.png" />
-                    <input asp-for="TransactionDate" class="form-group__date-input" type="date" data-date-format="ll" value="@ViewBag.Date.ToString("yyyy-MM-dd")"/>
+                    <input asp-for="TransactionDate" class="form-group__date-input" type="date" data-date-format="ll" value="@Model.TransactionDate.ToString("yyyy-MM-dd")" />
                 </div>
             </div>
 
