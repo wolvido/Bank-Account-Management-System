@@ -8,52 +8,70 @@
 @model AccountViewModel
 
 <main class="main accounts">
+    <form asp-controller="Home" asp-action="Index" method="get">
 
     <section class="accounts__toolbar">
-        <button class="accounts__add-accounts button">
+        <button type="button" class="accounts__add-accounts button">
             Add Bank Account
         </button>
 
-        <form asp-controller="Home" asp-action="Index" method="get">
-            <search class="accounts__search">
-                <div class="accounts__search-form">
-                    <button class="accounts__search-button">
-                        <img class="accounts__search-icon" src="~/desktop.blocks/accounts/__search/search.png" />
-                    </button>
-                    <input class="accounts__search-input" name="searchString" id="" placeholder="Search">
-                </div>
+        <search class="accounts__search">
 
-                <select name="bankFilter" class="accounts__search-filter">
-                    @foreach(var bank in ViewBag.Banks)
-                    {
-                        <option class="accounts__search-option" value="@bank">&nbsp;&nbsp;&nbsp; @bank</option>
-                    }
-                </select>
-            </search>
-        </form>
+            <div class="accounts__search-form">
+                <button class="accounts__search-button">
+                    <img class="accounts__search-icon" src="~/desktop.blocks/accounts/__search/search.png" />
+                </button>
+                <input class="accounts__search-input" name="searchString" id="" placeholder="Search">
+            </div>
 
+            <select name="bankFilter" class="accounts__search-filter">
+                @foreach(var bank in ViewBag.Banks)
+                {
+                    <option class="accounts__search-option" value="@bank">&nbsp;&nbsp;&nbsp; @bank</option>
+                }
+            </select>
+
+        </search>
 
     </section>
 
     <section class="accounts__table table">
 
         <header class="accounts__header table__header">
+            @{
+                var sortOrderBankName = Enum.Parse<SortOrderOptions>("Ascending");
+                var sortOrderAccountNumber = Enum.Parse<SortOrderOptions>("Ascending");
+                var sortOrderAccountName = Enum.Parse<SortOrderOptions>("Ascending");
+                var sortOrderBalance = Enum.Parse<SortOrderOptions>("Ascending");
+
+                if (ViewBag.SortBy == "BankName" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderBankName = Enum.Parse<SortOrderOptions>("Descending");
+                }
+                if(ViewBag.SortBy == "AccountNumber" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderAccountNumber = Enum.Parse<SortOrderOptions>("Descending");
+                }
+                if(ViewBag.SortBy == "AccountName" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderAccountName = Enum.Parse<SortOrderOptions>("Descending");
+                }
+                if(ViewBag.SortBy == "Balance" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderBalance = Enum.Parse<SortOrderOptions>("Descending");
+                }
+            }
+
             <div class="accounts__header-bank table__header-title">
-                <button class="accounts__header-button table__header-button">
-                    Bank
-                </button>
+                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="BankName" asp-route-sortOrder="@sortOrderBankName" class="accounts__header-button table__header-button">Bank</button>
             </div>
 
             <div class="accounts__header-account table__header-title">
-                <button class="accounts__header-button table__header-button">Account Number</button>
+                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountNumber" asp-route-sortOrder="@sortOrderAccountNumber" class="accounts__header-button table__header-button">Account Number</button>
             </div>
 
             <div class="accounts__header-payor table__header-title">
-                <button class="accounts__header-button table__header-button">Payor</button>
+                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountName" asp-route-sortOrder="@sortOrderAccountName" class="accounts__header-button table__header-button">Payor</button>
             </div>
 
             <div class="accounts__header-balance table__header-title">
-                <button class="accounts__header-button table__header-button">Working Balance</button>
+                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="Balance" asp-route-sortOrder="@sortOrderBalance" class="accounts__header-button table__header-button">Working Balance</button>
             </div>
         </header>
 
@@ -69,7 +87,7 @@
                         <div class="table__item-field-label">@account.WorkingBalance?.ToCurrencyString()</div>
 
                         <div class="accounts__item-controls table__item-controls">
-                            <button data-accountId="@account.AccountId" class="accounts__item-button accounts__item-button_edit table__item-button">
+                            <button type="button" data-accountId="@account.AccountId" class="accounts__item-button accounts__item-button_edit table__item-button">
                                 <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
                             </button>
                         </div>
@@ -80,6 +98,7 @@
         </div>
     </section>
 
+    </form>
 </main>
 
 <section class="accounts__overlay accounts__overlay_create overlay">

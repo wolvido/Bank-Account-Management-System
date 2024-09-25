@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BmsKhameleon.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5368d89da9d07451feb7e48ff30a1e05dd6c38ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eed459d862b6b4b75d7eff659fe8e41448f2e198")]
 [assembly: System.Reflection.AssemblyProductAttribute("BmsKhameleon.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BmsKhameleon.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

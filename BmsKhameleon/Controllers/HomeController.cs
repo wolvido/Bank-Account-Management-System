@@ -1,4 +1,5 @@
 ﻿using BmsKhameleon.Core.DTO.AccountDTOs;
+using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.UI.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -11,14 +12,16 @@ namespace BmsKhameleon.UI.Controllers
     {
         private readonly IAccountsService _accountsService = accountsService;
 
-        [Route("[action]")]
+        [Route("[action]/{sortBy?}/{sortOrder?}")]
         [HttpGet]
-        public async Task<IActionResult> Index(string? bankFilter, string? searchString)
+        public async Task<IActionResult> Index(string? bankFilter, string? searchString, string? sortBy, SortOrderOptions? sortOrder)
         {
             var banks = await _accountsService.GetAllAccountBanks();
             banks.Insert(0, "Any Bank");
 
             ViewBag.Banks = banks;
+            ViewBag.SortBy = sortBy ?? string.Empty;
+            ViewBag.SortOrder = sortOrder ?? SortOrderOptions.Ascending;
 
             List<AccountResponse> accounts = await _accountsService.GetAllAccounts();
 
@@ -39,6 +42,12 @@ namespace BmsKhameleon.UI.Controllers
                 accounts = accounts.Where(account => account.BankName == bankFilter).ToList();
                 banks.Remove(bankFilter);
                 banks.Insert(0, bankFilter);
+            }
+
+            // sort
+            if (sortBy != null && sortOrder != null) 
+            {
+                accounts = await _accountsService.SortAccounts(accounts, sortBy, (SortOrderOptions)sortOrder);
             }
 
             AccountViewModel accountViewModel = new AccountViewModel

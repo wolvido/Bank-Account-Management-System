@@ -16,3 +16,9 @@
     margin-top: -1px;
     margin-bottom: -1px;
 }
+
+@-moz-document url-prefix() {
+    .accounts__search-filter {
+        text-indent: 23px;
+    }
+}
