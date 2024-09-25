@@ -20,6 +20,7 @@ namespace BmsKhameleon.UI.Controllers
             banks.Insert(0, "Any Bank");
 
             ViewBag.Banks = banks;
+            ViewBag.BankFilter = bankFilter ?? "Any Bank";
             ViewBag.SortBy = sortBy ?? string.Empty;
             ViewBag.SortOrder = sortOrder ?? SortOrderOptions.Ascending;
 
