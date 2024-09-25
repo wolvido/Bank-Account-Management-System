@@ -57,21 +57,24 @@
                     sortOrderBalance = Enum.Parse<SortOrderOptions>("Descending");
                 }
             }
+            <input type="hidden" name="sortOrder" value="@ViewBag.SortOrder" />
+            <input type="hidden" name="sortBy" value="@ViewBag.SortBy"  />
+            
 
             <div class="accounts__header-bank table__header-title">
-                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="BankName" asp-route-sortOrder="@sortOrderBankName" class="accounts__header-button table__header-button">Bank</button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="BankName" asp-route-sortOrder="@sortOrderBankName" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Bank</a>
             </div>
 
             <div class="accounts__header-account table__header-title">
-                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountNumber" asp-route-sortOrder="@sortOrderAccountNumber" class="accounts__header-button table__header-button">Account Number</button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountNumber" asp-route-sortOrder="@sortOrderAccountNumber" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Account Number</a>
             </div>
 
             <div class="accounts__header-payor table__header-title">
-                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountName" asp-route-sortOrder="@sortOrderAccountName" class="accounts__header-button table__header-button">Payor</button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountName" asp-route-sortOrder="@sortOrderAccountName" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Payor</a>
             </div>
 
             <div class="accounts__header-balance table__header-title">
-                <button asp-controller="Home" asp-action="Index" asp-route-sortBy="Balance" asp-route-sortOrder="@sortOrderBalance" class="accounts__header-button table__header-button">Working Balance</button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="Balance" asp-route-sortOrder="@sortOrderBalance" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Working Balance</a>
             </div>
         </header>
 

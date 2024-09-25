@@ -12,7 +12,7 @@ namespace BmsKhameleon.UI.Controllers
     {
         private readonly IAccountsService _accountsService = accountsService;
 
-        [Route("[action]/{sortBy?}/{sortOrder?}")]
+        [Route("[action]")]
         [HttpGet]
         public async Task<IActionResult> Index(string? bankFilter, string? searchString, string? sortBy, SortOrderOptions? sortOrder)
         {
