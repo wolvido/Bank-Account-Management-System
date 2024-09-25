@@ -73,11 +73,11 @@
         $(".transactions-overview__overlay form").data("validator", null);
         $.validator.unobtrusive.parse(".transactions-overview__overlay form");
     };
-    async function loadWithdrawalsTable(accountId, dateString) {
+    async function loadWithdrawalsTable(accountId, dateString, sortBy, sortOrder) {
         let date = await parseToISO(dateString);
 
         //grab main view withdrawals table and populate the withdrawals section
-        let response = await fetch(`/WithdrawalsTable/${accountId}/${date}`);
+        let response = await fetch(`/WithdrawalsTable/${accountId}/${date}?sortBy=${sortBy}&sortOrder=${sortOrder}`);
         let withdrawTable = await response.text();
         $(".transactions-overview__withdrawals-section").html(withdrawTable);
 
@@ -138,8 +138,11 @@
         $(".transactions-overview__back-button").prop("href", `/Calendar/${accountId}/${date}`);
     }
 
+    //Initialize
     let accountId = $("main").attr('data-accountId');
     let dateString = $("main").attr('data-date');
+    let sortBy = $("main").attr('data-sortBy');
+    let sortOrder = $("main").attr('data-sortOrder');
     let updateTransactionId;
 
     //edit transaction
@@ -155,7 +158,7 @@
     await backToCalendarLink(accountId, dateString);
 
     //load withdrawals table
-    await loadWithdrawalsTable(accountId, dateString);
+    await loadWithdrawalsTable(accountId, dateString, sortBy, sortOrder);
 
     //load deposits table
     await loadDepositsTable(accountId, dateString);

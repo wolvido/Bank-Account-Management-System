@@ -21,29 +21,54 @@
 
 <div class="transactions-overview__withdrawals-table table">
     <header class="transactions-overview__table-header table__header">
+
+        @{
+            var sortOrderTransactionMedium = Enum.Parse<SortOrderOptions>("Ascending");
+            var sortOrderPayee = Enum.Parse<SortOrderOptions>("Ascending");
+            var sortOrderAmount = Enum.Parse<SortOrderOptions>("Ascending");
+            var sortOrderNote = Enum.Parse<SortOrderOptions>("Ascending");
+
+            if (ViewBag.SortBy == "TransactionMedium" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderTransactionMedium = Enum.Parse<SortOrderOptions>("Descending");
+            }
+            if (ViewBag.SortBy == "Payee" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderPayee = Enum.Parse<SortOrderOptions>("Descending");
+            }
+            if (ViewBag.SortBy == "Amount" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderAmount = Enum.Parse<SortOrderOptions>("Descending");
+            }
+            if (ViewBag.SortBy == "Note" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderNote = Enum.Parse<SortOrderOptions>("Descending");
+            }
+        }
+
         <div class="transactions-overview__header-payment table__header-title">
-            <button class="transactions-overview__header-button table__header-button">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="TransactionMedium" asp-route-sortOrder="@sortOrderTransactionMedium" class="transactions-overview__header-button table__header-button">
                 Check #<br />
                 / Cash
-            </button>
+            </a>
         </div>
 
         <div class="transactions-overview__header-payee table__header-title">
-            <button class="transactions-overview__header-button table__header-button">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="Payee" asp-route-sortOrder="@sortOrderPayee" class="transactions-overview__header-button table__header-button">
                 Payee
-            </button>
+            </a>
         </div>
 
         <div class="transactions-overview__header-amount table__header-title">
-            <button class="transactions-overview__header-button table__header-button">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="Amount" asp-route-sortOrder="@sortOrderAmount" class="transactions-overview__header-button table__header-button">
                 Amount
-            </button>
+            </a>
         </div>
 
         <div class="transactions-overview__header-notes table__header-title">
-            <button class="transactions-overview__header-button table__header-button">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="Note" asp-route-sortOrder="@sortOrderNote" class="transactions-overview__header-button table__header-button">
                 Notes
-            </button>
+            </a>
         </div>
 
     </header>

@@ -352,5 +352,49 @@ namespace BmsKhameleon.Core.Services
             List<Transaction> transactions = await _transactionsRepository.GetTransactionsForAccount(accountId);
             return transactions.Select(transaction => transaction.ToTransactionResponse()).ToList();
         }
+
+        public Task<List<TransactionResponse>> SortTransactions(List<TransactionResponse> transactions, string sortBy, SortOrderOptions sortOrder)
+        {
+
+            if (sortOrder == SortOrderOptions.Ascending)
+            {
+                switch (sortBy)
+                {
+                    case nameof(TransactionResponse.TransactionMedium):
+                        transactions = transactions.OrderBy(transaction => transaction.TransactionMedium).ToList();
+                        break;
+                    case nameof(TransactionResponse.Payee):
+                        transactions = transactions.OrderBy(transaction => transaction.Payee).ToList();
+                        break;
+                    case nameof(TransactionResponse.Amount):
+                        transactions = transactions.OrderBy(transaction => transaction.Amount).ToList();
+                        break;
+                    case nameof(TransactionResponse.Note):
+                        transactions = transactions.OrderBy(transaction => transaction.Note).ToList();
+                        break;
+                }
+            }
+            else
+            {
+                switch (sortBy)
+                {
+                    case nameof(TransactionResponse.TransactionMedium):
+                        transactions = transactions.OrderByDescending(transaction => transaction.TransactionMedium).ToList();
+                        break;
+                    case nameof(TransactionResponse.Payee):
+                        transactions = transactions.OrderByDescending(transaction => transaction.Payee).ToList();
+                        break;
+                    case nameof(TransactionResponse.Amount):
+                        transactions = transactions.OrderByDescending(transaction => transaction.Amount).ToList();
+                        break;
+                    case nameof(TransactionResponse.Note):
+                        transactions = transactions.OrderByDescending(transaction => transaction.Note).ToList();
+                        break;
+                }
+            }
+
+            return Task.FromResult(transactions);
+            
+        }
     }
 }

@@ -4,13 +4,14 @@
     font-size: 14px;
     font-family: inherit;
     border: none;
-    text-align: left;
     color: #434C52;
     padding: 0px 0px 0px 0px;
-
     width: max-content;
     height: 100%;
     cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -54,5 +55,5 @@
 .table__header-button:after {
     position: relative;
     content: "\62";
-    top: 11%;
+    top: 5%;
 }

@@ -8,7 +8,11 @@
     <script src="~/common.blocks/popup/popup.js" defer></script>
 }
 
-<main class="main transactions-overview" data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date">
+<main class="main transactions-overview" data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" data-sortBy="@ViewBag.SortBy" data-sortOrder="@ViewBag.SortOrder">
+
+    <p>
+        @ViewBag.SortBy
+    </p>
 
     <section class="transactions-overview__toolbar-section ">
         <section class="transactions-overview__session-info">
