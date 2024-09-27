@@ -50,15 +50,17 @@
             fadedDesign = " ";
         }
 
-        let higlightToday = ''; //highlight today
+        //highlight today on calendar
+        let higlightToday = ''; 
         let today = new Date();
-        if (day == today.getDate()) {
+        today.setHours(8, 0, 0, 0);
+        if (date == today.toISOString().split('.')[0]) {
             higlightToday = 'calendar__date-item_highlight';
         }
 
         let calendarDay = ''; // Default value if date or accountId is not provided
 
-
+        // inject the day item to the calendar
         if (date !== '' && accountId !== '') {
             const transactionOverviewUrl = `/TransactionsOverview/${accountId}/${date}`; // form the URL
 

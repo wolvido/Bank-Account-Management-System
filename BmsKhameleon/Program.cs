@@ -1,4 +1,5 @@
 using System.Globalization;
+using BmsKhameleon.Core.Domain.IdentityEntities;
 using BmsKhameleon.Core.Domain.RepositoryContracts;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.Core.Services;
@@ -6,8 +7,11 @@ using BmsKhameleon.Infrastructure.DbContexts;
 using BmsKhameleon.Infrastructure.Repositories;
 using BmsKhameleon.UI.Factories;
 using BmsKhameleon.UI.Handlers;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using IdentityDbContext = BmsKhameleon.Infrastructure.DbContexts.IdentityDbContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,10 +28,15 @@ builder.Services.AddHsts(options =>
     options.MaxAge = TimeSpan.FromDays(365);
 });
 
-//DbContext
+//DbContexts
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddDbContext<AccountDbContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    });
+
+    builder.Services.AddDbContext<IdentityDbContext>(options =>
     {
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
     });
@@ -38,8 +47,26 @@ else
     {
         options.UseSqlServer(builder.Configuration.GetConnectionString("AspSmarterConnectionString"));
     });
+    builder.Services.AddDbContext<IdentityDbContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("AspSmarterConnectionString"));
+    });
 }
 
+
+//Identity
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true; 
+    options.Password.RequireNonAlphanumeric = false; 
+    options.Password.RequireUppercase = true; 
+    options.Password.RequiredLength = 6; 
+})
+    .AddEntityFrameworkStores<AccountDbContext>()
+    .AddDefaultTokenProviders()
+    .AddUserStore<UserStore<ApplicationUser, ApplicationRole, IdentityDbContext, Guid>>()
+    .AddRoleStore<RoleStore<ApplicationRole, IdentityDbContext, Guid>>();
 
 //services
 builder.Services.AddScoped<IAccountsService, AccountsService>();
@@ -69,13 +96,9 @@ var localizationOptions = new RequestLocalizationOptions()
     .AddSupportedUICultures(supportedCultures);
 app.UseRequestLocalization(localizationOptions);
 
-
-app.MapControllers();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -85,6 +108,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
+
+app.MapControllers();
 
 app.UseAuthorization();
 

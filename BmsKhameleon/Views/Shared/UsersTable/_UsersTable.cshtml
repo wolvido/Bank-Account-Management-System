@@ -1,0 +1,24 @@
+﻿@model List<UserRoleViewModel>
+
+<section class="table table_small">
+    <header class="table__header">
+        <div class="table__header-title">
+            UserName
+        </div>
+
+        <div class="table__header-title">
+            Type
+        </div>
+    </header>
+
+    <div class="table__item-container">
+
+        @foreach(var item in Model){
+            <div class="accounts__item table__item">
+                <div class="table__item-field">@item.User.UserName</div>
+                <div class="table__item-field">@item.UserRole</div>
+            </div>
+        }
+
+    </div>
+</section>

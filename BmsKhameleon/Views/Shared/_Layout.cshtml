@@ -25,7 +25,7 @@
                 <button class="header__button header__button_small button button_green">Admin</button>
                 <button class="header__button header__button_small button button_green">User Manual</button>
                 <form method="get">
-                    <button asp-controller="Authentication" asp-action="Authentication" class="header__button button">Log Out</button>
+                    <button asp-controller="Authentication" asp-action="Logout" class="header__button button">Log Out</button>
                 </form>
                 
             </div>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="header__details">
-            <span class="header__user-details">Welcome <strong class="header__username">User</strong> </span>
+            <span class="header__user-details">Welcome <strong class="header__username">@User.Identity?.Name</strong> </span>
             @{
                 var utcNow = DateTime.UtcNow;
                 var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Singapore Standard Time");
