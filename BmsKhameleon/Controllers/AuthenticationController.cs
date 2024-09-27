@@ -44,7 +44,13 @@ namespace BmsKhameleon.UI.Controllers
 
         }
 
-
+        [Route("[action]")]
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            _signInManager.SignOutAsync().Wait();
+            return RedirectToAction("Authentication");
+        }
 
     }
 }
