@@ -1,8 +1,10 @@
 ﻿using BmsKhameleon.Core.Domain.IdentityEntities;
 using BmsKhameleon.UI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
 namespace BmsKhameleon.UI.Controllers
 {
@@ -13,6 +15,7 @@ namespace BmsKhameleon.UI.Controllers
 
         private readonly IConfiguration _configuration = configuration;
 
+        [AllowAnonymous]
         [Route("/")]
         [Route("[action]")]
         [HttpGet]
@@ -21,19 +24,19 @@ namespace BmsKhameleon.UI.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         [Route("[action]")]
         [HttpPost]
-        public IActionResult Authentication(LoginViewModel LoginDTO)
+        public async Task<IActionResult> Authentication(LoginViewModel loginDTO)
         {
             var defaultUserName = _configuration["AccessKeys:DefaultUserKey"];
             var defaultAccessKey = _configuration["AccessKeys:DefaultKey"];
-            if (defaultAccessKey == LoginDTO.Password && defaultUserName == LoginDTO.Username)
+            if (defaultAccessKey == loginDTO.Password && defaultUserName == loginDTO.Username)
             {
-                return RedirectToAction("Admin", "Admin");
+                return await HandleDefaultUser(loginDTO);
             }
 
-            var result = _signInManager.PasswordSignInAsync(LoginDTO.Username, LoginDTO.Password, LoginDTO.KeepLoggedIn, true).Result;
-
+            var result = await _signInManager.PasswordSignInAsync(loginDTO.Username, loginDTO.Password, loginDTO.KeepLoggedIn, true);
             if(result.Succeeded)
             {
                 return RedirectToAction("Index", "Home");
@@ -41,15 +44,45 @@ namespace BmsKhameleon.UI.Controllers
 
             ModelState.AddModelError("LoginError", "Invalid email or password");
             return View();
+        }
 
+        [AllowAnonymous]
+        private async Task<IActionResult> HandleDefaultUser(LoginViewModel loginDTO) {
+
+            var user = await _userManager.FindByNameAsync(loginDTO.Username);
+            if (user == null)
+            {
+                ApplicationUser defaultUser = new ApplicationUser
+                {
+                    UserName = loginDTO.Username
+                };
+
+                var createResult = await _userManager.CreateAsync(defaultUser, loginDTO.Password);
+
+                if(!createResult.Succeeded)
+                {
+                    foreach (var error in createResult.Errors)
+                    {
+                        ModelState.AddModelError("LoginError", error.Description);
+                    }
+                    return View("Authentication", loginDTO);
+                }
+
+                await _userManager.AddToRoleAsync(defaultUser, "Admin");
+                await _signInManager.PasswordSignInAsync(loginDTO.Username, loginDTO.Password, loginDTO.KeepLoggedIn, true);
+                return RedirectToAction("Admin", "Admin");
+            }
+
+            await _signInManager.PasswordSignInAsync(loginDTO.Username, loginDTO.Password, loginDTO.KeepLoggedIn, true);
+            return RedirectToAction("Admin", "Admin");
         }
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            _signInManager.SignOutAsync().Wait();
-            return RedirectToAction("Authentication");
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Authentication", "Authentication");
         }
 
     }

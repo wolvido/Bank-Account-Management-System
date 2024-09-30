@@ -1,6 +1,7 @@
 ﻿using BmsKhameleon.Core.Domain.IdentityEntities;
 using BmsKhameleon.Core.Enums;
 using BmsKhameleon.UI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

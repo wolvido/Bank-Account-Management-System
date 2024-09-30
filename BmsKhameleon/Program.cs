@@ -7,6 +7,7 @@ using BmsKhameleon.Infrastructure.DbContexts;
 using BmsKhameleon.Infrastructure.Repositories;
 using BmsKhameleon.UI.Factories;
 using BmsKhameleon.UI.Handlers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -68,6 +69,23 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     .AddUserStore<UserStore<ApplicationUser, ApplicationRole, IdentityDbContext, Guid>>()
     .AddRoleStore<RoleStore<ApplicationRole, IdentityDbContext, Guid>>();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.FallbackPolicy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .Build();
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+    options.LoginPath = "/";
+    //options.AccessDeniedPath = "/Authentication/Authentication";
+    options.SlidingExpiration = true;
+});
+
+
 //services
 builder.Services.AddScoped<IAccountsService, AccountsService>();
 builder.Services.AddScoped<ITransactionsService, TransactionsService>();
@@ -111,8 +129,10 @@ app.UseRouting();
 
 app.UseAuthentication();
 
+app.UseAuthorization();
+
 app.MapControllers();
 
-app.UseAuthorization();
+
 
 app.Run();
