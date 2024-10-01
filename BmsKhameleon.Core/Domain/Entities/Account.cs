@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BmsKhameleon.Core.Domain.IdentityEntities;
 
 namespace BmsKhameleon.Core.Domain.Entities
 {
@@ -49,6 +50,10 @@ namespace BmsKhameleon.Core.Domain.Entities
         public bool Visibility { get; set; }
         public ICollection<Transaction> Transactions { get; } = new List<Transaction>();
         public ICollection<MonthlyWorkingBalance> MonthlyWorkingBalances { get; } = new List<MonthlyWorkingBalance>();
+
+        //IdentityUser
+        public Guid? ApplicationUserId  { get; set; }
+        public ApplicationUser? ApplicationUser { get; set; }
 
 
     }

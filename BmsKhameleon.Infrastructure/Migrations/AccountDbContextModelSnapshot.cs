@@ -43,6 +43,9 @@ namespace BmsKhameleon.Infrastructure.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<Guid?>("ApplicationUserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("BankBranch")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
@@ -52,8 +55,7 @@ namespace BmsKhameleon.Infrastructure.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
-                    b.Property<DateTime?>("DateEnrolled")
-                        .IsRequired()
+                    b.Property<DateTime>("DateEnrolled")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("InitialBalance")
@@ -67,6 +69,8 @@ namespace BmsKhameleon.Infrastructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("AccountId");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Accounts", (string)null);
                 });
@@ -146,6 +150,68 @@ namespace BmsKhameleon.Infrastructure.Migrations
                     b.ToTable("Transactions", (string)null);
                 });
 
+            modelBuilder.Entity("BmsKhameleon.Core.Domain.IdentityEntities.ApplicationUser", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ApplicationUser");
+                });
+
+            modelBuilder.Entity("BmsKhameleon.Core.Domain.Entities.Account", b =>
+                {
+                    b.HasOne("BmsKhameleon.Core.Domain.IdentityEntities.ApplicationUser", "ApplicationUser")
+                        .WithMany("Accounts")
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.Navigation("ApplicationUser");
+                });
+
             modelBuilder.Entity("BmsKhameleon.Core.Domain.Entities.MonthlyWorkingBalance", b =>
                 {
                     b.HasOne("BmsKhameleon.Core.Domain.Entities.Account", "Account")
@@ -173,6 +239,11 @@ namespace BmsKhameleon.Infrastructure.Migrations
                     b.Navigation("MonthlyWorkingBalances");
 
                     b.Navigation("Transactions");
+                });
+
+            modelBuilder.Entity("BmsKhameleon.Core.Domain.IdentityEntities.ApplicationUser", b =>
+                {
+                    b.Navigation("Accounts");
                 });
 #pragma warning restore 612, 618
         }

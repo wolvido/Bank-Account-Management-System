@@ -69,6 +69,7 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     .AddUserStore<UserStore<ApplicationUser, ApplicationRole, IdentityDbContext, Guid>>()
     .AddRoleStore<RoleStore<ApplicationRole, IdentityDbContext, Guid>>();
 
+//Authorization
 builder.Services.AddAuthorization(options =>
 {
     options.FallbackPolicy = new AuthorizationPolicyBuilder()
