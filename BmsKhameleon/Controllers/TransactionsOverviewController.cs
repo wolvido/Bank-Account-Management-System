@@ -3,11 +3,13 @@ using BmsKhameleon.Core.DTO.TransactionDTOs;
 using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.UI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 
 namespace BmsKhameleon.UI.Controllers
 {
+    [Authorize]
     public class TransactionsOverviewController(ITransactionsService transactionsService, IAccountsService accountsService) : Controller
     {
         private readonly ITransactionsService _transactionsService = transactionsService;

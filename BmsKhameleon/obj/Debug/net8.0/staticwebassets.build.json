@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QlIxhGLRvxu9qA7Z9+mgG6aI7x23ZLWU8tHmn+PJtT8=",
+  "Hash": "9fuen37pXPe1J1z40hKbXA0kSElQkY10VVC0PcdUtYM=",
   "Source": "BmsKhameleon.UI",
   "BasePath": "_content/BmsKhameleon.UI",
   "Mode": "Default",
@@ -16,25 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\button\\button.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/button/button.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\button\\button.css"
-    },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\button\\button_cancel.css",
       "SourceId": "BmsKhameleon.UI",
@@ -131,6 +112,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\button\\button_small.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\button\\button.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/button/button.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\button\\button.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\common-blocks.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -167,25 +167,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\calendar-icon.png"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/form-group/form-group.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__date-container.css",
@@ -264,25 +245,6 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__date-input.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__input.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/form-group/form-group__input.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__input.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__input_date.js",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -340,12 +302,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__input_value-bold.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__label.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__input.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/form-group/form-group__label.css",
+      "RelativePath": "common.blocks/form-group/form-group__input.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -356,7 +318,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__label.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__input.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__label_error.css",
@@ -397,6 +359,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__label_notice.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group__label.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/form-group/form-group__label.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group__label.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group_checkbox.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -435,6 +416,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group_invisible.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/form-group/form-group.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\form-group\\form-group.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\BMS-Logo.png",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -454,12 +454,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\header\\BMS-Logo.png"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header__button_small.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/header/header.css",
+      "RelativePath": "common.blocks/header/header__button_small.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -470,7 +470,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\header\\header.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\header\\header__button_small.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header__button.css",
@@ -490,25 +490,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\header\\header__button.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header__button_small.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/header/header__button_small.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\header\\header__button_small.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header__details.css",
@@ -644,6 +625,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\header\\header__username.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/header/header.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\header\\header.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\input-validation-error\\input-validation-error.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -661,25 +661,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\input-validation-error\\input-validation-error.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\main\\main.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/main/main.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\main\\main.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\main\\main__padding.css",
@@ -720,12 +701,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\main\\main_calendar-page.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\notice\\notice.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\main\\main.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/notice/notice.css",
+      "RelativePath": "common.blocks/main/main.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -736,7 +717,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\notice\\notice.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\main\\main.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\notice\\notice__transaction-medium.css",
@@ -777,12 +758,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\notice\\notice__validation.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\overlay\\overlay.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\notice\\notice.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/overlay/overlay.css",
+      "RelativePath": "common.blocks/notice/notice.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -793,26 +774,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\overlay\\overlay.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\overlay\\overlay.js",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/overlay/overlay.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\overlay\\overlay.js"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\notice\\notice.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\overlay\\overlay__cancel.css",
@@ -853,12 +815,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\overlay\\overlay__content.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\page\\page.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\overlay\\overlay.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/page/page.css",
+      "RelativePath": "common.blocks/overlay/overlay.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -869,7 +831,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\page\\page.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\overlay\\overlay.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\overlay\\overlay.js",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/overlay/overlay.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\overlay\\overlay.js"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\page\\page__section.css",
@@ -908,6 +889,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\page\\page_authentication.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\page\\page.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/page/page.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\page\\page.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\popup\\__content\\popup__content.css",
@@ -1062,25 +1062,6 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\popup\\popup.js"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/radio-controls/radio-controls.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__group.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -1098,25 +1079,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls__group.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/radio-controls/radio-controls__label.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label-group.css",
@@ -1138,6 +1100,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls__label-group.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/radio-controls/radio-controls__label.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls__label.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls__radio-input.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -1155,6 +1136,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls__radio-input.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\radio-controls\\radio-controls.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/radio-controls/radio-controls.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\radio-controls\\radio-controls.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__header\\fonts\\table__header-button.eot",
@@ -1233,25 +1233,6 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__header\\fonts\\table__header-button.woff"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__header\\table__header.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/table/__header/table__header.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__header\\table__header.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__header\\table__header-button.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -1290,6 +1271,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__header\\table__header-title.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__header\\table__header.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/table/__header/table__header.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__header\\table__header.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\delete-icon.png",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -1326,25 +1326,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\edit-icon.png"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\table__item.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/table/__item/table__item.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\table__item.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\table__item-button.css",
@@ -1404,25 +1385,6 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\table__item-controls.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\table__item-field.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/table/__item/table__item-field.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\table__item-field.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\table__item-field_controller.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -1461,6 +1423,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\table__item-field-label.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\table__item-field.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/table/__item/table__item-field.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\table__item-field.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\table__item-icon.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -1480,12 +1461,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\table__item-icon.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\table.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\__item\\table__item.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/table/table.css",
+      "RelativePath": "common.blocks/table/__item/table__item.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1496,7 +1477,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\table.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\__item\\table__item.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\table_small.css",
@@ -1518,12 +1499,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\table\\table_small.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\table.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__button/transaction-controller__button.css",
+      "RelativePath": "common.blocks/table/table.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1534,7 +1515,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\table\\table.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_deposit.css",
@@ -1592,6 +1573,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button_withdraw.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/transaction-controller/__button/transaction-controller__button.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__cash\\transaction-controller__cash-amount-input.css",
@@ -1879,25 +1879,6 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-date.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__field/transaction-controller__field-note.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note_invisible.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -1915,6 +1896,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note_invisible.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/transaction-controller/__field/transaction-controller__field-note.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-note.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-payee.css",
@@ -1953,25 +1953,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__field\\transaction-controller__field-transaction-type.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__fieldset/transaction-controller__fieldset.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_cash.css",
@@ -2050,6 +2031,25 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset_withdraw.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/transaction-controller/__fieldset/transaction-controller__fieldset.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__fieldset\\transaction-controller__fieldset.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__item\\transaction-controller__item.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -2067,25 +2067,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__item\\transaction-controller__item.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__overlay/transaction-controller__overlay.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay_deposit.css",
@@ -2126,12 +2107,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay_withdraw.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__radio/transaction-controller__radio.css",
+      "RelativePath": "common.blocks/transaction-controller/__overlay/transaction-controller__overlay.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2142,7 +2123,64 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__overlay\\transaction-controller__overlay.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_deposit.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/transaction-controller/__radio-controls/transaction-controller__radio-controls_deposit.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_deposit.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_withdraw.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/transaction-controller/__radio-controls/transaction-controller__radio-controls_withdraw.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_withdraw.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "common.blocks/transaction-controller/__radio-controls/transaction-controller__radio-controls.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_bank-pick-up.css",
@@ -2240,12 +2278,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio_over-the-counter.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__radio-controls/transaction-controller__radio-controls.css",
+      "RelativePath": "common.blocks/transaction-controller/__radio/transaction-controller__radio.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2256,45 +2294,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_deposit.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__radio-controls/transaction-controller__radio-controls_deposit.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_deposit.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_withdraw.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-controller/__radio-controls/transaction-controller__radio-controls_withdraw.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio-controls\\transaction-controller__radio-controls_withdraw.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-controller\\__radio\\transaction-controller__radio.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__transaction-type\\transaction-controller__transaction-medium.css",
@@ -2392,12 +2392,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-toolbar\\__inner\\transaction-toolbar__inner.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item_red.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-toolbar/__legend/transaction-toolbar__legend.css",
+      "RelativePath": "common.blocks/transaction-toolbar/__legend/transaction-toolbar__legend-item_red.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2408,7 +2408,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item_red.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item.css",
@@ -2430,12 +2430,12 @@
       "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item_red.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/transaction-toolbar/__legend/transaction-toolbar__legend-item_red.css",
+      "RelativePath": "common.blocks/transaction-toolbar/__legend/transaction-toolbar__legend.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2446,7 +2446,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend-item_red.css"
+      "OriginalItemSpec": "wwwroot\\common.blocks\\transaction-toolbar\\__legend\\transaction-toolbar__legend.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-toolbar\\_vertical-margin\\transaction-toolbar_vertical-margin.css",
@@ -2504,25 +2504,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__header\\accounts__header.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/accounts/__header/accounts__header.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__header\\accounts__header.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__header\\accounts__header-account.css",
@@ -2620,12 +2601,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__header\\accounts__header-payor.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__item\\accounts__item.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__header\\accounts__header.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/accounts/__item/accounts__item.css",
+      "RelativePath": "desktop.blocks/accounts/__header/accounts__header.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2636,7 +2617,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__item\\accounts__item.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__header\\accounts__header.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__item\\accounts__item-account.css",
@@ -2715,6 +2696,25 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__item\\accounts__item-payor.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__item\\accounts__item.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/accounts/__item/accounts__item.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__item\\accounts__item.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__modify\\accounts__modify-form-group_joint.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -2732,25 +2732,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__modify\\accounts__modify-form-group_joint.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__search\\accounts__search.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/accounts/__search/accounts__search.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__search\\accounts__search.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__search\\accounts__search-button.css",
@@ -2865,6 +2846,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__search\\accounts__search-option.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__search\\accounts__search.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/accounts/__search/accounts__search.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\accounts\\__search\\accounts__search.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\accounts\\__search\\filter-icon.png",
@@ -3038,25 +3038,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\admin\\admin.js"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/authentication/authentication.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__button.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -3114,25 +3095,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__checkbox.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__error.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/authentication/authentication__error.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__error.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__error_active.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -3150,6 +3112,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__error_active.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__error.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/authentication/authentication__error.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__error.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__field-details.css",
@@ -3190,25 +3171,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__fieldset.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__header.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/authentication/authentication__header.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__header.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__header-container.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -3226,6 +3188,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__header-container.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__header.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/authentication/authentication__header.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication__header.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__input.css",
@@ -3323,6 +3304,25 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication-test.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/authentication/authentication.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\authentication\\authentication.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\BMS-Logo.png",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -3418,25 +3418,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-container.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-day.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/calendar/__date/calendar__date-day.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-day.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-day_faded.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -3456,12 +3437,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-day_faded.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-day.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/calendar/__date/calendar__date-item.css",
+      "RelativePath": "desktop.blocks/calendar/__date/calendar__date-day.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3472,7 +3453,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-day.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item_highlight.css",
@@ -3492,6 +3473,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item_highlight.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/calendar/__date/calendar__date-item.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-item.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__date\\calendar__date-transactions.css",
@@ -3779,12 +3779,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\create-account\\__form\\create-account__form-input.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar-button_cancel.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/create-account/__toolbar/create-account__toolbar.css",
+      "RelativePath": "desktop.blocks/create-account/__toolbar/create-account__toolbar-button_cancel.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3795,7 +3795,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar-button_cancel.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar-button.css",
@@ -3817,12 +3817,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar-button.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar-button_cancel.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/create-account/__toolbar/create-account__toolbar-button_cancel.css",
+      "RelativePath": "desktop.blocks/create-account/__toolbar/create-account__toolbar.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3833,7 +3833,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar-button_cancel.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\create-account\\__toolbar\\create-account__toolbar.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\create-account\\__validation-errors\\create-account__validation-errors.css",
@@ -3893,25 +3893,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\create-account\\create-account.js"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__control\\deposit__control.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/deposit/__control/deposit__control.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__control\\deposit__control.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__control\\deposit__control-group.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -3969,12 +3950,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__control\\deposit__control-radio.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-container.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__control\\deposit__control.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/deposit/__form/deposit__form-container.css",
+      "RelativePath": "desktop.blocks/deposit/__control/deposit__control.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3985,7 +3966,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-container.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__control\\deposit__control.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-container_cash.css",
@@ -4026,12 +4007,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-container_cheque.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-group.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-container.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/deposit/__form/deposit__form-group.css",
+      "RelativePath": "desktop.blocks/deposit/__form/deposit__form-container.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4042,7 +4023,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-group.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-container.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-group_radio-group.css",
@@ -4083,6 +4064,25 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-group_row.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-group.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/deposit/__form/deposit__form-group.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-group.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-input.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -4100,25 +4100,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__form\\deposit__form-input.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__notice\\deposit__notice.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/deposit/__notice/deposit__notice.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__notice\\deposit__notice.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__notice\\deposit__notice-deposit-type.css",
@@ -4159,12 +4140,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__notice\\deposit__notice-validation.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__notice\\deposit__notice.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/deposit/__toolbar/deposit__toolbar.css",
+      "RelativePath": "desktop.blocks/deposit/__notice/deposit__notice.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4175,7 +4156,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__notice\\deposit__notice.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar-button_cancel.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/deposit/__toolbar/deposit__toolbar-button_cancel.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar-button_cancel.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar-button.css",
@@ -4197,12 +4197,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar-button.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar-button_cancel.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/deposit/__toolbar/deposit__toolbar-button_cancel.css",
+      "RelativePath": "desktop.blocks/deposit/__toolbar/deposit__toolbar.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4213,7 +4213,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar-button_cancel.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\__toolbar\\deposit__toolbar.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\deposit\\deposit.css",
@@ -4254,25 +4254,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\deposit\\deposit.js"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/transactions-overview/__back/transactions-overview__back-button.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button-container.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -4292,6 +4273,25 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button-container.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/transactions-overview/__back/transactions-overview__back-button.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__back\\transactions-overview__back-button.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-deposits-section.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -4309,25 +4309,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-deposits-section.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/transactions-overview/__balance/transactions-overview__balance-label.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label_working-balance.css",
@@ -4368,6 +4349,25 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label-group.css"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/transactions-overview/__balance/transactions-overview__balance-label.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-label.css"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-section.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -4404,25 +4404,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__balance\\transactions-overview__balance-value.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/transactions-overview/__deposits/transactions-overview__deposits.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-cash.css",
@@ -4499,6 +4480,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits-table.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/transactions-overview/__deposits/transactions-overview__deposits.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__deposits\\transactions-overview__deposits.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__finance\\transactions-overview__finance-section.css",
@@ -4672,25 +4672,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-cheque.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/transactions-overview/__item/transactions-overview__item-notes.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes-label.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -4708,6 +4689,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes-label.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/transactions-overview/__item/transactions-overview__item-notes.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-notes.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-payee.css",
@@ -4748,25 +4748,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__item\\transactions-overview__item-payment.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/transactions-overview/__session/transactions-overview__session-info.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info-account.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -4803,6 +4784,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info-date.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/transactions-overview/__session/transactions-overview__session-info.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__session\\transactions-overview__session-info.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-caption.css",
@@ -4900,25 +4900,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__table\\transactions-overview__table-total.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/transactions-overview/__toolbar/transactions-overview__toolbar.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar-button.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -4955,6 +4936,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar-section.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/transactions-overview/__toolbar/transactions-overview__toolbar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\__toolbar\\transactions-overview__toolbar.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\transactions-overview\\__withdrawals\\transactions-overview__withdrawals-section.css",
@@ -5052,25 +5052,6 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\transactions-overview\\transactions-overview.js"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/withdraw/__control/withdraw__control.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control.css"
-    },
-    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control-group.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -5128,12 +5109,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control-radio.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/withdraw/__form/withdraw__form-container.css",
+      "RelativePath": "desktop.blocks/withdraw/__control/withdraw__control.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5144,7 +5125,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__control\\withdraw__control.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container_cash.css",
@@ -5185,12 +5166,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container_cheque.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-group.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/withdraw/__form/withdraw__form-group.css",
+      "RelativePath": "desktop.blocks/withdraw/__form/withdraw__form-container.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5201,7 +5182,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-group.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-container.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-group_radio-group.css",
@@ -5223,12 +5204,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-group_radio-group.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-group.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/withdraw/__notice/withdraw__notice.css",
+      "RelativePath": "desktop.blocks/withdraw/__form/withdraw__form-group.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5239,7 +5220,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__form\\withdraw__form-group.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice_validation.css",
@@ -5280,12 +5261,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice_withdraw-type.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/withdraw/__toolbar/withdraw__toolbar.css",
+      "RelativePath": "desktop.blocks/withdraw/__notice/withdraw__notice.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5296,7 +5277,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__notice\\withdraw__notice.css"
+    },
+    {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "desktop.blocks/withdraw/__toolbar/withdraw__toolbar-button_cancel.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button.css",
@@ -5318,12 +5318,12 @@
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button.css"
     },
     {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css",
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar.css",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
       "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "desktop.blocks/withdraw/__toolbar/withdraw__toolbar-button_cancel.css",
+      "RelativePath": "desktop.blocks/withdraw/__toolbar/withdraw__toolbar.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5334,7 +5334,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar-button_cancel.css"
+      "OriginalItemSpec": "wwwroot\\desktop.blocks\\withdraw\\__toolbar\\withdraw__toolbar.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\withdraw\\withdraw.css",
@@ -5394,6 +5394,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\lib\\jquery\\dist\\jquery-3.7.1.min.js",
+      "SourceId": "BmsKhameleon.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
+      "BasePath": "_content/BmsKhameleon.UI",
+      "RelativePath": "lib/jquery/dist/jquery-3.7.1.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery-3.7.1.min.js"
+    },
+    {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\lib\\jquery\\dist\\jquery.validate.min.js",
       "SourceId": "BmsKhameleon.UI",
       "SourceType": "Discovered",
@@ -5430,25 +5449,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.validate.unobtrusive.min.js"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\lib\\jquery\\dist\\jquery-3.7.1.min.js",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "lib/jquery/dist/jquery-3.7.1.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery-3.7.1.min.js"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\lib\\moment\\moment.js",

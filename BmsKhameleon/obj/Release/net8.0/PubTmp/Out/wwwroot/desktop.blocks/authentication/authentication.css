@@ -10,6 +10,7 @@
 @import url('authentication__header-container.css');
 @import url('authentication__error.css');
 @import url('authentication__error_active.css');
+@import url('authentication__checkbox.css');
 
 
 .authentication {
@@ -17,5 +18,5 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 418px;
+    height: 460px;
 }

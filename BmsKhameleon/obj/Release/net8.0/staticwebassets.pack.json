@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group__label_notice.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group_checkbox.css",
+      "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group_checkbox.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\form-group_invisible.css",
       "PackagePath": "staticwebassets\\common.blocks\\form-group\\form-group_invisible.css"
     },
@@ -307,6 +311,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\table.css",
       "PackagePath": "staticwebassets\\common.blocks\\table\\table.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\table\\table_small.css",
+      "PackagePath": "staticwebassets\\common.blocks\\table\\table_small.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\transaction-controller\\__button\\transaction-controller__button.css",
@@ -621,6 +629,14 @@
       "PackagePath": "staticwebassets\\desktop.blocks\\accounts\\accounts.js"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\admin\\admin.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\admin\\admin.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\admin\\admin.js",
+      "PackagePath": "staticwebassets\\desktop.blocks\\admin\\admin.js"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\BMS-Logo.png",
       "PackagePath": "staticwebassets\\desktop.blocks\\authentication\\BMS-Logo.png"
     },
@@ -639,6 +655,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__change.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\authentication\\authentication__change.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__checkbox.css",
+      "PackagePath": "staticwebassets\\desktop.blocks\\authentication\\authentication__checkbox.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__error.css",

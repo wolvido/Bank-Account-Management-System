@@ -4305,11 +4305,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj",
+      "projectUniqueName": "D:\\repo\\bmskhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj",
       "projectName": "BmsKhameleon.Infrastructure",
-      "projectPath": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj",
+      "projectPath": "D:\\repo\\bmskhameleon\\BmsKhameleon.Infrastructure\\BmsKhameleon.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\repo\\BmsKhameleon\\BmsKhameleon.Infrastructure\\obj\\",
+      "outputPath": "D:\\repo\\bmskhameleon\\BmsKhameleon.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

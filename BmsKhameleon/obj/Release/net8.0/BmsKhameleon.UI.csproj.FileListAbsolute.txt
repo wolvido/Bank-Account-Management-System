@@ -137,3 +137,9 @@ D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\refint\BmsKhameleon.UI.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\BmsKhameleon.UI.pdb
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\BmsKhameleon.UI.genruntimeconfig.cache
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\ref\BmsKhameleon.UI.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\Microsoft.Extensions.Options.dll
