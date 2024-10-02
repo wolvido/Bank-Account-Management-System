@@ -26,6 +26,7 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
 
         [Required(ErrorMessage = "Visibility is required.")]
         public bool Visibility { get; set; }
+        public Guid? ApplicationUserId  { get; set; }
 
         public Account ToAccount()
         {
@@ -40,7 +41,8 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
                 InitialBalance = InitialBalance,
                 WorkingBalance = InitialBalance,
                 DateEnrolled = DateTime.Now,
-                Visibility = Visibility
+                Visibility = Visibility,
+                ApplicationUserId = ApplicationUserId
             };
         }
     }

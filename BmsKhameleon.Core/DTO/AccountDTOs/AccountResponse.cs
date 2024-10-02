@@ -14,6 +14,8 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
         public decimal? WorkingBalance { get; set; }
         public DateTime? DateEnrolled { get; set; }
         public bool Visibility { get; set; }
+
+        public Guid? ApplicationUserId  { get; set; }
     }
 
     public static class AccountExtensions
@@ -31,7 +33,8 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
                 InitialBalance = account.InitialBalance,
                 WorkingBalance = account.WorkingBalance,
                 DateEnrolled = account.DateEnrolled,
-                Visibility = account.Visibility
+                Visibility = account.Visibility,
+                ApplicationUserId = account.ApplicationUserId
             };
         }
     }

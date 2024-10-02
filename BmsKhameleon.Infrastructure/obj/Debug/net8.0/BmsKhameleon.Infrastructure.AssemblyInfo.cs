@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BmsKhameleon.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5dc74bd661829d28604b83bf08ba136ac457ff2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b75d33237dd89a6b340c6103000a8df54f96c446")]
 [assembly: System.Reflection.AssemblyProductAttribute("BmsKhameleon.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BmsKhameleon.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

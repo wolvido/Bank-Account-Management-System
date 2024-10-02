@@ -10,6 +10,5 @@ namespace BmsKhameleon.Core.Domain.IdentityEntities
 {
     public class ApplicationUser : IdentityUser<Guid>
     {
-        public ICollection<Account> Accounts { get; } = new List<Account>();
     }
 }

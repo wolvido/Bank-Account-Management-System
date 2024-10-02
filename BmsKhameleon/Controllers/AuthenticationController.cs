@@ -8,10 +8,11 @@ using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
 namespace BmsKhameleon.UI.Controllers
 {
-    public class AuthenticationController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration) : Controller
+    public class AuthenticationController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration) : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;
         private readonly SignInManager<ApplicationUser> _signInManager = signInManager;
+        private readonly RoleManager<ApplicationRole> _roleManager = roleManager;
 
         private readonly IConfiguration _configuration = configuration;
 
@@ -66,6 +67,14 @@ namespace BmsKhameleon.UI.Controllers
                         ModelState.AddModelError("LoginError", error.Description);
                     }
                     return View("Authentication", loginDTO);
+                }
+
+
+                //check if role exists, create if not
+                var roleExists = await _roleManager.RoleExistsAsync("Admin");
+                if (!roleExists)
+                {
+                    await _roleManager.CreateAsync(new ApplicationRole { Name = "Admin" });
                 }
 
                 await _userManager.AddToRoleAsync(defaultUser, "Admin");

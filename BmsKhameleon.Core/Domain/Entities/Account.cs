@@ -51,10 +51,7 @@ namespace BmsKhameleon.Core.Domain.Entities
         public ICollection<Transaction> Transactions { get; } = new List<Transaction>();
         public ICollection<MonthlyWorkingBalance> MonthlyWorkingBalances { get; } = new List<MonthlyWorkingBalance>();
 
-        //IdentityUser
+        //Identity User Foreign Key
         public Guid? ApplicationUserId  { get; set; }
-        public ApplicationUser? ApplicationUser { get; set; }
-
-
     }
 }

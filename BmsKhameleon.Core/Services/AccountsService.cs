@@ -154,6 +154,16 @@ namespace BmsKhameleon.Core.Services
 
             return accounts.Select(account => account.ToAccountResponse()).ToList();
         }
+        /// <summary>
+        ///     sort accounts by user id and shared visibility
+        /// </summary>
+        /// <param name="accounts"></param>
+        /// <param name="userId"></param>
+        /// <returns>returns accounts with the given user ID and shared visibility</returns>
+        public List<AccountResponse> SortAccountsByUser(List<AccountResponse> accounts, Guid userId)
+        {
+            return accounts.Where(account => account.ApplicationUserId == userId || account.Visibility).ToList();
+        }
 
         public Task<List<AccountResponse>> SortAccounts(List<AccountResponse> accounts, string sortBy, SortOrderOptions sortOrder)
         {

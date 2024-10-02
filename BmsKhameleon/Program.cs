@@ -64,7 +64,7 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     options.Password.RequireUppercase = true; 
     options.Password.RequiredLength = 6; 
 })
-    .AddEntityFrameworkStores<AccountDbContext>()
+    .AddEntityFrameworkStores<IdentityDbContext>()
     .AddDefaultTokenProviders()
     .AddUserStore<UserStore<ApplicationUser, ApplicationRole, IdentityDbContext, Guid>>()
     .AddRoleStore<RoleStore<ApplicationRole, IdentityDbContext, Guid>>();

@@ -1,16 +1,20 @@
-﻿using BmsKhameleon.Core.DTO.AccountDTOs;
+﻿using System.Security.Claims;
+using BmsKhameleon.Core.Domain.IdentityEntities;
+using BmsKhameleon.Core.DTO.AccountDTOs;
 using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.UI.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace BmsKhameleon.UI.Controllers
 {
-    public class HomeController(IAccountsService accountsService) : Controller
+    public class HomeController(IAccountsService accountsService, UserManager<ApplicationUser> userManager) : Controller
     {
         private readonly IAccountsService _accountsService = accountsService;
+        private readonly UserManager<ApplicationUser> _userManager = userManager;
 
         [Route("[action]")]
         [HttpGet]
@@ -51,6 +55,15 @@ namespace BmsKhameleon.UI.Controllers
                 accounts = await _accountsService.SortAccounts(accounts, sortBy, (SortOrderOptions)sortOrder);
             }
 
+            //get the current logged in user
+            var user = await _userManager.GetUserAsync(User);
+            if(user == null)
+            {
+                return BadRequest("No user logged in");
+            }
+
+            accounts = _accountsService.SortAccountsByUser(accounts, user.Id);
+
             AccountViewModel accountViewModel = new AccountViewModel
             {
                 AccountResponses = accounts
@@ -67,6 +80,13 @@ namespace BmsKhameleon.UI.Controllers
             {
                 return BadRequest("Invalid account request.");
             }
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return BadRequest("No user logged id");
+            }
+            accountCreateRequest.ApplicationUserId = user.Id;
 
             bool result = await _accountsService.CreateAccount(accountCreateRequest);
 

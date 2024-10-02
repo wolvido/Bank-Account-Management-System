@@ -23,9 +23,14 @@ namespace BmsKhameleon.Infrastructure.DbContexts
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Account>().ToTable("Accounts");
-            modelBuilder.Entity<Transaction>().ToTable("Transactions");
-            modelBuilder.Entity<MonthlyWorkingBalance>().ToTable("MonthlyWorkingBalances");
+            modelBuilder.Entity<Account>()
+                .ToTable("Accounts");
+
+            modelBuilder.Entity<Transaction>()
+                .ToTable("Transactions");
+
+            modelBuilder.Entity<MonthlyWorkingBalance>()
+                .ToTable("MonthlyWorkingBalances");
 
             modelBuilder.Entity<MonthlyWorkingBalance>()
                 .HasIndex(m => new { m.AccountId, m.Date })
