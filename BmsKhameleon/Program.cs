@@ -16,7 +16,7 @@ using IdentityDbContext = BmsKhameleon.Infrastructure.DbContexts.IdentityDbConte
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 builder.Services.AddControllersWithViews(options =>
 {
     options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
