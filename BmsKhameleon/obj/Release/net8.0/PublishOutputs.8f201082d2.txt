@@ -1,4 +1,5 @@
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\BmsKhameleon.UI.exe
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\web.config
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\appsettings.json
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\wwwroot\common.blocks\transaction-controller\__button\transaction-controller__button_edit.css

@@ -22,9 +22,13 @@
             </a>
 
             <div class="header__toolbar">
+
+                @if( User.IsInRole("Admin") )
+                {
                 <form method="get">
                     <button asp-controller="Admin" asp-action="Admin" class="header__button header__button_small button button_green">Admin</button>
                 </form>
+                }
                 
                 <button class="header__button header__button_small button button_green">User Manual</button>
                 <form method="post">

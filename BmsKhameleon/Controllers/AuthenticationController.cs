@@ -8,7 +8,6 @@ using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
 namespace BmsKhameleon.UI.Controllers
 {
-    [Authorize]
     public class AuthenticationController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration) : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;

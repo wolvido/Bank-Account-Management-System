@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BmsKhameleon.UI.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AdminController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<ApplicationRole> roleManager) : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;
