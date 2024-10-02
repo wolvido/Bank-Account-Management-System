@@ -1,10 +1,12 @@
 ﻿using BmsKhameleon.Core.DTO.AccountDTOs;
 using BmsKhameleon.Core.DTO.TransactionDTOs;
 using BmsKhameleon.Core.ServiceContracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BmsKhameleon.UI.Controllers
 {
+    [Authorize]
     public class CalendarController(ITransactionsService transactionsService, IAccountsService accountsService) : Controller
     {
         private readonly ITransactionsService _transactionsService = transactionsService;

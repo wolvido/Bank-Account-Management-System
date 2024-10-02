@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BmsKhameleon.UI.Controllers
 {
+    [Authorize]
     public class HomeController(IAccountsService accountsService, UserManager<ApplicationUser> userManager) : Controller
     {
         private readonly IAccountsService _accountsService = accountsService;

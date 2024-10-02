@@ -2,11 +2,13 @@
 using BmsKhameleon.Core.Enums;
 using BmsKhameleon.Core.ServiceContracts;
 using BmsKhameleon.UI.Factories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 
 namespace BmsKhameleon.UI.Controllers
 {
+    [Authorize]
     public class TransactionFormsController(ITransactionsService transactionsService) : Controller
     {
         private readonly ITransactionsService _transactionsService = transactionsService;
