@@ -1,0 +1,10 @@
+﻿.authentication__fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    height: 200px;
+    justify-content: space-between;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}

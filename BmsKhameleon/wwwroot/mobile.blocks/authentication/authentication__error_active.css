@@ -1,0 +1,5 @@
+﻿.authentication__error_active.validation-summary-errors {
+    border-radius: 3px;
+    border: 1px solid var(--Dark-Stroke-Color-Card-Stroke-Default, rgba(0, 0, 0, 0.10));
+    background: #CF2129;
+}
