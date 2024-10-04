@@ -1,0 +1,18 @@
+﻿@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+    .transactions-overview__back-button {
+        font-weight: 600;
+        width: 69vw;
+        height: 5.5vh;
+    }
+}
+
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .transactions-overview__back-button {
+        font-weight: 600;
+        width: 50vw;
+        height: 8.5vh;
+    }
+
+}

@@ -1,0 +1,12 @@
+﻿
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .calendar__date-item {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 14%;
+        border: 0.5px solid #F4F4F8;
+        color: inherit;
+        text-decoration: inherit;
+        height: 16vh;
+    }
+}

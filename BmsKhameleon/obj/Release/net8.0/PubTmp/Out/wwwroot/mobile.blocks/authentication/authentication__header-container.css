@@ -1,0 +1,6 @@
+﻿.authentication__header-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,39 @@
+﻿
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    .main {
+        margin: 0px 15px 0px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__padding {
+        padding: 0px 15px 0px 15px;
+    }
+
+    .main_calendar-page {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 81vh;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 480px) {
+    .main {
+        margin: 0px 34px 0px 34px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__padding {
+        padding: 0px 34px 0px 34px;
+    }
+
+    .main_calendar-page {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 81vh;
+    }
+}
+

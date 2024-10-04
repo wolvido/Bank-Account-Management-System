@@ -1,0 +1,11 @@
+﻿
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .transaction-toolbar__inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        transform: scale(0.6);
+        transform-origin: left;
+    }
+}

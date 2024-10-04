@@ -1,0 +1,31 @@
+﻿@import url('__button/transaction-toolbar__button.css');
+@import url('__inner/transaction-toolbar__inner.css');
+@import url('__legend/transaction-toolbar__legend-item.css');
+@import url('__legend/transaction-toolbar__legend-item_red.css');
+@import url('__legend/transaction-toolbar__legend.css');
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    .transaction-toolbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        transform: scale(0.7);
+        transform-origin: left bottom;
+        gap: 10px;
+        width: 135%;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .transaction-toolbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        transform: scale(0.7);
+        transform-origin: left;
+        height: 10%;
+        width: 133%;
+    }
+}

@@ -1,0 +1,11 @@
+﻿@media only screen and (orientation: landscape) and (max-height: 470px) {
+
+    .calendar__date-transactions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+        gap: 2px;
+    }
+}

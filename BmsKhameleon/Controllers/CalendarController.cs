@@ -16,7 +16,8 @@ namespace BmsKhameleon.UI.Controllers
         [Route("[action]/{accountId}/{date?}")]
         public async Task<IActionResult> Calendar(Guid accountId, DateTime? date)
         {
-            date ??= DateTime.Now;
+            var philippineDateNow = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.Now, "Singapore Standard Time");
+            date ??= philippineDateNow;
 
             AccountResponse? accountExists = await _accountsService.GetAccountById(accountId);
 

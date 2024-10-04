@@ -5,6 +5,7 @@
 
 @section styles {
     <link href="~/desktop.blocks/calendar/calendar.css" rel="stylesheet" type="text/css" />
+    <link href="~/mobile.blocks/calendar/calendar.css" rel="stylesheet" type="text/css" />
     <script src="~/common.blocks/form-group/form-group__input_date.js" defer></script>
     <script src="~/common.blocks/transaction-controller/transaction-controller.js" defer></script>
     <script src="~/desktop.blocks/calendar/calendar.js" defer></script>
@@ -19,8 +20,8 @@
 
     <section class="transaction-toolbar transaction-toolbar_vertical-margin main__padding ">
         <div class="transaction-toolbar__inner">
-            <button data-accountId="@Model[0].AccountId" data-date="@Model[0].Date" class="button button_large transaction-controller__button transaction-controller__button_deposit"> Add Deposit</button>
-            <button data-accountId="@Model[0].AccountId" data-date="@Model[0].Date" class="button button_large transaction-controller__button transaction-controller__button_withdraw"> Add Withdrawal</button>
+            <button data-accountId="@Model[0].AccountId" data-date="@Model[0].Date" class="button button_large transaction-toolbar__button transaction-controller__button transaction-controller__button_deposit"> Add Deposit</button>
+            <button data-accountId="@Model[0].AccountId" data-date="@Model[0].Date" class="button button_large transaction-toolbar__button transaction-controller__button transaction-controller__button_withdraw"> Add Withdrawal</button>
         </div>
 
         <div class="transaction-toolbar__legend">

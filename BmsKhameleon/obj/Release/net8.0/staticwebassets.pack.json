@@ -1149,6 +1149,226 @@
       "PackagePath": "staticwebassets\\lib\\moment\\moment.js"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__add-accounts\\accounts__add-accounts.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__header\\accounts__header-account.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__header\\accounts__header-account.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__header\\accounts__header-balance.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__header\\accounts__header-balance.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__header\\accounts__header-bank.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__header\\accounts__header-bank.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__header\\accounts__header-button.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__header\\accounts__header-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__header\\accounts__header-payor.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__header\\accounts__header-payor.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__header\\accounts__header.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__header\\accounts__header.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__item\\accounts__item-account.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__item\\accounts__item-account.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__item\\accounts__item-balance.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__item\\accounts__item-balance.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__item\\accounts__item-bank.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__item\\accounts__item-bank.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__item\\accounts__item-payor.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__item\\accounts__item-payor.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__item\\accounts__item.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__item\\accounts__item.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__modify\\accounts__modify-form-group_joint.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__modify\\accounts__modify-form-group_joint.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\accounts__search-button.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\accounts__search-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\accounts__search-filter.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\accounts__search-filter.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\accounts__search-form.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\accounts__search-form.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\accounts__search-icon.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\accounts__search-icon.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\accounts__search-input.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\accounts__search-input.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\accounts__search-option.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\accounts__search-option.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\accounts__search.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\accounts__search.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\filter-icon.png",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\filter-icon.png"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__search\\search.png",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__search\\search.png"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__small-button\\accounts__small-button.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__small-button\\accounts__small-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__table\\accounts__table.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__table\\accounts__table.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\__toolbar\\accounts__toolbar.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\__toolbar\\accounts__toolbar.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\accounts\\accounts.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\accounts\\accounts.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\BMS-Logo.png",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\BMS-Logo.png"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication-test.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication-test.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__button.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__change.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__change.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__checkbox.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__checkbox.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__error.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__error.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__error_active.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__error_active.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__field-details.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__field-details.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__fieldset.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__fieldset.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__header-container.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__header-container.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__header.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__header.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__input.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__input.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__label.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__label.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__logo.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__logo.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\authentication__version.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__version.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\BMS-Logo.png",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\BMS-Logo.png"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__button.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__button_small.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__button_small.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__details.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__details.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__logo.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__logo.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__main.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__main.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__time.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__time.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__toolbar.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__toolbar.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__user-details.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__user-details.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header__username.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\header__username.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\main\\main.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\main\\main.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\page\\page.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\page\\page.css"
+    },
+    {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.BmsKhameleon.UI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

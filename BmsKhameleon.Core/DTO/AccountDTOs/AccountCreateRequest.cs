@@ -40,7 +40,7 @@ namespace BmsKhameleon.Core.DTO.AccountDTOs
                 BankBranch = BankBranch,
                 InitialBalance = InitialBalance,
                 WorkingBalance = InitialBalance,
-                DateEnrolled = DateTime.Now,
+                DateEnrolled = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.Now, "Singapore Standard Time"),
                 Visibility = Visibility,
                 ApplicationUserId = ApplicationUserId
             };

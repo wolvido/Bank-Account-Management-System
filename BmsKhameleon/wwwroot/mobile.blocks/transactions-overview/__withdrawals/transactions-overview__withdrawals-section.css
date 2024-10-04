@@ -1,0 +1,18 @@
+﻿@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+    .transactions-overview__withdrawals-section {
+        flex-basis: 56.25%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .transactions-overview__withdrawals-section {
+        flex-basis: 56.25%;
+        display: flex;
+        flex-direction: column;
+        width: 45vh;
+    }
+}
