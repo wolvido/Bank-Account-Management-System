@@ -1,0 +1,14 @@
+﻿.calendar__account-info-button {
+
+    width: 30px;
+    height: 30px;
+    background-image: url("info-icon.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    cursor: pointer;
+
+    align-self: center;
+    border: 0;
+}

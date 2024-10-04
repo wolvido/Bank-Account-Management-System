@@ -47,7 +47,11 @@
 
                 <select class="calendar__select-year">
                     //generate year options
-                    @for (int i = DateTime.Now.Year; i >= ViewBag.accountYearEnrolled; i--)
+                    @{
+                        var philippineDateNow = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.Now, "Singapore Standard Time");
+                    }
+
+                    @for (int i = philippineDateNow.Year; i >= ViewBag.accountYearEnrolled; i--)
                     {
                         <option value="@i"> @i</option>
                     }

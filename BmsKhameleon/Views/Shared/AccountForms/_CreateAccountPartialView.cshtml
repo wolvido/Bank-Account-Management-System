@@ -45,7 +45,10 @@
             </div>
 
             <div class="accounts__modify-form-group form-group">
-                <label asp-validation-for="InitialBalance" class="accounts__modify-label accounts__modify-label_balance form-group__label">Initial Balance to Enroll @DateTime.Now</label>
+                @{
+                    var philippineDateNow = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.Now, "Singapore Standard Time");
+                }
+                <label asp-validation-for="InitialBalance" class="accounts__modify-label accounts__modify-label_balance form-group__label">Initial Balance to Enroll @philippineDateNow</label>
                 <input asp-for="InitialBalance" class="accounts__modify-balance form-group__input form-group__input_value-bold" type="text" placeholder="0.00" />
             </div>
 

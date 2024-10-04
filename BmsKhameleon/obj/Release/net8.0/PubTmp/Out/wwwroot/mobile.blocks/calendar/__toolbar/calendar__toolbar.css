@@ -1,0 +1,9 @@
+﻿@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .calendar__toolbar {
+        height: 45px;
+        background: #FFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

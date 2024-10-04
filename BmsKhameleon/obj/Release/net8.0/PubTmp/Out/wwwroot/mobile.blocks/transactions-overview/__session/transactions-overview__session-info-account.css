@@ -1,0 +1,8 @@
+﻿
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    .transactions-overview__session-info-account {
+        font-weight: 700;
+        font-size: 10px;
+        width: 148px;
+    }
+}
