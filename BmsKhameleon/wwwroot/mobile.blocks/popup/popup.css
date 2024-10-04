@@ -1,0 +1,41 @@
+﻿@import url('__content/popup__content.css');
+@import url('__footer/popup__footer.css');
+@import url('__header/popup__header.css');
+@import url('__show-delete/popup__show-delete-button.css');
+
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+    .popup {
+        display: flex;
+        flex-direction: column;
+        background: #FFF;
+        min-width: 500px;
+        border-radius: 5px;
+        border: 0px solid #FFF;
+        gap: 20px;
+
+        transform: scale(0.7);
+        transform-origin: center;
+    }
+}
+
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .popup {
+        display: flex;
+        flex-direction: column;
+        background: #FFF;
+        min-width: 500px;
+        border-radius: 5px;
+        border: 0px solid #FFF;
+        gap: 20px;
+        transform: scale(0.45);
+        transform-origin: center;
+    }
+}
+
+.popup_delete {
+    display: none;
+    border: 3px solid #CF2129;
+}

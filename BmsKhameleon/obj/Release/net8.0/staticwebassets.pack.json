@@ -1445,8 +1445,44 @@
       "PackagePath": "staticwebassets\\mobile.blocks\\main\\main.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay.js",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay.js"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay__cancel.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay__cancel.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay__content.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay__content.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\page\\page.css",
       "PackagePath": "staticwebassets\\mobile.blocks\\page\\page.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\popup\\__content\\popup__content.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\popup\\__content\\popup__content.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\popup\\__footer\\popup__footer.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\popup\\__footer\\popup__footer.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\popup\\__header\\popup__header.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\popup\\__header\\popup__header.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\popup\\__show-delete\\popup__show-delete-button.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\popup\\__show-delete\\popup__show-delete-button.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\popup\\popup.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\popup\\popup.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transaction-toolbar\\__button\\transaction-toolbar__button.css",
@@ -1575,6 +1611,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transactions-overview\\__item\\transactions-overview__item-payment.css",
       "PackagePath": "staticwebassets\\mobile.blocks\\transactions-overview\\__item\\transactions-overview__item-payment.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transactions-overview\\__overlay\\transactions-overview__overlay.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\transactions-overview\\__overlay\\transactions-overview__overlay.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transactions-overview\\__session\\transactions-overview__session-info-account.css",

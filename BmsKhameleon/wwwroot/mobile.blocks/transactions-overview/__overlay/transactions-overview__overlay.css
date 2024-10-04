@@ -1,0 +1,9 @@
+﻿
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .transactions-overview__overlay {
+        transform: scale(1.5);
+        height: 113vh;
+        position: fixed;
+        top: -11vh;
+    }
+}
