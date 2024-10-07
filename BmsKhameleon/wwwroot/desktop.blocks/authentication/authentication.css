@@ -1,23 +1,4 @@
-﻿/*
-    
-    
-    ('authentication__fieldset.css');
-
-    
-    ('authentication__button.css');
-@import url('authentication__change.css');
-@import url('authentication__field-details.css');
-@import url('authentication__input.css');
-@import url('authentication__label.css');
-@import url('authentication__logo.css');
-@import url('authentication__header.css');
-@import url('authentication__version.css');
-@import url('authentication__header-container.css');
-@import url('authentication__error.css');
-@import url('authentication__error_active.css');
-@import url('authentication__checkbox.css');*/
-
-
+﻿
 .authentication {
     display: flex;
     flex-direction: column;

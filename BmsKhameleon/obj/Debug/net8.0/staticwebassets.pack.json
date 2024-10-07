@@ -25,10 +25,6 @@
       "PackagePath": "staticwebassets\\common.blocks\\button\\button_small.css"
     },
     {
-      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\common-blocks.css",
-      "PackagePath": "staticwebassets\\common.blocks\\common-blocks.css"
-    },
-    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\calendar-icon.png",
       "PackagePath": "staticwebassets\\common.blocks\\form-group\\calendar-icon.png"
     },

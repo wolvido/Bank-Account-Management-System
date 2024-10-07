@@ -1,26 +1,4 @@
-﻿/*
-    
-    ('__toolbar/calendar__toolbar.css');
-@import url('__select/calendar__select-date.css');
-@import url('__select/calendar__select-label.css');
-@import url('__select/calendar__select-month.css');
-@import url('__select/calendar__select-year.css');
-
-@import url('__account/calendar__account-info-button.css');
-
-
-@import url('__week/calendar__week-header.css');
-@import url('__week/calendar__week-day.css');
-
-@import url('__date/calendar__date-container.css');
-@import url('__date/calendar__date-item.css');
-@import url('__date/calendar__date-item_highlight.css');
-@import url('__date/calendar__date-day.css');
-@import url('__date/calendar__date-transactions.css');
-@import url('__date/calendar__date-balance.css');
-@import url('__date/calendar__date-withrawal.css');
-@import url('__date/calendar__date-day_faded.css');*/
-
+﻿
 .calendar{
     flex-grow:1;
     display: flex;
