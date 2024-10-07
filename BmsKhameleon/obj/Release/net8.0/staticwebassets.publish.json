@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jUAvOfVi15JanVQraSnw4bLANT5FDUxjUTbjQ5Z4yKQ=",
+  "Hash": "jmOMNyx6ZiF/fWxL7vgfOU+ItJN9SdkbftxGJ6CWOp0=",
   "Source": "BmsKhameleon.UI",
   "BasePath": "_content/BmsKhameleon.UI",
   "Mode": "Default",
@@ -129,25 +129,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\common.blocks\\button\\button_small.css"
-    },
-    {
-      "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\common-blocks.css",
-      "SourceId": "BmsKhameleon.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\",
-      "BasePath": "_content/BmsKhameleon.UI",
-      "RelativePath": "common.blocks/common-blocks.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\common.blocks\\common-blocks.css"
     },
     {
       "Identity": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\form-group\\calendar-icon.png",

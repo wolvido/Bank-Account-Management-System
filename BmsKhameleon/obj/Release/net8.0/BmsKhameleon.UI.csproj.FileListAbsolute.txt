@@ -260,3 +260,6 @@ D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\runtimes\win\lib\net7.0\Mic
 D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\WebOptimizer.Core.dll
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Release\net8.0\NUglify.dll
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\BmsKhameleon.UI.MvcApplicationPartsAssemblyInfo.cs

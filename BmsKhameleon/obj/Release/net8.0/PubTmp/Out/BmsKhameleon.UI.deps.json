@@ -10,6 +10,7 @@
         "dependencies": {
           "BmsKhameleon.Core": "1.0.0",
           "BmsKhameleon.Infrastructure": "1.0.0",
+          "LigerShark.WebOptimizer.Core": "3.0.426",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.5"
         },
@@ -588,6 +589,17 @@
         "resources": {
           "lib/net6.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
+          }
+        }
+      },
+      "LigerShark.WebOptimizer.Core/3.0.426": {
+        "dependencies": {
+          "NUglify": "1.21.9"
+        },
+        "runtime": {
+          "lib/net8.0/WebOptimizer.Core.dll": {
+            "assemblyVersion": "3.0.426.0",
+            "fileVersion": "3.0.426.0"
           }
         }
       },
@@ -1655,6 +1667,14 @@
           }
         }
       },
+      "NUglify/1.21.9": {
+        "runtime": {
+          "lib/net5.0/NUglify.dll": {
+            "assemblyVersion": "1.21.9.0",
+            "fileVersion": "1.21.9.0"
+          }
+        }
+      },
       "System.CodeDom/5.0.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -2321,6 +2341,13 @@
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
     },
+    "LigerShark.WebOptimizer.Core/3.0.426": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mc4FFKL40n2f4ognnwDrvFxLt+2CdsovhCobaS8u2HXriS2OP8uMDwDIwmE2irlAW+HhR04a+wF1XImtFPxxRg==",
+      "path": "ligershark.weboptimizer.core/3.0.426",
+      "hashPath": "ligershark.weboptimizer.core.3.0.426.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/8.0.7": {
       "type": "package",
       "serviceable": true,
@@ -2831,6 +2858,13 @@
       "sha512": "sha512-v/GGlIj2dd7svplFmASWEueu62veKW0MrMtBaZ7QG8aJTSGv2yE+pgUGhXRcQ4nxNOEq/wLBrz1vkth/1SND7A==",
       "path": "nuget.versioning/6.11.0",
       "hashPath": "nuget.versioning.6.11.0.nupkg.sha512"
+    },
+    "NUglify/1.21.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ULyI/scrIRAo2In6cnaCc/QkWUt+wB6pBVt5lrVddOKyamsCAm1XgArkk4px9tVn6SipjhbTt4M38QPlpoET+g==",
+      "path": "nuglify/1.21.9",
+      "hashPath": "nuglify.1.21.9.nupkg.sha512"
     },
     "System.CodeDom/5.0.0": {
       "type": "package",

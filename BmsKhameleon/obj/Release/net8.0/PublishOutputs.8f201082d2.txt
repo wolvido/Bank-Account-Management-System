@@ -9,6 +9,7 @@ D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\BmsKhameleon.UI.
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\Humanizer.dll
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\WebOptimizer.Core.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -66,6 +67,7 @@ D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\NuGet.Packaging.
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\NuGet.ProjectModel.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\NuGet.Protocol.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\NuGet.Versioning.dll
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\NUglify.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\System.CodeDom.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Release\net8.0\PubTmp\Out\System.Composition.Convention.dll

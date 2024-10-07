@@ -1,8 +1,4 @@
-﻿@import url('__button/transaction-toolbar__button.css');
-@import url('__inner/transaction-toolbar__inner.css');
-@import url('__legend/transaction-toolbar__legend-item.css');
-@import url('__legend/transaction-toolbar__legend-item_red.css');
-@import url('__legend/transaction-toolbar__legend.css');
+﻿
 
 @media only screen and (orientation: portrait) and (max-width: 480px) {
     .transaction-toolbar {
