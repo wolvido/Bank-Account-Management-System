@@ -1445,6 +1445,22 @@
       "PackagePath": "staticwebassets\\mobile.blocks\\main\\main.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay.js",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay.js"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay__cancel.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay__cancel.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\overlay\\overlay__content.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\overlay\\overlay__content.css"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\page\\page.css",
       "PackagePath": "staticwebassets\\mobile.blocks\\page\\page.css"
     },
@@ -1595,6 +1611,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transactions-overview\\__item\\transactions-overview__item-payment.css",
       "PackagePath": "staticwebassets\\mobile.blocks\\transactions-overview\\__item\\transactions-overview__item-payment.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transactions-overview\\__overlay\\transactions-overview__overlay.css",
+      "PackagePath": "staticwebassets\\mobile.blocks\\transactions-overview\\__overlay\\transactions-overview__overlay.css"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transactions-overview\\__session\\transactions-overview__session-info-account.css",

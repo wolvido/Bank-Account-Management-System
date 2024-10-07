@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Reflection.Metadata;
 using BmsKhameleon.Core.Domain.IdentityEntities;
 using BmsKhameleon.Core.Domain.RepositoryContracts;
 using BmsKhameleon.Core.ServiceContracts;
@@ -103,6 +104,12 @@ builder.Services.AddTransient<IUpdateTransactionHandler, WithdrawCashUpdateTrans
 builder.Services.AddTransient<IUpdateTransactionHandler, WithdrawChequeUpdateTransactionHandler>();
 builder.Services.AddTransient<UpdateTransactionHandlerFactory>();
 
+//web optimizer
+builder.Services.AddWebOptimizer(pipeline =>
+{ 
+    pipeline.AddCssBundle("/bundle.css", "common.blocks/**/*.css", "desktop.blocks/**/*.css", "mobile.blocks/**/*.css");
+});
+
 //build
 var app = builder.Build();
 
@@ -122,6 +129,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseWebOptimizer();
 
 app.UseStaticFiles();
 

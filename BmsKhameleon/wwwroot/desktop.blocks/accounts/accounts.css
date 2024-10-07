@@ -1,4 +1,4 @@
-﻿@import url('__add-accounts/accounts__add-accounts.css');
+﻿/*@import url('__add-accounts/accounts__add-accounts.css');
 
 @import url('__header/accounts__header.css');
 @import url('__header/accounts__header-account.css');
@@ -13,8 +13,15 @@
 @import url('__item/accounts__item-bank.css');
 @import url('__item/accounts__item-payor.css');
 
-@import url('__search/accounts__search.css');
-@import url('__search/accounts__search-input.css');
+
+    
+    
+    
+    ('__search/accounts__search.css');
+
+    
+    
+    ('__search/accounts__search-input.css');
 @import url('__search/accounts__search-icon.css');
 @import url('__search/accounts__search-filter.css');
 @import url('__search/accounts__search-button.css');
@@ -24,11 +31,11 @@
 @import url('__table/accounts__table.css');
 @import url('__toolbar/accounts__toolbar.css');
 
-@import url('__small-button/accounts__small-button.css');
+@import url('__small-button/accounts__small-button.css');*/
 
 /*@import url('__delete/accounts__delete.css');*/
 
-@import url('__modify/accounts__modify-form-group_joint.css');
+/*@import url('__modify/accounts__modify-form-group_joint.css');*/
 
 .accounts {
     height: 73vh;

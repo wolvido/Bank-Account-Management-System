@@ -1,6 +1,10 @@
-﻿@import url('__add-accounts/accounts__add-accounts.css');
+﻿/*
+    
+    ('__add-accounts/accounts__add-accounts.css');
 
-@import url('__header/accounts__header.css');
+
+    
+    ('__header/accounts__header.css');
 @import url('__header/accounts__header-account.css');
 @import url('__header/accounts__header-balance.css');
 @import url('__header/accounts__header-bank.css');
@@ -26,7 +30,7 @@
 
 @import url('__small-button/accounts__small-button.css');
 
-@import url('__modify/accounts__modify-form-group_joint.css');
+@import url('__modify/accounts__modify-form-group_joint.css');*/
 
 
 @media only screen and (orientation: portrait) and (max-width: 480px) {

@@ -1,4 +1,4 @@
-﻿@import url('input-validation-error/input-validation-error.css');
+﻿/*@import url('input-validation-error/input-validation-error.css');
 
 @import url('button/button.css');
 @import url('button/button_cancel.css');
@@ -12,7 +12,10 @@
 @import url('header/header__main.css');
 @import url('header/header__details.css');
 @import url('header/header__button.css');
-@import url('header/header__user-details.css');
+
+    
+    
+    ('header/header__user-details.css');
 @import url('header/header__username.css');
 @import url('header/header__time.css');
 @import url('header/header__toolbar.css');
@@ -131,5 +134,5 @@
 @import url('transaction-controller/__cheque/transaction-controller__cheque-bank-name-input.css');
 
 
-
+*/
 

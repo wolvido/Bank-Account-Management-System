@@ -640,6 +640,29 @@
           }
         }
       },
+      "LigerShark.WebOptimizer.Core/3.0.426": {
+        "type": "package",
+        "dependencies": {
+          "NUglify": "1.21.9"
+        },
+        "compile": {
+          "lib/net8.0/WebOptimizer.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WebOptimizer.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/LigerShark.WebOptimizer.Core.props": {},
+          "build/LigerShark.WebOptimizer.Core.targets": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/8.0.7": {
         "type": "package",
         "compile": {
@@ -2111,6 +2134,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
+        }
+      },
+      "NUglify/1.21.9": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/NUglify.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/NUglify.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.CodeDom/5.0.0": {
@@ -3644,6 +3680,25 @@
         "lib/net6.0/zh-Hant/Humanizer.resources.dll",
         "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll",
         "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll",
+        "logo.png"
+      ]
+    },
+    "LigerShark.WebOptimizer.Core/3.0.426": {
+      "sha512": "Mc4FFKL40n2f4ognnwDrvFxLt+2CdsovhCobaS8u2HXriS2OP8uMDwDIwmE2irlAW+HhR04a+wF1XImtFPxxRg==",
+      "type": "package",
+      "path": "ligershark.weboptimizer.core/3.0.426",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/LigerShark.WebOptimizer.Core.props",
+        "build/LigerShark.WebOptimizer.Core.targets",
+        "lib/net6.0/WebOptimizer.Core.dll",
+        "lib/net6.0/WebOptimizer.Core.xml",
+        "lib/net8.0/WebOptimizer.Core.dll",
+        "lib/net8.0/WebOptimizer.Core.xml",
+        "ligershark.weboptimizer.core.3.0.426.nupkg.sha512",
+        "ligershark.weboptimizer.core.nuspec",
         "logo.png"
       ]
     },
@@ -6528,6 +6583,28 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "NUglify/1.21.9": {
+      "sha512": "ULyI/scrIRAo2In6cnaCc/QkWUt+wB6pBVt5lrVddOKyamsCAm1XgArkk4px9tVn6SipjhbTt4M38QPlpoET+g==",
+      "type": "package",
+      "path": "nuglify/1.21.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/NUglify.dll",
+        "lib/net35/NUglify.xml",
+        "lib/net40/NUglify.dll",
+        "lib/net40/NUglify.xml",
+        "lib/net5.0/NUglify.dll",
+        "lib/net5.0/NUglify.xml",
+        "lib/netstandard1.3/NUglify.dll",
+        "lib/netstandard1.3/NUglify.xml",
+        "lib/netstandard2.0/NUglify.dll",
+        "lib/netstandard2.0/NUglify.xml",
+        "nuglify.1.21.9.nupkg.sha512",
+        "nuglify.nuspec",
+        "nuglify.png"
+      ]
+    },
     "System.CodeDom/5.0.0": {
       "sha512": "JPJArwA1kdj8qDAkY2XGjSWoYnqiM7q/3yRNkt6n28Mnn95MuEGkZXUbPBf7qc3IjwrGY5ttQon7yqHZyQJmOQ==",
       "type": "package",
@@ -7925,6 +8002,7 @@
     "net8.0": [
       "BmsKhameleon.Core >= 1.0.0",
       "BmsKhameleon.Infrastructure >= 1.0.0",
+      "LigerShark.WebOptimizer.Core >= 3.0.426",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.5"
     ]
@@ -7981,6 +8059,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "LigerShark.WebOptimizer.Core": {
+            "target": "Package",
+            "version": "[3.0.426, )"
+          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",

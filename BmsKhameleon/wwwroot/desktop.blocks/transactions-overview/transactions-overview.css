@@ -1,4 +1,6 @@
-﻿@import url('__toolbar/transactions-overview__toolbar-section.css');
+﻿/*
+    
+    ('__toolbar/transactions-overview__toolbar-section.css');
 @import url('__toolbar/transactions-overview__toolbar.css');
 @import url('__toolbar/transactions-overview__toolbar-button.css');
 
@@ -47,7 +49,7 @@
 @import url('__item/transactions-overview__item-amount-deposit.css');
 @import url('__item/transactions-overview__item-amount-deposit.css');
 @import url('__item/transactions-overview__item-cheque.css');
-@import url('__item/transactions-overview__item-bank.css');
+@import url('__item/transactions-overview__item-bank.css');*/
 
 
 .transactions-overview {

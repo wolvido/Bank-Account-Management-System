@@ -1,4 +1,4 @@
-﻿
+﻿/*
 @import url('header__button.css');
 @import url('header__button_small.css');
 @import url('header__details.css');
@@ -7,7 +7,7 @@
 @import url('header__time.css');
 @import url('header__toolbar.css');
 @import url('header__user-details.css');
-@import url('header__username.css');
+@import url('header__username.css');*/
 
 .header {
     background-color: white;

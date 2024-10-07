@@ -1,4 +1,4 @@
-﻿@import url('__toolbar/calendar__toolbar.css');
+﻿/*@import url('__toolbar/calendar__toolbar.css');
 @import url('__select/calendar__select-date.css');
 @import url('__select/calendar__select-label.css');
 @import url('__select/calendar__select-month.css');
@@ -17,7 +17,7 @@
 @import url('__date/calendar__date-transactions.css');
 @import url('__date/calendar__date-balance.css');
 @import url('__date/calendar__date-withrawal.css');
-@import url('__date/calendar__date-day_faded.css');
+@import url('__date/calendar__date-day_faded.css');*/
 
 @media only screen and (orientation: landscape) and (max-height: 470px) {
     .calendar {
