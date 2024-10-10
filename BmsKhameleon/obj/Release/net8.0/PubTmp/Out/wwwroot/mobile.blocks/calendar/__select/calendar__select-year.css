@@ -1,0 +1,14 @@
+﻿.calendar__select-year {
+    width: 101px;
+    height: 37px;
+
+    border-radius: 4px;
+    border: 1px solid #E5E7EB;
+    text-align: center;
+    appearance: none;
+    background-image: url('select-icon.png');
+    background-repeat: no-repeat;
+    background-size: 24px, 24px;
+    background-position: 94%;
+    padding-right: 10px;
+}

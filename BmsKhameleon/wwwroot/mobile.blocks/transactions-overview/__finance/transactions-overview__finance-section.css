@@ -1,0 +1,23 @@
+﻿
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    .transactions-overview__finance-section {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+        gap: 3vh;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+
+    .transactions-overview__finance-section {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+        gap: 3vh;
+        width: 100%;
+    }
+}

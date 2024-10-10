@@ -12,7 +12,7 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
     {
         public Guid TransactionId { get; set; }
         public Guid AccountId { get; set; }
-        public DateTime? TransactionDate { get; set; }
+        public DateTime TransactionDate { get; set; }
         public decimal Amount { get; set; }
         public string? TransactionType { get; set; }
         public string? TransactionMedium { get; set; }
@@ -25,6 +25,37 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
         public string? Payee { get; set; }
         public string? ChequeBankName { get; set; }
         public string? ChequeNumber { get; set; }
+
+
+        public CashTransactionUpdateRequest ToCashTransactionUpdateRequest()
+        {
+            return new CashTransactionUpdateRequest
+            {
+                TransactionId = TransactionId,
+                AccountId = AccountId,
+                TransactionDate = TransactionDate,
+                Amount = Amount,
+                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), TransactionType ?? throw new InvalidOperationException($"Invalid Transaction type '{TransactionType}'"), true ),
+                Note = Note,
+                CashTransactionType = CashTransactionType
+            };
+        }
+
+        public ChequeTransactionUpdateRequest ToChequeTransactionUpdateRequest()
+        {
+            return new ChequeTransactionUpdateRequest
+            {
+                TransactionId = TransactionId,
+                AccountId = AccountId,
+                TransactionDate = TransactionDate,
+                Amount = Amount,
+                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), TransactionType ?? throw new InvalidOperationException($"Invalid Transaction type '{TransactionType}'"), true ),
+                Note = Note,
+                Payee = Payee,
+                ChequeBankName = ChequeBankName,
+                ChequeNumber = ChequeNumber
+            };
+        }
 
     }
 

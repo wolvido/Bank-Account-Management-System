@@ -2,12 +2,20 @@
 
 <html>
 <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>@ViewBag.Title</title>
-    <link href="~/common.blocks/common-blocks.css" rel="stylesheet" />
-    <script src="~/lib/jquery/dist/jquery-3.7.1.min.js" async defer></script>
-    <script src="~/lib/moment/moment.js" async defer> </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/bundle.css" />
+
+    <script src="~/lib/jquery/dist/jquery-3.7.1.min.js" defer></script>
+    <script src="~/lib/jquery/dist/jquery.validate.min.js" defer></script>
+    <script src="~/lib/jquery/dist/jquery.validate.unobtrusive.min.js" defer></script>
+    <script src="~/lib/moment/moment.js" defer> </script>
 
     @await RenderSectionAsync("styles", false)
 </head>
@@ -15,19 +23,36 @@
 <body class="page">
     <header class="header">
         <div class="header__main">
-            <img class="header__logo" src="~/common.blocks/header/BMS-Logo.png" />
+            <a asp-controller="Home" asp-action="Index">
+                <img class="header__logo" src="~/common.blocks/header/BMS-Logo.png" />
+            </a>
 
             <div class="header__toolbar">
-                <button class="header__button header__button_small button button_green">Admin</button>
+
+                @if( User.IsInRole("Admin") )
+                {
+                <form method="get">
+                    <button asp-controller="Admin" asp-action="Admin" class="header__button header__button_small button button_green">Admin</button>
+                </form>
+                }
+                
                 <button class="header__button header__button_small button button_green">User Manual</button>
-                <button class="header__button button">Log Out</button>
+                <form method="post">
+                    <button asp-controller="Authentication" asp-action="Logout" class="header__button button">Log Out</button>
+                </form>
+                
             </div>
 
         </div>
 
         <div class="header__details">
-            <span class="header__user-details">Welcome <strong class="header__username">WINZYL C OLVIDO</strong> </span>
-            <time class="header__time" datetime="2024-04-09T12:00">04/09/2024 12:00</time>
+            <span class="header__user-details">Welcome <strong class="header__username">@User.Identity?.Name</strong> </span>
+            @{
+                var utcNow = DateTime.UtcNow;
+                var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Singapore Standard Time");
+                var pstTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, phTimeZone);
+            }
+            <time class="header__time" datetime="@pstTime.ToString("MM/dd/yyyy hh:mm tt")"> @pstTime.ToString("MM/dd/yyyy hh:mm tt") PST</time>
         </div>
     </header>
     @RenderBody()

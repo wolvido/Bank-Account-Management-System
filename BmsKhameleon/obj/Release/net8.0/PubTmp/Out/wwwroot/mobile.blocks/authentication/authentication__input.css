@@ -1,0 +1,10 @@
+﻿.authentication__input {
+    border-radius: 2px;
+    height: 39px;
+    border: 1px solid #CFD0D7;
+    border-width: 1px;
+    padding: 0px 0px;
+
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}

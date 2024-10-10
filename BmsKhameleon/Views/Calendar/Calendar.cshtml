@@ -1,0 +1,131 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model List<DailyTransactionsAggregateResponse>
+
+@section styles {
+    <script src="~/common.blocks/form-group/form-group__input_date.js" defer></script>
+    <script src="~/common.blocks/transaction-controller/transaction-controller.js" defer></script>
+    <script src="~/desktop.blocks/calendar/calendar.js" defer></script>
+    <script src="~/common.blocks/overlay/overlay.js" defer></script>
+
+    <script>
+        var transactions = '@Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model))';
+    </script>
+}
+
+<main class="main main_calendar-page transaction-controller">
+
+    <section class="transaction-toolbar transaction-toolbar_vertical-margin main__padding ">
+        <div class="transaction-toolbar__inner">
+            <button data-accountId="@Model[0].AccountId" data-date="@Model[0].Date" class="button button_large transaction-toolbar__button transaction-controller__button transaction-controller__button_deposit"> Add Deposit</button>
+            <button data-accountId="@Model[0].AccountId" data-date="@Model[0].Date" class="button button_large transaction-toolbar__button transaction-controller__button transaction-controller__button_withdraw"> Add Withdrawal</button>
+        </div>
+
+        <div class="transaction-toolbar__legend">
+            <div class="transaction-toolbar__legend-item">Total Working Balance</div>
+            <div class="transaction-toolbar__legend-item transaction-toolbar__legend-item_red">Total Issued</div>
+        </div>
+    </section>
+
+    <section class="calendar">
+        <section class="calendar__toolbar main__padding">
+            <form class="calendar__select-date">
+                <label class="calendar__select-label">
+                    Select Date
+                </label>
+                 
+                <select class="calendar__select-month">
+                    //generate month options 
+                    @for (int i = ViewBag.accountMonthEnrolled; i <= 12; i++)
+                    {
+                        <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
+                    }
+                </select>
+
+                <select class="calendar__select-year">
+                    //generate year options
+                    @{
+                        var philippineDateNow = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.Now, "Singapore Standard Time");
+                    }
+
+                    @for (int i = philippineDateNow.Year; i >= ViewBag.accountYearEnrolled; i--)
+                    {
+                        <option value="@i"> @i</option>
+                    }
+                </select>
+            </form>
+
+            <button class="calendar__account-info-button">
+
+            </button>
+        </section>
+
+        <section class="calendar__week-header main__padding">
+            <div class="calendar__week-day">Sun</div>
+            <div class="calendar__week-day">Mon</div>
+            <div class="calendar__week-day">Tue</div>
+            <div class="calendar__week-day">Wed</div>
+            <div class="calendar__week-day">Thu</div>
+            <div class="calendar__week-day">Fri</div>
+            <div class="calendar__week-day">Sat</div>
+        </section>
+
+        <section class="calendar__date-container main__padding">
+            @* 
+            <div class="calendar__date-item"> 
+
+                <div class="calendar__date-day">
+                </div> 
+
+                <div class="calendar__date-transactions">
+                    <div class="calendar__date-balance">
+                    </div>
+
+                    <div class ="calendar__date-withrawal">
+                    </div>
+
+                </div>
+            </div>
+            *@
+             
+        </section>
+
+    </section>
+
+    <section class="overlay transaction-controller__overlay">
+        
+    </section>
+
+    <section class="calendar__overlay-account-info overlay">
+        <div class="calendar__account-info popup">
+            <header class="popup__header">
+                Bank Account Information
+            </header>
+            <div>
+                Under Construction
+            </div>
+
+@*             <ul class="popup__content">
+                <li>Created by Alias: WINZYL C OLVIDO</li>
+                <li>Date Created on System: July 01, 2024</li>
+                <li>Bank Account Visibility: Shared</li>
+                <li>Initial Balance Enrolled Date: July 01, 2024</li>
+                <li>Account Name: WINZYL C OLVIDO</li>
+                <li>Account Number: 9039000000 </li>
+                <li>Account Type: Savings</li>
+                <li>Bank Name: LANDBANK </li>
+                <li>Branch of Account: LANDBANK - CEBU</li>
+            </ul>
+
+            <footer class="popup__footer">
+                <button type="button" class="button  button_cancel overlay__cancel">Close</button>
+            </footer> *@
+
+        </div>
+    </section>
+
+</main>
+
+
+

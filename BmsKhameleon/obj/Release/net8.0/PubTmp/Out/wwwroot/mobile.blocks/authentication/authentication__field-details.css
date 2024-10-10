@@ -1,0 +1,6 @@
+﻿.authentication__field-details{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 20px;
+}

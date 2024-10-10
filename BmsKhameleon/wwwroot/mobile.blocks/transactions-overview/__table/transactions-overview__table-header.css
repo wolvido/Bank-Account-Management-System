@@ -1,0 +1,4 @@
+﻿.transactions-overview__table-header {
+    display: flex;
+    flex-direction: row;
+}

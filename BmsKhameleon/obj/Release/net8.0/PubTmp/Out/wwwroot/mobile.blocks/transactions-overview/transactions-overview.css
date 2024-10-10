@@ -1,0 +1,23 @@
+﻿
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+
+    .transactions-overview {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+    }
+}
+
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .transactions-overview {
+        display: flex;
+        flex-direction: column;
+        height: 74.5vh;
+        transform: scale(0.7);
+        width: 131%;
+        transform-origin: top left;
+    }
+}

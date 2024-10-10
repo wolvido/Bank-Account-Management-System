@@ -1,0 +1,8 @@
+﻿.page_authentication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FBFBFB;
+    height: 82vh;
+}

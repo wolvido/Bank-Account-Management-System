@@ -1,0 +1,7 @@
+﻿.table__item-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 14px;
+    gap: 15px;
+}

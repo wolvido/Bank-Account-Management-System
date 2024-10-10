@@ -1,0 +1,28 @@
+﻿.header__logo {
+    height: 91px;
+    width: 234px;
+    margin-top: 9px;
+    object-fit: scale-down;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+    .header__logo {
+        height: 91px;
+        width: 234px;
+        margin-top: 9px;
+        object-fit: scale-down;
+        margin-right: 25px;
+    }
+
+}
+
+@media only screen and (orientation: portrait) and (max-width: 417px) {
+
+    .header__logo {
+        height: 91px;
+        width: 179px;
+        margin-top: 9px;
+        object-fit: scale-down;
+    }
+}

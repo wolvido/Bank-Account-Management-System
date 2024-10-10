@@ -1,0 +1,7 @@
+﻿.header__details {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #33429E;
+    align-items: center;
+}

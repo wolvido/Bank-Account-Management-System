@@ -1,86 +1,96 @@
 ﻿@section styles {
-    <link href="~/desktop.blocks/accounts/accounts.css" rel="stylesheet" type="text/css" />
-    <script src="~/desktop.blocks/accounts/accounts.js" async defer></script>
-    <script src="~/common.blocks/overlay/overlay.js" async defer></script>
-    <script src="~/common.blocks/popup/popup.js" async defer></script>
+    <script src="~/desktop.blocks/accounts/accounts.js" defer></script>
+    <script src="~/common.blocks/overlay/overlay.js" defer></script>
+    <script src="~/common.blocks/popup/popup.js" defer></script>
 }
 
+@model AccountViewModel
+
 <main class="main accounts">
+    <form asp-controller="Home" asp-action="Index" method="get">
 
     <section class="accounts__toolbar">
-        <button class="accounts__add-accounts button">
+        <button type="button" class="accounts__add-accounts button">
             Add Bank Account
         </button>
 
         <search class="accounts__search">
 
-            <form class="accounts__search-form">
+            <div class="accounts__search-form">
                 <button class="accounts__search-button">
                     <img class="accounts__search-icon" src="~/desktop.blocks/accounts/__search/search.png" />
                 </button>
-                <input class="accounts__search-input" name="" id="" placeholder="Search">
-            </form>
+                <input class="accounts__search-input" name="searchString" id="" placeholder="Search">
+            </div>
 
-            <select class="accounts__search-filter">
-                <option class="accounts__search-option" value="All">&nbsp;&nbsp;&nbsp; Any Bank</option>
-                <option class="accounts__search-option" value="RCBC">&nbsp;&nbsp;&nbsp; RCBC</option>
-                <option class="accounts__search-option" value="Land-Bank">&nbsp;&nbsp;&nbsp; Land Bank </option>
-                <option class="accounts__search-option" value="BDO">&nbsp;&nbsp;&nbsp; BDO </option>
-                <option class="accounts__search-option" value="BPI">&nbsp;&nbsp;&nbsp; BPI </option>
-                <option class="accounts__search-option" value="Metrobank"> &nbsp;&nbsp;&nbsp; Metrobank </option>
-                <option class="accounts__search-option" value="Unionbank"> &nbsp;&nbsp;&nbsp; Unionbank </option>
-                <option class="accounts__search-option" value="Security Bank"> &nbsp;&nbsp;&nbsp; Security Bank </option>
-                <option class="accounts__search-option" value="PNB"> &nbsp;&nbsp;&nbsp; PNB </option>
-                <option class="accounts__search-option" value="China Bank"> &nbsp;&nbsp;&nbsp; China Bank </option>
-                <option class="accounts__search-option" value="Eastwest Bank"> &nbsp;&nbsp;&nbsp; Eastwest Bank </option>
-                <option class="accounts__search-option" value="PS Bank"> &nbsp;&nbsp;&nbsp; PS Bank </option>
-                <option class="accounts__search-option" value="Maybank"> &nbsp;&nbsp;&nbsp; Maybank </option>
-                <option class="accounts__search-option" value="UCPB"> &nbsp;&nbsp;&nbsp; UCPB </option>
-                <option class="accounts__search-option" value="DBP"> &nbsp;&nbsp;&nbsp; DBP </option>
-                <option class="accounts__search-option" value="HSBC"> &nbsp;&nbsp;&nbsp; HSBC </option>
+            <select name="bankFilter" class="accounts__search-filter">
+                @foreach(var bank in ViewBag.Banks)
+                {
+                    <option class="accounts__search-option" value="@bank">&nbsp;&nbsp;&nbsp; @bank</option>
+                }
             </select>
+
         </search>
+
     </section>
 
     <section class="accounts__table table">
 
         <header class="accounts__header table__header">
+            @{
+                var sortOrderBankName = Enum.Parse<SortOrderOptions>("Ascending");
+                var sortOrderAccountNumber = Enum.Parse<SortOrderOptions>("Ascending");
+                var sortOrderAccountName = Enum.Parse<SortOrderOptions>("Ascending");
+                var sortOrderBalance = Enum.Parse<SortOrderOptions>("Ascending");
+
+                if (ViewBag.SortBy == "BankName" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderBankName = Enum.Parse<SortOrderOptions>("Descending");
+                }
+                if(ViewBag.SortBy == "AccountNumber" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderAccountNumber = Enum.Parse<SortOrderOptions>("Descending");
+                }
+                if(ViewBag.SortBy == "AccountName" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderAccountName = Enum.Parse<SortOrderOptions>("Descending");
+                }
+                if(ViewBag.SortBy == "Balance" && ViewBag.SortOrder == SortOrderOptions.Ascending){
+                    sortOrderBalance = Enum.Parse<SortOrderOptions>("Descending");
+                }
+            }
+            <input type="hidden" name="sortOrder" value="@ViewBag.SortOrder" />
+            <input type="hidden" name="sortBy" value="@ViewBag.SortBy"  />
+
             <div class="accounts__header-bank table__header-title">
-                <button class="accounts__header-button table__header-button">
-                    Bank
-                </button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="BankName" asp-route-sortOrder="@sortOrderBankName" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Bank</a>
             </div>
 
             <div class="accounts__header-account table__header-title">
-                <button class="accounts__header-button table__header-button">Account Number</button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountNumber" asp-route-sortOrder="@sortOrderAccountNumber" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Account Number</a>
             </div>
 
             <div class="accounts__header-payor table__header-title">
-                <button class="accounts__header-button table__header-button">Payor</button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="AccountName" asp-route-sortOrder="@sortOrderAccountName" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Payor</a>
             </div>
 
             <div class="accounts__header-balance table__header-title">
-                <button class="accounts__header-button table__header-button">Working Balance</button>
+                <a asp-controller="Home" asp-action="Index" asp-route-sortBy="Balance" asp-route-sortOrder="@sortOrderBalance" asp-route-bankFilter="@ViewBag.BankFilter" class="accounts__header-button table__header-button">Working Balance</a>
             </div>
         </header>
 
         <div class="accounts__table-container table__item-container">
-            @for (int i = 1; i < 20; i++)
+            @foreach (var account in Model.AccountResponses!)
             {
-                <div class="accounts__item table__item">
-                    <div class="accounts__item-bank table__item-field">@("POGO "+i)</div>
-                    <div class="accounts__item-account table__item-field">@(i+1000)</div>
-                    <div class="accounts__item-payor table__item-field">Alice Gou</div>
+                <div class="accounts__item table__item" onclick="if (!window.getSelection().toString()) {window.location.href='@Url.Action("Calendar", "Calendar", new { accountId = account.AccountId })'; }">
+                    <div class="accounts__item-bank table__item-field">@account.BankName</div>
+                    <div class="accounts__item-account table__item-field">@account.AccountNumber</div>
+                    <div class="accounts__item-payor table__item-field">@account.AccountName</div>
                     <div class="accounts__item-balance table__item-field table__item-field_controller">
 
-                        <div class="table__item-field-label">123,456.78</div>
+                        <div class="table__item-field-label">@account.WorkingBalance?.ToCurrencyString()</div>
 
                         <div class="accounts__item-controls table__item-controls">
-
-                            <button class="accounts__item-button accounts__item-button_edit table__item-button">
+                            <button type="button" data-accountId="@account.AccountId" class="accounts__item-button accounts__item-button_edit table__item-button">
                                 <img class="accounts__item-icon table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -89,103 +99,13 @@
         </div>
     </section>
 
+    </form>
 </main>
 
+<section class="accounts__overlay accounts__overlay_create overlay">
+    <partial name="~/Views/Shared/AccountForms/_CreateAccountPartialView.cshtml" model="Model.AccountCreateRequest"></partial>
+</section>
+
 <section class="accounts__overlay accounts__overlay_modify overlay">
-
-    <form>
-        <section class="accounts__modify popup popup_modify">
-
-            <header class="accounts__modify-header popup__header">
-                Modify Bank Account
-            </header>
-
-            <fieldset class="accounts__modify-fieldset popup__content">
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Account Name (Payor)</label>
-                    <input class="accounts__modify-payor form-group__input" type="text" placeholder="Alice Gou" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Bank Name</label>
-                    <input class="accounts__modify-bank form-group__input" type="text" placeholder="Union Bank" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Account Number</label>
-                    <input class="accounts__modify-account-number form-group__input" type="text" placeholder="1234567890" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Account Type</label>
-                    <select class="accounts__modify-account-type form-group__input form-group__input_select">
-                        <option>Savings Account</option>
-                        <option>Checking Account</option>
-                        <option>Joint Account</option>
-                        <option>Payroll</option>
-                    </select>
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label form-group__label">Bank Branch of Account</label>
-                    <input class="accounts__modify-branch form-group__input" type="text" placeholder="Makati" />
-                </div>
-
-                <div class="accounts__modify-form-group form-group">
-                    <label class="accounts__modify-label accounts__modify-label_balance form-group__label">Initial Balance</label>
-                    <input class="accounts__modify-balance form-group__input form-group__input_value-bold" type="text" placeholder="123456.78" />
-                </div>
-
-                <div>
-                    <fieldset class="form-group radio-controls">
-                        <legend class="form-group__label">Bank Account Visibility</legend>
-
-                        <div class="radio-controls__group ">
-                            <input type="radio" class="radio-controls__radio" name="visibility" />
-                            <div class="radio-controls__label-group">
-                                <label class="radio-controls__label">Shared </label>
-                                <span>All users with active access code can access</span>
-                            </div>
-                        </div>
-
-                        <div class="radio-controls__group">
-                            <input type="radio" class="radio-controls__radio" name="visibility" />
-                            <div class="radio-controls__label-group">
-                                <label class="radio-controls__label">Private </label>
-                                <span>Only you can access this Bank Account</span>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-
-            </fieldset>
-
-            <footer class="accounts__modify-footer popup__footer">
-                <button type="button" class="accounts__button_delete button button_cancel popup__show-delete-button">Delete</button>
-                <input type="submit" class="accounts__button_update button" value="Update" />
-                <button type="button" class="accounts__button_cancel button button_cancel overlay__cancel">Cancel</button>
-            </footer>
-
-        </section>
-
-        <section class="popup popup_delete">
-            <header class="popup__header">
-                Delete Account?
-            </header>
-
-            <section class="popup__content">
-                <p>
-                    You are about to delete a Bank Account. This action cannot be undone.
-                </p>
-            </section>
-
-            <footer class="popup__footer">
-                <input type="submit" class="button " value="Delete" />
-                <button type="button" class="accounts__button_cancel button button_cancel overlay__cancel">Cancel</button>
-            </footer>
-        </section>
-
-    </form>
-
+    @* <partial name="~/Views/Shared/AccountForms/_UpdateAccountPartialView.cshtml" model="Model.AccountUpdateRequest"></partial> *@
 </section>

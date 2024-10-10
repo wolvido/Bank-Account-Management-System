@@ -13,6 +13,8 @@ namespace BmsKhameleon.Core.ServiceContracts
     {
         public Task<bool> CreateAccount(AccountCreateRequest accountCreateRequest);
 
+        public Task<AccountResponse?> GetAccountById(Guid accountId);
+
         public Task<List<AccountResponse>> GetAllAccounts();
 
         public Task<bool> UpdateAccount(AccountUpdateRequest accountUpdateRequest);
@@ -23,6 +25,11 @@ namespace BmsKhameleon.Core.ServiceContracts
 
         public Task<List<AccountResponse>> SortAccounts(List<AccountResponse> accounts, string sortBy, SortOrderOptions sortOrder);
 
+        public List<AccountResponse> SortAccountsByUser(List<AccountResponse> accounts, Guid userId);
+
         public Task<List<string>> GetAllAccountBanks();
+
+        public Task<bool> DepositToWorkingBalance(Guid accountId, decimal amount);
+        public Task<bool> WithdrawFromWorkingBalance(Guid accountId, decimal amount);
     }
 }

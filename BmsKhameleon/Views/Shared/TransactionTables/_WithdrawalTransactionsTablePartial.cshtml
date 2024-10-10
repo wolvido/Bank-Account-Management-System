@@ -1,0 +1,127 @@
+﻿@model List<TransactionResponse>
+
+<div class="transactions-overview__table-caption">
+    <div class="transactions-overview__table-label">
+        Issuance & Withdrawals
+    </div>
+
+    <div class="transactions-overview__table-total">
+        @{
+            //get total cash amount withdrawn
+            var totalCash = Model.Where(x => x is { TransactionType: "Withdraw", ChequeNumber: null }).Sum(x => x.Amount);
+        }
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cash"> Cash: Php @totalCash.ToCurrencyString() </div>
+        @{
+            //get total cheque amount withdrawn
+            var totalCheque = Model.Where(x => x is { TransactionType: "Withdraw", ChequeNumber: not null }).Sum(x => x.Amount);
+        }
+        <div class="transactions-overview__withdrawals-total transactions-overview__withdrawals-total-value_cheque"> Check: Php @totalCheque.ToCurrencyString() </div>
+    </div>
+</div>
+
+<div class="transactions-overview__withdrawals-table table">
+    <header class="transactions-overview__table-header table__header">
+
+        @{
+            var sortOrderTransactionMedium = Enum.Parse<SortOrderOptions>("Ascending");
+            var sortOrderPayee = Enum.Parse<SortOrderOptions>("Ascending");
+            var sortOrderAmount = Enum.Parse<SortOrderOptions>("Ascending");
+            var sortOrderNote = Enum.Parse<SortOrderOptions>("Ascending");
+
+            if (ViewBag.SortBy == "TransactionMedium" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderTransactionMedium = Enum.Parse<SortOrderOptions>("Descending");
+            }
+            if (ViewBag.SortBy == "Payee" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderPayee = Enum.Parse<SortOrderOptions>("Descending");
+            }
+            if (ViewBag.SortBy == "Amount" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderAmount = Enum.Parse<SortOrderOptions>("Descending");
+            }
+            if (ViewBag.SortBy == "Note" && ViewBag.SortOrder == SortOrderOptions.Ascending)
+            {
+                sortOrderNote = Enum.Parse<SortOrderOptions>("Descending");
+            }
+        }
+
+        <div class="transactions-overview__header-payment table__header-title">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="TransactionMedium" asp-route-sortOrder="@sortOrderTransactionMedium" class="transactions-overview__header-button table__header-button">
+                Check #<br />
+                / Cash
+            </a>
+        </div>
+
+        <div class="transactions-overview__header-payee table__header-title">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="Payee" asp-route-sortOrder="@sortOrderPayee" class="transactions-overview__header-button table__header-button">
+                Payee
+            </a>
+        </div>
+
+        <div class="transactions-overview__header-amount table__header-title">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="Amount" asp-route-sortOrder="@sortOrderAmount" class="transactions-overview__header-button table__header-button">
+                Amount
+            </a>
+        </div>
+
+        <div class="transactions-overview__header-notes table__header-title">
+            <a asp-controller="TransactionsOverview" asp-action="TransactionsOverview" asp-route-accountId="@ViewBag.AccountId" asp-route-date="@ViewBag.Date" asp-route-sortBy="Note" asp-route-sortOrder="@sortOrderNote" class="transactions-overview__header-button table__header-button">
+                Notes
+            </a>
+        </div>
+
+    </header>
+
+    <div class="transactions-overview__table-content table__item-container">
+
+        @foreach (var transaction in Model)
+        {
+            <div class="transactions-overview__table-item table__item transaction-controller__item">
+
+                <div class="transaction-controller__field-transaction-type">
+                    @transaction.TransactionType
+                </div>
+
+                <div class="transaction-controller__field-date">
+                    @transaction.TransactionDate
+                </div>
+
+                <div class="transactions-overview__item-payment table__item-field">
+                    @{
+                        transaction.ChequeNumber ??= "Cash";
+                    }
+                    @transaction.ChequeNumber
+                </div>
+
+                <div class="transactions-overview__item-payee table__item-field transaction-controller__field-payee">
+                    @{
+                        transaction.Payee ??= "N/A";
+                    }
+                    @transaction.Payee
+                </div>
+
+                <div class="transactions-overview__item-amount-withdrawal table__item-field transaction-controller__field-amount">
+                    @transaction.Amount.ToCurrencyString()
+                </div>
+
+                <div class="transactions-overview__item-notes table__item-field table__item-field_controller">
+                    <div class="transactions-overview__item-notes-label table__item-field-label transaction-controller__field-note">
+                        @transaction.Note
+                    </div>
+
+                    <div class="table__item-controls">
+
+                        <button data-transactionId="@transaction.TransactionId" data-transactionType="@transaction.TransactionType" data-transactionMedium="@transaction.TransactionMedium" class="table__item-button transaction-overview__button_edit">
+                            <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

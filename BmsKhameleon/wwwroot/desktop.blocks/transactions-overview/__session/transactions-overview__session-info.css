@@ -1,0 +1,7 @@
+﻿.transactions-overview__session-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 43.75%;
+    width: 533px;
+}

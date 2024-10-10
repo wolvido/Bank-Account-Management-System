@@ -16,6 +16,7 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
         public DateTime? TransactionDate { get; set; }
         public decimal Amount { get; set; }
         public string? TransactionType { get; set; }
+        public required string TransactionMedium { get; set; }
         public string? Note { get; set; }
 
         //cheque transaction properties
@@ -35,11 +36,30 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
                 TransactionDate = transaction.TransactionDate,
                 Amount = transaction.Amount,
                 TransactionType = transaction.TransactionType,
+                TransactionMedium = "Cheque",
                 Note = transaction.Note,
                 Payee = transaction.Payee,
                 ChequeBankName = transaction.ChequeBankName,
                 ChequeNumber = transaction.ChequeNumber
             };
         }
+
+        public static ChequeTransactionResponse ToTransactionChequeResponse(this TransactionResponse transactionResponse)
+        {
+            return new ChequeTransactionResponse
+            {
+                TransactionId = transactionResponse.TransactionId,
+                AccountId = transactionResponse.AccountId,
+                TransactionDate = transactionResponse.TransactionDate,
+                Amount = transactionResponse.Amount,
+                TransactionType = transactionResponse.TransactionType,
+                TransactionMedium = "Cheque",
+                Note = transactionResponse.Note,
+                Payee = transactionResponse.Payee,
+                ChequeBankName = transactionResponse.ChequeBankName,
+                ChequeNumber = transactionResponse.ChequeNumber
+            };
+        }
+
     }
 }

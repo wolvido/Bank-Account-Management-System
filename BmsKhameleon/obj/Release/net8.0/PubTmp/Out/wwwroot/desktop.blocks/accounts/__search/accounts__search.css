@@ -1,0 +1,11 @@
+﻿.accounts__search {
+    width: 482px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #33429E;
+    border-radius: 100px;
+    background: white;
+
+    justify-content: space-between;
+}

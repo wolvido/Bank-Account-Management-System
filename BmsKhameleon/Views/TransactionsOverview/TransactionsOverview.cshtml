@@ -1,0 +1,73 @@
+﻿@model TransactionOverviewViewModel
+
+@section styles{
+    <script src="~/desktop.blocks/transactions-overview/transactions-overview.js" defer></script>
+    <script src="~/common.blocks/form-group/form-group__input_date.js" defer></script>
+    <script src="~/common.blocks/overlay/overlay.js" defer></script>
+    <script src="~/common.blocks/popup/popup.js" defer></script>
+}
+
+<main class="main transactions-overview" data-accountId="@ViewBag.AccountId" data-date="@ViewBag.Date" data-sortBy="@ViewBag.SortBy" data-sortOrder="@ViewBag.SortOrder">
+    <section class="transactions-overview__toolbar-section ">
+        <section class="transactions-overview__session-info">
+            <div class="transactions-overview__session-info-date">@ViewBag.Date.ToString("MMM d, yyyy")</div> @* date selected sa calendar *@
+            <div class="transactions-overview__session-info-account"> @Model.AccountResponse.BankName  @Model.AccountResponse.AccountName  @Model.AccountResponse.AccountNumber</div>
+        </section>
+
+        <div class="transactions-overview__toolbar transaction-toolbar">
+            <button class="transactions-overview__deposit-button transactions-overview__toolbar-button button">Add Cash / Check Deposit</button>
+            <button class="transactions-overview__withdraw-button transactions-overview__toolbar-button button">Add Check Issuance / Cash </button>
+        </div>
+    </section>
+
+    <section class="transactions-overview__finance-section">
+
+        <section class="transactions-overview__balance-deposits-section">
+
+            <section class="transactions-overview__balance-section">
+                <div class="transactions-overview__balance-label-group">
+                    <label class="transactions-overview__balance-label transactions-overview__balance-label_working-balance">Working Balance</label>
+                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_total" maxlength="25">@Model.DailyTransactionsAggregateResponse.TotalBalance?.ToCurrencyString()</textarea>
+                </div>
+
+                <div class="transactions-overview__balance-label-group">
+                    <label class="transactions-overview__balance-label">Total Deposits for the Day</label>
+                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_deposit" maxlength="25">0.00</textarea>
+                </div>
+
+                <div class="transactions-overview__balance-label-group">
+                    <label class="transactions-overview__balance-label">Total Withdrawals for the Day</label>
+                    <textarea readonly class="transactions-overview__balance-value transactions-overview__balance-value_withdraw" maxlength="25">0.00</textarea>
+                </div>
+            </section>
+
+            <div class="transactions-overview__back-button-container">
+                <a class="transactions-overview__back-button button button_cancel button_link"> Back To Calendar </a>
+            </div>
+
+            <section class="transactions-overview__deposits-section">
+
+                <section class="transactions-overview__deposits-cash">
+                    deposit cash table
+                </section>
+
+                <section class="transactions-overview__deposits-cheque">
+                     deposit cheque table 
+                </section>
+
+            </section>
+
+        </section>
+
+        <section class="transactions-overview__withdrawals-section">
+             withdrawals table
+        </section>
+
+    </section>
+
+    <section class="overlay transactions-overview__overlay">
+        form
+    </section>
+
+
+</main>

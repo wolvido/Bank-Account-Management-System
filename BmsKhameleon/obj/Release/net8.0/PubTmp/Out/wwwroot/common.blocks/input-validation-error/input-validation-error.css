@@ -1,0 +1,20 @@
+﻿/*.input-validation-error{
+    color: red;
+}
+*/
+
+label:has(+ .input-validation-error) {
+    color: red;
+}
+
+label:has(+ .input-validation-error)::before {
+    content: "*";
+}
+
+fieldset:has(.input-validation-error) > label {
+    color: red;
+}
+
+fieldset:has(.input-validation-error) > label::before {
+    content: "*";
+}   

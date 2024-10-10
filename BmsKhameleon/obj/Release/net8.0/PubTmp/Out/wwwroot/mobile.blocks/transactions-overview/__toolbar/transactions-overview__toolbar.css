@@ -1,0 +1,18 @@
+﻿
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    .transactions-overview__toolbar {
+        flex-basis: 56.25%;
+        width: 71vw;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+    .transactions-overview__toolbar {
+        flex-basis: 56.25%;
+        width: 45vh;
+        transform: scale(1);
+        transform-origin: left center;
+        height: 100%;
+        gap: 5vw;
+    }
+}

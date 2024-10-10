@@ -1,0 +1,14 @@
+﻿.deposit__notice-validation {
+    font-size: 14px;
+    font-weight: 600;
+    color: #434C52;
+}
+
+.deposit__notice-validation em {
+    color: red;
+    font-style: inherit;
+}
+
+.deposit__notice-validation em::before {
+    content: "*";
+}

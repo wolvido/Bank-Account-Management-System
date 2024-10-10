@@ -1,0 +1,29 @@
+﻿
+@media only screen and (max-width: 480px) {
+
+    .page {
+        background-color: #E2EFFF;
+        margin: 0 0 0 0;
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    page__section {
+        flex-grow: 1;
+    }
+
+    .page_authentication {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #FBFBFB;
+        height: 82vh;
+        width: max-content;
+    }
+}
+

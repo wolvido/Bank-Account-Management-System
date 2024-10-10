@@ -1,14 +1,9 @@
-﻿@section styles {
-    <link href="~/desktop.blocks/authentication/authentication.css" rel="stylesheet" type="text/css" />
-}
-
-
+﻿@model LoginViewModel
 
 <main>
-    <form class="authentication" asp-controller="Authentication" asp-action="Authentication">
+    <form asp-controller="Authentication" asp-action="Authentication" method="post" class="authentication">
 
-        <div class="authentication__error authentication__error_active">
-            Your mom Gay
+        <div asp-validation-summary="All" class="authentication__error authentication__error_active">
         </div>
 
         <img class="authentication__logo" src="~/desktop.blocks/authentication/BMS-Logo.png" />
@@ -18,26 +13,40 @@
                 Accounts Overview System
             </header>
             <div class="authentication__version">
-                version 0.1.0
+                version 0.9.5
             </div>
         </div>
 
         <div>
             <fieldset class="authentication__fieldset">
-                <span class="authentication__field-details">
-                    <label class="authentication__label" for="code">Access Code</label>
-                    <a class="authentication__change" href="">Change?</a>
-                </span> 
 
-                <input class="authentication__input" id="code" type="password" />
+                <div class="form-group">
+                    <span class="authentication__field-details">
+                        <label class="authentication__label" for="code">Username</label>
+                        <a class="authentication__change" href="">Change?</a>
+                    </span>
+                    <input asp-for="Username" class="authentication__input" />
+                </div>
 
-                <button class="authentication__button">Sign in</button>
+                <div class="form-group">
+                    <span class="authentication__field-details">
+                        <label class="authentication__label" for="code">Password</label>
+                    </span>
+                    <input asp-for="Password" class="authentication__input" />
+                </div>
+
+                <div class="form-group form-group_checkbox">
+                    <input asp-for="KeepLoggedIn" type="checkbox" class="authentication__checkbox" />
+                    <label class="authentication__label">Keep me logged in</label>
+                </div>
+               
+                <button type="submit" class="authentication__button">Sign in</button>
             </fieldset>
         </div>
 
 
-    </form>
 
+    </form>
 
 </main>
 

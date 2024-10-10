@@ -1,0 +1,8 @@
+﻿.table__item {
+    display: flex;
+    flex-direction: row;
+    background-color: #D7E4F2;
+    height: 50px;
+    align-items: center;
+    border: 1px solid #CFD0D7;
+}

@@ -1,0 +1,15 @@
+﻿.header__time {
+    margin: 0px 62px 0px 50px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    .header__time {
+        margin: 0px 15px 0px 15px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+}

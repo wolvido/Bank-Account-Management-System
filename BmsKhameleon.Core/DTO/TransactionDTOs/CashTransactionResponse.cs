@@ -15,10 +15,12 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
         public DateTime? TransactionDate { get; set; }
         public decimal Amount { get; set; }
         public string? TransactionType { get; set; }
+        public required string TransactionMedium { get; set; }
         public string? Note { get; set; }
 
         //cash transaction properties
         public string? CashTransactionType { get; set; }
+
     }
 
     public static partial class TransactionExtensions
@@ -32,8 +34,24 @@ namespace BmsKhameleon.Core.DTO.TransactionDTOs
                 TransactionDate = transaction.TransactionDate,
                 Amount = transaction.Amount,
                 TransactionType = transaction.TransactionType,
+                TransactionMedium = "Cash",
                 Note = transaction.Note,
                 CashTransactionType = transaction.CashTransactionType
+            };
+        }
+
+        public static CashTransactionResponse ToTransactionCashResponse(this TransactionResponse transactionResponse)
+        {
+            return new CashTransactionResponse
+            {
+                TransactionId = transactionResponse.TransactionId,
+                AccountId = transactionResponse.AccountId,
+                TransactionDate = transactionResponse.TransactionDate,
+                Amount = transactionResponse.Amount,
+                TransactionType = transactionResponse.TransactionType,
+                TransactionMedium = "Cash",
+                Note = transactionResponse.Note,
+                CashTransactionType = transactionResponse.CashTransactionType
             };
         }
     }

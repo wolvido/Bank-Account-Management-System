@@ -1,0 +1,5 @@
+﻿.form-group_checkbox {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: fit-content;
+}

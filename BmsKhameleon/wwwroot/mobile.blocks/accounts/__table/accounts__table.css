@@ -1,0 +1,22 @@
+﻿@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+    .accounts__table {
+        /*height: inherit;*/
+        flex-grow: 1;
+        transform: scale(0.6);
+        transform-origin: top left;
+        width: 167%;
+        height: 200%;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 480px) {
+    .accounts__table {
+        /*height: inherit;*/
+        flex-grow: 1;
+        transform: scale(0.6);
+        transform-origin: top left;
+        width: 167%;
+        height: 100%;
+    }
+}

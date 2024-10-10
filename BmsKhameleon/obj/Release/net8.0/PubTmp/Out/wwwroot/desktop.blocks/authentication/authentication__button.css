@@ -1,0 +1,10 @@
+﻿.authentication__button {
+    border-radius: 5px;
+    height: 43px;
+    background-color: #33429E;
+    color: white;
+    border-width: 0;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 15.8px;
+}

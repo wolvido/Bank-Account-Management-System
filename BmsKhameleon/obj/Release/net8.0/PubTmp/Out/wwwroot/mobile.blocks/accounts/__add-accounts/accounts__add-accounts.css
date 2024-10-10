@@ -1,0 +1,11 @@
+﻿@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+    .accounts__add-accounts {
+        width: 150px;
+        height: 43px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

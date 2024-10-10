@@ -1,0 +1,12 @@
+﻿.transactions-overview__balance-value {
+    width: 285px;
+    height: 43px;
+    border: 1px solid var(--grey-90, #CFD0D7);
+    background: #F3F3F3;
+    padding: 0px;
+    resize: none;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 42px;
+    padding-left: 15px;
+}

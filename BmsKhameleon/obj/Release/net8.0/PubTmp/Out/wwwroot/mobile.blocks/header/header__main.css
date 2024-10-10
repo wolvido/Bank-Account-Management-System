@@ -1,0 +1,29 @@
+﻿@media only screen and (orientation: portrait) and (max-width: 480px) {
+
+    .header__main {
+        height: 71px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 15px 0px 15px;
+        transform: scale(0.6);
+        transform-origin: left;
+        width: 159%;
+        height: 59%;
+    }
+}
+
+
+@media only screen and (orientation: landscape) and (max-height: 480px) {
+
+    .header__main {
+        height: 71px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 50px 0px 50px;
+        transform: scale(0.6);
+        transform-origin: left;
+        width: 153.5%;
+    }
+}

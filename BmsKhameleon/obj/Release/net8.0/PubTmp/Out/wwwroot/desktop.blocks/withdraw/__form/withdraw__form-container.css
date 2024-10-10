@@ -1,0 +1,9 @@
+﻿.withdraw__form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 365px;
+    margin: 37px 0px 0px 0px;
+    padding: 0;
+    border: 0px;
+}

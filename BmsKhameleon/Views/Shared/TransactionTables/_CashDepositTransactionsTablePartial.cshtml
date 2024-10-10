@@ -1,0 +1,64 @@
+﻿@model List<CashTransactionResponse>
+
+<div class="transactions-overview__table-caption">
+    <div class="transactions-overview__table-label">
+        Cash Deposits
+    </div>
+
+    <div class="transactions-overview__table-total transactions-overview__deposits-total-value_cash">
+        @{
+            //get total cash amount deposited
+            var totalCash = Model.Sum(x => x.Amount);
+        }
+        Php @totalCash.ToCurrencyString()
+    </div>
+</div>
+
+<div class="transactions-overview__deposits-table table">
+
+    <div class="transactions-overview__table-container table__item-container">
+        @foreach (var transaction in Model)
+        {
+            <div class="transactions-overview__table-item table__item transaction-controller__item">
+
+                <div class="transaction-controller__field-transaction-type">
+                    @transaction.TransactionType
+                </div>
+
+                <div class="table__item-field transaction-controller__field-currency-type">
+                    @transaction.TransactionMedium
+                </div>
+
+                <div class="transaction-controller__cash-transaction">
+                    @transaction.CashTransactionType
+                </div>
+
+                <div class="transaction-controller__field-date">
+                    @transaction.TransactionDate
+                </div>
+
+                <div class="transaction-controller__field-note transaction-controller__field-note transaction-controller__field-note_invisible">
+                    @transaction.Note
+                </div>
+
+                <div class="table__item-field table__item-field_controller">
+
+                    <div class="table__item-field-label transaction-controller__field-amount">
+                        @transaction.Amount.ToCurrencyString()
+                    </div>
+
+                    <div class="table__item-controls">
+
+                        <button data-transactionId="@transaction.TransactionId" data-transactionType="@transaction.TransactionType" data-transactionMedium="@transaction.TransactionMedium" class="table__item-button transaction-overview__button_edit">
+                            <img class="table__item-icon" src="~/common.blocks/table/__item/edit-icon.png" />
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+﻿
+
+.authentication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 460px;
+}
+
+
+@media only screen and (orientation: landscape) and (max-height: 470px) {
+
+    .authentication {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 460px;
+        transform: scale(0.8);
+    }
+}

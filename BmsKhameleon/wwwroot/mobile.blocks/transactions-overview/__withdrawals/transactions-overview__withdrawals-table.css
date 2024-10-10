@@ -1,0 +1,11 @@
+﻿.transactions-overview__withdrawals-table {
+    flex-grow: 1;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    .transactions-overview__withdrawals-table {
+        flex-grow: 1;
+        width: 51vh;
+    }
+}
+

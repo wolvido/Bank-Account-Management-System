@@ -1,0 +1,11 @@
+﻿.authentication__error {
+    width: 500px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}

@@ -1,0 +1,5 @@
+﻿.deposit__form-group {
+    display: flex;
+    flex-direction: column;
+    width: 365px;
+}
