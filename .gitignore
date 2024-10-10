@@ -68,3 +68,18 @@ BmsKhameleon/obj/Debug/net8.0/BmsKhameleon.UI.pdb
 /.vs/BmsKhameleonSolution/v17
 /BmsKhameleon/Properties/PublishProfiles
 BmsKhameleon/Properties/PublishProfiles/winzyl-001-site1 - Web Deploy.pubxml.user
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/refint/BmsKhameleon.Infrastructure.dll
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/ref/BmsKhameleon.Infrastructure.dll
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.sourcelink.json
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.pdb
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.dll
+BmsKhameleon.Infrastructure/obj/Debug/net8.0/BmsKhameleon.Infrastructure.AssemblyInfo.cs
+BmsKhameleon.Core/obj/Debug/net8.0/refint/BmsKhameleon.Core.dll
+BmsKhameleon.Core/obj/Debug/net8.0/ref/BmsKhameleon.Core.dll
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.sourcelink.json
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.pdb
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.dll
+BmsKhameleon.Core/obj/Debug/net8.0/BmsKhameleon.Core.AssemblyInfo.cs
+.vs/BmsKhameleonSolution/v17/.suo
+BmsKhameleon/obj/Debug/net8.0/BmsKhameleon.UI.pdb
+BmsKhameleon/obj/Debug/net8.0/BmsKhameleon.UI.dll

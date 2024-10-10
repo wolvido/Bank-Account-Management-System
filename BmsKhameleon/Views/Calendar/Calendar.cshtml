@@ -49,7 +49,7 @@
                         var philippineDateNow = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.Now, "Singapore Standard Time");
                     }
 
-                    @for (int i = philippineDateNow.Year; i >= ViewBag.accountYearEnrolled; i--)
+                    @for (int i = philippineDateNow.Year+1; i >= ViewBag.accountYearEnrolled; i--) //added one year for no reason.
                     {
                         <option value="@i"> @i</option>
                     }
