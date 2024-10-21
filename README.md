@@ -1,5 +1,5 @@
 <p align="left">
-A web application that allows users to manually track transactions, withdraws, deposits, and current balance in a given date across all their bank accounts. 
+A web application that allows users to manually track transactions, withdraws, deposits, and current balance in a given date on their bank accounts. 
 
 Features:
 - A calendar interface that displays the account balance, withdraws, and deposits of a given date.
