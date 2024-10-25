@@ -1,4 +1,4 @@
-A web application that allows users to manually track various transactions, withdraws, deposits, and current balance in a given date of their bank accounts. 
+A web application that offers a comprehensive financial management solution designed around a calendar-based interface. Users can track their daily financial activities, view balances, and record withdrawals for every day of the month.
 
 Features:
 - A calendar interface that displays the balancea and withdraws of every day of the month.
