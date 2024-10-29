@@ -1,7 +1,7 @@
 A web application that offers a comprehensive financial management solution designed around a calendar-based interface. Users can track their daily financial activities, view balances, and record withdrawals for every day of the month.
 
 Features:
-- A calendar interface that displays the balancea and withdraws of every day of the month.
+- A calendar interface that displays the balance and withdraws of every day of the month.
 - Users can specify the type of transaction such as cheque, cash, over-the-counter (OTC), or other types.
 - A transaction overview interface for a given date, allowing users to view and edit all transactions for that day and providing a snapshot of their financial activity.
 - User accounts; signin, signout, and signup.
