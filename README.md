@@ -1,4 +1,4 @@
-A full stack web application that offers a comprehensive financial management solution designed around a calendar-based interface. Users can track their daily financial activities, view balances, and record withdrawals for every day of the month.
+A full stack web application that offers a comprehensive financial management solution designed around a calendar-based interface. Helps clients track financial transactions across multiple accounts via a calendar based interface and a transaction overview interface.
 
 Features:
 - A calendar interface that displays the balance and withdraws of every day of the month.
