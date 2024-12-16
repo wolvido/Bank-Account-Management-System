@@ -25,16 +25,24 @@ Dotnet needs to be installed first, please refer to https://dotnet.microsoft.com
 Build Commands:
 ```bash
 git clone https://github.com/wolvido/FundPulse-Tracker.git
+```
+- After cloning or downloading the sample you must first setup your local sql database. Please create a local SQL server instance.
+- After you have created a local SQL server instance, rewrite the default connection strings in `FundPulse-Tracker/BmsKhameleon/appsettings.Development.json`  to point to the local SQL Server instance.
+  - eg. `"DefaultConnection": "YourLocalDatabaseConnectionString".`
 
+After a local database has been setup, and it's connection string established in appsettings.Development.json, proceed with bash commands:
+```bash
 cd FundPulse-Tracker
 
 dotnet restore
 
 dotnet build
 
+dotnet tool install --global dotnet-ef
+
 cd bmskhameleon
 
-dotnet tool install --global dotnet-ef
+dotnet tool restore
 
 dotnet ef database update --context AccountDbContext
 
@@ -42,6 +50,6 @@ dotnet ef database update --context IdentityDbContext
 
 dotnet run
 ```
-- Then, check the assigned localhost in the console (eg. http://localhost:5299) and paste in the browser
-- use the default username: BMSAdminDefault241 and password: BMSKeyDefault33
-- click the main logo to navigate to the bank accounts page
+- Then, check the assigned localhost in the console (eg. http://localhost:5299) and paste in the browser.
+- use the default username: BMSAdminDefault241 and password: BMSKeyDefault33.
+- click the main logo to navigate to the bank accounts page.
