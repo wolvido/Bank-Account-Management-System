@@ -263,3 +263,7 @@ D:\repo\BmsKhameleon\BmsKhameleon\bin\Debug\net8.0\runtimes\win\lib\net7.0\Syste
 D:\repo\BmsKhameleon\BmsKhameleon\bin\Debug\net8.0\WebOptimizer.Core.dll
 D:\repo\BmsKhameleon\BmsKhameleon\bin\Debug\net8.0\NUglify.dll
 D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\BmsKhameleon.UI.MvcApplicationPartsAssemblyInfo.cs
+D:\repo\BmsKhameleon\BmsKhameleon\bin\Debug\net8.0\BmsKhameleon.UI.staticwebassets.endpoints.json
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\staticwebassets\msbuild.BmsKhameleon.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\repo\BmsKhameleon\BmsKhameleon\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

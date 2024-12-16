@@ -89,6 +89,10 @@
       "PackagePath": "staticwebassets\\common.blocks\\header\\BMS-Logo.png"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\fundpulse-tracker-logo.png",
+      "PackagePath": "staticwebassets\\common.blocks\\header\\fundpulse-tracker-logo.png"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\common.blocks\\header\\header.css",
       "PackagePath": "staticwebassets\\common.blocks\\header\\header.css"
     },
@@ -695,6 +699,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\authentication__version.css",
       "PackagePath": "staticwebassets\\desktop.blocks\\authentication\\authentication__version.css"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\authentication\\fundpulse-tracker-logo.png",
+      "PackagePath": "staticwebassets\\desktop.blocks\\authentication\\fundpulse-tracker-logo.png"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\__account\\calendar__account-info-button.css",
@@ -1313,6 +1321,10 @@
       "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\authentication__version.css"
     },
     {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\authentication\\fundpulse-tracker-logo.png",
+      "PackagePath": "staticwebassets\\mobile.blocks\\authentication\\fundpulse-tracker-logo.png"
+    },
+    {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\calendar\\__account\\calendar__account-info-button.css",
       "PackagePath": "staticwebassets\\mobile.blocks\\calendar\\__account\\calendar__account-info-button.css"
     },
@@ -1395,6 +1407,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\BMS-Logo.png",
       "PackagePath": "staticwebassets\\mobile.blocks\\header\\BMS-Logo.png"
+    },
+    {
+      "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\fundpulse-tracker-logo.png",
+      "PackagePath": "staticwebassets\\mobile.blocks\\header\\fundpulse-tracker-logo.png"
     },
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\header\\header.css",
@@ -1671,6 +1687,10 @@
     {
       "Id": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\mobile.blocks\\transactions-overview\\transactions-overview.css",
       "PackagePath": "staticwebassets\\mobile.blocks\\transactions-overview\\transactions-overview.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BmsKhameleon.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BmsKhameleon.UI.Microsoft.AspNetCore.StaticWebAssets.props",
