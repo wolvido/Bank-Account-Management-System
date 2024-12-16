@@ -6,18 +6,16 @@ Many business owners and individuals struggle with managing multiple bank accoun
 
 Features:
 - Multiple bank account management.
-![accounts](https://github.com/user-attachments/assets/d9afe5d4-4673-46b1-a3cc-49d882fbc9d4)
+![accounts](https://github.com/user-attachments/assets/c11c7284-8a33-455a-899a-5b1fe4add84a)
+
 
 - A calendar interface that displays the balance and withdraws of every day of the month.
-![calendar](https://github.com/user-attachments/assets/72754168-f921-4c96-b404-128c084c5524)
+![calendar](https://github.com/user-attachments/assets/a6016fd3-dff0-4cec-b650-1f3efec567dd)
+
 
 - A transaction overview interface for a given date, allowing users to view and edit all transactions for that day and providing a snapshot of their financial activity.
-![overview](https://github.com/user-attachments/assets/a0429441-fc38-481b-8050-9402112cb164)
-
-- Users can specify the type of transaction such as cheque, cash, over-the-counter (OTC), or other types.
-##### Forms
-![form account](https://github.com/user-attachments/assets/8d2ea27d-85b8-400e-9e7c-42779222955e)
-![form 2](https://github.com/user-attachments/assets/3c2cc435-31b5-445e-b78e-b026e347b65f)
+![transactions for the day](https://github.com/user-attachments/assets/7a6ec8b8-8c1e-4033-8ee2-52fb7b8edaeb)
 
 - User accounts; signin, signout, and signup.
+![authentication](https://github.com/user-attachments/assets/e60f879d-0afa-410e-ad38-b56c335034ea)
 
