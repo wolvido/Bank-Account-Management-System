@@ -4,7 +4,7 @@ A full stack web application that offers a comprehensive financial management so
 ### Purpose
 Many business owners and individuals struggle with managing multiple bank accounts and the scattered transaction records associated with them. FundPulse was created to consolidate this data into a clear and user-friendly interface, making financial tracking simple and organized.  
 
-Features:
+### Features:
 - Multiple bank account management.
 ![accounts](https://github.com/user-attachments/assets/c11c7284-8a33-455a-899a-5b1fe4add84a)
 
@@ -19,3 +19,14 @@ Features:
 - User accounts; signin, signout, and signup.
 ![authentication](https://github.com/user-attachments/assets/e60f879d-0afa-410e-ad38-b56c335034ea)
 
+### Build
+Build Commands:
+```bash
+git clone https://github.com/wolvido/FundPulse-Tracker.git
+
+cd YourProjectFolder
+
+dotnet restore
+
+dotnet build
+```
