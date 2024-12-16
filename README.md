@@ -1,4 +1,8 @@
+# FundPulse Tracker
 A full stack web application that offers a comprehensive financial management solution designed around a calendar-based interface. Helps clients track financial transactions across multiple accounts via a calendar based interface and a transaction overview interface.
+
+### Purpose
+Many business owners and individuals struggle with managing multiple bank accounts and the scattered transaction records associated with them. FundPulse was created to consolidate this data into a clear and user-friendly interface, making financial tracking simple and organized.  
 
 Features:
 - Multiple bank account management.
