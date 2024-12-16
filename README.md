@@ -19,7 +19,9 @@ Many business owners and individuals struggle with managing multiple bank accoun
 - User accounts; signin, signout, and signup.
 ![authentication](https://github.com/user-attachments/assets/e60f879d-0afa-410e-ad38-b56c335034ea)
 
-### Build
+### Local Build
+Dotnet needs to be installed first, please refer to https://dotnet.microsoft.com/en-us/download
+
 Build Commands:
 ```bash
 git clone https://github.com/wolvido/FundPulse-Tracker.git
@@ -29,4 +31,14 @@ cd FundPulse-Tracker
 dotnet restore
 
 dotnet build
+
+cd bmskhameleon
+
+dotnet ef database update --context AccountDbContext
+
+dotnet ef database update --context IdentityDbContext
+
+dotnet run
 ```
+- Then, check the assigned localhost in the console (eg. http://localhost:5299) and paste in the browser
+- use the default username: BMSAdminDefault241 and password: BMSKeyDefault33
