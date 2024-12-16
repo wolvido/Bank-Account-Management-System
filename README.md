@@ -42,3 +42,4 @@ dotnet run
 ```
 - Then, check the assigned localhost in the console (eg. http://localhost:5299) and paste in the browser
 - use the default username: BMSAdminDefault241 and password: BMSKeyDefault33
+- click the main logo to navigate to the bank accounts page
