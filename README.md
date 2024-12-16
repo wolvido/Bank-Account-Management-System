@@ -24,7 +24,7 @@ Build Commands:
 ```bash
 git clone https://github.com/wolvido/FundPulse-Tracker.git
 
-cd YourProjectFolder
+cd FundPulse-Tracker
 
 dotnet restore
 
