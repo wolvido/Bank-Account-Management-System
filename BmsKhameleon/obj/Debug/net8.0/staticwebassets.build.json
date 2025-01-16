@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3f+XC9J3pDwxfs0EdJbmKBf8VMNkgIvRWpb+qWS4/Hg=",
+  "Hash": "ypp58j3QNaYaJN1q8Zt9Zc5h2zt850CVg+OkHvEOZjs=",
   "Source": "BmsKhameleon.UI",
   "BasePath": "_content/BmsKhameleon.UI",
   "Mode": "Default",
@@ -4126,8 +4126,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8at6065eiu",
-      "Integrity": "wIFh3lwdH1cmdeMjFJXN9lvyuOckhXNOm4VPE3rxIGA=",
+      "Fingerprint": "3bmw3lstp8",
+      "Integrity": "EXAwBkAE8yqDe4nYfgdUQpvPKF7AXJr37aBZ+s7ipKg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\desktop.blocks\\calendar\\calendar.js"
@@ -10707,7 +10707,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10752,7 +10752,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22925,7 +22925,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:23:54 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22962,7 +22962,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:23:54 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23253,7 +23253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23298,7 +23298,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24789,7 +24789,7 @@
       ]
     },
     {
-      "Route": "desktop.blocks/calendar/calendar.8at6065eiu.js",
+      "Route": "desktop.blocks/calendar/calendar.3bmw3lstp8.js",
       "AssetFile": "D:\\repo\\BmsKhameleon\\BmsKhameleon\\wwwroot\\desktop.blocks\\calendar\\calendar.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -24799,7 +24799,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7843"
+          "Value": "7905"
         },
         {
           "Name": "Content-Type",
@@ -24807,11 +24807,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wIFh3lwdH1cmdeMjFJXN9lvyuOckhXNOm4VPE3rxIGA=\""
+          "Value": "\"EXAwBkAE8yqDe4nYfgdUQpvPKF7AXJr37aBZ+s7ipKg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Oct 2024 11:35:18 GMT"
+          "Value": "Thu, 16 Jan 2025 09:58:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24821,7 +24821,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8at6065eiu"
+          "Value": "3bmw3lstp8"
         },
         {
           "Name": "label",
@@ -24829,7 +24829,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wIFh3lwdH1cmdeMjFJXN9lvyuOckhXNOm4VPE3rxIGA="
+          "Value": "sha256-EXAwBkAE8yqDe4nYfgdUQpvPKF7AXJr37aBZ+s7ipKg="
         }
       ]
     },
@@ -24926,7 +24926,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7843"
+          "Value": "7905"
         },
         {
           "Name": "Content-Type",
@@ -24934,11 +24934,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wIFh3lwdH1cmdeMjFJXN9lvyuOckhXNOm4VPE3rxIGA=\""
+          "Value": "\"EXAwBkAE8yqDe4nYfgdUQpvPKF7AXJr37aBZ+s7ipKg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Oct 2024 11:35:18 GMT"
+          "Value": "Thu, 16 Jan 2025 09:58:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24948,7 +24948,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wIFh3lwdH1cmdeMjFJXN9lvyuOckhXNOm4VPE3rxIGA="
+          "Value": "sha256-EXAwBkAE8yqDe4nYfgdUQpvPKF7AXJr37aBZ+s7ipKg="
         }
       ]
     },
@@ -35635,7 +35635,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:17:26 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -35672,7 +35672,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:17:26 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -35963,7 +35963,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -36008,7 +36008,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -37767,7 +37767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -37812,7 +37812,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Dec 2024 06:07:33 GMT"
+          "Value": "Wed, 15 Jan 2025 12:10:16 GMT"
         },
         {
           "Name": "Cache-Control",

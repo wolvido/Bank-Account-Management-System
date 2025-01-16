@@ -17,10 +17,11 @@ namespace BmsKhameleon.UI.Controllers
         public async Task<IActionResult> Calendar(Guid accountId, DateTime? date)
         {
             var philippineDateNow = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.Now, "Singapore Standard Time");
+
             date ??= philippineDateNow;
 
+            //check if account exists
             AccountResponse? accountExists = await _accountsService.GetAccountById(accountId);
-
             if(accountExists == null)
             {
                 return BadRequest("Account does not exist");
@@ -30,9 +31,19 @@ namespace BmsKhameleon.UI.Controllers
 
             var accountMonthEnrolled = accountDateEnrolled.Month;
             var accountYearEnrolled = accountDateEnrolled.Year;
+            var selectedYear = date.Value.Year;
+
+            //if the selected month is less than the month the account was enrolled
+            if (date.Value.Month < accountMonthEnrolled && date.Value.Year <= accountYearEnrolled)
+            {
+                //set month value to the month the account was enrolled
+                date = new DateTime(selectedYear, accountMonthEnrolled, 1);
+                //to make sure no going back in time
+            }
 
             ViewBag.accountMonthEnrolled = accountMonthEnrolled;
             ViewBag.accountYearEnrolled = accountYearEnrolled;
+            ViewBag.selectedYear = selectedYear;
 
             List<DailyTransactionsAggregateResponse> monthlyTransactionsAggregate = await _transactionsService.GetMonthlyTransactionsAggregate(date.Value, accountId);
 

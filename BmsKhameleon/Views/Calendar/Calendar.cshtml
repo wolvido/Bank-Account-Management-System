@@ -37,9 +37,24 @@
                  
                 <select class="calendar__select-month">
                     //generate month options 
-                    @for (int i = ViewBag.accountMonthEnrolled; i <= 12; i++)
-                    {
-                        <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
+                    @{
+                        var yearCreated = ViewBag.accountYearEnrolled;
+                        var yearSelected = ViewBag.selectedYear;
+
+                        if (yearCreated == yearSelected)
+                        {
+                            for (int i = ViewBag.accountMonthEnrolled; i <= 12; i++)
+                            {
+                                <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
+                            }
+                        }
+                        else
+                        {
+                            for (int i = 1; i <= 12; i++)
+                            {
+                                <option value="@i"> @DateTimeFormatInfo.CurrentInfo.GetMonthName(i)</option>
+                            }
+                        }
                     }
                 </select>
 
@@ -56,9 +71,7 @@
                 </select>
             </form>
 
-            <button class="calendar__account-info-button">
-
-            </button>
+            <button class="calendar__account-info-button"></button>
         </section>
 
         <section class="calendar__week-header main__padding">
