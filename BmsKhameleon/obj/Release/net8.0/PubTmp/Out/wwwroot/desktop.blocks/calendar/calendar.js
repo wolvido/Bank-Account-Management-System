@@ -14,8 +14,10 @@
     let transactionsYear = transactions[0].Date.split('-')[0] * 1;
 
     $(".calendar__select-month").val(transactionsMonth); //set dropdown default to current month
-    $(".calendar__select-year").val(transactionsYear); //set dropdown default to current year"
-    async function calendarDay(day, adjacentMonths = false, balance = '0.00', withdrawal = '0.00', date = '', accountId = '') {
+    $(".calendar__select-year").val(transactionsYear); //set dropdown default to current year
+
+    async function calendarDay(day, adjacentMonths = false, balance = '0.00', withdrawal = '0.00', date = '', accountId = '')
+    {
         let transactions =
             `
             <div class="calendar__date-transactions">
@@ -186,12 +188,14 @@
     });
 
     //on date change reload link with the new date
-    $(".calendar__select-date").on("change", function () {
-        let selectedMonth = $(".calendar__select-month").find(":selected").val();
+    $(document).on("change", ".calendar__select-date", function () {
+        
         let selectedYear = $(".calendar__select-year").find(":selected").val();
+        let selectedMonth = $(".calendar__select-month").find(":selected").val();
+        console.log(selectedMonth);
 
         let date = new Date(selectedYear, selectedMonth, 1).toISOString();
-        reloadWithRouteParameter(date); 
+        reloadWithRouteParameter(date);
     });
 
     //account info control

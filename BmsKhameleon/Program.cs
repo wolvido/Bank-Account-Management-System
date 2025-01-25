@@ -31,29 +31,41 @@ builder.Services.AddHsts(options =>
 });
 
 //DbContexts
-if (builder.Environment.IsDevelopment())
-{
-    builder.Services.AddDbContext<AccountDbContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-    });
+//if (builder.Environment.IsDevelopment())
+//{
+//    builder.Services.AddDbContext<AccountDbContext>(options =>
+//    {
+//        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+//    });
 
-    builder.Services.AddDbContext<IdentityDbContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-    });
-}
-else
+//    builder.Services.AddDbContext<IdentityDbContext>(options =>
+//    {
+//        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+//    });
+//}
+//else
+//{
+//    builder.Services.AddDbContext<AccountDbContext>(options =>
+//    {
+//        options.UseSqlServer(builder.Configuration.GetConnectionString("AspSmarterConnectionString"));
+//    });
+//    builder.Services.AddDbContext<IdentityDbContext>(options =>
+//    {
+//        options.UseSqlServer(builder.Configuration.GetConnectionString("AspSmarterConnectionString"));
+//    });
+//}
+
+//for offline deployment
+builder.Services.AddDbContext<AccountDbContext>(options =>
 {
-    builder.Services.AddDbContext<AccountDbContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("AspSmarterConnectionString"));
-    });
-    builder.Services.AddDbContext<IdentityDbContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("AspSmarterConnectionString"));
-    });
-}
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+builder.Services.AddDbContext<IdentityDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 
 
 //Identity
@@ -109,6 +121,18 @@ builder.Services.AddWebOptimizer(pipeline =>
 { 
     pipeline.AddCssBundle("/bundle.css", "common.blocks/**/*.css", "desktop.blocks/**/*.css", "mobile.blocks/**/*.css");
 });
+
+//for local offline deployment
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(7102, listenOptions =>
+    {
+        listenOptions.UseHttps(); // For HTTPS on 7102
+    });
+    options.ListenAnyIP(5299); // For HTTP on 5299
+});
+builder.WebHost.UseUrls("https://0.0.0.0:7102", "http://0.0.0.0:5299");
+
 
 //build
 var app = builder.Build();
