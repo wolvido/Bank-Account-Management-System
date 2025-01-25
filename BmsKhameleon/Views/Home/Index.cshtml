@@ -109,3 +109,20 @@
 <section class="accounts__overlay accounts__overlay_modify overlay">
     @* <partial name="~/Views/Shared/AccountForms/_UpdateAccountPartialView.cshtml" model="Model.AccountUpdateRequest"></partial> *@
 </section>
+
+
+<div>
+    <h4>Share Links to Other Devices:</h4>
+    @{
+        var ipv4Addresses = ViewBag.IpAddress;
+
+        foreach (var address in ipv4Addresses)
+        {
+            var ip = address.Item1;
+            var connectionType = address.Item2;
+
+            <p>@connectionType: <a href="https://@ip:7102">https://@ip:7102</a> </p>
+
+        }
+    }
+</div>

@@ -1,4 +1,7 @@
-﻿using System.Security.Claims;
+﻿using System.Net;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Security.Claims;
 using BmsKhameleon.Core.Domain.IdentityEntities;
 using BmsKhameleon.Core.DTO.AccountDTOs;
 using BmsKhameleon.Core.Enums;
@@ -51,7 +54,7 @@ namespace BmsKhameleon.UI.Controllers
             }
 
             // sort
-            if (sortBy != null && sortOrder != null) 
+            if (sortBy != null && sortOrder != null)
             {
                 accounts = await _accountsService.SortAccounts(accounts, sortBy, (SortOrderOptions)sortOrder);
             }
@@ -70,7 +73,41 @@ namespace BmsKhameleon.UI.Controllers
                 AccountResponses = accounts
             };
 
+            //get the local machine ipv4 address
+            ViewBag.IpAddress = GetLocalIpAddresses();
+
+            //this action method is a fat bitch. Refactor and use a viewmodel.
             return View(accountViewModel);
+        }
+
+        //this method should NOT BE IN THIS CONTROLLER. Maybe move to a viewmodel or something.
+        private static List<(string IpAddress, string ConnectionType)> GetLocalIpAddresses()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+
+            //list of tuple to store the ip and connection type
+            var ipv4List = new List<(string IpAddress, string ConnectionType)>();
+
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    string connectionType = NetworkInterface.GetAllNetworkInterfaces()
+                        .Where(ni => ni.GetIPProperties().UnicastAddresses
+                        .Any(ua => ua.Address.Equals(ip)))
+                        .Select(ni => ni.NetworkInterfaceType == NetworkInterfaceType.Wireless80211 ? "WiFi" : "Ethernet")
+                        .FirstOrDefault() ?? "Unknown";
+
+                    ipv4List.Add((ip.ToString(), connectionType));
+                }
+            }
+
+            if (ipv4List.Count <= 0)
+            {
+                throw new Exception("No network adapters with an IPv4 address in the system!");
+            }
+
+            return ipv4List;
         }
 
         [Route("[action]")]
