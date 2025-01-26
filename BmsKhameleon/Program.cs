@@ -67,7 +67,6 @@ builder.Services.AddDbContext<IdentityDbContext>(options =>
 });
 
 
-
 //Identity
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
@@ -133,9 +132,30 @@ builder.WebHost.ConfigureKestrel(options =>
 });
 builder.WebHost.UseUrls("https://0.0.0.0:7102", "http://0.0.0.0:5299");
 
-
 //build
 var app = builder.Build();
+
+// Auto update database
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    try
+    {
+        // Apply migrations for AccountDbContext
+        var accountDbContext = services.GetRequiredService<AccountDbContext>();
+        accountDbContext.Database.Migrate();
+
+        // Apply migrations for IdentityDbContext
+        var identityDbContext = services.GetRequiredService<IdentityDbContext>();
+        identityDbContext.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        // Log or handle exceptions
+        Console.WriteLine($"An error occurred while migrating the database: {ex.Message}");
+    }
+}
 
 // Ensure the app uses PH culture
 var supportedCultures = new[] { "en-PH" };
